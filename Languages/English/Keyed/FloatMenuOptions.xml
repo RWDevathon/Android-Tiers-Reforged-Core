@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableSources>Available Sources:</ATR_ViableSources>
+	<ATR_ViableTargets>Available Targets:</ATR_ViableTargets>
+	<ATR_NoAvailableTarget>No available targets for operation.</ATR_NoAvailableTarget>
+
+	<!-- Charging -->
+	<ATR_ForceCharge>Force battery charging</ATR_ForceCharge>
+	<ATR_NoAvailableChargingSpots>Cannot use, charging spots are reserved.</ATR_NoAvailableChargingSpots>
+	<ATR_NeedToAllowCharge>{0} does not have charging capabilities enabled.</ATR_NeedToAllowCharge>
+	<ATR_MassiveNotAllowed>Massive mechanical units can not use this.</ATR_MassiveNotAllowed>
+	<ATR_MassiveRequired>Only massive mechanical units can use this.</ATR_MassiveRequired>
+
+    <ATR_NoSurrogateMechanitors>Mechanitors can not be surrogates.</ATR_NoSurrogateMechanitors>
+
+</LanguageData>
