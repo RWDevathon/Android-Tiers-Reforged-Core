@@ -2,12 +2,6 @@
 <LanguageData>
 
 	<!-- General -->
-
-	<ATR_ReprogramSuccess>Drone Reprogrammed</ATR_ReprogramSuccess>
-	<ATR_ReprogramSuccessDesc>{0} has been reprogrammed. After rebooting, it will recognize the colony as its controller.</ATR_ReprogramSuccessDesc>
-	<ATR_ReprogramFailed>Reprogramming Failed</ATR_ReprogramFailed>
-	<ATR_ReprogramFailedDesc>Reprogramming operation on {0} failed. It will reboot, but it will not recognize commands. It may have suffered memory damage in the process.</ATR_ReprogramFailedDesc>
-
 	<ATR_FractalCorruption>Fractal Abomination</ATR_FractalCorruption>
 	<ATR_FractalCorruptionDesc>{0} has been fully corrupted by fractal warping. They are no more than an abomination! The echoes of tortured screams will be heard for many miles, and perhaps as many years.</ATR_FractalCorruptionDesc>
 
@@ -95,18 +89,12 @@
     <ATR_RelationshipRetaliation>Relations damaged</ATR_RelationshipRetaliation>
     <ATR_RelationshipRetaliationDesc>The attempted operation was intercepted and defeated by target defense measures. The faction suspects you of committing the attempt, but lacks hard evidence tying you to the crime. The actual impact on relations, {0}, seems to have occurred because the individual who intercepted it decided to take it upon themselves to accuse you in front of anyone willing to listen. An unfortunate diplomatic incident.</ATR_RelationshipRetaliationDesc>
 
-    <!-- Maintenance -->
-    <ATR_PoorMaintenanceLetter>Poor maintenance</ATR_PoorMaintenanceLetter>
-
     <!-- Learning Letters -->
     <ATR_FirstBlankAndroidCreated>About: Blank Androids</ATR_FirstBlankAndroidCreated>
     <ATR_FirstBlankAndroidCreatedDesc>Unlike drones, androids are built "blank" without any consciousness. In order to render them active, you must install an autonomous or receiver core. Autonomous cores store a fully fledged intelligence that may self-initialize or may have a mind transferred via the SkyMind network upon installation. Receiver cores turn the unit into a surrogate for remote control. Both are simple surgery installations without any special parts.</ATR_FirstBlankAndroidCreatedDesc>
 
     <ATR_FirstDroneCreated>About: Drones</ATR_FirstDroneCreated>
     <ATR_FirstDroneCreatedDesc>While they possess humanlike intelligence, drones do not have proper consciousnesses and thus no mood or related needs. Others view them as simple machines, and will never mind their destruction or disassembly. They can not be socially interacted with or interact, and are thus unable to trade, warden, tame, or otherwise interact with others.</ATR_FirstDroneCreatedDesc>
-
-    <ATR_FirstDroneCaptured>About: Imprisoned Drones</ATR_FirstDroneCaptured>
-    <ATR_FirstDroneCapturedDesc>Due to the fact that drones can not be socially interacted with, they can not receive normal prisoner interactions. Instead, drones can be reprogrammed surgically to recruit them or can be shut down surgically to execute them. They can not be released (but may wander away if left outside). The prisoner interface for drones is hidden to avoid potentially game-breaking behavior.</ATR_FirstDroneCapturedDesc>
 
     <ATR_FirstSurrogateCreated>About: Surrogates</ATR_FirstSurrogateCreated>
     <ATR_FirstSurrogateCreatedDesc>You have created your first surrogate pawn. Until it is connected to a controller (any SkyMind-connected pawn can toggle controls and link to this pawn), it will remain blank and not considered part of your faction. When connected to a controller, it will share the skills, passions, and relations with its controller. XP gained is automatically shared. Mood, health, and some other details can't be shared to avoid game-breaking issues.</ATR_FirstSurrogateCreatedDesc>
