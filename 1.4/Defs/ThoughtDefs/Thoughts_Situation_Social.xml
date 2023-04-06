@@ -8,7 +8,7 @@
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
-                <label>Loves organics</label>
+                <label>Adores organics</label>
                 <baseOpinionOffset>30</baseOpinionOffset>
             </li>
             <li>

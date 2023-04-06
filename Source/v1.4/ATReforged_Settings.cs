@@ -16,18 +16,6 @@ namespace ATReforged
         public static Gender androidsFixedGender;
         public static float androidsGenderRatio;
 
-            // Settings for mechanical factions
-        public static bool androidFactionsNeverFlee;
-
-            // Settings for mechanical/organic rights
-        public static bool factionsWillDeclareRightsWars;
-        public static HashSet<string> antiMechanicalRightsFaction;
-        public static HashSet<string> antiOrganicRightsFaction;
-        public static bool dronesTriggerRightsWars;
-        public static bool prisonersTriggerRightsWars;
-        public static bool slavesTriggerRightsWars;
-        public static bool surrogatesTriggerRightsWars;
-
         // SECURITY SETTINGS
             // Settings for Enemy hacks
         public static bool enemyHacksOccur;
@@ -48,7 +36,7 @@ namespace ATReforged
         public static bool surrogatesAllowed = true;
         public static bool otherFactionsAllowedSurrogates = true;
         public static int minGroupSizeForSurrogates = 5;
-        public static float minSurrogatePercentagePerLegalGroup = 0.2f;
+        public static float minSurrogatePercentagePerLegalGroup = 0.0f;
         public static float maxSurrogatePercentagePerLegalGroup = 0.7f;
 
         public static bool displaySurrogateControlIcon = true;
@@ -74,10 +62,6 @@ namespace ATReforged
 
         public void StartupChecks()
         {
-            if (antiMechanicalRightsFaction == null)
-                antiMechanicalRightsFaction = new HashSet<string>();
-            if (antiOrganicRightsFaction == null)
-                antiOrganicRightsFaction = new HashSet<string>();
             if (ActivePreset == MHC_SettingsPreset.None)
             {
                 settingsEverOpened = false;
@@ -87,13 +71,6 @@ namespace ATReforged
 
         Vector2 scrollPosition = Vector2.zero;
         float cachedScrollHeight = 0;
-
-        bool cachedExpandFirst = true;
-
-        void ResetCachedExpand()
-        {
-            cachedExpandFirst = true;
-        }
 
         public void DoSettingsWindowContents(Rect inRect)
         {
@@ -113,7 +90,7 @@ namespace ATReforged
             Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
-            prelist.EnumSelector("MHC_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null, onChange: ResetCachedExpand);
+            prelist.EnumSelector("MHC_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null);
             prelist.GapLine();
 
             prelist.End();
@@ -171,31 +148,6 @@ namespace ATReforged
                     if (androidsHaveGenders && androidsPickGenders)
                     {
                         listingStandard.SliderLabeled("ATR_AndroidsGenderRatio".Translate(), ref androidsGenderRatio, 0.0f, 1.0f, displayMult: 100, onChange: onChange);
-                    }
-                    listingStandard.GapLine();
-
-                    // ANDROID FACTION SETTINGS
-                    listingStandard.CheckboxLabeled("ATR_AndroidFactionsNeverFlee".Translate(), ref androidFactionsNeverFlee, onChange: onChange);
-                    listingStandard.GapLine();
-
-                    // RIGHTS SETTINGS
-
-                    listingStandard.CheckboxLabeled("ATR_factionsWillDeclareRightsWars".Translate(), ref factionsWillDeclareRightsWars, tooltip: "ATR_factionsWillDeclareRightsWarsDesc".Translate(), onChange: onChange);
-                    if (factionsWillDeclareRightsWars && listingStandard.ButtonText("MHC_ExpandMenu".Translate()))
-                    {
-                        cachedExpandFirst = !cachedExpandFirst;
-                    }
-                    if (factionsWillDeclareRightsWars && cachedExpandFirst)
-                    {
-                        listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiMechanicalRightsFaction, "ATR_SettingsAntiMechanicalFaction".Translate(), "ATR_SettingsTolerateMechanicalFaction".Translate(), onChange);
-                        listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiOrganicRightsFaction, "ATR_SettingsAntiOrganicFaction".Translate(), "ATR_SettingsTolerateOrganicFaction".Translate(), onChange);
-                    }
-                    if (factionsWillDeclareRightsWars)
-                    {
-                        listingStandard.CheckboxLabeled("ATR_dronesTriggerRightsWars".Translate(), ref dronesTriggerRightsWars, onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_prisonersTriggerRightsWars".Translate(), ref prisonersTriggerRightsWars, onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_slavesTriggerRightsWars".Translate(), ref slavesTriggerRightsWars, onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_surrogatesTriggerRightsWars".Translate(), ref surrogatesTriggerRightsWars, onChange: onChange);
                     }
                     listingStandard.GapLine();
                     break;
@@ -293,18 +245,6 @@ namespace ATReforged
             androidsFixedGender = 0;
             androidsGenderRatio = 0.5f;
 
-            // Android Factions
-            androidFactionsNeverFlee = false;
-
-            // Rights
-            factionsWillDeclareRightsWars = true;
-            antiMechanicalRightsFaction = new HashSet<string> { "Empire" };
-            antiOrganicRightsFaction = new HashSet<string> { "ATR_MechanicalMarauders" };
-            dronesTriggerRightsWars = true;
-            prisonersTriggerRightsWars = false;
-            slavesTriggerRightsWars = true;
-            surrogatesTriggerRightsWars = true;
-
             // SECURITY SETTINGS
             enemyHacksOccur = true;
             chanceAlliesInterceptHack = 0.05f;
@@ -323,7 +263,7 @@ namespace ATReforged
             surrogatesAllowed = true;
             otherFactionsAllowedSurrogates = true;
             minGroupSizeForSurrogates = 5;
-            minSurrogatePercentagePerLegalGroup = 0.2f;
+            minSurrogatePercentagePerLegalGroup = 0.0f;
             maxSurrogatePercentagePerLegalGroup = 0.7f;
             displaySurrogateControlIcon = true;
             safeSurrogateConnectivityCountBeforePenalty = 1;
@@ -377,18 +317,6 @@ namespace ATReforged
             Scribe_Values.Look(ref androidsFixedGender, "ATR_androidsFixedGender", Gender.None);
             Scribe_Values.Look(ref androidsGenderRatio, "ATR_androidsGenderRatio", 0.5f);
 
-            // Android Factions
-            Scribe_Values.Look(ref androidFactionsNeverFlee, "ATR_androidFactionsNeverFlee", false);
-
-            // Rights
-            Scribe_Values.Look(ref factionsWillDeclareRightsWars, "ATR_factionsWillDeclareRightsWars", true);
-            Scribe_Collections.Look(ref antiMechanicalRightsFaction, "ATR_antiMechanicalRightsFaction", LookMode.Value);
-            Scribe_Collections.Look(ref antiOrganicRightsFaction, "ATR_antiOrganicRightsFaction", LookMode.Value);
-            Scribe_Values.Look(ref dronesTriggerRightsWars, "ATR_dronesTriggerRightsWars", true);
-            Scribe_Values.Look(ref prisonersTriggerRightsWars, "ATR_prisonersTriggerRightsWars", false);
-            Scribe_Values.Look(ref slavesTriggerRightsWars, "ATR_slavesTriggerRightsWars", true);
-            Scribe_Values.Look(ref surrogatesTriggerRightsWars, "ATR_surrogatesTriggerRightsWars", true);
-
             /* === SECURITY === */
 
             // Hostile Hacks
@@ -410,7 +338,7 @@ namespace ATReforged
             Scribe_Values.Look(ref surrogatesAllowed, "ATR_surrogatesAllowed", true);
             Scribe_Values.Look(ref otherFactionsAllowedSurrogates, "ATR_otherFactionsAllowedSurrogates", true);
             Scribe_Values.Look(ref minGroupSizeForSurrogates, "ATR_minGroupSizeForSurrogates", 5);
-            Scribe_Values.Look(ref minSurrogatePercentagePerLegalGroup, "ATR_minSurrogatePercentagePerLegalGroup", 0.2f);
+            Scribe_Values.Look(ref minSurrogatePercentagePerLegalGroup, "ATR_minSurrogatePercentagePerLegalGroup", 0.0f);
             Scribe_Values.Look(ref maxSurrogatePercentagePerLegalGroup, "ATR_maxSurrogatePercentagePerLegalGroup", 0.7f);
             Scribe_Values.Look(ref displaySurrogateControlIcon, "ATR_displaySurrogateControlIcon", true);
             Scribe_Values.Look(ref safeSurrogateConnectivityCountBeforePenalty, "ATR_safeSurrogateConnectivityCountBeforePenalty", 1);

@@ -10,25 +10,10 @@
         <techLevel>Industrial</techLevel>
         <prerequisites>
             <li>MicroelectronicsBasics</li>
-            <li>ATR_UtilityBiomimetics</li>
-			<li>ATR_T1Androids</li>
+			<li>ATR_MechanicalInsight</li>
         </prerequisites>
         <researchViewX>2</researchViewX>
         <researchViewY>2.5</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>ATR_MassCharging</defName>
-        <label>Charging station</label>
-        <tab>ATR_MechResearch</tab>
-        <description>In order to maximize charging and space efficiency for industrial applications, an effective way to charge a number of mechanical units simultaneously must be developed. A small charging port that can charge 8 at a time could prove essential to expansion.</description>
-        <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <prerequisites>
-            <li>ATR_MechanicalStandardization</li>
-        </prerequisites>
-        <researchViewX>3</researchViewX>
-        <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -43,21 +28,6 @@
         </prerequisites>
 		<researchViewX>3</researchViewX>
 		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ATR_MilitaryBiomimetics</defName>
-		<label>Military biomimetics</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Iterating upon utility biomimetics, this research delves into military applications. Significantly more complicated than copying mere domesticated farm animals, militarization can lead to miniature swarm drones, mechanical hounds, or more experimental adaptations.</description>
-		<baseCost>1400</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-            <li>ATR_UtilityBiomimetics</li>
-            <li>ATR_MechanicalStandardization</li>
-        </prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>3.2</researchViewY>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -128,24 +98,6 @@
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
 		<researchViewX>5</researchViewX>
 		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ATR_T2Androids</defName>
-		<label>T2 androids</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
-		<baseCost>2000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-            <li>ATR_MechanicalStandardization</li>
-            <li>Fabrication</li>
-        </prerequisites>
-		<researchViewX>5</researchViewX>
-		<researchViewY>2</researchViewY>
-        <requiredResearchFacilities>
-            <li>MultiAnalyzer</li>
-        </requiredResearchFacilities>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>

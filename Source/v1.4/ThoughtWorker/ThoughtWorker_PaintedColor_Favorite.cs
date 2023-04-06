@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using MechHumanlikes;
+using RimWorld;
 using Verse;
 
 namespace ATReforged
@@ -7,7 +8,7 @@ namespace ATReforged
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (p.story?.favoriteColor.HasValue == true && Utils.IsConsideredMechanicalAndroid(p))
+            if (p.story?.favoriteColor.HasValue == true && MHC_Utils.IsConsideredMechanicalSapient(p))
             {
                 return p.story?.favoriteColor.Value == p.story?.SkinColorBase;
             }

@@ -14,5 +14,6 @@ namespace ATReforged
         public static BackstoryDef ATR_MechAdulthoodBlank;
 
         public static BackstoryDef ATR_NewbootChildhood;
+        public static BackstoryDef ATR_NewbootAdulthood;
     }
 }

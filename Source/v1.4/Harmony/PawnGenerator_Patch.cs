@@ -1,6 +1,7 @@
 ﻿using Verse;
 using HarmonyLib;
 using System;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -35,7 +36,7 @@ namespace ATReforged
                 try
                 {
                     // All androids that need cores (by def extension) receive one by default. Cases where that is not desired can remove it there.
-                    if (Utils.IsConsideredMechanicalAndroid(__result) && __result.def.GetModExtension<ATR_AndroidExtension>()?.needsCoreAsAndroid == true)
+                    if (Utils.IsConsideredMechanicalAndroid(__result) && MHC_Utils.IsConsideredMechanicalSapient(__result))
                     {
                         __result.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                     }

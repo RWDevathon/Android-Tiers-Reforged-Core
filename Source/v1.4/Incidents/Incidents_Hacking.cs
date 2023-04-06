@@ -12,7 +12,7 @@ namespace ATReforged
         private string letterText;
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return ATReforged_Settings.enemyHacksOccur && !Utils.IsSolarFlarePresent() && HasIncidentToFire();
+            return ATReforged_Settings.enemyHacksOccur && !Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare) && HasIncidentToFire();
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -430,18 +430,21 @@ namespace ATReforged
 
         // Internal Functions to use in incidents
 
+        // Send a letter, defaulting to defense success if no parameters are provided.
         private void SendLetter(LetterDef letter, string label, string text, LookTargets lookTargets = null)
-        { // Send a letter, defaulting to defense success if no parameters are provided.
+        { 
             Find.LetterStack.ReceiveLetter(label, text, letter ?? LetterDefOf.NeutralEvent, lookTargets);
         }
 
+        // Generates the attack strength as the baseStrength times a random percentage value between the lower and upper bound modifiers. IE. 100, 1, 4 == 100 * (100% ~ 400%).
         private float GenerateAttackStrength(float baseStrength, float lowerBoundModifier, float upperBoundModifier)
-        { // Generates the attack strength as the baseStrength times a random percentage value between the lower and upper bound modifiers. IE. 100, 1, 4 == 100 * (100% ~ 400%).
+        {
             return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier) * ATReforged_Settings.enemyHackAttackStrengthModifier;
         }
 
+        // Check if the defense was successful. If it was, send an appropriate letter. If not, inform the caller of the failed defense.
         private bool HandleDefenseSuccessful(float defenseStrength, float attackStrength, float damageModifier, string interceptTitle = "ATR_IncidentGenericAllyIntercept", string label = null, string text = null)
-        { // Check if the defense was successful. If it was, send an appropriate letter. If not, inform the caller of the failed defense.
+        {
             bool defenseSuccessful = false;
 
             if (defenseStrength >= attackStrength)
@@ -461,9 +464,10 @@ namespace ATReforged
             return defenseSuccessful;
         }
 
+        // Check if allies intercepted a hacking attempt. Each allied faction has a 5% of being in a position to catch and stop an attack. If it does, it gives the player a portion of the attack strength as free points.
         private bool HandleAlliesIntercept(float attackStrength, string interceptTitle)
-        { // Check if allies intercepted a hacking attempt. Each allied faction has a 5% of being in a position to catch and stop an attack. If it does, it gives the player 25% of the attack strength as free points.
-            IEnumerable<Faction> alliedValidFactions = Find.FactionManager.GetFactions().Where(targetFaction => Utils.FactionCanUseSkyMind(targetFaction.def) && targetFaction.PlayerRelationKind == FactionRelationKind.Ally);
+        {
+            IEnumerable<Faction> alliedValidFactions = Find.FactionManager.GetFactions().Where(targetFaction => (targetFaction.def.GetModExtension<ATR_FactionExtension>()?.canUseOrganicSurrogates == true || targetFaction.def.GetModExtension<ATR_FactionExtension>()?.canUseMechanicalSurrogates == true) && targetFaction.PlayerRelationKind == FactionRelationKind.Ally);
 
             foreach (Faction faction in alliedValidFactions)
             { // Allied factions each have a percentage chance (settings) of catching the attack and being in a position to prevent it. 

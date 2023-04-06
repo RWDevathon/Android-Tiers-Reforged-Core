@@ -5,6 +5,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 using Verse.Sound;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -45,35 +46,32 @@ namespace ATReforged
             Pawn innerPawn = Corpse.InnerPawn;
 
             // Legal to resurrect pawns with this if they are considered mechanical.
-            if (Utils.IsConsideredMechanical(innerPawn))
+            if (MHC_Utils.IsConsideredMechanical(innerPawn))
             {
                 // Drone Resurrection Kits may only resurrect drone units (simple-minded) or animal units.
-                if (Item.def.defName == "ATR_DroneResurrectorKit" && Utils.IsConsideredMechanicalAndroid(innerPawn))
+                if (Item.def.defName == "ATR_DroneResurrectorKit" && MHC_Utils.IsConsideredMechanicalSapient(innerPawn))
                 {
                     Messages.Message("ATR_ResurrectionFailedDroneOnly".Translate(innerPawn).CapitalizeFirst(), innerPawn, MessageTypeDefOf.RejectInput, true);
                     return;
                 }
 
                 // Apply the long reboot (24 hours) to the pawn. This will ensure hostile units can be safely captured, and that friendly units can't be reactivated mid-combat.
-                Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, innerPawn);
+                Hediff rebootHediff = HediffMaker.MakeHediff(MHC_HediffDefOf.MHC_Restarting, innerPawn);
                 innerPawn.health.AddHediff(rebootHediff);
 
                 bool shouldbeBlank = false;
                 // Androids have a special consideration attached: if the Core is destroyed, then the dead pawn is blank upon resurrection.
-                if (Utils.IsConsideredMechanicalAndroid(innerPawn))
+                if (Utils.IsConsideredMechanicalAndroid(innerPawn) && MHC_Utils.IsConsideredMechanicalSapient(innerPawn) && innerPawn.health.hediffSet.GetBrain() == null)
                 {
-                    // Dead surrogates originating from other factions should no longer be considered foreign. Surrogates are already blank when dead, no additional checks needed.
-                    if (Utils.IsSurrogate(innerPawn))
-                    {
-                        CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
-                        if (targetComp.isForeign)
-                            targetComp.isForeign = false;
-                    }
-                    // If the android is missing their consciousness source, they should be blank upon revival.
-                    else if (innerPawn.def.GetModExtension<ATR_MechTweaker>()?.needsCoreAsAndroid == true && innerPawn.health.hediffSet.GetBrain() == null)
-                    {
-                        shouldbeBlank = true;
-                    }
+                    shouldbeBlank = true;
+                }
+
+                // Dead surrogates originating from other factions should no longer be considered foreign. Surrogates are already blank when dead, no additional checks needed.
+                if (Utils.IsSurrogate(innerPawn))
+                {
+                    CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
+                    if (targetComp.isForeign)
+                        targetComp.isForeign = false;
                 }
 
                 // This kit executes a full resurrection which removes all negative hediffs.

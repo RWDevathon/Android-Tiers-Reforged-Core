@@ -109,7 +109,7 @@ namespace ATReforged
             if (Utils.IsSurrogate(ThisPawn))
             {
                 //Organic surrogates may receive downloads from the pawn they are connected to in the SkyMind network.
-                if (!Utils.IsConsideredMechanicalAndroid(ThisPawn) && HasSurrogate())
+                if (!MHC_Utils.IsConsideredMechanical(ThisPawn) && HasSurrogate())
                 {
                     Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
@@ -268,7 +268,7 @@ namespace ATReforged
                     if (surrogatePawns.Count == 1)
                     {
                         Pawn surrogate = surrogatePawns.FirstOrFallback();
-                        if (!Utils.IsConsideredMechanicalAndroid(surrogate))
+                        if (!MHC_Utils.IsConsideredMechanical(surrogate))
                         {
                             yield return new Command_Action
                             {
@@ -369,7 +369,7 @@ namespace ATReforged
                     }
 
                     // All pawns undergo a system reboot upon successful completion of an operation.
-                    Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, ThisPawn, null);
+                    Hediff hediff = HediffMaker.MakeHediff(MHC_HediffDefOf.MHC_Restarting, ThisPawn, null);
                     hediff.Severity = 1f;
                     ThisPawn.health.AddHediff(hediff, null, null);
 
@@ -381,7 +381,7 @@ namespace ATReforged
                     // Recipients lose any MindOperation hediffs as well and also reboot.
                     if (recipientPawn != null)
                     {
-                        recipientPawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        recipientPawn.health.AddHediff(MHC_HediffDefOf.MHC_Restarting);
                         target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation);
                         if (target != null)
                             recipientPawn.health.RemoveHediff(target);
@@ -639,20 +639,20 @@ namespace ATReforged
                     // Disconnect the surrogate to sever the connection, then duplicate this pawn into the surrogate.
                     Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
                     Utils.Duplicate(ThisPawn, recipientPawn, false, false);
-                    // Duplication may only occur via operation on organic surrogates. Remove the receiver (burns out), remove no host hediff.
-                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
-                    if (target != null)
-                        recipientPawn.health.RemoveHediff(target);
-                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_NoController);
-                    if (target != null)
-                        recipientPawn.health.RemoveHediff(target);
+                    // Duplication may only occur via operation on organic surrogates. Remove all implants considered receivers (burns out), remove no host hediff.
+                    List<Hediff> targetHediffs = new List<Hediff>();
+                    recipientPawn.health.hediffSet.GetHediffs(ref targetHediffs, hediff => hediff.def.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true || hediff.def == ATR_HediffDefOf.ATR_NoController);
+                    for (int i = targetHediffs.Count - 1; i >= 0; i--)
+                    {
+                        recipientPawn.health.RemoveHediff(targetHediffs[i]);
+                    }
                 }
                 // Download, insert of a copy of the recipient pawn into the current pawn. After, destroy the recipient's intelligence.
                 // For androids, this means becoming a blank. For humans, a wild person. For SkyMind intelligences, ceasing to exist.
                 else if (status == 4)
                 {
                     // Organic pawns that have been downloaded into should lose some hediffs and disconnect from the network.
-                    if (!Utils.IsConsideredMechanicalAndroid(ThisPawn))
+                    if (!MHC_Utils.IsConsideredMechanical(ThisPawn))
                     {
                         Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                         target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
@@ -731,14 +731,22 @@ namespace ATReforged
                 // Remove any Hediffs the game may have applied when generating the clone - this is to avoid weird hediffs appearing that may cause unexpected behavior.
                 clone.health.RemoveAllHediffs();
 
-                // It should however have an Autonomous Core or Transceiver hediff, as this allows it to be SkyMind capable (which it definitely is).
-                if (Utils.IsConsideredMechanicalAndroid(ThisPawn))
+                // It should however have a SkyMind capable implant if its race does not confer it automatically.
+                ATR_PawnExtension pawnExtension = clone.def.GetModExtension<ATR_PawnExtension>();
+                if (pawnExtension?.canInherentlyUseSkyMind != true)
                 {
-                    clone.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
-                }
-                else
-                {
-                    clone.health.AddHediff(ATR_HediffDefOf.ATR_SkyMindTransceiver, clone.health.hediffSet.GetBrain());
+                    if (pawnExtension?.defaultTransceiverImplant != null)
+                    {
+                        clone.health.AddHediff(pawnExtension.defaultTransceiverImplant, clone.health.hediffSet.GetBrain());
+                    }
+                    else if (Utils.IsConsideredMechanicalAndroid(clone))
+                    {
+                        clone.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
+                    }
+                    else if (!MHC_Utils.IsConsideredMechanical(clone))
+                    {
+                        clone.health.AddHediff(ATR_HediffDefOf.ATR_SkyMindTransceiver, clone.health.hediffSet.GetBrain());
+                    }
                 }
 
                 // Duplicate the intelligence of this pawn into the clone (not murder) and add them to the SkyMind network.

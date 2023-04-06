@@ -13,7 +13,6 @@ Android Tiers Reforged is a total rework of Atlas' and ARandomKiwi's works imple
 * The ability to use a SkyMind network to upload, download, permute, or replicate pawn consciousnesses into new mechanical - or organic - bodies.
 * A fully functioning Skill, Security, and Hacking server system to allow for giving pawns xp or passions, and hacking other factions for gains - with defenses against their own attacks.
 * A full research tree to delve into a more mechanized future.
-* New security options such as launching or laying traps of swarms of microscythers for unwary raiders.
 * A vast swath of new mechanical specific hediffs, body parts, diseases, and implants.
 
 ## Known Issues / Incompatibilities

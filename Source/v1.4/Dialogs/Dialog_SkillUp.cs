@@ -2,7 +2,7 @@
 using RimWorld;
 using UnityEngine;
 using System.Collections.Generic;
-using static ATReforged.ListingExtensions;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -126,7 +126,7 @@ namespace ATReforged
                 
                 // Cut the current section in half to make space for adding points and passions to be side by side under their skill.
                 var subsection = listingStandard.BeginHiddenSection(out float subsectionHeight);
-                subsection.ColumnWidth = (maxWidth - ColumnGap) / 2;
+                subsection.ColumnWidth = (maxWidth - ListingExtensions.ColumnGap) / 2;
 
                 // Section for purchasing raw xp, a number of skill points for that number of points * Settings modifier. Affected by vanilla (or patched by mod) learning speed effects.
                 if (subsection.ButtonText("ATR_AddSkillPoints".Translate(skillDefTranslationList[i])))

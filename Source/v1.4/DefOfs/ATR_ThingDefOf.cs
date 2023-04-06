@@ -12,8 +12,6 @@ namespace ATReforged
             DefOfHelper.EnsureInitializedInCtor(typeof(ATR_ThingDefOf));
         }
 
-        public static ThingDef ATR_FractalPill;
-
         public static ThingDef ATR_MindOperationAttachedMote;
     }
 

@@ -23,7 +23,7 @@
 			<drugCategory>Medical</drugCategory>
 			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
-				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+				<li Class="MechHumanlikes.IngestionOutcomeDoer_MechOrganicSplitEffects">
 					<organicEffect>ATR_Toxicated</organicEffect>
                     <organicSeverity>1</organicSeverity>
 					<mechanicalEffect>ATR_MechaniteSurge</mechanicalEffect>

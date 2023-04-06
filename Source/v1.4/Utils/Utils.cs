@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
-using Verse.AI;
 using HarmonyLib;
 using RimWorld.Planet;
 using System.Linq;
@@ -14,13 +13,9 @@ namespace ATReforged
     public static class Utils
     {
         // GENERAL UTILITIES
-        // Return a new Gender for a mechanical pawn, based on settings and on the pawn kind.
+        // Return a new Gender for a mechanical pawn, based on settings. This should only be called for androids.
         public static Gender GenerateGender(PawnKindDef pawnKind)
         {
-            // Only mechanical androids have proper genders. Mechanical drones and animals never have gender.
-            if (!IsConsideredMechanicalAndroid(pawnKind.race))
-                return Gender.None;
-
             // If androids are not allowed to have genders by setting, then set to none.
             if (!ATReforged_Settings.androidsHaveGenders)
                 return Gender.None;
@@ -37,49 +32,24 @@ namespace ATReforged
                 return Gender.Female;
         }
 
-        public static bool IsConsideredMechanical(Pawn pawn)
-        {
-            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def.defName);
-        }
-
-        public static bool IsConsideredMechanical(ThingDef thingDef)
-        {
-            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef.defName);
-        }
-
-        public static bool IsConsideredMechanicalAnimal(Pawn pawn)
-        {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def.defName);
-        }
-
-        public static bool IsConsideredMechanicalAnimal(ThingDef thingDef)
-        {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef.defName);
-        }
-
         public static bool IsConsideredMechanicalAndroid(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def.defName);
+            return IsConsideredMechanicalAndroid(pawn.def);
         }
 
         public static bool IsConsideredMechanicalAndroid(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef.defName);
-        }
-
-        public static bool IsSolarFlarePresent()
-        {
-            return Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare);
+            return thingDef.GetModExtension<ATR_PawnExtension>()?.isAndroid == true;
         }
 
         /* === HEALTH UTILITIES === */
 
         /* === CONNECTIVITY UTILITIES === */
 
-        // If a pawn's Def Extension allows it to use the SkyMind network or it has a hediff that allows it (via a comp bool), return true.
+        // If a pawn's Def Extension allows it to use the SkyMind network or it has a hediff that allows it (via a defModExtension bool), return true.
         public static bool HasCloudCapableImplant(Pawn pawn)
         {
-            if (pawn.def.GetModExtension<ATR_AndroidExtension>()?.canInherentlyUseSkyMind == true)
+            if (pawn.def.GetModExtension<ATR_PawnExtension>()?.canInherentlyUseSkyMind == true)
             {
                 return true;
             }
@@ -87,30 +57,24 @@ namespace ATReforged
             List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
             for (int i = pawnHediffs.Count - 1; i >= 0; i--)
             {
-                if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.AllowsSkyMindConnection == true)
+                if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.allowsConnection == true)
                     return true;
             }
             return false;
         }
 
-        // Returns true if the pawn has a Hediff that acts as a receiver via the SkyMindEffecter comp marking it as one.
+        // Returns true if the pawn has a Hediff that acts as a receiver via the ATR_SkyMindHediffExtension extension marking it as one.
         public static bool IsSurrogate(Pawn pawn)
         {
             List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
             for (int i = pawnHediffs.Count - 1; i >= 0; i--)
             {
-                if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.IsReceiver == true)
+                if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true)
                     return true;
             }
             return false;
         }
-
-        public static bool FactionCanUseSkyMind(FactionDef factionDef)
-        {
-            return ATReforged_Settings.factionsUsingSkyMind.Contains(factionDef.defName);
-        }
-
-
+        
         // Misc
         // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
         public static void ApplySkyMindAttack(IEnumerable<Pawn> victims = null, ThoughtDef forVictim = null, ThoughtDef forWitness = null)
@@ -209,9 +173,6 @@ namespace ATReforged
             gameComp.blankPawn = blankMechanical;
             return gameComp.blankPawn;
         }
-
-        // RESERVED UTILITIES, INTERNAL USE ONLY
-        public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "ATR_PlayerAndroidFaction", "ATR_AndroidUnion", "ATR_MechanicalMarauders" };
 
         // Utilities not available for direct player editing but not reserved by this mod
         public static ATR_GameComponent gameComp;
@@ -594,7 +555,7 @@ namespace ATReforged
             for (int i = targetHediffs.Count - 1; i >= 0; i--)
             {
                 Hediff hediff = targetHediffs[i];
-                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true)
+                if (hediff.def.GetModExtension<ATR_SkyMindHediffExtension>()?.blocksConnection == true)
                 {
                     return false;
                 }
@@ -772,7 +733,7 @@ namespace ATReforged
             }
 
             // Androids that become blanks should also lose their interface (if they have them) so that they're ready for a new intelligence.
-            if (IsConsideredMechanicalAndroid(pawn) && pawn.def.GetModExtension<ATR_AndroidExtension>()?.needsCoreAsAndroid == true)
+            if (IsConsideredMechanicalAndroid(pawn) && MHC_Utils.IsConsideredMechanicalSapient(pawn))
             {
                 pawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
                 Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
@@ -799,7 +760,7 @@ namespace ATReforged
                 List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
                 for (int i = pawnHediffs.Count - 1; i >= 0; i--)
                 {
-                    if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.AllowsSkyMindConnection == true)
+                    if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.allowsConnection == true)
                     {
                         pawnHediffs.RemoveAt(i);
                     }

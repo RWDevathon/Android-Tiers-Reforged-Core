@@ -2,6 +2,7 @@
 using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -19,12 +20,11 @@ namespace ATReforged
                     Thing thing = outThings[i];
                     if (thing is Pawn pawn)
                     {
-                        if (!Utils.IsConsideredMechanicalAndroid(pawn) && (pawn.Faction != null && Utils.ReservedAndroidFactions.Contains(pawn.Faction.def.defName) || pawn.Faction == null && Utils.ReservedAndroidFactions.Contains(Faction.OfPlayer.def.defName)))
+                        if (!MHC_Utils.IsConsideredMechanical(pawn) && (pawn.Faction != null && pawn.Faction.def.GetModExtension<ATR_FactionExtension>()?.membersShouldBeAndroids == true || pawn.Faction == null && Faction.OfPlayer.def.GetModExtension<ATR_FactionExtension>()?.membersShouldBeAndroids == true))
                         {
                             if (pawn.Faction != null)
                             {
                                 pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawn.Faction.def.basicMemberKind, pawn.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowFood: true));
-
                             }
                             else
                             {
@@ -34,9 +34,9 @@ namespace ATReforged
                             outThings.Replace(thing, pawn);
                         }
 
-                        if (Utils.IsConsideredMechanicalAndroid(pawn))
+                        if (MHC_Utils.IsConsideredMechanical(pawn))
                         {
-                            pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                            pawn.health.AddHediff(MHC_HediffDefOf.MHC_Restarting);
                         }
                     }
                 }

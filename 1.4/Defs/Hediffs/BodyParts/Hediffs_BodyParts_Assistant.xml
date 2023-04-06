@@ -231,12 +231,12 @@
 			<li>
 				<statOffsets>
 					<ButcheryMechanoidEfficiency>0.5</ButcheryMechanoidEfficiency>
-          			<ATR_MechanicalTendQuality>0.25</ATR_MechanicalTendQuality>
+          			<MHC_MechanicalTendQuality>0.25</MHC_MechanicalTendQuality>
 				</statOffsets>
                 <statFactors>
-					<ATR_MechanicalSurgerySuccessChance>1.2</ATR_MechanicalSurgerySuccessChance>
+					<MHC_MechanicalSurgerySuccessChance>1.2</MHC_MechanicalSurgerySuccessChance>
 					<ButcheryMechanoidSpeed>1.6</ButcheryMechanoidSpeed>
-                    <ATR_MechanicalTendSpeed>1.6</ATR_MechanicalTendSpeed>
+                    <MHC_MechanicalTendSpeed>1.6</MHC_MechanicalTendSpeed>
                 </statFactors>
 			</li>
 		</stages>

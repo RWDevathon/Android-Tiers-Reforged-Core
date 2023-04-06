@@ -1,6 +1,5 @@
 ﻿using Verse;
 using HarmonyLib;
-using RimWorld;
 
 namespace ATReforged
 {
@@ -13,29 +12,19 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Listener(ref Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
             {
-                if (__instance.kindDef == ATR_PawnKindDefOf.ATR_MicroScyther)
+                ATR_DetonateOnIncapacitation detonationExtension = __instance.def.GetModExtension<ATR_DetonateOnIncapacitation>();
+                if (detonationExtension == null)
                 {
-                    // Save details and destroy before doing the explosion to avoid the damage hitting the pawn, killing them again.
-                    if (!__instance.Destroyed)
-                    {
-                        IntVec3 tempPos = __instance.Position;
-                        Map tempMap = __instance.Map;
-                        __instance.Destroy();
-                        GenExplosion.DoExplosion(tempPos, tempMap, 0.3f, DamageDefOf.Bomb, __instance, 5);
-                    }
-                    return false;
+                    return true;
                 }
-                else if (__instance.kindDef == ATR_PawnKindDefOf.ATR_FractalAbomination)
+
+                // Save details and destroy before doing the explosion to avoid the damage hitting the pawn, killing them again.
+                if (!__instance.Destroyed)
                 {
-                    // Save details and destroy before doing the explosion to avoid the damage hitting the pawn, killing them again.
-                    if (!__instance.Destroyed)
-                    {
-                        IntVec3 tempPos = __instance.Position;
-                        Map tempMap = __instance.Map;
-                        __instance.Destroy();
-                        GenExplosion.DoExplosion(tempPos, tempMap, 2, DamageDefOf.Flame, __instance, 10);
-                        GenExplosion.DoExplosion(tempPos, tempMap, 0.5f, DamageDefOf.Bomb, __instance, 10, postExplosionSpawnThingDef: ATR_ThingDefOf.ATR_FractalPill, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1);
-                    }
+                    IntVec3 tempPos = __instance.Position;
+                    Map tempMap = __instance.Map;
+                    __instance.Destroy();
+                    GenExplosion.DoExplosion(tempPos, tempMap, detonationExtension.explosionRadius, detonationExtension.damageType, __instance, detonationExtension.damageAmount, postExplosionSpawnThingDef: detonationExtension.itemToSpawnOnDetonation, postExplosionSpawnChance: detonationExtension.itemToSpawnOnDetonation != null ? 1 : 0, postExplosionSpawnThingCount: detonationExtension.itemCountToSpawn);
                     return false;
                 }
                 return true;

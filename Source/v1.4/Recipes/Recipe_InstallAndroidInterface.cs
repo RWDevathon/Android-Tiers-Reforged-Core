@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Verse;
 using RimWorld;
+using MechHumanlikes;
 
 namespace ATReforged
 {
-    public class Recipe_InstallAndroidInterface : Recipe_InstallAndroidPart
+    public class Recipe_InstallAndroidInterface : Recipe_InstallMechanicalPart
     {
         // This recipe is specifically targetting the brain of a mechanical unit, so we only need to check if the brain is available (a slight optimization over checking fixed body parts).
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)

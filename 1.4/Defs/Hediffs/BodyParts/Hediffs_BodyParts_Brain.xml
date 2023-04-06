@@ -97,12 +97,12 @@
         <defName>ATR_AutonomousCore</defName>
         <label>Autonomous core</label>
         <description>This core is fully interfaced with an autonomous intelligence. Everything that makes up the intelligence is stored safely within this core, from which it is able to exert control over the rest of the chassis.</description>
-        <comps>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
                 <allowsConnection>true</allowsConnection>
                 <isTransceiver>true</isTransceiver>
-            </li>
-        </comps>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
@@ -126,12 +126,12 @@
                 </statFactors>
             </li>
         </stages>
-        <comps>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
                 <allowsConnection>true</allowsConnection>
                 <isReceiver>true</isReceiver>
-            </li>
-        </comps>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
@@ -156,12 +156,12 @@
                 </statFactors>
             </li>
         </stages>
-        <comps>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
                 <allowsConnection>true</allowsConnection>
                 <isReceiver>true</isReceiver>
-            </li>
-        </comps>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartCoreBase">
@@ -224,12 +224,12 @@
         <defName>ATR_SkyMindTransceiver</defName>
         <label>SkyMind Transceiver</label>
         <description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</description>
-        <comps>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
                 <allowsConnection>true</allowsConnection>
                 <isTransceiver>true</isTransceiver>
-            </li>
-        </comps>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartCoreBase">

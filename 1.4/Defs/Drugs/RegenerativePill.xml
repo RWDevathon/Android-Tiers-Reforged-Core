@@ -22,12 +22,12 @@
 			<drugCategory>Medical</drugCategory>
 			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
-				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+				<li Class="MechHumanlikes.IngestionOutcomeDoer_MechOrganicSplitEffects">
 					<organicEffect>ATR_RegenOrganic</organicEffect>
                     <organicSeverity>1</organicSeverity>
 					<mechanicalEffect>ATR_RegenMechanical</mechanicalEffect>
 					<mechanicalSeverity>1</mechanicalSeverity>
-				</li>      
+				</li>
 			</outcomeDoers>
 		</ingestible>
 		<recipeMaker>
@@ -141,7 +141,7 @@
 				<label>Regeneration (Moderate)</label>
 				<description>I feel extremely uncomfortable and strange. My body is sending my all sorts of warning signs.</description>
 				<baseMoodEffect>-8</baseMoodEffect>
-			</li>     
+			</li>
 			<li>
 				<label>Regeneration (Significant)</label>
 				<description>My whole body feels really wrong and weird - like my flesh is crawling.</description>
@@ -151,7 +151,7 @@
 				<label>Regeneration (Peak)</label>
 				<description>My body squirms, twists, burns, and twitches without my control! It feels like my body has a mind of its own!</description>
 				<baseMoodEffect>-16</baseMoodEffect>
-			</li>   
+			</li>
 		</stages>
 	</ThoughtDef>
 

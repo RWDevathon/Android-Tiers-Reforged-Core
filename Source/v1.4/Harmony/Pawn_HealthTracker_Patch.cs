@@ -1,8 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
 using RimWorld;
-using System;
-using RimWorld.Planet;
 
 namespace ATReforged
 {
@@ -25,7 +23,8 @@ namespace ATReforged
                     }
                 }
 
-                if (___pawn.kindDef == ATR_PawnKindDefOf.ATR_MicroScyther || ___pawn.kindDef == ATR_PawnKindDefOf.ATR_FractalAbomination)
+                // Pawns that should detonate on incapacitation die on being downed.
+                if (___pawn.def.HasModExtension<ATR_DetonateOnIncapacitation>())
                 {
                     ___pawn.Kill(dinfo, hediff);
                     return false;

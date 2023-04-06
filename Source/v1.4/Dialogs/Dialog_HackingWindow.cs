@@ -328,7 +328,7 @@ namespace ATReforged
                 List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
                 // Get a list of all other hostile factions technologically capable of using the SkyMind network
-                foreach (Faction targetFaction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.HostileTo(Faction.OfPlayer) && Utils.FactionCanUseSkyMind(faction.def)))
+                foreach (Faction targetFaction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.HostileTo(Faction.OfPlayer) && (faction.def.GetModExtension<ATR_FactionExtension>()?.canUseOrganicSurrogates == true || faction.def.GetModExtension<ATR_FactionExtension>()?.canUseMechanicalSurrogates == true)))
                 {
                     IEnumerable<Pawn> targetPawns = Find.CurrentMap.mapPawns.SpawnedPawnsInFaction(targetFaction).Where(pawn => Utils.HasCloudCapableImplant(pawn));
                     if (targetPawns.Any())
@@ -402,14 +402,13 @@ namespace ATReforged
             if (baseCost + cachedHackPenalty <= availableHackingPoints)
             {
                 // Cost slider
-                listingStandard.SliderLabeled(title, ref costModifier, baseCost + cachedHackPenalty, availableHackingPoints);
+                listingStandard.SliderLabeled(title, costModifier, baseCost + cachedHackPenalty, availableHackingPoints);
 
                 // Activation button displaying success chance.
                 if (listingStandard.ButtonText("ATR_SuccessChance".Translate(successChance * 100), operationDescription))
                 {
                     operation.Invoke();
                 }
-
             }
             else
                 listingStandard.Label("ATR_InsufficientPoints".Translate(baseCost + cachedHackPenalty));

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 using RimWorld;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -11,12 +12,12 @@ namespace ATReforged
         {
             HediffSet hediffSet = pawn.health.hediffSet;
             BodyPartRecord targetBodyPart = hediffSet.GetBrain();
-            if (targetBodyPart != null && !Utils.IsConsideredMechanical(pawn))
+            if (targetBodyPart != null && !MHC_Utils.IsConsideredMechanical(pawn))
             {
                 // If the pawn has any implant that allows SkyMind connection already, then we can not install another one. SkyMind implants are mutually exclusive.
                 for (int i = hediffSet.hediffs.Count - 1; i >= 0; i--)
                 {
-                    if (hediffSet.hediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.AllowsSkyMindConnection == true)
+                    if (hediffSet.hediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.allowsConnection == true)
                     {
                         yield break;
                     }
@@ -25,7 +26,7 @@ namespace ATReforged
                 // If Biotech is active, ensure the pawn does not have a mechlink if we are applying a receiver (surrogates can not be mechanitors)
                 if (ModLister.BiotechInstalled)
                 {
-                    if (recipe.addsHediff.CompProps<HediffCompProperties_SkyMindEffecter>().isReceiver && pawn.health.hediffSet.HasHediff(HediffDefOf.MechlinkImplant))
+                    if (recipe.addsHediff.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true && pawn.health.hediffSet.HasHediff(HediffDefOf.MechlinkImplant))
                     {
                         yield break;
                     }
@@ -45,7 +46,7 @@ namespace ATReforged
                 return;
 
             // There are special considerations for adding these implants. Receiver chips kill the current mind.
-            if (recipe.addsHediff.CompProps<HediffCompProperties_SkyMindEffecter>()?.isReceiver == true)
+            if (recipe.addsHediff.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true)
             {
                 Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
                 pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);

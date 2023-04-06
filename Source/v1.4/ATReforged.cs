@@ -2,7 +2,6 @@
 using System.Reflection;
 using Verse;
 using UnityEngine;
-using System.Collections.Generic;
 using RimWorld;
 
 namespace ATReforged
@@ -39,10 +38,6 @@ namespace ATReforged
         {
             ATReforged.settings = ATReforged.ModSingleton.GetSettings<ATReforged_Settings>();
             ATReforged.settings.StartupChecks();
-
-            // Patch android factions based on the appropriate settings.
-            DefDatabase<FactionDef>.GetNamedSilentFail("ATR_AndroidUnion").autoFlee = ATReforged_Settings.androidFactionsNeverFlee;
-            DefDatabase<FactionDef>.GetNamedSilentFail("ATR_MechanicalMarauders").autoFlee = ATReforged_Settings.androidFactionsNeverFlee;
 
             // Must dynamically modify some ThingDefs based on certain qualifications.
             foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)

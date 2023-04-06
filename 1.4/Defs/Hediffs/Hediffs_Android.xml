@@ -1,74 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Added body parts -->
-
-    <HediffDef>
-        <defName>ATR_ShutdownMechanical</defName>
-        <label>decommissioned</label>
-        <description>AI core shutdown.</description>
-        <initialSeverity>0</initialSeverity>
-        <lethalSeverity>0</lethalSeverity>
-        <defaultLabelColor>(0.4, 0.4, 0.4)</defaultLabelColor>
-        <scenarioCanAdd>false</scenarioCanAdd>
-    </HediffDef>
-
-    <HediffDef>
-        <defName>ATR_ShortReboot</defName>
-        <label>Rebooting</label>
-        <description>Unit is rebooting.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <initialSeverity>1</initialSeverity>
-        <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <isBad>false</isBad>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-24</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
-        </comps>
-        <stages>
-            <li>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <HediffDef>
-        <defName>ATR_LongReboot</defName>
-        <label>Restarting</label>
-        <description>Unit is currently undergoing full system restart.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <initialSeverity>1</initialSeverity>
-        <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <isBad>false</isBad>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
-        </comps>
-        <stages>
-            <li>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-        </stages>
-    </HediffDef>
-
     <HediffDef>
         <defName>ATR_RecoveringFromDDOS</defName>
         <label>DDOS Recovery</label>
@@ -79,9 +11,6 @@
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.25</severityPerDay>
-            </li>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
-                <blocksConnection>true</blocksConnection>
             </li>
         </comps>
         <stages>
@@ -97,6 +26,11 @@
                 </statOffsets>
             </li>
         </stages>
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
+                <blocksConnection>true</blocksConnection>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <HediffDef>
@@ -116,7 +50,7 @@
                 </capMods>
 		        <statOffsets>
 					<ComfyTemperatureMax>-10</ComfyTemperatureMax>
-                    <ATR_MaintenanceRetention>-0.25</ATR_MaintenanceRetention>
+                    <MHC_MaintenanceRetention>-0.25</MHC_MaintenanceRetention>
                 </statOffsets>
             </li>
         </stages>
@@ -132,9 +66,6 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.01</severityPerDay>
                 <showDaysToRecover>true</showDaysToRecover>
-            </li>
-            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
-                <blocksConnection>true</blocksConnection>
             </li>
         </comps>
         <stages>
@@ -237,6 +168,11 @@
                 </statOffsets>
             </li>
         </stages>
+		<modExtensions>
+			<li Class="ATReforged.ATR_SkyMindHediffExtension">
+                <blocksConnection>true</blocksConnection>
+			</li>
+		</modExtensions>
     </HediffDef>
 
     <HediffDef>

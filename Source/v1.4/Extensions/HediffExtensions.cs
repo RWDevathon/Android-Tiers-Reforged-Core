@@ -3,12 +3,9 @@ using Verse;
 
 namespace ATReforged
 {
-    public class HediffCompProperties_SkyMindEffecter : HediffCompProperties
+    // Mod extension for Hediffs to affect the pawn's ability to use the SkyMind network. These attributes are only used for humanlikes.
+    public class ATR_SkyMindHediffExtension : DefModExtension
     {
-        public HediffCompProperties_SkyMindEffecter()
-        {
-            compClass = typeof(HediffComp_SkyMindEffecter);
-        }
 
         // Marks the host hediff as something that allows connecting to the SkyMind network.
         public bool allowsConnection = false;
@@ -23,23 +20,18 @@ namespace ATReforged
         public bool isReceiver = false;
 
         // Some states are illegal and should not be allowed.
-        public override IEnumerable<string> ConfigErrors(HediffDef parentDef)
+        public override IEnumerable<string> ConfigErrors()
         {
             if (allowsConnection)
             {
                 if (blocksConnection)
                 {
-                    yield return "HediffDef " + parentDef + " has a HediffCompProperties_SkyMindEffecter with both allowing and blocking SkyMind connections.";
+                    yield return "A HediffDef was given an ATR_SkyMindHediffExtension that both allowed and blocked SkyMind connections.";
                 }
                 if (!(isTransceiver || isReceiver))
                 {
-                    yield return "HediffDef " + parentDef + " has a HediffCompProperties_SkyMindEffecter that allows SkyMind connection but is neither a transceiver nor receiver.";
+                    yield return "A HediffDef was given an ATR_SkyMindHediffExtension that allows SkyMind connection but is neither a transceiver nor receiver.";
                 }
-            }
-
-            foreach (string error in base.ConfigErrors(parentDef))
-            {
-                yield return error;
             }
         }
     }

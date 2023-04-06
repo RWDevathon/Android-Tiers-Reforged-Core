@@ -7,7 +7,7 @@
         <degreeDatas>
             <li>
                 <label>Loves Organics</label>
-                <description>{PAWN_nameDef} has a deep fondness toward all organic life, seeing them as the pinnacle of culture and existence. {PAWN_nameDef} aspires to be as organic as possible, whatever that means to them.</description>
+                <description>{PAWN_nameDef} has a deep fondness toward all organic life, seeing them as the pinnacle of culture and existence. {PAWN_nameDef} aspires to act as organic as possible, whatever that means to them.</description>
                 <degree>1</degree>
             </li>
             <li>

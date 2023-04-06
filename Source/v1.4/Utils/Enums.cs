@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ATReforged
+﻿namespace ATReforged
 {
     public enum ATR_OptionsTab { General, Security, Connectivity }
 

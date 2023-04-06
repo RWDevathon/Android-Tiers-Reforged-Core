@@ -3,6 +3,7 @@ using Verse;
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -48,12 +49,6 @@ namespace ATReforged
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
-                            // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
-                            Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
-                            if (target != null)
-                            {
-                                newIntelligence.health.RemoveHediff(target);
-                            }
                             Close();
                         }));
                     }
@@ -63,12 +58,6 @@ namespace ATReforged
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
-                            // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
-                            Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
-                            if (target != null)
-                            {
-                                newIntelligence.health.RemoveHediff(target);
-                            }
                             Close();
                         }));
                     }
@@ -85,16 +74,15 @@ namespace ATReforged
                 PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
                 newPawn.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
+                newPawn.story.Adulthood = ATR_BackstoryDefOf.ATR_NewbootAdulthood;
                 Utils.Duplicate(newPawn, newIntelligence, false, false);
-                Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, newIntelligence, null);
-                rebootHediff.Severity = 1;
-                newIntelligence.health.AddHediff(rebootHediff);
-                // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
-                Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
-                if (target != null)
+                Hediff rebootHediff = newIntelligence.health.hediffSet.GetFirstHediffOfDef(MHC_HediffDefOf.MHC_Restarting);
+                if (rebootHediff == null)
                 {
-                    newIntelligence.health.RemoveHediff(target);
+                    rebootHediff = HediffMaker.MakeHediff(MHC_HediffDefOf.MHC_Restarting, newIntelligence, null);
+                    newIntelligence.health.AddHediff(rebootHediff);
                 }
+                rebootHediff.Severity = 1;
 
                 // Allow the player to pick a few passions and a trait for the new android, akin to child growth moments in Biotech.
                 if (ModLister.BiotechInstalled)

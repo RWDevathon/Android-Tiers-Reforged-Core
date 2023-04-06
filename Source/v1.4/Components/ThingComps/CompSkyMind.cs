@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Text;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -124,7 +125,7 @@ namespace ATReforged
                     // Release hacked pawn. Remove Mind Operation hediff and reboot.
                     if (parent is Pawn pawn)
                     { 
-                        Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
+                        Hediff hediff = HediffMaker.MakeHediff(MHC_HediffDefOf.MHC_Restarting, pawn, null);
                         hediff.Severity = 0.75f;
                         pawn.health.AddHediff(hediff, null, null);
                         hediff = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation);

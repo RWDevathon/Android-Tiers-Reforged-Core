@@ -10,17 +10,12 @@ namespace ATReforged
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(ATR_HediffDefOf));
         }
-        public static HediffDef ATR_FractalPillOrganic;
 
         public static HediffDef ATR_StasisPill;
 
         public static HediffDef ATR_RemainingCharge;
 
         public static HediffDef ATR_RecoveringFromDDOS;
-
-        public static HediffDef ATR_ShortReboot;
-
-        public static HediffDef ATR_LongReboot;
 
         public static HediffDef ATR_MemoryCorruption;
 

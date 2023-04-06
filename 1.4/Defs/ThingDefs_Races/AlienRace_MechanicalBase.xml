@@ -26,18 +26,12 @@
 				<allowHumanBios>false</allowHumanBios>
 				<maxDamageForSocialfight>20</maxDamageForSocialfight>
 				<immuneToAge>false</immuneToAge>
-                <notXenophobistTowards>
-                    <li>ATR_Tier1Android</li>
-                    <li>ATR_Tier2Android</li>
-                    <li>ATR_Tier3Android</li>
-                    <li>ATR_Tier4Android</li>
-                </notXenophobistTowards>
+                <notXenophobistTowards />
 				<alienPartGenerator>
 					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
                     <bodyTypes>
                         <li>Male</li>
                         <li>Female</li>
-                        <!--<li>None</li>-->
                     </bodyTypes>
                     <colorChannels Inherit="False">
 						<li>

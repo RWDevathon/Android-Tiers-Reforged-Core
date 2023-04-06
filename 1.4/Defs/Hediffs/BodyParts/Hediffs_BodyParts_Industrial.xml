@@ -287,10 +287,10 @@
                     <MedicalOperationSpeed>0.45</MedicalOperationSpeed>
                     <MedicalTendQuality>0.15</MedicalTendQuality>
                     <MedicalSurgerySuccessChance>0.05</MedicalSurgerySuccessChance>
-                    <ATR_MechanicalTendSpeed>0.45</ATR_MechanicalTendSpeed>
-                    <ATR_MechanicalOperationSpeed>0.45</ATR_MechanicalOperationSpeed>
-                    <ATR_MechanicalTendQuality>0.15</ATR_MechanicalTendQuality>
-                    <ATR_MechanicalSurgerySuccessChance>0.05</ATR_MechanicalSurgerySuccessChance>
+                    <MHC_MechanicalTendSpeed>0.45</MHC_MechanicalTendSpeed>
+                    <MHC_MechanicalOperationSpeed>0.45</MHC_MechanicalOperationSpeed>
+                    <MHC_MechanicalTendQuality>0.15</MHC_MechanicalTendQuality>
+                    <MHC_MechanicalSurgerySuccessChance>0.05</MHC_MechanicalSurgerySuccessChance>
 				</statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>1.05</IncomingDamageFactor>
@@ -560,7 +560,7 @@
         </addedPartProps>
     </HediffDef>
 
-    <RecipeDef ParentName="ATR_surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanicalBase">
 		<defName>ATR_Install_MakeshiftReplacementLeg</defName>
 		<label>Install makeshift mechanical leg</label>
 		<description>Installs a makeshift mechanical leg.</description>
@@ -569,12 +569,6 @@
         <skillRequirements>
             <Crafting>2</Crafting>
         </skillRequirements>
-        <recipeUsers>
-            <li>ATR_Tier1Android</li>
-            <li>ATR_Tier2Android</li>
-            <li>ATR_Tier3Android</li>
-            <li>ATR_Tier4Android</li>
-        </recipeUsers>
 		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
 		<ingredients>
 			<li>
@@ -632,7 +626,7 @@
         </addedPartProps>
     </HediffDef>
 
-    <RecipeDef ParentName="ATR_surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanicalBase">
 		<defName>ATR_Install_MakeshiftReplacementArm</defName>
 		<label>Install makeshift mechanical arm</label>
 		<description>Installs a makeshift mechanical arm.</description>
@@ -641,12 +635,6 @@
         <skillRequirements>
             <Crafting>2</Crafting>
         </skillRequirements>
-        <recipeUsers>
-            <li>ATR_Tier1Android</li>
-            <li>ATR_Tier2Android</li>
-            <li>ATR_Tier3Android</li>
-            <li>ATR_Tier4Android</li>
-        </recipeUsers>
 		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
 		<ingredients>
 			<li>

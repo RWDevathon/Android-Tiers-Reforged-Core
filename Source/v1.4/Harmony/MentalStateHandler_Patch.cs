@@ -3,6 +3,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse.AI;
 using System.Collections.Generic;
+using MechHumanlikes;
 
 namespace ATReforged
 {
@@ -44,7 +45,7 @@ namespace ATReforged
                     if (!stateDef.IsExtreme)
                     {
                         controller.needs.mood?.thoughts?.memories?.TryGainMemoryFast(ATR_ThoughtDefOf.ATR_SurrogateMentalBreak);
-                        ___pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        ___pawn.health.AddHediff(MHC_HediffDefOf.MHC_Restarting);
                         Find.LetterStack.ReceiveLetter("ATR_SurrogateSufferedMentalState".Translate(), "ATR_SurrogateSufferedMentalStateDesc".Translate(), LetterDefOf.NegativeEvent);
 
                     }
@@ -59,7 +60,7 @@ namespace ATReforged
                         // Surrogates of a SkyMind Core intelligence simply reboot upon suffering a mental break, regardless of extremity.
                         else
                         {
-                            ___pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                            ___pawn.health.AddHediff(MHC_HediffDefOf.MHC_Restarting);
                         }
                     }
                 }
@@ -69,7 +70,7 @@ namespace ATReforged
                     IEnumerable<Pawn> surrogates = compSkyMindLink.GetSurrogates();
                     foreach (Pawn surrogate in surrogates)
                     {
-                        surrogate.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        surrogate.health.AddHediff(MHC_HediffDefOf.MHC_Restarting);
                     }
                     compSkyMindLink.DisconnectSurrogates();
                     Find.LetterStack.ReceiveLetter("ATR_ControllerSufferedMentalState".Translate(), "ATR_ControllerSufferedMentalStateDesc".Translate(), LetterDefOf.NegativeEvent);

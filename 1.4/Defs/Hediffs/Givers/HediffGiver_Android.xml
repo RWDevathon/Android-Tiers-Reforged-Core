@@ -13,9 +13,7 @@
 			<li Class="HediffGiver_Heat">
 				<hediff>ATR_Overheating</hediff>
 			</li>
-
-            <!-- "Age" hediffs are handled by the CompMaintenanceNeed -->
 	    </hediffGivers>
 	</HediffGiverSetDef>
-    
+
 </Defs>
