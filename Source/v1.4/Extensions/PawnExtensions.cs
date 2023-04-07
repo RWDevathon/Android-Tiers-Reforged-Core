@@ -21,7 +21,7 @@ namespace ATReforged
     public class ATR_DetonateOnIncapacitation : DefModExtension
     {
         public float explosionRadius = 0.5f;
-        public DamageDef damageType = DamageDefOf.Bomb;
+        public DamageDef damageType;
         public int damageAmount;
 
         public ThingDef itemToSpawnOnDetonation;

@@ -21,7 +21,7 @@ namespace ATReforged
             CompSkyMindLink link = pawn.GetComp<CompSkyMindLink>();
 
             // Surrogates need the CompSkyMindLink of their controller.
-            if (Utils.IsSurrogate(pawn))
+            if (ATRCore_Utils.IsSurrogate(pawn))
             {
                 SetSeverity(link.GetSurrogates().First().GetComp<CompSkyMindLink>().GetSurrogates().Count());
             }
@@ -37,9 +37,9 @@ namespace ATReforged
         {
             if (cachedSurrogateSoftCap > 100 || pawn.IsHashIntervalTick(3000))
             {
-                cachedSurrogateSoftCap = ATReforged_Settings.safeSurrogateConnectivityCountBeforePenalty;
+                cachedSurrogateSoftCap = ATReforgedCore_Settings.safeSurrogateConnectivityCountBeforePenalty;
                 // Surrogates check their controller for a surrogate limit bonus to add to the soft cap.
-                if (Utils.IsSurrogate(pawn))
+                if (ATRCore_Utils.IsSurrogate(pawn))
                 {
                     cachedSurrogateSoftCap += (int)pawn.GetComp<CompSkyMindLink>().GetSurrogates().First().GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
                 }

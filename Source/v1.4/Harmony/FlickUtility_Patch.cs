@@ -14,7 +14,7 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Prefix(Thing t)
             {
-                if (t.TryGetComp<CompSkyMind>()?.connected == true && Utils.gameComp.GetSkyMindCloudCapacity() > 0)
+                if (t.TryGetComp<CompSkyMind>()?.connected == true && ATRCore_Utils.gameComp.GetSkyMindCloudCapacity() > 0)
                 {
                     CompFlickable compFlick = t.TryGetComp<CompFlickable>();
                     if (compFlick != null)

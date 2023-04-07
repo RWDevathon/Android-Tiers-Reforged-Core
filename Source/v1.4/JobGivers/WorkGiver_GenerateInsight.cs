@@ -19,7 +19,7 @@ namespace ATReforged
         // If all point capacities are zero'd out, then there is no point in trying to identify an insight generation job as there is no capacity at all.
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
-            if (Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) <= 0 && Utils.gameComp.GetPointCapacity(ATR_ServerType.SecurityServer) <= 0 && Utils.gameComp.GetPointCapacity(ATR_ServerType.HackingServer) <= 0)
+            if (ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) <= 0 && ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SecurityServer) <= 0 && ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.HackingServer) <= 0)
             {
                 return true;
             }
@@ -43,7 +43,7 @@ namespace ATReforged
 
             // If this particular bench is set to a server type that is full on its points, then no work can be done here.
             CompInsightBench compInsightBench = bench.GetComp<CompInsightBench>();
-            if (compInsightBench == null || Utils.gameComp.GetPointCapacity(compInsightBench.ATR_ServerType) <= Utils.gameComp.GetPoints(compInsightBench.ATR_ServerType))
+            if (compInsightBench == null || ATRCore_Utils.gameComp.GetPointCapacity(compInsightBench.ATR_ServerType) <= ATRCore_Utils.gameComp.GetPoints(compInsightBench.ATR_ServerType))
             {
                 return false;
             }

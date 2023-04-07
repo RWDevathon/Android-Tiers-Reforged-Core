@@ -16,7 +16,7 @@ namespace ATReforged
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             // Do not show button to manually open/close door if the door isn't connected to the SkyMind or there is no SkyMind Cloud.
-            if (parent.GetComp<CompSkyMind>()?.connected != true || Utils.gameComp.GetSkyMindCloudCapacity() == 0)
+            if (parent.GetComp<CompSkyMind>()?.connected != true || ATRCore_Utils.gameComp.GetSkyMindCloudCapacity() == 0)
             {
                 yield break;
             }
@@ -31,7 +31,7 @@ namespace ATReforged
             {
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.CloseDoorIcon,
+                    icon = ATRCore_Textures.CloseDoorIcon,
                     defaultLabel = "ATR_AutoDoorClose".Translate(),
                     defaultDesc = "ATR_AutoDoorCloseDescription".Translate(),
                     action = delegate ()
@@ -48,7 +48,7 @@ namespace ATReforged
             {
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.OpenDoorIcon,
+                    icon = ATRCore_Textures.OpenDoorIcon,
                     defaultLabel = "ATR_AutoDoorOpen".Translate(),
                     defaultDesc = "ATR_AutoDoorOpenDescription".Translate(),
                     action = delegate ()

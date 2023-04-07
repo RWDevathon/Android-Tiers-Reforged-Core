@@ -13,7 +13,7 @@ namespace ATReforged
             for (int i = possiblePawns.Count - 1; i >= 0; i--)
             {
                 Pawn possiblePawn = possiblePawns[i];
-                if (!Utils.IsConsideredMechanicalAndroid(possiblePawn))
+                if (!ATRCore_Utils.IsConsideredMechanicalAndroid(possiblePawn))
                 {
                     possiblePawns.RemoveAt(i);
                     continue;

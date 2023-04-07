@@ -61,13 +61,13 @@ namespace ATReforged
 
                 bool shouldbeBlank = false;
                 // Androids have a special consideration attached: if the Core is destroyed, then the dead pawn is blank upon resurrection.
-                if (Utils.IsConsideredMechanicalAndroid(innerPawn) && MHC_Utils.IsConsideredMechanicalSapient(innerPawn) && innerPawn.health.hediffSet.GetBrain() == null)
+                if (ATRCore_Utils.IsConsideredMechanicalAndroid(innerPawn) && MHC_Utils.IsConsideredMechanicalSapient(innerPawn) && innerPawn.health.hediffSet.GetBrain() == null)
                 {
                     shouldbeBlank = true;
                 }
 
                 // Dead surrogates originating from other factions should no longer be considered foreign. Surrogates are already blank when dead, no additional checks needed.
-                if (Utils.IsSurrogate(innerPawn))
+                if (ATRCore_Utils.IsSurrogate(innerPawn))
                 {
                     CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
                     if (targetComp.isForeign)
@@ -81,7 +81,7 @@ namespace ATReforged
                 // If the pawn should be blank, replace their autonomous core with an isolated core to represent that.
                 if (shouldbeBlank)
                 {
-                    Utils.Duplicate(Utils.GetBlank(), innerPawn, false, false);
+                    ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), innerPawn, false, false);
                     innerPawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, innerPawn.health.hediffSet.GetBrain());
                     Hediff target = innerPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
                     if (target != null)

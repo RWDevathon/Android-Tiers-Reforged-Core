@@ -12,7 +12,7 @@ namespace ATReforged
         private string letterText;
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return ATReforged_Settings.enemyHacksOccur && !Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare) && HasIncidentToFire();
+            return ATReforgedCore_Settings.enemyHacksOccur && !Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare) && HasIncidentToFire();
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -57,14 +57,14 @@ namespace ATReforged
 
         public bool CanFireGridVirus()
         {
-            return Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || Utils.IsSurrogate(pawn)).Count() > 0;
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || ATRCore_Utils.IsSurrogate(pawn)).Count() > 0;
         }
 
         public bool TryExecuteGridVirus(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float attackStrength = parms.points * ATReforgedCore_Settings.enemyHackAttackStrengthModifier;
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentGridVirusDefeated", "ATR_IncidentGridVirusAllyIntercept"))
                 return true; // Function handles everything if it returns true.
@@ -81,7 +81,7 @@ namespace ATReforged
 
 
             HashSet<Thing> cryptolockedThings = new HashSet<Thing>();
-            HashSet<Thing> potentialVictims = new HashSet<Thing>(Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || Utils.IsSurrogate(pawn)));
+            HashSet<Thing> potentialVictims = new HashSet<Thing>(ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || ATRCore_Utils.IsSurrogate(pawn)));
             int targetDeviceCount = Rand.RangeInclusive(1, potentialVictims.Count);
 
             // Generate message for the hack and adding extra information depending on the attack type.
@@ -115,21 +115,21 @@ namespace ATReforged
 
             foreach (Thing victim in victims)
             {
-                Utils.gameComp.DisconnectFromSkyMind(victim);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(victim);
                 victim.TryGetComp<CompSkyMind>().Breached = attackType;
 
                 // Grid-sleeper and Grid-breaker time to repair
                 if (attackType != 2)
                 {
-                    Utils.gameComp.PushVirusedThing(victim, Find.TickManager.TicksGame + Rand.RangeInclusive(30000, 120000));
+                    ATRCore_Utils.gameComp.PushVirusedThing(victim, Find.TickManager.TicksGame + Rand.RangeInclusive(30000, 120000));
                 }
 
                 // Grid-locker Encryption fee increases per victim.
                 if (attackType == 2)
                 {
-                    Utils.gameComp.PushVirusedThing(victim, -1);
+                    ATRCore_Utils.gameComp.PushVirusedThing(victim, -1);
                     cryptolockedThings.Add(victim);
-                    fee += (int)(victim.def.BaseMarketValue * ATReforged_Settings.percentageOfValueUsedForRansoms);
+                    fee += (int)(victim.def.BaseMarketValue * ATReforgedCore_Settings.percentageOfValueUsedForRansoms);
                 }
 
                 // Grid-breaker forcing explosion/breakdown of victim
@@ -146,7 +146,7 @@ namespace ATReforged
             }
 
             // Apply a mood debuff to all current SkyMind users as they clearly can't trust the safety of the SkyMind network. There are no direct victims in this attack however.
-            Utils.ApplySkyMindAttack();
+            ATRCore_Utils.ApplySkyMindAttack();
             SendLetter(letter, letterLabel, letterText, new LookTargets(victims));
 
             if (attackType == 2)
@@ -169,26 +169,26 @@ namespace ATReforged
 
         public bool CanFireDDOS()
         {
-            return Utils.gameComp.GetSkyMindDevices().Any();
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteDDOS(IncidentParms parms)
         {
             // Generate an attack strength that is 1.0 - 4.0 times normal attack strength. DDOS attacks are very dangerous to security points.
             float attackStrength = GenerateAttackStrength(parms.points, 1, 4);
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentDDOSDefeated", "ATR_IncidentDDOSAllyIntercept"))
                 return true; // Function handles everything if it returns true.
 
             // Enemy attack succeeds
-            int targetPawnCount = Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Count();
+            int targetPawnCount = ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Count();
 
             // Remaining points goes to damaging Skill/Hacking, half each.
             float leftOverPoints = attackStrength - defenseStrength;
-            Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ATR_ServerType.SkillServer);
-            Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ATR_ServerType.HackingServer);
+            ATRCore_Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ATR_ServerType.SkillServer);
+            ATRCore_Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ATR_ServerType.HackingServer);
 
             // Initialize hack letter. Message starts with generic and then will append an additional string.
             letter = LetterDefOf.ThreatSmall;
@@ -202,24 +202,24 @@ namespace ATReforged
                 HashSet<Pawn> victims = new HashSet<Pawn>();
 
                 // All pawns get the recovery hediff. Everyone is a victim of DDOS attacks.
-                foreach (Pawn user in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Cast<Pawn>())
+                foreach (Pawn user in ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Cast<Pawn>())
                 {
                     user.health.AddHediff(ATR_HediffDefOf.ATR_RecoveringFromDDOS, user.health.hediffSet.GetBrain());
                     victims.Add(user);
                 }
-                foreach (Pawn surrogate in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)).Cast<Pawn>())
+                foreach (Pawn surrogate in ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && ATRCore_Utils.IsSurrogate(pawn)).Cast<Pawn>())
                 {
                     surrogate.health.AddHediff(ATR_HediffDefOf.ATR_RecoveringFromDDOS, surrogate.health.hediffSet.GetBrain());
                     victims.Add(surrogate);
                 }
                 // Apply a SkyMind mood debuff to all victims of the DDOS attack. Everyone is a victim of DDOS attacks.
-                Utils.ApplySkyMindAttack(victims);
+                ATRCore_Utils.ApplySkyMindAttack(victims);
             }
             else
             {
                 letterText += "ATR_IncidentDDOSNormalAttackDesc".Translate();
                 // Apply a minor mood debuff to all witnesses of the DDOS attack. Anyone can be a victim of a sufficiently strong DDOS attack.
-                Utils.ApplySkyMindAttack();
+                ATRCore_Utils.ApplySkyMindAttack();
             }
 
             SendLetter(letter, letterLabel, letterText);
@@ -228,14 +228,14 @@ namespace ATReforged
 
         public bool CanFireTroll()
         {
-            return Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).Any();
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !ATRCore_Utils.IsSurrogate(pawn)).Any();
         }
 
         public bool TryExecuteTroll(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float attackStrength = parms.points * ATReforgedCore_Settings.enemyHackAttackStrengthModifier;
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -245,7 +245,7 @@ namespace ATReforged
             // Enemy attack succeeds
 
             // Select victim. Troll attacks target a singular (non-surrogate) individual.
-            Pawn victim = (Pawn) Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).RandomElement();
+            Pawn victim = (Pawn) ATRCore_Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !ATRCore_Utils.IsSurrogate(pawn)).RandomElement();
             float remainingAttackStrength = attackStrength - defenseStrength;
             float totalSkillPointsLost = 0;
 
@@ -260,7 +260,7 @@ namespace ATReforged
             }
 
             // Apply the Trolled mood debuff to this victim and the witnessed breach debuff to all other pawns.
-            Utils.ApplySkyMindAttack((IEnumerable<Pawn>) victim, ATR_ThoughtDefOf.ATR_TrolledViaSkyMind);
+            ATRCore_Utils.ApplySkyMindAttack((IEnumerable<Pawn>) victim, ATR_ThoughtDefOf.ATR_TrolledViaSkyMind);
 
             // Create hack letter. Message starts with generic and then will append an additional string.
             letter = LetterDefOf.ThreatSmall;
@@ -284,14 +284,14 @@ namespace ATReforged
                     break;
                 }
             }
-            return Utils.gameComp.GetSkyMindDevices().Any() && hasComms;
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Any() && hasComms;
         }
 
         public bool TryExecuteDiplohack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float attackStrength = parms.points * ATReforgedCore_Settings.enemyHackAttackStrengthModifier;
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -321,14 +321,14 @@ namespace ATReforged
 
         public bool CanFireProvokerhack()
         {
-            return Utils.gameComp.GetSkyMindDevices().Any();
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteProvokerhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float attackStrength = parms.points * ATReforgedCore_Settings.enemyHackAttackStrengthModifier;
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentProvokerhackDefeated", "ATR_IncidentProvokerhackAllyIntercept"))
@@ -357,14 +357,14 @@ namespace ATReforged
 
         public bool CanFireCounterhack()
         {
-            return Utils.gameComp.GetSkyMindDevices().Any();
+            return ATRCore_Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteCounterhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = GenerateAttackStrength(parms.points, 1, 4);
-            float defenseStrength = Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
+            float defenseStrength = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 0.25f, "ATR_IncidentCounterhackDefeated", "ATR_IncidentCounterhackAllyIntercept"))
@@ -373,10 +373,10 @@ namespace ATReforged
             // Enemy attack succeeds
 
             // Counterhacks destroy hacking points first, then skill points.
-            float remainingAttackStrengthAfterHacking = parms.points - Utils.gameComp.GetPoints(ATR_ServerType.HackingServer);
-            Utils.gameComp.ChangeServerPoints(-Utils.gameComp.GetPoints(ATR_ServerType.HackingServer), ATR_ServerType.HackingServer);
+            float remainingAttackStrengthAfterHacking = parms.points - ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.HackingServer);
+            ATRCore_Utils.gameComp.ChangeServerPoints(-ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.HackingServer), ATR_ServerType.HackingServer);
             if (remainingAttackStrengthAfterHacking > 0)
-                Utils.gameComp.ChangeServerPoints(-remainingAttackStrengthAfterHacking, ATR_ServerType.SkillServer);
+                ATRCore_Utils.gameComp.ChangeServerPoints(-remainingAttackStrengthAfterHacking, ATR_ServerType.SkillServer);
 
             // Create hack letter.
             letter = LetterDefOf.ThreatSmall;
@@ -439,7 +439,7 @@ namespace ATReforged
         // Generates the attack strength as the baseStrength times a random percentage value between the lower and upper bound modifiers. IE. 100, 1, 4 == 100 * (100% ~ 400%).
         private float GenerateAttackStrength(float baseStrength, float lowerBoundModifier, float upperBoundModifier)
         {
-            return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier) * ATReforged_Settings.enemyHackAttackStrengthModifier;
+            return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier) * ATReforgedCore_Settings.enemyHackAttackStrengthModifier;
         }
 
         // Check if the defense was successful. If it was, send an appropriate letter. If not, inform the caller of the failed defense.
@@ -460,7 +460,7 @@ namespace ATReforged
             }
 
             // Points are subtracted from the security servers. 
-            Utils.gameComp.ChangeServerPoints(-attackStrength * damageModifier, ATR_ServerType.SecurityServer);
+            ATRCore_Utils.gameComp.ChangeServerPoints(-attackStrength * damageModifier, ATR_ServerType.SecurityServer);
             return defenseSuccessful;
         }
 
@@ -471,11 +471,11 @@ namespace ATReforged
 
             foreach (Faction faction in alliedValidFactions)
             { // Allied factions each have a percentage chance (settings) of catching the attack and being in a position to prevent it. 
-                if (Rand.Chance(ATReforged_Settings.chanceAlliesInterceptHack))
+                if (Rand.Chance(ATReforgedCore_Settings.chanceAlliesInterceptHack))
                 {
                     // Add 25% of the attack strength to the security points. Overflows are accounted for automatically.
-                    float gainedStrength = (attackStrength * ATReforged_Settings.pointsGainedOnInterceptPercentage);
-                    Utils.gameComp.ChangeServerPoints(gainedStrength, ATR_ServerType.SecurityServer);
+                    float gainedStrength = (attackStrength * ATReforgedCore_Settings.pointsGainedOnInterceptPercentage);
+                    ATRCore_Utils.gameComp.ChangeServerPoints(gainedStrength, ATR_ServerType.SecurityServer);
 
                     // Generate the message and terminate the function.
                     LetterDef letter = LetterDefOf.PositiveEvent;

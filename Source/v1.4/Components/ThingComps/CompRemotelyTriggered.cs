@@ -14,7 +14,7 @@ namespace ATReforged
 
             yield return new Command_Action
             {
-                icon = ATR_Textures.HackingIcon,
+                icon = ATRCore_Textures.HackingIcon,
                 defaultLabel = "ATR_DetonateIEDRemotely".Translate(),
                 defaultDesc = "ATR_DetonateIEDRemotelyDesc".Translate(),
                 action = delegate ()

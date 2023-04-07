@@ -10,7 +10,7 @@ namespace ATReforged
         // This operation is nearly identical to the vanilla RemoveImplant recipe, but makes sure to disconnect from the SkyMind before proceeding. Disconnects happen regardless of surgery outcome.
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            Utils.gameComp.DisconnectFromSkyMind(pawn);
+            ATRCore_Utils.gameComp.DisconnectFromSkyMind(pawn);
             MedicalRecipesUtility.IsClean(pawn, part);
             if (billDoer != null)
             {

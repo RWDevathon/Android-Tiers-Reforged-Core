@@ -35,9 +35,9 @@ namespace ATReforged
         public Dialog_InitializeMind(Pawn newIntelligence) : base("ATR_InitializeMindDesc".Translate(), "ATR_SkyMindInitialization".Translate(), null, "ATR_AutomaticInitialization".Translate(), null, "ATR_InitializeMindTitle".Translate(), false)
         {
             // If there is any idle intelligence in the SkyMind, then the new intelligence may download it. This is a standard download action.
-            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate());
-            IEnumerable<Thing> networkedPawns = Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.GetComp<CompSkyMindLink>()?.HasSurrogate() == false);
-            if (cloudPawns.Count() + networkedPawns.Count() > 0 && Utils.gameComp.networkedDevices.Count < Utils.gameComp.GetSkyMindNetworkSlots())
+            IEnumerable<Pawn> cloudPawns = ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate());
+            IEnumerable<Thing> networkedPawns = ATRCore_Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.GetComp<CompSkyMindLink>()?.HasSurrogate() == false);
+            if (cloudPawns.Count() + networkedPawns.Count() > 0 && ATRCore_Utils.gameComp.networkedDevices.Count < ATRCore_Utils.gameComp.GetSkyMindNetworkSlots())
             {
                 buttonAAction = delegate ()
                 {
@@ -47,7 +47,7 @@ namespace ATReforged
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
-                            Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
+                            ATRCore_Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
@@ -56,7 +56,7 @@ namespace ATReforged
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
-                            Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
+                            ATRCore_Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
@@ -75,7 +75,7 @@ namespace ATReforged
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
                 newPawn.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
                 newPawn.story.Adulthood = ATR_BackstoryDefOf.ATR_NewbootAdulthood;
-                Utils.Duplicate(newPawn, newIntelligence, false, false);
+                ATRCore_Utils.Duplicate(newPawn, newIntelligence, false, false);
                 Hediff rebootHediff = newIntelligence.health.hediffSet.GetFirstHediffOfDef(MHC_HediffDefOf.MHC_Restarting);
                 if (rebootHediff == null)
                 {

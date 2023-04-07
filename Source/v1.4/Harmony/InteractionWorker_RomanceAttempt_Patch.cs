@@ -13,7 +13,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn initiator, Pawn recipient, ref float __result)
             {
-                if (Utils.IsSurrogate(initiator) || Utils.IsSurrogate(recipient))
+                if (ATRCore_Utils.IsSurrogate(initiator) || ATRCore_Utils.IsSurrogate(recipient))
                     __result = 0f;
             }
         }
@@ -25,7 +25,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn initiator, Pawn recipient, ref float __result, float baseChance = 0.6f)
             {
-                if (Utils.IsSurrogate(initiator) || Utils.IsSurrogate(recipient))
+                if (ATRCore_Utils.IsSurrogate(initiator) || ATRCore_Utils.IsSurrogate(recipient))
                     __result = 0;
             }
         }

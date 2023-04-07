@@ -36,8 +36,8 @@ namespace ATReforged
             {
                 foreach (Pawn surrogate in surrogatePawns)
                 {
-                    Utils.DuplicateSkills(ThisPawn, surrogate, true);
-                    Utils.DuplicateRelations(ThisPawn, surrogate, true);
+                    ATRCore_Utils.DuplicateSkills(ThisPawn, surrogate, true);
+                    ATRCore_Utils.DuplicateRelations(ThisPawn, surrogate, true);
                 }
             }
         }
@@ -96,7 +96,7 @@ namespace ATReforged
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             // No point in showing SkyMind operations on a pawn that isn't connected to it or is not a valid target for mind operations.
-            if (!Utils.IsValidMindTransferTarget(ThisPawn))
+            if (!ATRCore_Utils.IsValidMindTransferTarget(ThisPawn))
                 yield break;
 
             // Only pawns belonging explicitly to the the player may have these actions used.
@@ -106,18 +106,18 @@ namespace ATReforged
             }
 
             // Surrogate only operations.
-            if (Utils.IsSurrogate(ThisPawn))
+            if (ATRCore_Utils.IsSurrogate(ThisPawn))
             {
                 //Organic surrogates may receive downloads from the pawn they are connected to in the SkyMind network.
                 if (!MHC_Utils.IsConsideredMechanical(ThisPawn) && HasSurrogate())
                 {
                     Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
-                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && controller.GetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
+                    if (ATRCore_Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && controller.GetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
                     {
                         yield return new Command_Action
                         {
-                            icon = ATR_Textures.DownloadFromSkyCloud,
+                            icon = ATRCore_Textures.DownloadFromSkyCloud,
                             defaultLabel = "ATR_DownloadCloudPawn".Translate(),
                             defaultDesc = "ATR_DownloadCloudPawnDesc".Translate(),
                             action = delegate ()
@@ -134,12 +134,12 @@ namespace ATReforged
                 // Surrogates may disconnect freely from their host.
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.DisconnectIcon,
+                    icon = ATRCore_Textures.DisconnectIcon,
                     defaultLabel = "ATR_DisconnectSurrogate".Translate(),
                     defaultDesc = "ATR_DisconnectSurrogateDesc".Translate(),
                     action = delegate ()
                     {
-                        Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                        ATRCore_Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                     }
                 };
 
@@ -148,11 +148,11 @@ namespace ATReforged
             }
 
             // Show surrogate control mode as long as they are enabled via settings, as any non-surrogate SkyMind connected pawn may use them.
-            if (ATReforged_Settings.surrogatesAllowed)
+            if (ATReforgedCore_Settings.surrogatesAllowed)
             {
                 yield return new Command_Toggle
                 {
-                    icon = ATR_Textures.ControlModeIcon,
+                    icon = ATRCore_Textures.ControlModeIcon,
                     defaultLabel = "ATR_ToggleControlMode".Translate(),
                     defaultDesc = "ATR_ToggleControlModeDesc".Translate(),
                     isActive = () => controlMode,
@@ -166,7 +166,7 @@ namespace ATReforged
             // Always show Skill Up menu option, as any non-surrogate SkyMind connected pawn may use them.
             yield return new Command_Action
             {
-                icon = ATR_Textures.SkillWorkshopIcon,
+                icon = ATRCore_Textures.SkillWorkshopIcon,
                 defaultLabel = "ATR_Skills".Translate(),
                 defaultDesc = "ATR_SkillsDesc".Translate(),
                 action = delegate ()
@@ -181,7 +181,7 @@ namespace ATReforged
                 // Allow connecting to new surrogates.
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.ConnectIcon,
+                    icon = ATRCore_Textures.ConnectIcon,
                     defaultLabel = "ATR_ControlSurrogate".Translate(),
                     defaultDesc = "ATR_ControlSurrogateDesc".Translate(),
                     action = delegate ()
@@ -197,7 +197,7 @@ namespace ATReforged
                             onlyTargetIncapacitatedPawns = true,
                             validator = delegate (TargetInfo targetInfo)
                             {
-                                return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && ATRCore_Utils.IsSurrogate(pawn)
                                         && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
                             }
                         };
@@ -222,13 +222,13 @@ namespace ATReforged
                 };
 
                 // Allow connecting a host to hostless surrogates in caravans.
-                IEnumerable<Pawn> hostlessSurrogatesInCaravans = Utils.GetHostlessCaravanSurrogates();
+                IEnumerable<Pawn> hostlessSurrogatesInCaravans = ATRCore_Utils.GetHostlessCaravanSurrogates();
 
                 if (hostlessSurrogatesInCaravans != null)
                 {
                     yield return new Command_Action
                     {
-                        icon = ATR_Textures.RecoveryIcon,
+                        icon = ATRCore_Textures.RecoveryIcon,
                         defaultLabel = "ATR_ControlCaravanSurrogate".Translate(),
                         defaultDesc = "ATR_ControlCaravanSurrogateDesc".Translate(),
                         action = delegate ()
@@ -238,7 +238,7 @@ namespace ATReforged
                             {
                                 opts.Add(new FloatMenuOption(surrogate.LabelShortCap, delegate ()
                                 {
-                                    if (!Utils.gameComp.AttemptSkyMindConnection(surrogate))
+                                    if (!ATRCore_Utils.gameComp.AttemptSkyMindConnection(surrogate))
                                         return;
                                     ConnectSurrogate(surrogate);
                                 }));
@@ -255,7 +255,7 @@ namespace ATReforged
                     // Always allow controllers to disconnect from all pawns.
                     yield return new Command_Action
                     {
-                        icon = ATR_Textures.DisconnectIcon,
+                        icon = ATRCore_Textures.DisconnectIcon,
                         defaultLabel = "ATR_DisconnectSurrogate".Translate(),
                         defaultDesc = "ATR_DisconnectSurrogateDesc".Translate(),
                         action = delegate ()
@@ -272,7 +272,7 @@ namespace ATReforged
                         {
                             yield return new Command_Action
                             {
-                                icon = ATR_Textures.DownloadFromSkyCloud,
+                                icon = ATRCore_Textures.DownloadFromSkyCloud,
                                 defaultLabel = "ATR_Transfer".Translate(),
                                 defaultDesc = "ATR_TransferDesc".Translate(),
                                 action = delegate ()
@@ -294,7 +294,7 @@ namespace ATReforged
             // Allow this pawn to do permutations.
             yield return new Command_Action
             {
-                icon = ATR_Textures.Permute,
+                icon = ATRCore_Textures.Permute,
                 defaultLabel = "ATR_Permute".Translate(),
                 defaultDesc = "ATR_PermuteDesc".Translate(),
                 action = delegate ()
@@ -303,7 +303,7 @@ namespace ATReforged
 
                     foreach (Pawn colonist in ThisPawn.Map.mapPawns.FreeColonists)
                     {
-                        if (Utils.IsValidMindTransferTarget(colonist) && colonist != ThisPawn && !Utils.IsSurrogate(colonist))
+                        if (ATRCore_Utils.IsValidMindTransferTarget(colonist) && colonist != ThisPawn && !ATRCore_Utils.IsSurrogate(colonist))
                         {
                             opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
                             {
@@ -323,11 +323,11 @@ namespace ATReforged
             };
 
             // Uploading requires space in the SkyMind network for the intelligence.
-            if (Utils.gameComp.GetSkyMindCloudCapacity() > Utils.gameComp.GetCloudPawns().Count)
+            if (ATRCore_Utils.gameComp.GetSkyMindCloudCapacity() > ATRCore_Utils.gameComp.GetCloudPawns().Count)
             {
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.SkyMindUpload,
+                    icon = ATRCore_Textures.SkyMindUpload,
                     defaultLabel = "ATR_Upload".Translate(),
                     defaultDesc = "ATR_UploadDesc".Translate(),
                     action = delegate ()
@@ -387,7 +387,7 @@ namespace ATReforged
                             recipientPawn.health.RemoveHediff(target);
                     }
 
-                    Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
+                    ATRCore_Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
                 }
                 // Operation has begun. Stand by until completion or aborted.
                 else if (networkOperationInProgress > -1)
@@ -405,9 +405,9 @@ namespace ATReforged
                 return base.CompInspectStringExtra();
 
             // A SkyMind operation is in progress. State how long players must wait before the operation will be complete.
-            if (networkOperationInProgress > -1 && Utils.gameComp.GetAllLinkedPawns().ContainsKey(ThisPawn))
+            if (networkOperationInProgress > -1 && ATRCore_Utils.gameComp.GetAllLinkedPawns().ContainsKey(ThisPawn))
             {
-                ret.Append("ATR_SkyMindOperationInProgress".Translate((Utils.gameComp.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.Append("ATR_SkyMindOperationInProgress".Translate((ATRCore_Utils.gameComp.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
             else if (networkOperationInProgress == -2)
             {
@@ -443,13 +443,13 @@ namespace ATReforged
         public void ConnectSurrogate(Pawn surrogate, bool external = false)
         {
             // Ensure the surrogate is connected to the SkyMind network. Abort if it can't. This step only occurs for player pawns.
-            if (!external && !Utils.gameComp.AttemptSkyMindConnection(surrogate))
+            if (!external && !ATRCore_Utils.gameComp.AttemptSkyMindConnection(surrogate))
             {
                 Messages.Message("ATR_CannotConnect".Translate(), surrogate, MessageTypeDefOf.RejectInput, false);
             }
 
             // Copy this pawn into the surrogate. Player surrogates are tethered to the controller.
-            Utils.Duplicate(ThisPawn, surrogate, false, !external);
+            ATRCore_Utils.Duplicate(ThisPawn, surrogate, false, !external);
             CompSkyMindLink surrogateLink = surrogate.GetComp<CompSkyMindLink>();
 
             // Foreign controllers aren't saved, so only handle linking the surrogate and controller together if it's a player pawn.
@@ -460,7 +460,7 @@ namespace ATReforged
                 surrogateLink.surrogatePawns.Add(ThisPawn);
 
                 // If this is not a cloud pawn, both the surrogate and controller should have Hediff_SplitConsciousness.
-                if (!Utils.gameComp.GetCloudPawns().Contains(ThisPawn))
+                if (!ATRCore_Utils.gameComp.GetCloudPawns().Contains(ThisPawn))
                 {
                     Hediff splitConsciousness = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_SplitConsciousness, surrogate);
                     surrogate.health.AddHediff(splitConsciousness);
@@ -510,7 +510,7 @@ namespace ATReforged
             }
 
             // Apply the blank template to self.
-            Utils.Duplicate(Utils.GetBlank(), ThisPawn, false, false);
+            ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), ThisPawn, false, false);
 
             // Foreign surrogates do not have links to their controllers.
             if (!isForeign)
@@ -543,7 +543,7 @@ namespace ATReforged
             // Disconnect each surrogate from the SkyMind (and this pawn by extension).
             foreach (Pawn surrogate in new List<Pawn>(surrogatePawns))
             {
-                Utils.gameComp.DisconnectFromSkyMind(surrogate);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(surrogate);
             }
             // Forget about all surrogates.
             surrogatePawns.Clear();
@@ -557,7 +557,7 @@ namespace ATReforged
                 return;
 
             Hediff corruption;
-            if (Utils.IsConsideredMechanicalAndroid(pawn))
+            if (ATRCore_Utils.IsConsideredMechanicalAndroid(pawn))
             {
                 corruption = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MemoryCorruption, pawn, pawn.health.hediffSet.GetBrain());
                 corruption.Severity = Rand.Range(0.15f, 0.95f);
@@ -585,7 +585,7 @@ namespace ATReforged
         public void HandleInitialization()
         {
             ThisPawn.health.AddHediff(ATR_HediffDefOf.ATR_MindOperation);
-            Utils.gameComp.PushNetworkLinkedPawn(ThisPawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
+            ATRCore_Utils.gameComp.PushNetworkLinkedPawn(ThisPawn, Find.TickManager.TicksGame + ATReforgedCore_Settings.timeToCompleteSkyMindOperations * 2500);
             if (recipientPawn != null)
             {
                 recipientPawn.health.AddHediff(ATR_HediffDefOf.ATR_MindOperation);
@@ -599,8 +599,8 @@ namespace ATReforged
             // Absorption failure kills the source pawn - they were going to die on success any way.
             if (Linked == 3)
             {
-                Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
-                Utils.Duplicate(Utils.GetBlank(), ThisPawn, true, false);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), ThisPawn, true, false);
                 ThisPawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, ThisPawn.health.hediffSet.GetBrain()));
                 // If they're somehow not dead from that, make them dead for real.
                 if (!ThisPawn.Dead)
@@ -617,7 +617,7 @@ namespace ATReforged
                 ApplyCorruption(recipientPawn);
                 recipientPawn.GetComp<CompSkyMindLink>().Linked = -1;
             }
-            Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
+            ATRCore_Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
             Linked = -1;
         }
 
@@ -631,14 +631,14 @@ namespace ATReforged
                 // Permutation, swap the pawn's minds.
                 if (status == 1)
                 {
-                    Utils.PermutePawn(ThisPawn, recipientPawn);
+                    ATRCore_Utils.PermutePawn(ThisPawn, recipientPawn);
                 }
                 // Duplication, insert a copy of the current pawn into the recipient - an organic surrogate that will now become a fully fledged individual again.
                 else if (status == 2)
                 {
                     // Disconnect the surrogate to sever the connection, then duplicate this pawn into the surrogate.
-                    Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
-                    Utils.Duplicate(ThisPawn, recipientPawn, false, false);
+                    ATRCore_Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
+                    ATRCore_Utils.Duplicate(ThisPawn, recipientPawn, false, false);
                     // Duplication may only occur via operation on organic surrogates. Remove all implants considered receivers (burns out), remove no host hediff.
                     List<Hediff> targetHediffs = new List<Hediff>();
                     recipientPawn.health.hediffSet.GetHediffs(ref targetHediffs, hediff => hediff.def.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true || hediff.def == ATR_HediffDefOf.ATR_NoController);
@@ -654,7 +654,7 @@ namespace ATReforged
                     // Organic pawns that have been downloaded into should lose some hediffs and disconnect from the network.
                     if (!MHC_Utils.IsConsideredMechanical(ThisPawn))
                     {
-                        Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                        ATRCore_Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                         target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
                         if (target != null)
                             ThisPawn.health.RemoveHediff(target);
@@ -663,9 +663,9 @@ namespace ATReforged
                             ThisPawn.health.RemoveHediff(target);
                     }
 
-                    Utils.Duplicate(recipientPawn, ThisPawn, false, false);
-                    Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
-                    Utils.KillPawnIntelligence(recipientPawn);
+                    ATRCore_Utils.Duplicate(recipientPawn, ThisPawn, false, false);
+                    ATRCore_Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
+                    ATRCore_Utils.KillPawnIntelligence(recipientPawn);
                 }
             }
 
@@ -679,9 +679,9 @@ namespace ATReforged
                     sum += (int)(Math.Pow(skillRecord.levelInt, 1.5) * 10);
                 }
 
-                Utils.gameComp.ChangeServerPoints(sum/2, ATR_ServerType.HackingServer);
-                Utils.gameComp.ChangeServerPoints(sum/2, ATR_ServerType.SkillServer);
-                Utils.Duplicate(Utils.GetBlank(), ThisPawn, true, false);
+                ATRCore_Utils.gameComp.ChangeServerPoints(sum/2, ATR_ServerType.HackingServer);
+                ATRCore_Utils.gameComp.ChangeServerPoints(sum/2, ATR_ServerType.SkillServer);
+                ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), ThisPawn, true, false);
                 ThisPawn.Kill(null);
             }
 
@@ -689,15 +689,15 @@ namespace ATReforged
             if (status == 5)
             {
                 // Add the pawn to storage and suspend any tick-checks it performs.
-                Utils.gameComp.PushCloudPawn(ThisPawn);
+                ATRCore_Utils.gameComp.PushCloudPawn(ThisPawn);
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
 
                 try
                 {
                     // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
-                    Pawn replacement = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
+                    Pawn replacement = ATRCore_Utils.SpawnCopy(ThisPawn, ATReforgedCore_Settings.uploadingToSkyMindKills);
                     // If in the settings, uploading is set to Permakill, find the new pawn copy's brain and mercilessly destroy it so it can't be revived. Ensure no one cares about this.
-                    if (ATReforged_Settings.uploadingToSkyMindPermaKills)
+                    if (ATReforgedCore_Settings.uploadingToSkyMindPermaKills)
                     {
                         replacement.SetFactionDirect(null);
                         replacement.ideo?.SetIdeo(null);
@@ -711,7 +711,7 @@ namespace ATReforged
                 finally
                 {
                     // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
-                    Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                    ATRCore_Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                     ThisPawn.DeSpawn();
                     ThisPawn.ownership.UnclaimAll();
                 }
@@ -739,7 +739,7 @@ namespace ATReforged
                     {
                         clone.health.AddHediff(pawnExtension.defaultTransceiverImplant, clone.health.hediffSet.GetBrain());
                     }
-                    else if (Utils.IsConsideredMechanicalAndroid(clone))
+                    else if (ATRCore_Utils.IsConsideredMechanicalAndroid(clone))
                     {
                         clone.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
                     }
@@ -750,8 +750,8 @@ namespace ATReforged
                 }
 
                 // Duplicate the intelligence of this pawn into the clone (not murder) and add them to the SkyMind network.
-                Utils.Duplicate(ThisPawn, clone, false, false);
-                Utils.gameComp.PushCloudPawn(clone);
+                ATRCore_Utils.Duplicate(ThisPawn, clone, false, false);
+                ATRCore_Utils.gameComp.PushCloudPawn(clone);
             }
 
             Find.LetterStack.ReceiveLetter("ATR_OperationCompleted".Translate(), "ATR_OperationCompletedDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.PositiveEvent, ThisPawn);
@@ -761,10 +761,10 @@ namespace ATReforged
         // Check if there is an operation in progress. If there is (Linked != -1) and it is the operation source (LinkedPawn != -2), then we need to check if it's been interrupted and respond appropriately. 
         public void CheckInterruptedUpload()
         {
-            if (Linked > -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
+            if (Linked > -1 && ATRCore_Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
             {
                 // Check to see if the current pawn is no longer connected to the SkyMind network (or is dead).
-                if (ThisPawn.Dead || (!ThisPawn.GetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
+                if (ThisPawn.Dead || (!ThisPawn.GetComp<CompSkyMind>().connected && !ATRCore_Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
                 {
                     HandleInterrupt();
                     return;
@@ -773,7 +773,7 @@ namespace ATReforged
                 // Check to see if the operation involves a recipient pawn and ensure their status is similarly acceptable if there is one.
                 if (recipientPawn != null)
                 {
-                    if (recipientPawn.Dead || (!recipientPawn.GetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(recipientPawn)))
+                    if (recipientPawn.Dead || (!recipientPawn.GetComp<CompSkyMind>().connected && !ATRCore_Utils.gameComp.GetCloudPawns().Contains(recipientPawn)))
                     {
                         HandleInterrupt();
                         return;
@@ -781,7 +781,7 @@ namespace ATReforged
                 }
 
                 // Check to see if there is a functional SkyMind Core if one is required for an operation to continue. One is required for uploading, or replicating.
-                if (Linked >= 5 && Utils.gameComp.GetSkyMindCloudCapacity() == 0)
+                if (Linked >= 5 && ATRCore_Utils.gameComp.GetSkyMindCloudCapacity() == 0)
                 {
                     HandleInterrupt();
                     return;

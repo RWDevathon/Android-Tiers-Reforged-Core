@@ -10,7 +10,7 @@ namespace ATReforged
 
         public ATR_GameComponent(Game game)
         {
-            Utils.gameComp = this;
+            ATRCore_Utils.gameComp = this;
             AllocateIfNull();
         }
 

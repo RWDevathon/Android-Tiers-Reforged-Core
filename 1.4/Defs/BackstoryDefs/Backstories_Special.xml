@@ -23,37 +23,4 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 
-	<BackstoryDef>
-		<defName>ATR_FractalVictim</defName>
-		<title>Fractal Witness</title>
-		<titleShort>Witness</titleShort>
-		<baseDesc>{PAWN_nameDef} remembers leading a normal life, until one day, something came for {PAWN_objective}. It tore through walls, through people, through everything, to reach {PAWN_objective}. The last thing {PAWN_pronoun} remembers is the howling. And now, somehow, {PAWN_nameDef} is here, alive, but... changed.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_FractalWitness</li>
-		</spawnCategories>
-		<skillGains>
-            <li>
-                <key>Crafting</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>Artistic</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>Medicine</key>
-                <value>4</value>
-            </li>
-			<li>
-				<key>Social</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-	</BackstoryDef>
-
 </Defs>

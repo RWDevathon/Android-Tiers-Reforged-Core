@@ -35,7 +35,7 @@ namespace ATReforged
 
         public void AssignAttachedMote()
         {
-            if (ATReforged_Settings.displaySurrogateControlIcon)
+            if (ATReforgedCore_Settings.displaySurrogateControlIcon)
             {
                 Vector3 vector = Vector3.zero;
                 vector.x += Pawn.def.size.x / 2;

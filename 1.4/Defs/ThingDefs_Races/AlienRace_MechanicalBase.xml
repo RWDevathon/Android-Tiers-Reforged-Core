@@ -21,6 +21,17 @@
 					<li>ATR_FeelingsTowardOrganics</li>
 				</traitList>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+                <blackFoodList>
+                    <li>Beer</li>
+                    <li>Ambrosia</li>
+                    <li>GoJuice</li>
+                    <li>Penoxycyline</li>
+                    <li>Flake</li>
+                    <li>PsychiteTea</li>
+                    <li>Yayo</li>
+                    <li>SmokeleafJoint</li>
+                    <li>WakeUp</li>
+                </blackFoodList>
 			</raceRestriction>
 			<generalSettings>
 				<allowHumanBios>false</allowHumanBios>

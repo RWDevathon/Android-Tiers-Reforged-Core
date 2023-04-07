@@ -84,7 +84,7 @@ namespace ATReforged
             mainRect.height -= 210;
 
             // Display header content image and pawn information.
-            Widgets.ButtonImage(new Rect(0, 0, inRect.width - 20, 80), ATR_Textures.SkillWorkshopHeader, Color.white, Color.white, false);
+            Widgets.ButtonImage(new Rect(0, 0, inRect.width - 20, 80), ATRCore_Textures.SkillWorkshopHeader, Color.white, Color.white, false);
             Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
@@ -110,7 +110,7 @@ namespace ATReforged
             float maxWidth = listingStandard.ColumnWidth;
 
             SkillRecord skillRecord;
-            float availableSkillPoints = Utils.gameComp.GetPoints(ATR_ServerType.SkillServer);
+            float availableSkillPoints = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SkillServer);
 
             // Controls for buying skill points
             for (int i = 0; i != skillDefList.Count; i++)
@@ -131,11 +131,11 @@ namespace ATReforged
                 // Section for purchasing raw xp, a number of skill points for that number of points * Settings modifier. Affected by vanilla (or patched by mod) learning speed effects.
                 if (subsection.ButtonText("ATR_AddSkillPoints".Translate(skillDefTranslationList[i])))
                 {
-                    int insertionRate = ATReforged_Settings.skillPointInsertionRate;
+                    int insertionRate = ATReforgedCore_Settings.skillPointInsertionRate;
                     if (availableSkillPoints >= insertionRate)
                     { // Use vanilla stat learning to maximize compatibility. Remove skill points on complete.
-                        skillRecord.Learn(insertionRate * ATReforged_Settings.skillPointConversionRate);
-                        Utils.gameComp.ChangeServerPoints(-insertionRate, ATR_ServerType.SkillServer);
+                        skillRecord.Learn(insertionRate * ATReforgedCore_Settings.skillPointConversionRate);
+                        ATRCore_Utils.gameComp.ChangeServerPoints(-insertionRate, ATR_ServerType.SkillServer);
                         availableSkillPoints -= insertionRate;
                     }
                     else
@@ -148,19 +148,19 @@ namespace ATReforged
                 switch (skillDefPassionList[i])
                 {
                     case -1: // If this particular skill is disabled, show an uninteractible button with no passion.
-                        subsection.ButtonImage(ATR_Textures.PassionDisabled, 24, 24);
+                        subsection.ButtonImage(ATRCore_Textures.PassionDisabled, 24, 24);
                         break;
                     case 0: // No Passion
-                        texture = ATR_Textures.NoPassion;
+                        texture = ATRCore_Textures.NoPassion;
                         break;
                     case 1: // Minor Passion
-                        texture = ATR_Textures.MinorPassion;
+                        texture = ATRCore_Textures.MinorPassion;
                         break;
                     case 2: // Major Passion (No need to have the button be interactible as it can't be upgraded/changed at this stage.)
-                        subsection.ButtonImage(ATR_Textures.MajorPassion, 24, 24);
+                        subsection.ButtonImage(ATRCore_Textures.MajorPassion, 24, 24);
                         break;
                     default: // Display a no passion and move on as we have no texture for non-vanilla passions available.
-                        subsection.ButtonImage(ATR_Textures.NoPassion, 24, 24);
+                        subsection.ButtonImage(ATRCore_Textures.NoPassion, 24, 24);
                         break;
                 }
 
@@ -171,7 +171,7 @@ namespace ATReforged
                     continue;
                 }
 
-                int pointsToIncreasePassion = Utils.GetSkillPointsToIncreasePassion(pawn, curSumPassions);
+                int pointsToIncreasePassion = ATRCore_Utils.GetSkillPointsToIncreasePassion(pawn, curSumPassions);
 
                 // Display a button for upgrading a passion to the next tier.
                 if (subsection.ButtonImage(texture, 24, 24))
@@ -180,7 +180,7 @@ namespace ATReforged
                     { // Increase passion tier and take away points used.
                         skillDefPassionList[i]++;
                         skillRecord.passion = (Passion)skillDefPassionList[i];
-                        Utils.gameComp.ChangeServerPoints(-pointsToIncreasePassion, ATR_ServerType.SkillServer);
+                        ATRCore_Utils.gameComp.ChangeServerPoints(-pointsToIncreasePassion, ATR_ServerType.SkillServer);
                         availableSkillPoints -= pointsToIncreasePassion;
                     }
                     else

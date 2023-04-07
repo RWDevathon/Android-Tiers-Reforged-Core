@@ -38,6 +38,7 @@
         <baseCost>1200</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
+            <li>MultiAnalyzer</li>
             <li>ATR_MechanicalStandardization</li>
         </prerequisites>
         <researchViewX>3</researchViewX>
@@ -92,7 +93,7 @@
 		<defName>ATR_MechaniteAssistedRecovery</defName>
 		<label>Mechanite assisted recovery</label>
 		<tab>ATR_MechResearch</tab>
-		<description>Components and replacement parts alone can almost perfectly imitate original parts and repair most damage. The inclusion of mechanites will allow for the eradication of words like "almost" and "most" as even in the hands of mediocre mechanics, mechanites will greatly improve repair and operation outcomes.</description>
+		<description>While simple components and replacement parts can fix most physical damage to mechanical units, recovering the consciousness of a sapient mechanical entity is a more complicated process. Advanced tools and and intricate materials - with the technical knowhow to produce and incorporate - will be required to reactivate offline mechanical sapients.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
@@ -108,6 +109,7 @@
         <baseCost>2000</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
+            <li>MultiAnalyzer</li>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
         <researchViewX>5</researchViewX>

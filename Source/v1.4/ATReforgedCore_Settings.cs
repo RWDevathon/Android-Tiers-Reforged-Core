@@ -7,7 +7,7 @@ using MechHumanlikes;
 
 namespace ATReforged
 {
-    public class ATReforged_Settings : ModSettings
+    public class ATReforgedCore_Settings : ModSettings
     {
         // GENERAL SETTINGS
             // Settings for android gender

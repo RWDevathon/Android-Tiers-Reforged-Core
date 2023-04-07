@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Android Tiers Reforged Core</name>
+	<name>MH: Android Tiers Core</name>
     <author>Killathon</author>
     <supportedVersions>
 		<li>1.4</li>
@@ -25,7 +25,7 @@
             <downloadUrl>https://github.com/RWDevathon/Dev_Mechanical-Humanlikes-Core</downloadUrl>
         </li>
     </modDependencies>
-    <packageId>Killathon.AndroidTiersReforgedCore</packageId>
+    <packageId>Killathon.MechHumanlikes.AndroidTiersCore</packageId>
     <loadAfter>
         <li>brrainz.harmony</li>
         <li>erdelf.HumanoidAlienRaces</li>

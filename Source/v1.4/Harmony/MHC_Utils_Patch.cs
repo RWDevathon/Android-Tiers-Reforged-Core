@@ -13,7 +13,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn pawn, ref bool __result)
             {
-                __result = __result && Utils.IsSurrogate(pawn);
+                __result = __result && ATRCore_Utils.IsSurrogate(pawn);
             }
         }
     }

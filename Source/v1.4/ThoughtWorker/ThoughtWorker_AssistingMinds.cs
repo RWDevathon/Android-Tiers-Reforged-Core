@@ -8,16 +8,16 @@ namespace ATReforged
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             // Skip pawns that can't connect to the SkyMind.
-            if (!Utils.HasCloudCapableImplant(p))
+            if (!ATRCore_Utils.HasCloudCapableImplant(p))
                 return false;
 
             // Skip pawns that can be but aren't connected to the SkyMind
-            if (!Utils.gameComp.HasSkyMindConnection(p))
+            if (!ATRCore_Utils.gameComp.HasSkyMindConnection(p))
             {
                 return false;
             }
 
-            int num = Utils.gameComp.GetCloudPawns().Count;
+            int num = ATRCore_Utils.gameComp.GetCloudPawns().Count;
             if (num >= 15)
             {
                 return ThoughtState.ActiveAtStage(2);

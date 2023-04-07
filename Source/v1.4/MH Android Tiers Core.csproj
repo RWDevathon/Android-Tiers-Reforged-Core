@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ATReforged</RootNamespace>
-    <AssemblyName>Android Tiers Reforged Core</AssemblyName>
+    <AssemblyName>MH Android Tiers Core</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -190,7 +190,6 @@
     <Compile Include="Components\ThingComps\CompProperties_SkyMindTower.cs" />
     <Compile Include="Components\ThingComps\CompProperties_HeatSensitive.cs" />
     <Compile Include="Components\ThingComps\CompProperties_SuperComputer.cs" />
-    <Compile Include="Components\ThingComps\CompScorchPack.cs" />
     <Compile Include="Components\ThingComps\CompRemotelyTriggered.cs" />
     <Compile Include="Components\ThingComps\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
@@ -226,7 +225,7 @@
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
     <Compile Include="MaintenanceWorkers\MaintenanceWorker_NoConsciousnessSource.cs" />
     <Compile Include="MentalStates\MentalState_Exterminator.cs" />
-    <Compile Include="ATReforged.cs" />
+    <Compile Include="ATReforgedCore.cs" />
     <Compile Include="ChoiceLetter\ChoiceLetter_RansomDemand.cs" />
     <Compile Include="Components\ThingComps\CompAutoDoor.cs" />
     <Compile Include="Components\ThingComps\CompSkyMindTower.cs" />
@@ -235,8 +234,8 @@
     <Compile Include="Components\ThingComps\CompSkyMindCore.cs" />
     <Compile Include="Components\ThingComps\CompSkyMind.cs" />
     <Compile Include="Components\ThingComps\CompSkyMindLink.cs" />
-    <Compile Include="Components\ThingComps\CompProperties_GenericSpawner.cs" />
-    <Compile Include="Components\ThingComps\CompSpawnerGeneric.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_PawnSpawner.cs" />
+    <Compile Include="Components\ThingComps\CompPawnSpawner.cs" />
     <Compile Include="DefOfs\ATR_JobDefOf.cs" />
     <Compile Include="DefOfs\ATR_StatDefOf.cs" />
     <Compile Include="DefOfs\ATR_ThingDefOf.cs" />
@@ -263,13 +262,13 @@
     <Compile Include="JobGivers\JobGiver_AIExterminatorSap.cs" />
     <Compile Include="Extensions\PawnExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ATReforged_Settings.cs" />
+    <Compile Include="ATReforgedCore_Settings.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="Components\ATR_GameComponent.cs" />
-    <Compile Include="Utils\Tex.cs" />
-    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\ATRCore_Textures.cs" />
+    <Compile Include="Utils\ATRCore_Utils.cs" />
     <Compile Include="JobGivers\WorkGiver_GenerateInsight.cs" />
   </ItemGroup>
   <ItemGroup />

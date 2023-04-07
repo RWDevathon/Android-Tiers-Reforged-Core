@@ -13,7 +13,7 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Listener(Pawn_HealthTracker __instance, DamageInfo? dinfo, Hediff hediff, ref Pawn ___pawn)
             {
-                if (Utils.IsSurrogate(___pawn))
+                if (ATRCore_Utils.IsSurrogate(___pawn))
                 {
                     // Surrogates from other factions are fail-deadly, and will self-immolate to prevent capture.
                     if (___pawn.Faction != null && ___pawn.Faction != Faction.OfPlayer)
@@ -47,10 +47,10 @@ namespace ATReforged
                     return;
 
                 // Dead pawns always try to disconnect from the network. This only actually affects player pawns, as they are the only things actually in the network.
-                Utils.gameComp.DisconnectFromSkyMind(___pawn);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(___pawn);
 
                 // Non-player surrogates must disconnect directly.
-                if (Utils.IsSurrogate(___pawn) && ___pawn.Faction != Faction.OfPlayer)
+                if (ATRCore_Utils.IsSurrogate(___pawn) && ___pawn.Faction != Faction.OfPlayer)
                     ___pawn.GetComp<CompSkyMindLink>().DisconnectController();
             }
         }

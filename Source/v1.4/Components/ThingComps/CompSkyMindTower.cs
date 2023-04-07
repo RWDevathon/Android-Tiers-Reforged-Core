@@ -22,7 +22,7 @@ namespace ATReforged
             CompPowerTrader cpt = parent.GetComp<CompPowerTrader>();
             if (cpt != null && cpt.PowerOn)
             { 
-                Utils.gameComp.RemoveTower(this);
+                ATRCore_Utils.gameComp.RemoveTower(this);
             }
         }
 
@@ -33,10 +33,10 @@ namespace ATReforged
             switch (signal)
             {
                 case "PowerTurnedOn":
-                    Utils.gameComp.AddTower(this);
+                    ATRCore_Utils.gameComp.AddTower(this);
                     break;
                 case "PowerTurnedOff":
-                    Utils.gameComp.RemoveTower(this);
+                    ATRCore_Utils.gameComp.RemoveTower(this);
                     break;
             }
         }
@@ -48,7 +48,7 @@ namespace ATReforged
             if (parent.Map == null)
                 return base.CompInspectStringExtra();
 
-            ret.Append("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
+            ret.Append("ATR_SkyMindNetworkSummary".Translate(ATRCore_Utils.gameComp.GetSkyMindDevices().Count, ATRCore_Utils.gameComp.GetSkyMindNetworkSlots()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }
@@ -65,7 +65,7 @@ namespace ATReforged
             // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
             if (parent.GetComp<CompPowerTrader>() == null)
             { 
-                Utils.gameComp.AddTower(this);
+                ATRCore_Utils.gameComp.AddTower(this);
             }
         }
     }

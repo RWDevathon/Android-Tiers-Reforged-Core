@@ -15,10 +15,10 @@ namespace ATReforged
 
         public override AlertReport GetReport()
         {
-            if (!ATReforged_Settings.receiveSkillAlert || Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) <= 0)
+            if (!ATReforgedCore_Settings.receiveSkillAlert || ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) <= 0)
                 return false;
 
-            if (Utils.gameComp.GetPoints(ATR_ServerType.SkillServer) >= Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) * 0.9f)
+            if (ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SkillServer) >= ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer) * 0.9f)
             {
                 return true;
             }

@@ -20,12 +20,12 @@ namespace ATReforged
                 {
                     // Removing an interface always disconnects a pawn from the SkyMind network. This needs to disconnect surrogates, controllers, and those currently in mind operations.
                     // This will ensure all appropriate comps and interactions are taken care of before continuing
-                    Utils.gameComp.DisconnectFromSkyMind(pawn);
+                    ATRCore_Utils.gameComp.DisconnectFromSkyMind(pawn);
 
                     // Surrogates are already handled via disconnecting from the SkyMind or are already blank. Autonomous intelligences must be murdered and made blank.
-                    if (pawn.Name != Utils.GetBlank().Name)
+                    if (pawn.Name != ATRCore_Utils.GetBlank().Name)
                     {
-                        Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
+                        ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), pawn, isTethered: false);
                         pawn.guest?.SetGuestStatus(Faction.OfPlayer);
                         if (pawn.playerSettings != null)
                             pawn.playerSettings.medCare = MedicalCareCategory.Best;

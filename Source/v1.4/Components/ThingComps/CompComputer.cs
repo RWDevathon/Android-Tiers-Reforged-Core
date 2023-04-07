@@ -45,12 +45,12 @@ namespace ATReforged
         {
             if (signal == "PowerTurnedOff" || signal == "SkyMindNetworkUserDisconnected")
             {
-                Utils.gameComp.RemoveServer(building, serverMode);
+                ATRCore_Utils.gameComp.RemoveServer(building, serverMode);
             }
             else if ((signal == "SkyMindNetworkUserConnected" && powerConnection.PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected != false))
             {
                 UpdateGlow();
-                Utils.gameComp.AddServer(building, serverMode);
+                ATRCore_Utils.gameComp.AddServer(building, serverMode);
             }
         }
 
@@ -66,7 +66,7 @@ namespace ATReforged
                 case ATR_ServerType.SkillServer:
                     yield return new Command_Action
                     {
-                        icon = ATR_Textures.SkillIcon,
+                        icon = ATRCore_Textures.SkillIcon,
                         defaultLabel = "ATR_SkillMode".Translate(),
                         defaultDesc = "ATR_SkillModeDesc".Translate(),
                         action = delegate ()
@@ -79,7 +79,7 @@ namespace ATReforged
                 case ATR_ServerType.SecurityServer:
                     yield return new Command_Action
                     {
-                        icon = ATR_Textures.SecurityIcon,
+                        icon = ATRCore_Textures.SecurityIcon,
                         defaultLabel = "ATR_SecurityMode".Translate(),
                         defaultDesc = "ATR_SecurityModeDesc".Translate(),
                         action = delegate ()
@@ -92,7 +92,7 @@ namespace ATReforged
                 case ATR_ServerType.HackingServer:
                     yield return new Command_Action
                     {
-                        icon = ATR_Textures.HackingIcon,
+                        icon = ATRCore_Textures.HackingIcon,
                         defaultLabel = "ATR_HackingMode".Translate(),
                         defaultDesc = "ATR_HackingModeDesc".Translate(),
                         action = delegate ()
@@ -102,11 +102,11 @@ namespace ATReforged
                     };
 
                     // Servers in hacking mode allow access to the hacking menu for deploying a hack.
-                    if (ATReforged_Settings.playerCanHack)
+                    if (ATReforgedCore_Settings.playerCanHack)
                     {
                         yield return new Command_Action
                         {
-                            icon = ATR_Textures.HackingWindowIcon,
+                            icon = ATRCore_Textures.HackingWindowIcon,
                             defaultLabel = "ATR_HackingWindow".Translate(),
                             defaultDesc = "ATR_HackingWindowDesc".Translate(),
                             action = delegate ()
@@ -120,13 +120,13 @@ namespace ATReforged
                 default:
                     yield return new Command_Action
                     { 
-                        icon = ATR_Textures.SkillIcon,
+                        icon = ATRCore_Textures.SkillIcon,
                         defaultLabel = "ATR_SwitchToSkillMode".Translate(),
                         defaultDesc = "ATR_SwitchToSkillModeDesc".Translate(),
                         action = delegate ()
                         {
                             serverMode = ATR_ServerType.SkillServer;
-                            Utils.gameComp.AddServer(building, serverMode);
+                            ATRCore_Utils.gameComp.AddServer(building, serverMode);
                         }
                     };
                     break;
@@ -147,19 +147,19 @@ namespace ATReforged
 
             if (serverMode == ATR_ServerType.SkillServer)
             {
-                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetPoints(ATR_ServerType.SkillServer), Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer)))
+                ret.AppendLine("ATR_SkillServersSynthesis".Translate(ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SkillServer), ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SkillServer)))
                    .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                    .Append("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
             }
             else if (serverMode == ATR_ServerType.SecurityServer)
             {
-                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer), Utils.gameComp.GetPointCapacity(ATR_ServerType.SecurityServer)))
+                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.SecurityServer), ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.SecurityServer)))
                    .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                    .Append("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
             }
             else if (serverMode == ATR_ServerType.HackingServer)
             {
-                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetPoints(ATR_ServerType.HackingServer), Utils.gameComp.GetPointCapacity(ATR_ServerType.HackingServer)))
+                ret.AppendLine("ATR_HackingServersSynthesis".Translate(ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.HackingServer), ATRCore_Utils.gameComp.GetPointCapacity(ATR_ServerType.HackingServer)))
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
                    .Append("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
             }
@@ -173,15 +173,15 @@ namespace ATReforged
             // Servers can not be connected to the network when despawned.
             if (networkConnection?.connected == true)
             {
-                Utils.gameComp.DisconnectFromSkyMind(building);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(building);
             }
         }
 
         // Change this server to the given type, making sure it deregisters from the previous type.
         public void ChangeServerMode(ATR_ServerType newMode)
         {
-            Utils.gameComp.RemoveServer(building, serverMode);
-            Utils.gameComp.AddServer(building, newMode);
+            ATRCore_Utils.gameComp.RemoveServer(building, serverMode);
+            ATRCore_Utils.gameComp.AddServer(building, newMode);
             serverMode = newMode;
             UpdateGlow();
         }

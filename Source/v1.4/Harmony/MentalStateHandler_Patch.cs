@@ -36,7 +36,7 @@ namespace ATReforged
                 }
 
                 // Pawns that have a surrogate connection are either a controller or a surrogate themselves. Handle cases separately.
-                if (Utils.IsSurrogate(___pawn))
+                if (ATRCore_Utils.IsSurrogate(___pawn))
                 {
                     // If the controller is in the SkyMind Core, do nothing.
                     Pawn controller = compSkyMindLink.GetSurrogates().FirstOrFallback();
@@ -53,7 +53,7 @@ namespace ATReforged
                     else
                     {
                         // If the controller is not a SkyMind Core intelligence, it will have the mental state applied directly.
-                        if (!Utils.gameComp.GetCloudPawns().Contains(controller))
+                        if (!ATRCore_Utils.gameComp.GetCloudPawns().Contains(controller))
                         {
                             controller.mindState.mentalStateHandler.TryStartMentalState(stateDef, reason, forceWake, causedByMood, otherPawn, transitionSilently, causedByDamage, causedByPsycast);
                         }

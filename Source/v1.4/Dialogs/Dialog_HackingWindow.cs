@@ -18,7 +18,7 @@ namespace ATReforged
             absorbInputAroundWindow = true;
             closeOnAccept = true;
             closeOnClickedOutside = true;
-            cachedHackPenalty = Utils.gameComp.hackCostTimePenalty;
+            cachedHackPenalty = ATRCore_Utils.gameComp.hackCostTimePenalty;
             ResetCostModifiers();
         }
 
@@ -82,7 +82,7 @@ namespace ATReforged
 
             float maxWidth = listingStandard.ColumnWidth;
 
-            availableHackingPoints = Utils.gameComp.GetPoints(ATR_ServerType.HackingServer);
+            availableHackingPoints = ATRCore_Utils.gameComp.GetPoints(ATR_ServerType.HackingServer);
 
             // Guidance Hack operation
             HackSelector(listingStandard, maxWidth, "ATR_GuidanceHack".Translate(), ref guidanceCostModifier, guidanceCostBase, OperationSuccessChance(guidanceSuccessChanceBase, guidanceCostBase, guidanceCostModifier), "ATR_GuidanceHackDesc".Translate(), delegate
@@ -193,8 +193,8 @@ namespace ATReforged
                                 }
                             }
                             cachedHackPenalty += (int)guidanceCostBase;
-                            Utils.gameComp.hackCostTimePenalty += (int)guidanceCostBase;
-                            Utils.gameComp.ChangeServerPoints(-guidanceCostModifier, ATR_ServerType.HackingServer);
+                            ATRCore_Utils.gameComp.hackCostTimePenalty += (int)guidanceCostBase;
+                            ATRCore_Utils.gameComp.ChangeServerPoints(-guidanceCostModifier, ATR_ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -234,8 +234,8 @@ namespace ATReforged
                                 targetFaction.TryAffectGoodwillWith(Faction.OfPlayer, Rand.Range(5, 15));
                             }
                             cachedHackPenalty += (int)propagandaCostBase;
-                            Utils.gameComp.hackCostTimePenalty += (int)propagandaCostBase;
-                            Utils.gameComp.ChangeServerPoints(-propagandaCostModifier, ATR_ServerType.HackingServer);
+                            ATRCore_Utils.gameComp.hackCostTimePenalty += (int)propagandaCostBase;
+                            ATRCore_Utils.gameComp.ChangeServerPoints(-propagandaCostModifier, ATR_ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -304,8 +304,8 @@ namespace ATReforged
 
                             }
                             cachedHackPenalty += (int)espionageCostBase;
-                            Utils.gameComp.hackCostTimePenalty += (int)espionageCostBase;
-                            Utils.gameComp.ChangeServerPoints(-espionageCostModifier, ATR_ServerType.HackingServer);
+                            ATRCore_Utils.gameComp.hackCostTimePenalty += (int)espionageCostBase;
+                            ATRCore_Utils.gameComp.ChangeServerPoints(-espionageCostModifier, ATR_ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -330,7 +330,7 @@ namespace ATReforged
                 // Get a list of all other hostile factions technologically capable of using the SkyMind network
                 foreach (Faction targetFaction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.HostileTo(Faction.OfPlayer) && (faction.def.GetModExtension<ATR_FactionExtension>()?.canUseOrganicSurrogates == true || faction.def.GetModExtension<ATR_FactionExtension>()?.canUseMechanicalSurrogates == true)))
                 {
-                    IEnumerable<Pawn> targetPawns = Find.CurrentMap.mapPawns.SpawnedPawnsInFaction(targetFaction).Where(pawn => Utils.HasCloudCapableImplant(pawn));
+                    IEnumerable<Pawn> targetPawns = Find.CurrentMap.mapPawns.SpawnedPawnsInFaction(targetFaction).Where(pawn => ATRCore_Utils.HasCloudCapableImplant(pawn));
                     if (targetPawns.Any())
                     {
                         opts.Add(new FloatMenuOption(targetFaction.Name, delegate
@@ -355,8 +355,8 @@ namespace ATReforged
                                     Messages.Message("ATR_DisruptorHackSuccess".Translate(), MessageTypeDefOf.PositiveEvent, false);
                                 }
                                 cachedHackPenalty += (int)disruptorCostBase;
-                                Utils.gameComp.hackCostTimePenalty += (int)disruptorCostBase;
-                                Utils.gameComp.ChangeServerPoints(-disruptorCostModifier, ATR_ServerType.HackingServer);
+                                ATRCore_Utils.gameComp.hackCostTimePenalty += (int)disruptorCostBase;
+                                ATRCore_Utils.gameComp.ChangeServerPoints(-disruptorCostModifier, ATR_ServerType.HackingServer);
                                 ResetCostModifiers();
                             }));
                         }));
@@ -420,7 +420,7 @@ namespace ATReforged
         protected void HandleOperationFailure(Faction faction)
         {
             // Retaliation events come in several flavors and range from inconvenient to dangerous.
-            if (Rand.Chance(ATReforged_Settings.retaliationChanceOnFailure))
+            if (Rand.Chance(ATReforgedCore_Settings.retaliationChanceOnFailure))
             {
                 float retaliationPick = Rand.Range(0.0f, 1.0f);
                 // Raid
@@ -522,7 +522,7 @@ namespace ATReforged
         // Generate and return the success chance of an operation.
         protected float OperationSuccessChance(float baseSuccessChance, float baseCost, float costModifier)
         {
-            return Mathf.Clamp(baseSuccessChance * (costModifier / (baseCost + cachedHackPenalty)) * RecentHackSuccessPenalty.Evaluate(cachedHackPenalty), ATReforged_Settings.minHackSuccessChance, ATReforged_Settings.maxHackSuccessChance);
+            return Mathf.Clamp(baseSuccessChance * (costModifier / (baseCost + cachedHackPenalty)) * RecentHackSuccessPenalty.Evaluate(cachedHackPenalty), ATReforgedCore_Settings.minHackSuccessChance, ATReforgedCore_Settings.maxHackSuccessChance);
         }
 
         // Recent successes in hacking decreases the likelihood of hacking success as other factions raise short-term security measures.

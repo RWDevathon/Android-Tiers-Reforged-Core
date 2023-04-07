@@ -10,22 +10,22 @@ using MechHumanlikes;
 
 namespace ATReforged
 {
-    public static class Utils
+    public static class ATRCore_Utils
     {
         // GENERAL UTILITIES
         // Return a new Gender for a mechanical pawn, based on settings. This should only be called for androids.
         public static Gender GenerateGender(PawnKindDef pawnKind)
         {
             // If androids are not allowed to have genders by setting, then set to none.
-            if (!ATReforged_Settings.androidsHaveGenders)
+            if (!ATReforgedCore_Settings.androidsHaveGenders)
                 return Gender.None;
 
             // If androids don't pick their own gender by setting, then set it to the one players selected in settings.
-            if (!ATReforged_Settings.androidsPickGenders)
-                return ATReforged_Settings.androidsFixedGender;
+            if (!ATReforgedCore_Settings.androidsPickGenders)
+                return ATReforgedCore_Settings.androidsFixedGender;
 
             // If androids pick their gender, then randomly select a gender based on the matching setting.
-            if (Rand.Chance(ATReforged_Settings.androidsGenderRatio))
+            if (Rand.Chance(ATReforgedCore_Settings.androidsGenderRatio))
                 return Gender.Male;
             // If it did not randomly select male, then it randomly selected female.
             else
@@ -569,7 +569,7 @@ namespace ATReforged
         public static IEnumerable<Pawn> GetHostlessCaravanSurrogates()
         {
             // If surrogates aren't allowed, there can be no hostless surrogates.
-            if (!ATReforged_Settings.surrogatesAllowed)
+            if (!ATReforgedCore_Settings.surrogatesAllowed)
                 return null;
 
             HashSet<Pawn> hostlessSurrogates = new HashSet<Pawn>();
@@ -706,14 +706,14 @@ namespace ATReforged
         public static int GetSkillPointsToIncreasePassion(Pawn pawn, int passionCount)
         {
             // Assign base cost based on settings. Default is 5000.
-            float result = ATReforged_Settings.basePointsNeededForPassion;
+            float result = ATReforgedCore_Settings.basePointsNeededForPassion;
 
             // Multiply result by the pawn's global learning factor (inverse relation, as higher learning factor should reduce cost).
             result *= 1 / pawn.GetStatValue(StatDef.Named("GlobalLearningFactor"));
 
-            if (passionCount > ATReforged_Settings.passionSoftCap)
+            if (passionCount > ATReforgedCore_Settings.passionSoftCap)
             { // If over the soft cap for number of passions, each additional passion adds 25% cost to buying another passion.
-                result *= (float) Math.Pow(1.25, passionCount - ATReforged_Settings.passionSoftCap);
+                result *= (float) Math.Pow(1.25, passionCount - ATReforgedCore_Settings.passionSoftCap);
             }
 
             // Return the end result as an integer for nice display numbers and costs.

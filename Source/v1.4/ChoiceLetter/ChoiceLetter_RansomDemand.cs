@@ -41,7 +41,7 @@ namespace ATReforged
                             TradeUtility.LaunchSilver(target, fee);
 
                             // Remove all cryptolocker viruses from the virused list and send a letter.
-                            Utils.RemoveViruses(cryptolockedThings);
+                            ATRCore_Utils.RemoveViruses(cryptolockedThings);
                             Messages.Message("ATR_GridlockerCleared".Translate(), MessageTypeDefOf.PositiveEvent);
                             Find.LetterStack.RemoveLetter(this);
                         },

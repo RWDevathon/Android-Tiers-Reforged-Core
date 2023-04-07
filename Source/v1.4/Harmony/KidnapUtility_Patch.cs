@@ -16,7 +16,7 @@ namespace ATReforged
                 if (__result)
                 {
                     // This will handle the whole process. It will do nothing if it wasn't connected to the SkyMind already.
-                    Utils.gameComp.DisconnectFromSkyMind(pawn);
+                    ATRCore_Utils.gameComp.DisconnectFromSkyMind(pawn);
                 }
             }
         }

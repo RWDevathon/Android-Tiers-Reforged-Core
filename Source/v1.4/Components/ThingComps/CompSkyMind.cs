@@ -19,8 +19,8 @@ namespace ATReforged
         {
             base.PostDestroy(mode, previousMap);
 
-            Utils.gameComp.PopVirusedThing(parent);
-            Utils.gameComp.DisconnectFromSkyMind(parent);
+            ATRCore_Utils.gameComp.PopVirusedThing(parent);
+            ATRCore_Utils.gameComp.DisconnectFromSkyMind(parent);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -28,7 +28,7 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
             if (connected)
             {
-                if (!Utils.gameComp.AttemptSkyMindConnection(parent))
+                if (!ATRCore_Utils.gameComp.AttemptSkyMindConnection(parent))
                 {
                     connected = false;
                 }
@@ -44,7 +44,7 @@ namespace ATReforged
             // If this pawn can't use the SkyMind or is not a colonist or prisoner, then it doesn't get any buttons to interact with it.
             if (parent is Pawn pawn)
             {
-                if (!Utils.HasCloudCapableImplant(pawn) || (pawn.Faction != Faction.OfPlayer && !pawn.IsPrisonerOfColony))
+                if (!ATRCore_Utils.HasCloudCapableImplant(pawn) || (pawn.Faction != Faction.OfPlayer && !pawn.IsPrisonerOfColony))
                 {
                     yield break;
                 }
@@ -59,15 +59,15 @@ namespace ATReforged
             }
 
             // If there is no SkyMind capacity, then it doesn't get any buttons to interact with it.
-            if (Utils.gameComp.GetSkyMindNetworkSlots() <= 0)
+            if (ATRCore_Utils.gameComp.GetSkyMindNetworkSlots() <= 0)
             {
                 yield break;
             }
-
+            
             // Connect/Disconnect to SkyMind
             yield return new Command_Toggle
             { 
-                icon = ATR_Textures.ConnectSkyMindIcon,
+                icon = ATRCore_Textures.ConnectSkyMindIcon,
                 defaultLabel = "ATR_ConnectSkyMind".Translate(),
                 defaultDesc = "ATR_ConnectSkyMindDesc".Translate(),
                 isActive = () => connected,
@@ -75,9 +75,9 @@ namespace ATReforged
                 {
                     if (!connected)
                     { // Attempt to connect to SkyMind
-                        if (!Utils.gameComp.AttemptSkyMindConnection(parent))
+                        if (!ATRCore_Utils.gameComp.AttemptSkyMindConnection(parent))
                         { // If trying to connect but it is unable to, inform the player. 
-                            if (Utils.gameComp.GetSkyMindNetworkSlots() == 0)
+                            if (ATRCore_Utils.gameComp.GetSkyMindNetworkSlots() == 0)
                                 Messages.Message("ATR_SkyMindConnectionFailedNoNetwork".Translate(), parent, MessageTypeDefOf.NegativeEvent);
                             else
                                 Messages.Message("ATR_SkyMindConnectionFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
@@ -86,7 +86,7 @@ namespace ATReforged
                     }
                     else
                     { // Disconnect from SkyMind
-                        Utils.gameComp.DisconnectFromSkyMind(parent);
+                        ATRCore_Utils.gameComp.DisconnectFromSkyMind(parent);
                     }
                 }
             };
@@ -144,7 +144,7 @@ namespace ATReforged
                             parent.SetFaction(Faction.OfPlayer);
                         }
                     }
-                    Utils.gameComp.PopVirusedThing(parent);
+                    ATRCore_Utils.gameComp.PopVirusedThing(parent);
                 }
                 else
                 {
@@ -175,9 +175,9 @@ namespace ATReforged
                 return base.CompInspectStringExtra();
 
             // Add a special line for devices hacked into a shut-down state.
-            if ((integrityBreach == 1 || integrityBreach == 3) && Utils.gameComp.GetAllVirusedDevices().ContainsKey(parent))
+            if ((integrityBreach == 1 || integrityBreach == 3) && ATRCore_Utils.gameComp.GetAllVirusedDevices().ContainsKey(parent))
             {
-                ret.Append("ATR_HackedWithTimer".Translate((Utils.gameComp.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.Append("ATR_HackedWithTimer".Translate((ATRCore_Utils.gameComp.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
             // Add a special line for cryptolocked devices.
             else if (integrityBreach == 2)

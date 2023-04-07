@@ -39,7 +39,7 @@ namespace ATReforged
                     }
 
                     // If the pawn in question is not a surrogate, return false.
-                    if (!Utils.IsSurrogate(pawn))
+                    if (!ATRCore_Utils.IsSurrogate(pawn))
                     {
                         return false;
                     }

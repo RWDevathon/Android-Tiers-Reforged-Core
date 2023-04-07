@@ -16,9 +16,9 @@ namespace ATReforged
             public static bool Prefix(ref PawnGenerationRequest request)
             {
                 ThingDef thingDef = request.KindDef?.race;
-                if (thingDef != null && Utils.IsConsideredMechanicalAndroid(thingDef))
+                if (thingDef != null && ATRCore_Utils.IsConsideredMechanicalAndroid(thingDef))
                 {
-                    request.FixedGender = Utils.GenerateGender(request.KindDef);
+                    request.FixedGender = ATRCore_Utils.GenerateGender(request.KindDef);
                 }
                 // This prefix will always allow vanilla pawn gen to continue
                 return true;
@@ -36,7 +36,7 @@ namespace ATReforged
                 try
                 {
                     // All androids that need cores (by def extension) receive one by default. Cases where that is not desired can remove it there.
-                    if (Utils.IsConsideredMechanicalAndroid(__result) && MHC_Utils.IsConsideredMechanicalSapient(__result))
+                    if (ATRCore_Utils.IsConsideredMechanicalAndroid(__result) && MHC_Utils.IsConsideredMechanicalSapient(__result))
                     {
                         __result.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                     }

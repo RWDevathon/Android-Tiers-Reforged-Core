@@ -19,7 +19,7 @@ namespace ATReforged
 
                 Pawn otherPawn = LovePartnerRelationUtility.ExistingMostLikedLovePartnerRel(p, false).otherPawn;
 
-                HashSet<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns();
+                HashSet<Pawn> cloudPawns = ATRCore_Utils.gameComp.GetCloudPawns();
 
                 if (cloudPawns.Contains(p) || cloudPawns.Contains(otherPawn))
                     __result = false;

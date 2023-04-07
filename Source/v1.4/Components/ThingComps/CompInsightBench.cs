@@ -41,7 +41,7 @@ namespace ATReforged
                 case ATR_ServerType.SkillServer:
                     yield return new Command_Action
                     { // In Skill Mode, can switch to Security
-                        icon = ATR_Textures.SkillIcon,
+                        icon = ATRCore_Textures.SkillIcon,
                         defaultLabel = "ATR_SkillMode".Translate(),
                         defaultDesc = "ATR_SkillModeDesc".Translate(),
                         action = delegate ()
@@ -53,7 +53,7 @@ namespace ATReforged
                 case ATR_ServerType.SecurityServer:
                     yield return new Command_Action
                     { // In Security Mode, can switch to Hacking
-                        icon = ATR_Textures.SecurityIcon,
+                        icon = ATRCore_Textures.SecurityIcon,
                         defaultLabel = "ATR_SecurityMode".Translate(),
                         defaultDesc = "ATR_SecurityModeDesc".Translate(),
                         action = delegate ()
@@ -65,7 +65,7 @@ namespace ATReforged
                 case ATR_ServerType.HackingServer:
                     yield return new Command_Action
                     { // In Hacking Mode, can switch to Skill
-                        icon = ATR_Textures.HackingIcon,
+                        icon = ATRCore_Textures.HackingIcon,
                         defaultLabel = "ATR_HackingMode".Translate(),
                         defaultDesc = "ATR_HackingModeDesc".Translate(),
                         action = delegate ()
@@ -75,11 +75,11 @@ namespace ATReforged
                     };
 
                     // Servers in hacking mode allow access to the hacking menu for deploying a hack.
-                    if (ATReforged_Settings.playerCanHack)
+                    if (ATReforgedCore_Settings.playerCanHack)
                     {
                         yield return new Command_Action
                         {
-                            icon = ATR_Textures.HackingWindowIcon,
+                            icon = ATRCore_Textures.HackingWindowIcon,
                             defaultLabel = "ATR_HackingWindow".Translate(),
                             defaultDesc = "ATR_HackingWindowDesc".Translate(),
                             action = delegate ()
@@ -92,7 +92,7 @@ namespace ATReforged
                 default:
                     yield return new Command_Action
                     { // In an illegal Mode, can switch to Skill
-                        icon = ATR_Textures.SkillIcon,
+                        icon = ATRCore_Textures.SkillIcon,
                         defaultLabel = "ATR_SwitchToSkillMode".Translate(),
                         defaultDesc = "ATR_SwitchToSkillModeDesc".Translate(),
                         action = delegate ()
@@ -111,7 +111,7 @@ namespace ATReforged
             // No building can be connected to the network when despawned.
             if (networkConnection?.connected == true)
             {
-                Utils.gameComp.DisconnectFromSkyMind(building);
+                ATRCore_Utils.gameComp.DisconnectFromSkyMind(building);
             }
         }
 

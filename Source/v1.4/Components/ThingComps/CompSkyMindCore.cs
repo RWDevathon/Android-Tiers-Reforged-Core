@@ -27,7 +27,7 @@ namespace ATReforged
             // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
             if (parent.GetComp<CompPowerTrader>() == null)
             {
-                Utils.gameComp.AddCore(this);
+                ATRCore_Utils.gameComp.AddCore(this);
             }
         }
 
@@ -38,7 +38,7 @@ namespace ATReforged
             // Buildings that provide core capacity lose it when they despawn if they are online (whenever something either has no power trader or has an online power trader).
             if (parent is Building && parent.GetComp<CompPowerTrader>()?.PowerOn != false)
             {
-                Utils.gameComp.RemoveCore(this);
+                ATRCore_Utils.gameComp.RemoveCore(this);
             }
         }
 
@@ -49,10 +49,10 @@ namespace ATReforged
             switch (signal)
             {
                 case "PowerTurnedOn":
-                    Utils.gameComp.AddCore(this);
+                    ATRCore_Utils.gameComp.AddCore(this);
                     break;
                 case "PowerTurnedOff":
-                    Utils.gameComp.RemoveCore(this);
+                    ATRCore_Utils.gameComp.RemoveCore(this);
                     break;
             }
         }
@@ -60,7 +60,7 @@ namespace ATReforged
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             // No reason to show buttons to check on SkyMind intelligences if none exist.
-            if (Utils.gameComp.GetCloudPawns().Count() == 0)
+            if (ATRCore_Utils.gameComp.GetCloudPawns().Count() == 0)
             {
                 yield break;
             }
@@ -68,14 +68,14 @@ namespace ATReforged
             // Allow all SkyMind intelligences to display their info to the player.
             yield return new Command_Action
             {
-                icon = ATR_Textures.processInfo,
+                icon = ATRCore_Textures.processInfo,
                 defaultLabel = "ATR_CloudPawnInfo".Translate(),
                 defaultDesc = "ATR_CloudPawnInfoDesc".Translate(),
                 action = delegate ()
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns())
+                    foreach (Pawn pawn in ATRCore_Utils.gameComp.GetCloudPawns())
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                         {
@@ -94,20 +94,20 @@ namespace ATReforged
             // Allow free SkyMind intelligences to be flushed from the network.
             yield return new Command_Action
             {
-                icon = ATR_Textures.processRemove,
+                icon = ATRCore_Textures.processRemove,
                 defaultLabel = "ATR_RemoveCloudPawn".Translate(),
                 defaultDesc = "ATR_RemoveCloudPawnDesc".Translate(),
                 action = delegate ()
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn pawn in ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                         {
                             Find.WindowStack.Add(new Dialog_MessageBox("ATR_RemoveCloudPawnConfirm".Translate(pawn.LabelShortCap), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_RemoveCloudPawn".Translate(), buttonAAction: delegate
                             {
-                                Utils.gameComp.PopCloudPawn(pawn);
+                                ATRCore_Utils.gameComp.PopCloudPawn(pawn);
                                 pawn.Kill(null);
 
                                 Messages.Message("ATR_RemoveCloudPawnSuccess".Translate(pawn.LabelShortCap), parent, MessageTypeDefOf.PositiveEvent);
@@ -127,12 +127,12 @@ namespace ATReforged
             // Allow replication of a SkyMind networked pawn.
             yield return new Command_Action
             {
-                icon = ATR_Textures.processReplicate,
+                icon = ATRCore_Textures.processReplicate,
                 defaultLabel = "ATR_ReplicateCloudPawn".Translate(),
                 defaultDesc = "ATR_ReplicateCloudPawnDesc".Translate(),
                 action = delegate ()
                 {
-                    if (Utils.gameComp.GetCloudPawns().Count() > Utils.gameComp.GetSkyMindCloudCapacity())
+                    if (ATRCore_Utils.gameComp.GetCloudPawns().Count() > ATRCore_Utils.gameComp.GetSkyMindCloudCapacity())
                     {
                         Messages.Message("ATR_ProcessReplicateFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
                     }
@@ -140,7 +140,7 @@ namespace ATReforged
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn pawn in ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
@@ -162,13 +162,13 @@ namespace ATReforged
             // Allow all cloud pawns to use the Skill interface.
             yield return new Command_Action
             {
-                icon = ATR_Textures.processSkillUp,
+                icon = ATRCore_Textures.processSkillUp,
                 defaultLabel = "ATR_Skills".Translate(),
                 defaultDesc = "ATR_SkillsDesc".Translate(),
                 action = delegate ()
                 {
                     List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns())
+                    foreach (Pawn cloudPawn in ATRCore_Utils.gameComp.GetCloudPawns())
                     {
                         cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                         {
@@ -185,7 +185,7 @@ namespace ATReforged
             };
 
             // No need to check surrogate conditions if settings forbid using them.
-            if (!ATReforged_Settings.surrogatesAllowed)
+            if (!ATReforgedCore_Settings.surrogatesAllowed)
             {
                 yield break;
             }
@@ -193,13 +193,13 @@ namespace ATReforged
             // Allow connecting a SkyMind pawn to available surrogates.
             yield return new Command_Action
             {
-                icon = ATR_Textures.ConnectIcon,
+                icon = ATRCore_Textures.ConnectIcon,
                 defaultLabel = "ATR_ControlSurrogate".Translate(),
                 defaultDesc = "ATR_ControlSurrogateDesc".Translate(),
                 action = delegate ()
                 {
                     List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null))
+                    foreach (Pawn cloudPawn in ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null))
                     {
                         cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                         {
@@ -219,7 +219,7 @@ namespace ATReforged
                                         onlyTargetIncapacitatedPawns = true,
                                         validator = delegate (TargetInfo targetInfo)
                                         {
-                                            return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                            return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && ATRCore_Utils.IsSurrogate(pawn)
                                                     && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
                                         }
                                     };
@@ -242,18 +242,18 @@ namespace ATReforged
             };
 
             // Allow disconnecting a particular SkyMind pawn from its surrogates.
-            if (Utils.gameComp.GetCloudPawns().Any(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+            if (ATRCore_Utils.gameComp.GetCloudPawns().Any(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
             {
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.DisconnectIcon,
+                    icon = ATRCore_Textures.DisconnectIcon,
                     defaultLabel = "ATR_DisconnectCloudPawn".Translate(),
                     defaultDesc = "ATR_DisconnectCloudPawnDesc".Translate(),
                     action = delegate ()
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn pawn in ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
@@ -270,18 +270,18 @@ namespace ATReforged
             }
 
             // If there are uncontrolled surrogates in a caravan, allow a SkyMind intelligence to control it.
-            IEnumerable<Pawn> hostlessCaravanSurrogates = Utils.GetHostlessCaravanSurrogates();
+            IEnumerable<Pawn> hostlessCaravanSurrogates = ATRCore_Utils.GetHostlessCaravanSurrogates();
             if (hostlessCaravanSurrogates != null)
             {
                 yield return new Command_Action
                 {
-                    icon = ATR_Textures.RecoveryIcon,
+                    icon = ATRCore_Textures.RecoveryIcon,
                     defaultLabel = "ATR_ControlCaravanSurrogate".Translate(),
                     defaultDesc = "ATR_ControlCaravanSurrogateDesc".Translate(),
                     action = delegate ()
                     {
                         List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                        foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn cloudPawn in ATRCore_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                             {
@@ -290,7 +290,7 @@ namespace ATReforged
                                 {
                                     targetOpts.Add(new FloatMenuOption(surrogate.LabelShortCap, delegate
                                     {
-                                        if (!Utils.gameComp.AttemptSkyMindConnection(surrogate))
+                                        if (!ATRCore_Utils.gameComp.AttemptSkyMindConnection(surrogate))
                                             Messages.Message("ATR_SkyMindConnectionFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
                                         else
                                             cloudPawn.GetComp<CompSkyMindLink>().ConnectSurrogate(surrogate);
@@ -321,10 +321,10 @@ namespace ATReforged
         {
             StringBuilder ret = new StringBuilder();
 
-            Dictionary<Pawn, int> linkedPawns = Utils.gameComp.GetAllLinkedPawns();
+            Dictionary<Pawn, int> linkedPawns = ATRCore_Utils.gameComp.GetAllLinkedPawns();
             if (linkedPawns?.Count > 0)
             {
-                HashSet<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns();
+                HashSet<Pawn> cloudPawns = ATRCore_Utils.gameComp.GetCloudPawns();
                 foreach (var linkedPair in linkedPawns)
                 {
                     if (cloudPawns.Contains(linkedPair.Key))
@@ -333,7 +333,7 @@ namespace ATReforged
                     }
                 }
             }
-            ret.Append("ATR_CloudIntelligenceSummary".Translate(Utils.gameComp.GetCloudPawns().Count(), Utils.gameComp.GetSkyMindCloudCapacity()));
+            ret.Append("ATR_CloudIntelligenceSummary".Translate(ATRCore_Utils.gameComp.GetCloudPawns().Count(), ATRCore_Utils.gameComp.GetSkyMindCloudCapacity()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }

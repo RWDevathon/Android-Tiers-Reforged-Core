@@ -11,7 +11,7 @@
             <PainShockThreshold>1</PainShockThreshold>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
 			<ComfyTemperatureMax>120</ComfyTemperatureMax>
-            <ATR_MHC_MaintenanceRetention>4</ATR_MHC_MaintenanceRetention>
+            <MHC_MaintenanceRetention>4</MHC_MaintenanceRetention>
 		</statBases>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<race>
@@ -49,8 +49,13 @@
             <li>ATR_MechanicalAnimal</li>
 		</tradeTags>
 		<modExtensions>
-			<li Class="ATReforged.ATR_MechTweaker">
-			</li>
+            <li Class="MechHumanlikes.MHC_MechanicalPawnExtension">
+                <blacklistedNeeds>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Hygiene</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Bladder</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">DBHThirst</li>
+                </blacklistedNeeds>
+            </li>
 		</modExtensions>
 	</ThingDef>
 

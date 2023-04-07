@@ -13,7 +13,7 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Prefix(Pawn pawn, ref MarriageNameChange __result)
             {
-                if (Utils.IsConsideredMechanicalAndroid(pawn))
+                if (ATRCore_Utils.IsConsideredMechanicalAndroid(pawn))
                 {
                     __result = MarriageNameChange.NoChange;
                     return false;

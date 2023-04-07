@@ -2,9 +2,6 @@
 <LanguageData>
 
 	<!-- General -->
-	<ATR_FractalCorruption>Fractal Abomination</ATR_FractalCorruption>
-	<ATR_FractalCorruptionDesc>{0} has been fully corrupted by fractal warping. They are no more than an abomination! The echoes of tortured screams will be heard for many miles, and perhaps as many years.</ATR_FractalCorruptionDesc>
-
 	<ATR_ServerMeltdown>Server Meltdown</ATR_ServerMeltdown>
     <ATR_ServerMeltdownDesc>A server has partially exploded due to excessive heat!</ATR_ServerMeltdownDesc>
 

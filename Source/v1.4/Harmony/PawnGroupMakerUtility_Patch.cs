@@ -32,7 +32,7 @@ namespace ATReforged
                 }
 
                 // If settings disable this faction from using surrogates (or all surrogates are banned entirely), then there is no work to do here. Allow default generation to proceed.
-                if (!ATReforged_Settings.surrogatesAllowed || !ATReforged_Settings.otherFactionsAllowedSurrogates || parms.faction == null)
+                if (!ATReforgedCore_Settings.surrogatesAllowed || !ATReforgedCore_Settings.otherFactionsAllowedSurrogates || parms.faction == null)
                 {
                     return;
                 }
@@ -70,13 +70,13 @@ namespace ATReforged
                     }
 
                     // Skip groups that are too small
-                    if (surrogateCandidates.Count <= ATReforged_Settings.minGroupSizeForSurrogates)
+                    if (surrogateCandidates.Count <= ATReforgedCore_Settings.minGroupSizeForSurrogates)
                     {
                         return;
                     }
 
                     // Determine how many surrogates are taking the place of candidates
-                    int surCount = (int)(surrogateCandidates.Count * Rand.Range(ATReforged_Settings.minSurrogatePercentagePerLegalGroup, ATReforged_Settings.maxSurrogatePercentagePerLegalGroup));
+                    int surCount = (int)(surrogateCandidates.Count * Rand.Range(ATReforgedCore_Settings.minSurrogatePercentagePerLegalGroup, ATReforgedCore_Settings.maxSurrogatePercentagePerLegalGroup));
 
                     IEnumerable<Pawn> selectedPawns = surrogateCandidates.TakeRandom(surCount);
 

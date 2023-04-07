@@ -46,6 +46,11 @@
 				<listOrder>804</listOrder>
 			</li>
 		</comps>
+        <modExtensions>
+            <li Class="MechHumanlikes.MHC_FoodExtension">
+                <consumableByOrganics>false</consumableByOrganics>
+            </li>
+        </modExtensions>
 	</ThingDef>
 
     <HediffDef>

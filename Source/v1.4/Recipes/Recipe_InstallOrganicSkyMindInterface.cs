@@ -48,14 +48,14 @@ namespace ATReforged
             // There are special considerations for adding these implants. Receiver chips kill the current mind.
             if (recipe.addsHediff.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true)
             {
-                Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
+                ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), pawn, isTethered: false);
                 pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
 
                 // If this is the pawn's first surrogate, send a letter with information about surrogates.
-                if (!Utils.gameComp.hasMadeSurrogate)
+                if (!ATRCore_Utils.gameComp.hasMadeSurrogate)
                 {
                     Find.LetterStack.ReceiveLetter("ATR_FirstSurrogateCreated".Translate(), "ATR_FirstSurrogateCreatedDesc".Translate(), LetterDefOf.NeutralEvent);
-                    Utils.gameComp.hasMadeSurrogate = true;
+                    ATRCore_Utils.gameComp.hasMadeSurrogate = true;
                 }
             }
         }

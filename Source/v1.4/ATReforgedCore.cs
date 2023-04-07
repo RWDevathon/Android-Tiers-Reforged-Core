@@ -6,21 +6,21 @@ using RimWorld;
 
 namespace ATReforged
 {
-    public class ATReforged : Mod
+    public class ATReforgedCore : Mod
     {
-        public static ATReforged_Settings settings;
-        public static ATReforged ModSingleton { get; private set; }
+        public static ATReforgedCore_Settings settings;
+        public static ATReforgedCore ModSingleton { get; private set; }
 
-        public ATReforged(ModContentPack content) : base(content)
+        public ATReforgedCore(ModContentPack content) : base(content)
         {
             ModSingleton = this;
-            new Harmony("ATReforged").PatchAll(Assembly.GetExecutingAssembly());
+            new Harmony("ATReforgedCore").PatchAll(Assembly.GetExecutingAssembly());
         }
         
         // Handles the localization for the mod's name in the list of mods in the mod settings page.
         public override string SettingsCategory()
         {
-            return "ATR_ModTitle".Translate();
+            return "ATRCore_ModTitle".Translate();
         }
 
         // Handles actually displaying this mod's settings.
@@ -32,12 +32,12 @@ namespace ATReforged
     }
 
     [StaticConstructorOnStartup]
-    public static class ATReforged_PostInit
+    public static class ATReforgedCore_PostInit
     {
-        static ATReforged_PostInit()
+        static ATReforgedCore_PostInit()
         {
-            ATReforged.settings = ATReforged.ModSingleton.GetSettings<ATReforged_Settings>();
-            ATReforged.settings.StartupChecks();
+            ATReforgedCore.settings = ATReforgedCore.ModSingleton.GetSettings<ATReforgedCore_Settings>();
+            ATReforgedCore.settings.StartupChecks();
 
             // Must dynamically modify some ThingDefs based on certain qualifications.
             foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)

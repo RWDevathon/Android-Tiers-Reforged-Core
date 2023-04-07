@@ -4,9 +4,9 @@ using UnityEngine;
 namespace ATReforged
 {
     [StaticConstructorOnStartup]
-    static class ATR_Textures
+    static class ATRCore_Textures
     {
-        static ATR_Textures()
+        static ATRCore_Textures()
         {
         }
 

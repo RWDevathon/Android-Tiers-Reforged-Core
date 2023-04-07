@@ -32,11 +32,11 @@ namespace ATReforged
             }
 
             if (heatLevel == 1)
-                iconMat = ATR_Textures.WarningHeat;
+                iconMat = ATRCore_Textures.WarningHeat;
             else if (heatLevel == 2)
-                iconMat = ATR_Textures.DangerHeat;
+                iconMat = ATRCore_Textures.DangerHeat;
             else if (heatLevel == 3)
-                iconMat = ATR_Textures.CriticalHeat;
+                iconMat = ATRCore_Textures.CriticalHeat;
 
             Vector3 vector = parent.TrueCenter();
             vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;

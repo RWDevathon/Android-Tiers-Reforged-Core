@@ -10,6 +10,6 @@ namespace ATReforged
         public bool canUseOrganicSurrogates = false;
 
         // Bool for whether to enforce refugees and quest pawns of this faction to be androids.
-        public bool membersShouldBeAndroids = true;
+        public bool membersShouldBeAndroids = false;
     }
 }
