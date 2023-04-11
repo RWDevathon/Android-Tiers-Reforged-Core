@@ -21,7 +21,6 @@ namespace ATReforged
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
-            DestroyAttachedMote();
         }
 
         public override void CompPostTick(ref float severityAdjustment)
@@ -31,6 +30,7 @@ namespace ATReforged
             {
                 AssignAttachedMote();
             }
+            attachedMote.Maintain();
         }
 
         public void AssignAttachedMote()
@@ -42,15 +42,6 @@ namespace ATReforged
                 vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
                 vector.z += 1.4f;
                 attachedMote = MoteMaker.MakeAttachedOverlay(Pawn, Props.moteDef, vector, Props.scale);
-            }
-        }
-
-        public void DestroyAttachedMote()
-        {
-            if (attachedMote != null)
-            {
-                attachedMote.Destroy();
-                attachedMote = null;
             }
         }
 

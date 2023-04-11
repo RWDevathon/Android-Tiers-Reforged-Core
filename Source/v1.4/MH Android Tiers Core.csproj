@@ -184,6 +184,7 @@
     <Compile Include="ChoiceLetter\ChoiceLetter_PersonalityShift.cs" />
     <Compile Include="Components\HediffComps\HediffCompProperties_RemoveHediffOnApply.cs" />
     <Compile Include="Components\HediffComps\HediffComp_RemoveHediffOnApply.cs" />
+    <Compile Include="Components\ThingComps\CompSkyMindCommsConsole.cs" />
     <Compile Include="Components\ThingComps\CompInsightBench.cs" />
     <Compile Include="Components\ThingComps\CompHeatSensitive.cs" />
     <Compile Include="Components\ThingComps\CompProperties_SkyMindCore.cs" />

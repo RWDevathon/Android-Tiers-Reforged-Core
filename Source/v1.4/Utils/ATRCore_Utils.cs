@@ -134,7 +134,7 @@ namespace ATReforged
             }
 
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceNoIdeo: true, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             blankMechanical.story.Childhood = ATR_BackstoryDefOf.ATR_MechChildhoodFreshBlank;
             blankMechanical.story.Adulthood = ATR_BackstoryDefOf.ATR_MechAdulthoodBlank;
@@ -155,10 +155,16 @@ namespace ATReforged
                 hostilityResponse = HostilityResponseMode.Flee
             };
             if (ModsConfig.BiotechActive)
+            {
                 for (int i = blankMechanical.genes.GenesListForReading.Count - 1; i >= 0; i--)
                 {
                     blankMechanical.genes.RemoveGene(blankMechanical.genes.GenesListForReading[i]);
                 }
+            }
+            if (blankMechanical.ideo != null)
+            {
+                blankMechanical.ideo.SetIdeo(null);
+            }
             if (blankMechanical.timetable == null)
                 blankMechanical.timetable = new Pawn_TimetableTracker(blankMechanical);
             if (blankMechanical.playerSettings == null)

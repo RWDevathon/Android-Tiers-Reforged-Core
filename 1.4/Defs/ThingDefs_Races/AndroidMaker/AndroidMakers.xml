@@ -17,7 +17,7 @@
     <ThingDef Name="ATR_GeneratorBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
         <graphicData>
-            <texPath>Things/Alpha</texPath>
+            <texPath>Things/NullImage</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <tickerType>Normal</tickerType>

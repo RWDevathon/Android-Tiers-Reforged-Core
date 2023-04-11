@@ -4,11 +4,11 @@ using RimWorld;
 using System.Collections.Generic;
 using System;
 using MechHumanlikes;
+using System.Linq;
 
 namespace ATReforged
 {
     public class PawnGroupMakerUtility_Patch
-
     {
         // Handle generation of groups of pawns so that foreign factions may use surrogates. Random selected pawns of the group will be controlled surrogates.
         [HarmonyPatch(typeof(PawnGroupMakerUtility), "GeneratePawns")]
@@ -17,8 +17,9 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(PawnGroupMakerParms parms, bool warnOnZeroResults, ref IEnumerable<Pawn> __result)
             {
+                List<Pawn> modifiedResults = __result.ToList();
                 // Generated mechanical pawns in proper groups will always receive the Stasis Hediff to reduce their power consumption significantly.
-                foreach (Pawn member in __result)
+                foreach (Pawn member in modifiedResults)
                 {
                     Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_StasisPill);
                     if (MHC_Utils.IsConsideredMechanical(member) && stasisHediff == null)
@@ -48,7 +49,7 @@ namespace ATReforged
                 {
                     List<Pawn> surrogateCandidates = new List<Pawn>();
 
-                    foreach (Pawn pawn in __result)
+                    foreach (Pawn pawn in modifiedResults)
                     {
                         // Count all non-trader pawns with humanlike intelligence that are organics with the proper setting or androids with the proper setting. Don't take pawns that have relations.
                         if (pawn.def.race != null && pawn.def.race.Humanlike && pawn.trader == null && pawn.TraderKind == null && !pawn.relations.RelatedToAnyoneOrAnyoneRelatedToMe)
@@ -126,6 +127,7 @@ namespace ATReforged
                         // Connect the chosenCandidate to the surrogate as the controller. It is an external controller.
                         selectedPawn.GetComp<CompSkyMindLink>().ConnectSurrogate(selectedPawn, true);
                     }
+                    __result = modifiedResults;
                 }
                 catch (Exception ex)
                 {

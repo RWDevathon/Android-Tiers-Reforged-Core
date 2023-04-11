@@ -19,7 +19,6 @@ namespace ATReforged
         public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
         public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");
         public static readonly Texture2D HackingWindowIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/HackingWindowIcon");
-        public static readonly Texture2D RestrictionGizmoIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ATR_RestrictionGizmo");
 
         // Dialogs
         public static readonly Texture2D SkillWorkshopHeader = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/SkillWorkshopHeader");

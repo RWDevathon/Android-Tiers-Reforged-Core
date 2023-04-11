@@ -29,7 +29,7 @@ namespace ATReforged
 
             for (int i = countRange.RandomInRange; i >= 0; i--)
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(usableKinds.RandomElement(), null, PawnGenerationContext.NonPlayer, forTile, forceGenerateNewPawn: true);
+                PawnGenerationRequest request = new PawnGenerationRequest(usableKinds.RandomElement(), null, PawnGenerationContext.NonPlayer, forTile, forceGenerateNewPawn: true, forceBaselinerChance: 1);
                 Pawn result = PawnGenerator.GeneratePawn(request);
                 result.guest.joinStatus = JoinStatus.JoinAsColonist;
                 yield return result;

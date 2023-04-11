@@ -7,6 +7,10 @@
 	<ATR_AutoDoorClose>Close</ATR_AutoDoorClose>
 	<ATR_AutoDoorCloseDescription>Close remotely via a SkyMind connection.</ATR_AutoDoorCloseDescription>
 
+    <!-- Comms Console -->
+    <ATR_OpenRemoteComms>Open Comms</ATR_OpenRemoteComms>
+    <ATR_OpenRemoteCommsDesc>Open communications remotely via a SkyMind connection.</ATR_OpenRemoteCommsDesc>
+
 	<!-- Computer -->
     <ATR_ServerNetworkConnectionNeeded>Server not connected to SkyMind network.</ATR_ServerNetworkConnectionNeeded>
 

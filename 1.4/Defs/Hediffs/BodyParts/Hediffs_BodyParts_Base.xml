@@ -17,6 +17,9 @@
         <thingCategories>
             <li>ATR_BodyPartsMechanical</li>
         </thingCategories>
+        <techHediffsTags>
+            <li>ATR_MechanicalParts</li>
+        </techHediffsTags>
     </ThingDef>
 
     <!-- Base Implant Installation Surgery Recipe -->
