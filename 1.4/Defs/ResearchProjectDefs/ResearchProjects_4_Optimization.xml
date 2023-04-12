@@ -12,8 +12,8 @@
             <li>ATR_MechanicalStandardization</li>
             <li>AdvancedFabrication</li>
         </prerequisites>
-		<researchViewX>6</researchViewX>
-		<researchViewY>2.5</researchViewY>
+		<researchViewX>5</researchViewX>
+		<researchViewY>4</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
@@ -30,7 +30,7 @@
             <li>ATR_MechanicalFrameworks</li>
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
-		<researchViewX>7</researchViewX>
+		<researchViewX>6</researchViewX>
 		<researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
@@ -45,8 +45,8 @@
             <li>ATR_StandardizedCommunications</li>
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
-        <researchViewX>7</researchViewX>
-        <researchViewY>4</researchViewY>
+        <researchViewX>6</researchViewX>
+        <researchViewY>4.5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
@@ -63,7 +63,7 @@
             <li>ATR_MechanicalOptimization</li>
             <li>ATR_InterchangeableParts</li>
         </prerequisites>
-		<researchViewX>8</researchViewX>
+		<researchViewX>7</researchViewX>
 		<researchViewY>0</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -81,7 +81,7 @@
             <li>ATR_CommunicationOptimization</li>
             <li>ATR_RemoteControlProtocols</li>
         </prerequisites>
-        <researchViewX>8</researchViewX>
+        <researchViewX>7</researchViewX>
         <researchViewY>5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -100,8 +100,8 @@
         <prerequisites>
             <li>ATR_CommunicationOptimization</li>
         </prerequisites>
-        <researchViewX>8</researchViewX>
-        <researchViewY>4</researchViewY>
+        <researchViewX>7</researchViewX>
+        <researchViewY>4.5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
@@ -120,8 +120,8 @@
             <li>ATR_ServerOptimization</li>
             <li>ShipComputerCore</li>
         </prerequisites>
-        <researchViewX>9</researchViewX>
-        <researchViewY>4</researchViewY>
+        <researchViewX>8</researchViewX>
+        <researchViewY>4.5</researchViewY>
         <requiredResearchFacilities>
             <li>ATR_NetworkedIntelligence</li>
             <li>MultiAnalyzer</li>
@@ -141,7 +141,7 @@
             <li>ATR_ServerOptimization</li>
             <li>ShipComputerCore</li>
         </prerequisites>
-        <researchViewX>9</researchViewX>
+        <researchViewX>8</researchViewX>
         <researchViewY>5</researchViewY>
         <requiredResearchFacilities>
             <li>ATR_NetworkedIntelligence</li>

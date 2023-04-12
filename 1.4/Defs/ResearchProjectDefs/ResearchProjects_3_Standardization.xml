@@ -12,8 +12,8 @@
             <li>MicroelectronicsBasics</li>
 			<li>ATR_MechanicalInsight</li>
         </prerequisites>
-        <researchViewX>2</researchViewX>
-        <researchViewY>2.5</researchViewY>
+        <researchViewX>1</researchViewX>
+        <researchViewY>4</researchViewY>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -26,7 +26,7 @@
 		<prerequisites>
             <li>ATR_MechanicalStandardization</li>
         </prerequisites>
-		<researchViewX>3</researchViewX>
+		<researchViewX>2</researchViewX>
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
@@ -41,8 +41,8 @@
             <li>MultiAnalyzer</li>
             <li>ATR_MechanicalStandardization</li>
         </prerequisites>
-        <researchViewX>3</researchViewX>
-        <researchViewY>4</researchViewY>
+        <researchViewX>2</researchViewX>
+        <researchViewY>4.5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
@@ -58,7 +58,7 @@
 		<baseCost>800</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
-		<researchViewX>4</researchViewX>
+		<researchViewX>3</researchViewX>
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
@@ -73,7 +73,7 @@
 			<li>ATR_InterchangeableParts</li>
             <li>Fabrication</li>
         </prerequisites>
-		<researchViewX>4</researchViewX>
+		<researchViewX>3</researchViewX>
 		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
@@ -85,7 +85,7 @@
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
-		<researchViewX>5</researchViewX>
+		<researchViewX>4</researchViewX>
 		<researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
@@ -97,7 +97,7 @@
 		<baseCost>800</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
-		<researchViewX>5</researchViewX>
+		<researchViewX>4</researchViewX>
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
@@ -112,7 +112,7 @@
             <li>MultiAnalyzer</li>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
-        <researchViewX>5</researchViewX>
+        <researchViewX>4</researchViewX>
         <researchViewY>5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
