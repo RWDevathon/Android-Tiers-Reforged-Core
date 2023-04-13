@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_RecoveringFromDDOS.label>DDOS Recovery</ATR_RecoveringFromDDOS.label>
+  <ATR_RecoveringFromDDOS.description>This unit is recovering from exposure to a DDOS attack. Recompiling and separating junk data from true data is a frustrating and distracting activity as little data can be fully trusted until it is complete.</ATR_RecoveringFromDDOS.description>
+
+  <ATR_MechanicalOverclocking.label>Overclocking</ATR_MechanicalOverclocking.label>
+  <ATR_MechanicalOverclocking.description>This unit is overclocking its core processor, with a noticeable boost to performance. This requires significant additional power consumption, and strains heat and maintenance systems. The unusually heightened processor activity stresses the host consciousness as well.</ATR_MechanicalOverclocking.description>
+
+  <ATR_MemoryCorruption.label>Memory corruption</ATR_MemoryCorruption.label>
+  <ATR_MemoryCorruption.description>This unit suffered a critical memory corruption. The memories are lost, but the damaged storage itself may eventually be recoverable. It will be a long and arduous road, however.</ATR_MemoryCorruption.description>
+  <ATR_MemoryCorruption.stages.0.label>Near Total Recovery</ATR_MemoryCorruption.stages.0.label>
+  <ATR_MemoryCorruption.stages.1.label>Minor Errors</ATR_MemoryCorruption.stages.1.label>
+  <ATR_MemoryCorruption.stages.2.label>Major Errors</ATR_MemoryCorruption.stages.2.label>
+  <ATR_MemoryCorruption.stages.3.label>Significant Failures</ATR_MemoryCorruption.stages.3.label>
+  <ATR_MemoryCorruption.stages.4.label>Critical Failures</ATR_MemoryCorruption.stages.4.label>
+  <ATR_MemoryCorruption.stages.5.label>Near Total Loss</ATR_MemoryCorruption.stages.5.label>
+
+  <ATR_RemainingCharge.label>battery life</ATR_RemainingCharge.label>
+  <ATR_RemainingCharge.description>Battery life remaining before loss of function.</ATR_RemainingCharge.description>
+  <ATR_RemainingCharge.stages.0.label>Empty</ATR_RemainingCharge.stages.0.label>
+  <ATR_RemainingCharge.stages.1.label>Critical</ATR_RemainingCharge.stages.1.label>
+  <ATR_RemainingCharge.stages.2.label>Low</ATR_RemainingCharge.stages.2.label>
+  <ATR_RemainingCharge.stages.3.label>Moderate</ATR_RemainingCharge.stages.3.label>
+  <ATR_RemainingCharge.stages.4.label>High</ATR_RemainingCharge.stages.4.label>
+  <ATR_RemainingCharge.stages.5.label>Full</ATR_RemainingCharge.stages.5.label>
+
+
+</LanguageData>

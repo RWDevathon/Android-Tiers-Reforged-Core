@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Autonomous Core -->
+
+  <ATR_Install_AutonomousCore.label>Install autonomous core</ATR_Install_AutonomousCore.label>
+  <ATR_Install_AutonomousCore.description>Installs and connects an autonomous core. After repair stims connect the central networking, the core will be able to store an intelligence - either copied from the SkyMind network or freshly generated.</ATR_Install_AutonomousCore.description>
+  <ATR_Install_AutonomousCore.jobString>Installing autonomous core.</ATR_Install_AutonomousCore.jobString>
+
+
+  <!-- SkyMind Receiver Core -->
+
+  <Install_ReceiverCore.label>Install receiver core</Install_ReceiverCore.label>
+  <Install_ReceiverCore.description>Installs and connects a receiver core. After repair stims connect the central networking, the core will be able to host remote controllers and act as a surrogate. It will have no intelligence or functionality on its own, however.</Install_ReceiverCore.description>
+  <Install_ReceiverCore.jobString>Installing receiver core.</Install_ReceiverCore.jobString>
+
+
+  <!-- SkyMind Receiver -->
+
+  <ATR_Install_SkyMindReceiver.label>Install SkyMind receiver</ATR_Install_SkyMindReceiver.label>
+  <ATR_Install_SkyMindReceiver.description>Installs and initializes a receiver in the subjects brain. Whatever intelligence may be stored in the brain will die, and the subject will become a surrogate.</ATR_Install_SkyMindReceiver.description>
+  <ATR_Install_SkyMindReceiver.jobString>Installing SkyMind Receiver.</ATR_Install_SkyMindReceiver.jobString>
+
+  <ATR_RemoveSkyMindReceiver.label>remove SkyMind receiver</ATR_RemoveSkyMindReceiver.label>
+  <ATR_RemoveSkyMindReceiver.description>Remove the Skymind receiver implant.</ATR_RemoveSkyMindReceiver.description>
+  <ATR_RemoveSkyMindReceiver.jobString>Removing Skymind receiver.</ATR_RemoveSkyMindReceiver.jobString>
+
+
+  <!-- SkyMind Transceiver -->
+
+  <ATR_Install_SkyMindTransceiver.label>Install SkyMind transceiver</ATR_Install_SkyMindTransceiver.label>
+  <ATR_Install_SkyMindTransceiver.description>Installs and initializes a transceiver in the subjects brain. The pawn will be able to access the SkyMind network freely.</ATR_Install_SkyMindTransceiver.description>
+  <ATR_Install_SkyMindTransceiver.jobString>Installing SkyMind Transceiver.</ATR_Install_SkyMindTransceiver.jobString>
+
+  <ATR_RemoveOrganicSkyMindTransceiver.label>remove SkyMind transceiver</ATR_RemoveOrganicSkyMindTransceiver.label>
+  <ATR_RemoveOrganicSkyMindTransceiver.description>Remove the Skymind transceiver implant.</ATR_RemoveOrganicSkyMindTransceiver.description>
+  <ATR_RemoveOrganicSkyMindTransceiver.jobString>Removing Skymind transceiver.</ATR_RemoveOrganicSkyMindTransceiver.jobString>
+
+
+</LanguageData>

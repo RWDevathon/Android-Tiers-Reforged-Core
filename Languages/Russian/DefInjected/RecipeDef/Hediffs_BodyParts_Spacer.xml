@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Advanced Arm -->
+
+  <ATR_Install_AdvancedArm.label>Install advanced arm</ATR_Install_AdvancedArm.label>
+  <ATR_Install_AdvancedArm.description>Installs an advanced arm.</ATR_Install_AdvancedArm.description>
+  <ATR_Install_AdvancedArm.jobString>Installing advanced arm.</ATR_Install_AdvancedArm.jobString>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_Install_AdvancedLeg.label>Install advanced leg</ATR_Install_AdvancedLeg.label>
+  <ATR_Install_AdvancedLeg.description>Higher plasteel temperance with higher efficiency components grants this eye a significant advantage over standard issue parts.</ATR_Install_AdvancedLeg.description>
+  <ATR_Install_AdvancedLeg.jobString>Installing high power leg.</ATR_Install_AdvancedLeg.jobString>
+
+
+  <!-- Advanced Visual Sensor -->
+
+  <ATR_Install_AdvancedVisualSensor.label>Install advanced visual sensor</ATR_Install_AdvancedVisualSensor.label>
+  <ATR_Install_AdvancedVisualSensor.description>Installs an advanced visual sensor.</ATR_Install_AdvancedVisualSensor.description>
+  <ATR_Install_AdvancedVisualSensor.jobString>Installing advanced visual sensor.</ATR_Install_AdvancedVisualSensor.jobString>
+
+
+  <!-- Advanced Audio Sensor -->
+
+  <ATR_Install_AdvancedAudioSensor.label>Install advanced audio sensor</ATR_Install_AdvancedAudioSensor.label>
+  <ATR_Install_AdvancedAudioSensor.description>Installs an advanced audio sensor.</ATR_Install_AdvancedAudioSensor.description>
+  <ATR_Install_AdvancedAudioSensor.jobString>Installing advanced hearing sensor.</ATR_Install_AdvancedAudioSensor.jobString>
+
+
+  <!-- Advanced Heatsink -->
+
+  <ATR_Install_AdvancedHeatsink.label>Install advanced heatsink</ATR_Install_AdvancedHeatsink.label>
+  <ATR_Install_AdvancedHeatsink.description>Installs an advanced heatsink.</ATR_Install_AdvancedHeatsink.description>
+  <ATR_Install_AdvancedHeatsink.jobString>Installing advanced heatsink.</ATR_Install_AdvancedHeatsink.jobString>
+
+
+  <!-- Advanced Coolant Pump -->
+
+  <ATR_Install_AdvancedCoolantPump.label>Install advanced coolant pump</ATR_Install_AdvancedCoolantPump.label>
+  <ATR_Install_AdvancedCoolantPump.description>Installs an advanced coolant pump.</ATR_Install_AdvancedCoolantPump.description>
+  <ATR_Install_AdvancedCoolantPump.jobString>Installing advanced coolant pump.</ATR_Install_AdvancedCoolantPump.jobString>
+
+
+  <!-- Advanced Battery -->
+
+  <ATR_Install_AdvancedBattery.label>Install advanced battery pack</ATR_Install_AdvancedBattery.label>
+  <ATR_Install_AdvancedBattery.description>Installs an advanced battery pack.</ATR_Install_AdvancedBattery.description>
+  <ATR_Install_AdvancedBattery.jobString>Installing advanced battery pack.</ATR_Install_AdvancedBattery.jobString>
+
+
+  <!-- Advanced Mechanite Storage -->
+
+  <ATR_Install_AdvancedMechaniteStorage.label>Install advanced mechanite storage</ATR_Install_AdvancedMechaniteStorage.label>
+  <ATR_Install_AdvancedMechaniteStorage.description>Installs an advanced mechanite storage.</ATR_Install_AdvancedMechaniteStorage.description>
+  <ATR_Install_AdvancedMechaniteStorage.jobString>Installing advanced mechanite storage.</ATR_Install_AdvancedMechaniteStorage.jobString>
+
+
+  <!-- Advanced Reactor -->
+
+  <ATR_Install_AdvancedReactor.label>install advanced bio-reactor</ATR_Install_AdvancedReactor.label>
+  <ATR_Install_AdvancedReactor.description>Installs an advanced bio-reactor.</ATR_Install_AdvancedReactor.description>
+  <ATR_Install_AdvancedReactor.jobString>Installing advanced bio-reactor.</ATR_Install_AdvancedReactor.jobString>
+
+
+  <!-- Organic Charger -->
+
+  <ATR_Install_OrganicCharger.label>install organic charger</ATR_Install_OrganicCharger.label>
+  <ATR_Install_OrganicCharger.description>Installs an organic charger.</ATR_Install_OrganicCharger.description>
+  <ATR_Install_OrganicCharger.jobString>Installing organic charger.</ATR_Install_OrganicCharger.jobString>
+
+
+</LanguageData>

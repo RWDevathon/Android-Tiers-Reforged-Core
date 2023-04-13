@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Insight Assistant -->
+
+  <ATR_InsightAssistant.label>Insight assistant</ATR_InsightAssistant.label>
+  <ATR_InsightAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core intelligence handles. It is also capable of independently generating new theories and assisting with research.</ATR_InsightAssistant.description>
+
+
+  <!-- General Assistant -->
+
+  <ATR_GeneralAssistant.label>General assistant</ATR_GeneralAssistant.label>
+  <ATR_GeneralAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is deliberately unspecialized, instead possessing dedicated processes to a wide range of tasks. This results in vast speed increases in the rate at which any task where quality is a concern can be completed - it allows the core intelligence to focus on quality while it handles less intricate details.</ATR_GeneralAssistant.description>
+
+
+  <!-- Combat Assistant -->
+
+  <ATR_CombatAssistant.label>Combat assistant</ATR_CombatAssistant.label>
+  <ATR_CombatAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.\n\nThe assistant's constant tactical analysis drains work efficiency, however.</ATR_CombatAssistant.description>
+
+
+  <!-- Mechanic Assistant -->
+
+  <ATR_MechanicAssistant.label>Mechanic assistant</ATR_MechanicAssistant.label>
+  <ATR_MechanicAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines.</ATR_MechanicAssistant.description>
+
+
+  <!-- Construction Assistant -->
+
+  <ATR_ConstructionAssistant.label>Construction assistant</ATR_ConstructionAssistant.label>
+  <ATR_ConstructionAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for architecture and construction tasks. An in-depth archive of the exact characteristics of building materials, tools, practices, and styles ensures the unit has every piece of information it could possibly need when approaching a task. Automatic sub-routines for measuring, examining, and analyzing physical objects and spaces also permit quicker calculations on placement, force, and safety.</ATR_ConstructionAssistant.description>
+
+
+  <!-- Excavation Assistant -->
+
+  <ATR_ExcavationAssistant.label>Excavation assistant</ATR_ExcavationAssistant.label>
+  <ATR_ExcavationAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for optimizing mineral identification, categorization, and extraction. A comprehension archive of mineral and material properties permits much more precise and efficient mining operations, leading to significant yield increases and operational capacity. Autonomous sub-routines also optimize the processes of excavator technology like deep drills.</ATR_ExcavationAssistant.description>
+
+
+  <!-- Victual Assistant -->
+
+  <ATR_VictualAssistant.label>Victual assistant</ATR_VictualAssistant.label>
+  <ATR_VictualAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the processing and preparation of organic substances - namely, food and drugs. An array of autonomous sub-routines combined with a vast library of references on the nature, composition, and behavior of organic matter tailored with a focus on their proper usage ensures top-of-the-line quality substances with minimal waste.</ATR_VictualAssistant.description>
+
+
+  <!-- Cultivation Assistant -->
+
+  <ATR_CultivationAssistant.label>Cultivation assistant</ATR_CultivationAssistant.label>
+  <ATR_CultivationAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the cultivation of flora and fauna. With a massive archive of data with painstakingly accurate insights on every plant and animal known to exist on the planet, autonomous sub-routines allow the unit to identify key behaviors, stressors, and to some base extent allow "communication" with target species via specific behaviors and pheromones. \n\nCuriously, this occasionally makes the mechanical unit itself display almost parental affection for lesser intelligences.</ATR_CultivationAssistant.description>
+
+
+  <!-- Medicine Assistant -->
+
+  <ATR_MedicineAssistant.label>Medicine assistant</ATR_MedicineAssistant.label>
+  <ATR_MedicineAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for treatment of organic injuries and for organic surgeries. An array of sub-routines and procedures assists in identifying, categorizing, and analyzing organic issues and provides remedial suggestions. \n\nThis device also lends itself well to performing simple repairs on mechanical units.</ATR_MedicineAssistant.description>
+
+
+  <!-- Social Assistant -->
+
+  <ATR_SocialAssistant.label>Social assistant</ATR_SocialAssistant.label>
+  <ATR_SocialAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for social situations. From reading individual body movements and expressions to referencing all known histories of targets, every day negotiations are optimized and analyzed for advancing the core intelligence's ability to handle social situations. Maximizing popularity, infamy, prestige - all are considered viable objectives.</ATR_SocialAssistant.description>
+
+
+  <!-- Mental Assistant -->
+
+  <ATR_MentalAssistant.label>Mental assistant</ATR_MentalAssistant.label>
+  <ATR_MentalAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for imbuing the core intelligence with a much stronger mental resilience. A suite of individualized sub-routines remove many stressors and unpleasant issues from the intelligence's cognition, while training a greater capacity for overcoming difficult situations. Many mechanical units come to view this device as a trusted friend, and find their own immortal-like existence much more bearable with it safely within them.</ATR_MentalAssistant.description>
+
+
+  <!-- Psychic Assistant -->
+
+  <ATR_PsychicAssistant.label>Psychic assistant</ATR_PsychicAssistant.label>
+  <ATR_PsychicAssistant.description>Installed assistant that assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</ATR_PsychicAssistant.description>
+
+
+  <!-- Controller Assistant -->
+
+  <ATR_ControllerAssistant.label>Controller assistant</ATR_ControllerAssistant.label>
+  <ATR_ControllerAssistant.description>Installed assistant that assists the core intelligence. This highly specialized assistant allows for the usage of surrogate processing power to alleviate the burden of controlling surrogates. This assistant allows for connecting to 4 additional surrogates without suffering any penalties. This assistant will only function in surrogate controllers and will do nothing otherwise.</ATR_ControllerAssistant.description>
+
+
+</LanguageData>

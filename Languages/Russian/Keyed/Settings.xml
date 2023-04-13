@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Miscellaneous Keys -->
+  <ATRCore_ModTitle>Android Tiers Reforged Core</ATRCore_ModTitle>
+
+  <!-- Mod Settings Page Keys -->
+
+  <ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+  <ATR_SettingsTabOption_General>Общие</ATR_SettingsTabOption_General>
+  <ATR_SettingsTabOption_Security>Безопасность</ATR_SettingsTabOption_Security>
+  <ATR_SettingsTabOption_Connectivity>Соединение</ATR_SettingsTabOption_Connectivity>
+
+  <!-- General Settings -->
+
+  <!-- Gender Settings -->
+  <ATR_AndroidGenderNotice>Изменения коснутся только новых андроидов</ATR_AndroidGenderNotice>
+  <ATR_AndroidsHaveGenders>У андроидов есть пол</ATR_AndroidsHaveGenders>
+  <ATR_AndroidsPickGenders>Андроиды выбирают пол в момент создания</ATR_AndroidsPickGenders>
+  <ATR_AndroidsFixedGenderSelector>Все андроиды - мужчины (false) или женщины (true)</ATR_AndroidsFixedGenderSelector>
+  <ATR_AndroidsGenderRatio>Шанс для андроида выбрать мужской пол или женскоий</ATR_AndroidsGenderRatio>
+
+  <!-- Android Faction Settings -->
+  <ATR_AndroidFactionsNeverFlee>Фракции Android никогда не бегут от битвы</ATR_AndroidFactionsNeverFlee>
+
+  <!-- Rights Settings -->
+  <ATR_factionsWillDeclareRightsWars>Фракции объявят войну из-за споров о правах</ATR_factionsWillDeclareRightsWars>
+  <ATR_factionsWillDeclareRightsWarsDesc>Фракции, настроенные против механики или органики, объявят вам войну, если у вас есть механические/органические колонисты.</ATR_factionsWillDeclareRightsWarsDesc>
+
+  <ATR_SettingsAntiMechanicalFaction>Фракции, не имеющие механических прав</ATR_SettingsAntiMechanicalFaction>
+  <ATR_SettingsTolerateMechanicalFaction>Фракции, толерантно относящиеся к механике</ATR_SettingsTolerateMechanicalFaction>
+  <ATR_SettingsAntiOrganicFaction>Фракции, не имеющие органических прав</ATR_SettingsAntiOrganicFaction>
+  <ATR_SettingsTolerateOrganicFaction>Фракции, толерантно относящиеся к органике</ATR_SettingsTolerateOrganicFaction>
+
+  <ATR_dronesTriggerRightsWars>Антимеханические фракции объявляют войну из-за дронов</ATR_dronesTriggerRightsWars>
+  <ATR_prisonersTriggerRightsWars>Фракции объявляют войну из-за заключенных</ATR_prisonersTriggerRightsWars>
+  <ATR_slavesTriggerRightsWars>Фракции объявляют войну из-за рабов</ATR_slavesTriggerRightsWars>
+  <ATR_surrogatesTriggerRightsWars>Фракции объявляют войну из-за суррогатов</ATR_surrogatesTriggerRightsWars>
+
+  <!-- Security Settings -->
+  <!-- Hostile Hacking -->
+  <ATR_EnemyHacksOccur>Враждебный взлом включен.</ATR_EnemyHacksOccur>
+  <ATR_ChanceAlliesInterceptHack>Шанс перехватить взломы против вас для каждой союзной фракции</ATR_ChanceAlliesInterceptHack>
+  <ATR_ChanceAlliesInterceptHackDesc>Процентный шанс того, что союзные фракции спасут вас от успешного взлома противника, предотвращая повреждения и фактически давая вам очки безопасности. Это на КАЖДОГО СОЮЗНИКА.</ATR_ChanceAlliesInterceptHackDesc>
+  <ATR_PointsGainedOnInterceptPercentage>Очки, получаемые при перехвате союзников, как процент от атаки</ATR_PointsGainedOnInterceptPercentage>
+  <ATR_PointsGainedOnInterceptPercentageDesc>Когда союзник перехватывает атаку против вас, он жертвует вам очки безопасности. Это определяет, какой процент от очков рейда они вам дают.</ATR_PointsGainedOnInterceptPercentageDesc>
+  <ATR_EnemyHackAttackStrengthModifier>Модификатор силы взлома противника</ATR_EnemyHackAttackStrengthModifier>
+  <ATR_EnemyHackAttackStrengthModifierDesc>Мультипликативный модификатор количества очков взлома у врага. Меньше 100% снижает интенсивность, больше 100% повышает интенсивность.</ATR_EnemyHackAttackStrengthModifierDesc>
+  <ATR_PercentageOfValueUsedForRansoms>Процент от стоимости товара, требуемый при атаке с целью выкупа</ATR_PercentageOfValueUsedForRansoms>
+
+  <!-- Player Hacking -->
+  <ATR_PlayerCanHack>Взлом игрока включен.</ATR_PlayerCanHack>
+  <ATR_receiveFullHackingAlert>Предупреждение о очках взлома, превышающих 90% мощности.</ATR_receiveFullHackingAlert>
+  <ATR_RetaliationChanceOnFailure>Шанс того, что выбранная фракция предпримет ответные меры в случае неудачного взлома</ATR_RetaliationChanceOnFailure>
+  <ATR_MinHackSuccessChance>Минимальный шанс успешного взлома</ATR_MinHackSuccessChance>
+  <ATR_MaxHackSuccessChance>Максимальный шанс успешного взлома</ATR_MaxHackSuccessChance>
+
+  <!-- Connectivity Settings -->
+  <!-- Surrogates -->
+  <ATR_surrogatesAllowed>Суррогаты разрешены.</ATR_surrogatesAllowed>
+  <ATR_otherFactionsAllowedSurrogates>Другие фракции могут использовать суррогатов.</ATR_otherFactionsAllowedSurrogates>
+  <ATR_minGroupSizeForSurrogates>Количество членов для групп фракций, которые появлятся с суррогатами</ATR_minGroupSizeForSurrogates>
+  <ATR_minSurrogatePercentagePerLegalGroup>Минимальный процент суррогатов в легальных группах [по умолчанию 0%]</ATR_minSurrogatePercentagePerLegalGroup>
+  <ATR_maxSurrogatePercentagePerLegalGroup>Максимальный процент суррогатов в легальных группах [по умолчанию 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+  <ATR_displaySurrogateControlIcon>Отображение парящего значка над контролируемыми суррогатами.</ATR_displaySurrogateControlIcon>
+  <ATR_safeSurrogateConnectivityCountBeforePenalty>Суррогаты на одного контроллера до штрафов:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+  <!-- Skills -->
+  <ATR_receiveFullSkillAlert>Предупреждение о превышении 90% заполненности очков навыков.</ATR_receiveFullSkillAlert>
+  <ATR_skillPointInsertionRate>Количество очков навыков, используемых на одну вставку [по умолчанию: 100]</ATR_skillPointInsertionRate>
+  <ATR_skillPointConversionRate>Количество базового XP, получаемого за очки навыка [по умолчанию: 0,5].</ATR_skillPointConversionRate>
+  <ATR_passionSoftCap>Мягкий лимит на страсти до увеличения стоимости одной страсти [по умолчанию: 8]</ATR_passionSoftCap>
+  <ATR_basePointsNeededForPassion>Базовые очки навыков, необходимые для страсти [по умолчанию: 5000].</ATR_basePointsNeededForPassion>
+
+  <!-- Cloud -->
+  <ATR_UploadingKills>Загрузка в SkyMind превращает тело инициатора в пустое.</ATR_UploadingKills>
+  <ATR_UploadingPermakills>Загрузка в SkyMind оставляет тело инициатора полностью бесполезным и мертвым.</ATR_UploadingPermakills>
+  <ATR_SkyMindOperationTimeRequired>Часы, необходимые для выполнения операций SkyMind [по умолчанию: 24]</ATR_SkyMindOperationTimeRequired>
+
+</LanguageData>

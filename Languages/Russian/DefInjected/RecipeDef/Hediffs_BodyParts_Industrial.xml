@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mining Utility Arm -->
+
+  <ATR_Install_MiningArm.label>Install mining arm</ATR_Install_MiningArm.label>
+  <ATR_Install_MiningArm.description>Installs a mining arm.</ATR_Install_MiningArm.description>
+  <ATR_Install_MiningArm.jobString>Installing mining arm.</ATR_Install_MiningArm.jobString>
+
+
+  <!-- Agriculture Utility Arm -->
+
+  <ATR_Install_AgriArm.label>Install agri arm</ATR_Install_AgriArm.label>
+  <ATR_Install_AgriArm.description>Installs an agri arm.</ATR_Install_AgriArm.description>
+  <ATR_Install_AgriArm.jobString>Installing agri arm.</ATR_Install_AgriArm.jobString>
+
+
+  <!-- Pacification Utility Arm -->
+
+  <ATR_Install_PacificationArm.label>Install pacification arm</ATR_Install_PacificationArm.label>
+  <ATR_Install_PacificationArm.description>Installs a pacification arm.</ATR_Install_PacificationArm.description>
+  <ATR_Install_PacificationArm.jobString>Installing pacification arm.</ATR_Install_PacificationArm.jobString>
+
+
+  <!-- Scalpel Utility Arm -->
+
+  <ATR_Install_ScalpelArm.label>Install scalpel arm</ATR_Install_ScalpelArm.label>
+  <ATR_Install_ScalpelArm.description>Installs a scalpel arm.</ATR_Install_ScalpelArm.description>
+  <ATR_Install_ScalpelArm.jobString>Installing scalpel arm.</ATR_Install_ScalpelArm.jobString>
+
+
+  <!-- Rending Utility Arm -->
+
+  <ATR_Install_RendingArm.label>Install rending arm</ATR_Install_RendingArm.label>
+  <ATR_Install_RendingArm.description>Installs a rending arm.</ATR_Install_RendingArm.description>
+  <ATR_Install_RendingArm.jobString>Installing rending arm.</ATR_Install_RendingArm.jobString>
+
+
+  <!-- Auto-modulator Voice Synthesizer -->
+
+  <ATR_Install_AutomodulatedVoiceSynthesizer.label>install automodulated voice synthesizer</ATR_Install_AutomodulatedVoiceSynthesizer.label>
+  <ATR_Install_AutomodulatedVoiceSynthesizer.description>Installs an automodulated voice synthesizer.</ATR_Install_AutomodulatedVoiceSynthesizer.description>
+  <ATR_Install_AutomodulatedVoiceSynthesizer.jobString>Installing automodulated voice synthesizer.</ATR_Install_AutomodulatedVoiceSynthesizer.jobString>
+
+
+  <!-- Coercive Voice Synthesizer -->
+
+  <ATR_Install_CoerciveVoiceSynthesizer.label>install coercive voice synthesizer</ATR_Install_CoerciveVoiceSynthesizer.label>
+  <ATR_Install_CoerciveVoiceSynthesizer.description>Installs a coercive voice synthesizer.</ATR_Install_CoerciveVoiceSynthesizer.description>
+  <ATR_Install_CoerciveVoiceSynthesizer.jobString>Installing coercive voice synthesizer.</ATR_Install_CoerciveVoiceSynthesizer.jobString>
+
+
+  <!-- Makeshift Leg -->
+
+  <ATR_Install_MakeshiftReplacementLeg.label>Install makeshift mechanical leg</ATR_Install_MakeshiftReplacementLeg.label>
+  <ATR_Install_MakeshiftReplacementLeg.description>Installs a makeshift mechanical leg.</ATR_Install_MakeshiftReplacementLeg.description>
+  <ATR_Install_MakeshiftReplacementLeg.jobString>Installing makeshift mechanical leg.</ATR_Install_MakeshiftReplacementLeg.jobString>
+
+
+  <!-- Makeshift Arm -->
+
+  <ATR_Install_MakeshiftReplacementArm.label>Install makeshift mechanical arm</ATR_Install_MakeshiftReplacementArm.label>
+  <ATR_Install_MakeshiftReplacementArm.description>Installs a makeshift mechanical arm.</ATR_Install_MakeshiftReplacementArm.description>
+  <ATR_Install_MakeshiftReplacementArm.jobString>Installing makeshift mechanical arm.</ATR_Install_MakeshiftReplacementArm.jobString>
+
+
+</LanguageData>

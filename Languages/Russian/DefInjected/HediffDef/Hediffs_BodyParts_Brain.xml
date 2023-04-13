@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Isolated Core Housing -->
+
+  <ATR_IsolatedCore.label>No installed interface</ATR_IsolatedCore.label>
+  <ATR_IsolatedCore.description>This unit's core is empty. The initialization of an autonomous core or receiver core is required to connect to the interface and activate the unit.</ATR_IsolatedCore.description>
+
+
+  <!-- Autonomous Core -->
+
+  <ATR_AutonomousCore.label>Autonomous core</ATR_AutonomousCore.label>
+  <ATR_AutonomousCore.description>This core is fully interfaced with an autonomous intelligence. Everything that makes up the intelligence is stored safely within this core, from which it is able to exert control over the rest of the chassis.</ATR_AutonomousCore.description>
+
+
+  <!-- SkyMind Receiver Core -->
+
+  <ATR_ReceiverCore.label>Receiver core</ATR_ReceiverCore.label>
+  <ATR_ReceiverCore.description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</ATR_ReceiverCore.description>
+
+
+  <!-- SkyMind Receiver -->
+
+  <ATR_SkyMindReceiver.label>SkyMind Receiver</ATR_SkyMindReceiver.label>
+  <ATR_SkyMindReceiver.description>This device is installed directly into the brain, and completely overrides the subject's neural network, converting them into a blank husk to be controlled by an external force. Due to the complexity of the device and the inherent difficulty of controlling organic matter, this device has a tendency to combust violently upon destruction. \n\nMany forces have used this to their advantage to destroy surrogates rather than let them fall into enemy hands.</ATR_SkyMindReceiver.description>
+
+
+  <!-- SkyMind Transceiver -->
+
+  <ATR_SkyMindTransceiver.label>SkyMind Transceiver</ATR_SkyMindTransceiver.label>
+  <ATR_SkyMindTransceiver.description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</ATR_SkyMindTransceiver.description>
+
+
+</LanguageData>

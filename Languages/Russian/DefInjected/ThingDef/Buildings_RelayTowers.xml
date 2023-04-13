@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- SkyMind Towers Abstract -->
+
+  <ATR_SkyMindRelay.label>Релейная башня SkyMind</ATR_SkyMindRelay.label>
+  <ATR_SkyMindRelay.description>Эта башня служит в качестве реле для связи и работы устройств, подключенных к SkyMind. Подобные башни необходимы для операций суррогатов или SkyMind - эта башня рассчитана на три непрерывных соединения устройств.</ATR_SkyMindRelay.description>
+  <ATR_SkyMindRelay_Blueprint.label>Релейная башня SkyMind (чертеж)</ATR_SkyMindRelay_Blueprint.label>
+  <ATR_SkyMindRelay_Blueprint_Install.label>Релейная башня SkyMind (чертеж)</ATR_SkyMindRelay_Blueprint_Install.label>
+  <ATR_SkyMindRelay_Frame.label>Релейная башня SkyMind (строительство)</ATR_SkyMindRelay_Frame.label>
+  <ATR_SkyMindRelay_Frame.description>Эта башня служит в качестве реле для связи и работы устройств, подключенных к SkyMind. Подобные башни необходимы для операций суррогатов или SkyMind - эта башня рассчитана на три непрерывных соединения устройств.</ATR_SkyMindRelay_Frame.description>
+
+  <ATR_SkyMindNetwork.label>Сетевая башня SkyMind</ATR_SkyMindNetwork.label>
+  <ATR_SkyMindNetwork.description>Эта башня служит мощным сетевым узлом для связи и работы устройств, подключенных к SkyMind. Подобные башни необходимы для операций суррогатов или SkyMind - эта башня рассчитана на пятнадцать непрерывных подключений устройств.</ATR_SkyMindNetwork.description>
+  <ATR_SkyMindNetwork_Blueprint.label>Сетевая башня SkyMind (чертеж)</ATR_SkyMindNetwork_Blueprint.label>
+  <ATR_SkyMindNetwork_Blueprint_Install.label>Сетевая башня SkyMind (чертеж)</ATR_SkyMindNetwork_Blueprint_Install.label>
+  <ATR_SkyMindNetwork_Frame.label>Сетевая башня SkyMind (строительство)</ATR_SkyMindNetwork_Frame.label>
+  <ATR_SkyMindNetwork_Frame.description>Эта башня служит мощным сетевым узлом для связи и работы устройств, подключенных к SkyMind. Подобные башни необходимы для операций суррогатов или SkyMind - эта башня рассчитана на пятнадцать непрерывных подключений устройств.</ATR_SkyMindNetwork_Frame.description>
+
+
+</LanguageData>

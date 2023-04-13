@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+  <ATR_SkyMindConnectionFailed>Не удалось установить соединение SkyMind. Проверьте пропускную способность и доступность сети.</ATR_SkyMindConnectionFailed>
+  <ATR_SkyMindConnectionFailedNoNetwork>Не удалось установить соединение SkyMind. Нет доступной сети.</ATR_SkyMindConnectionFailedNoNetwork>
+
+  <ATR_GridlockerCleared>Решетчатый замок был успешно расшифрован и отключен.</ATR_GridlockerCleared>
+
+  <!-- Core -->
+  <ATR_RemoveCloudPawnSuccess>Нейронная сеть {0} была удалена.</ATR_RemoveCloudPawnSuccess>
+
+  <ATR_ReplicateCloudPawnFailed>Не удалось инициировать репликацию. Недостаточно места SkyMind, доступного для распределения.</ATR_ReplicateCloudPawnFailed>
+
+  <!-- Player hacking -->
+  <ATR_HackOperationFailed>В ходе операции не удалось взломать систему безопасности выбранной фракции. Никаких последствий не ожидается.</ATR_HackOperationFailed>
+  <ATR_DisruptorHackSuccess>Срыв успешный. Вражеские подразделения ослаблены.</ATR_DisruptorHackSuccess>
+
+  <ATR_NoArrival>Ничего не было отправлено по перепутанным координатам до того, как фракция перезагрузила свою систему наведения. На этот раз им повезло.</ATR_NoArrival>
+
+  <!-- Android Interfaces -->
+  <ATR_NewbootAndroidCreated>Андроид создан. Установите интерфейс через хирургию, чтобы подключить юнит к сети.</ATR_NewbootAndroidCreated>
+  <ATR_InterfaceRemoved>Интерфейс андроида был удален. Все данные личности и управления были уничтожены. Установите новый интерфейс, чтобы привести его в рабочее состояние.</ATR_InterfaceRemoved>
+
+  <!-- Link -->
+  <ATR_CannotConnect>Попытка установить соединение не удалась, убедитесь в достаточной пропускной способности сети и жизнеспособности цели.</ATR_CannotConnect>
+  <ATR_SurrogateControlled>{0} подключен к новому суррогату</ATR_SurrogateControlled>
+  <ATR_OperationInitiated>Сетевое соединение SkyMind установлено по запросу {0}. Не отключайте соединение до завершения процедуры.</ATR_OperationInitiated>
+  <ATR_OperationCompleted>Операция SkyMind завершена</ATR_OperationCompleted>
+  <ATR_OperationCompletedDesc>Сеть SkyMind успешно выполнила операцию по запросу {0}.</ATR_OperationCompletedDesc>
+  <ATR_OperationFailure>Операция SkyMind провалилась!</ATR_OperationFailure>
+  <ATR_OperationFailureDesc>У {0} произошло катастрофическое повреждение памяти из-за разрушения связи SkyMind во время операции с разумом. Операция не удалась, и произошло серьезное повреждение памяти.</ATR_OperationFailureDesc>
+
+</LanguageData>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_AssistingMindBoost.stages.0.label>SkyMind Assistants</ATR_AssistingMindBoost.stages.0.label>
+  <ATR_AssistingMindBoost.stages.0.description>Having personal assistants to converse with at any time is like having close friends around at all times.</ATR_AssistingMindBoost.stages.0.description>
+  <ATR_AssistingMindBoost.stages.1.label>SkyMind Cluster</ATR_AssistingMindBoost.stages.1.label>
+  <ATR_AssistingMindBoost.stages.1.description>Having so many personalities to converse with freely is like being part of an elite club.</ATR_AssistingMindBoost.stages.1.description>
+  <ATR_AssistingMindBoost.stages.2.label>SkyMind Legion</ATR_AssistingMindBoost.stages.2.label>
+  <ATR_AssistingMindBoost.stages.2.description>I have a whole legion of friends with me at all times. It is a wonderful thing to have!</ATR_AssistingMindBoost.stages.2.description>
+
+  <ATR_MentalAssistant.stages.0.label>Mental Assistant</ATR_MentalAssistant.stages.0.label>
+  <ATR_MentalAssistant.stages.0.description>This mental assistant chip helps remove terrible stressors and helps me to be mentally resilient. I feel strong.</ATR_MentalAssistant.stages.0.description>
+
+  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>painted favorite color</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>
+  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>I love the color of my paint.</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>
+
+
+</LanguageData>

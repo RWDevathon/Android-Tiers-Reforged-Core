@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_PartDecay.label>decaying part</ATR_PartDecay.label>
+  <ATR_PartDecay.description>This part of this unit has suffered significant decay and is performing suboptimally. Repairs are needed to alleviate this.</ATR_PartDecay.description>
+  <ATR_PartDecay.labelNoun>a decaying part</ATR_PartDecay.labelNoun>
+
+  <ATR_RustedPart.label>rusted part</ATR_RustedPart.label>
+  <ATR_RustedPart.description>This part has rusted. While it is not performing any noticeably worse, it is very displeasing to see, hear, and use. Repairs are needed to alleviate this.</ATR_RustedPart.description>
+  <ATR_RustedPart.labelNoun>a rusted part</ATR_RustedPart.labelNoun>
+
+  <ATR_PowerLoss.label>part blackout</ATR_PowerLoss.label>
+  <ATR_PowerLoss.description>This part has suffered a near total power loss. While the part is still somewhat manipulatable by adjacent parts, it is severely impairing functionality and increasing power usage. Repairs can alleviate this, but it will pass on its own as mechanites repair the system.</ATR_PowerLoss.description>
+  <ATR_PowerLoss.labelNoun>a part blackout</ATR_PowerLoss.labelNoun>
+
+  <ATR_DamagedCore.label>core damage</ATR_DamagedCore.label>
+  <ATR_DamagedCore.description>The memory core of this unit has suffered internal physical damage and is not operating at an appropriate level. This may result in additional transitory memory corruptions and impair functionality until repaired.</ATR_DamagedCore.description>
+
+  <ATR_FailingCoolantValves.label>failing coolant valves</ATR_FailingCoolantValves.label>
+  <ATR_FailingCoolantValves.description>The internal coolant valves of this unit are degrading. Over time, the chassis will lose the ability to circulate coolant, leading to severe impediments to repairs and cooling efficiency until repaired.</ATR_FailingCoolantValves.description>
+  <ATR_FailingCoolantValves.stages.0.label>initial</ATR_FailingCoolantValves.stages.0.label>
+  <ATR_FailingCoolantValves.stages.1.label>minor</ATR_FailingCoolantValves.stages.1.label>
+  <ATR_FailingCoolantValves.stages.2.label>moderate</ATR_FailingCoolantValves.stages.2.label>
+  <ATR_FailingCoolantValves.stages.3.label>significant</ATR_FailingCoolantValves.stages.3.label>
+  <ATR_FailingCoolantValves.stages.4.label>severe</ATR_FailingCoolantValves.stages.4.label>
+
+  <ATR_RogueMechanites.label>rogue mechanites</ATR_RogueMechanites.label>
+  <ATR_RogueMechanites.description>The internal mechanite storage has suffered a critical failure, and the mechanites are decohering and preventing coolant flow. As they accumulate in critical regions and damage coolant lines, they may cause a lethal hardware failure unless emergency repairs occur.</ATR_RogueMechanites.description>
+  <ATR_RogueMechanites.stages.0.label>high coherence</ATR_RogueMechanites.stages.0.label>
+  <ATR_RogueMechanites.stages.1.label>moderate coherence</ATR_RogueMechanites.stages.1.label>
+  <ATR_RogueMechanites.stages.2.label>severe coherence</ATR_RogueMechanites.stages.2.label>
+  <ATR_RogueMechanites.stages.3.label>fatal</ATR_RogueMechanites.stages.3.label>
+
+  <ATR_MaintenanceCritical.label>critical integrity</ATR_MaintenanceCritical.label>
+  <ATR_MaintenanceCritical.description>This unit is suffering from critically poor maintenance and may suffer spontaneous major breakdowns or many small scale failures. The lack of maintenance is also reducing overall efficiency and the chassis' ability to repair itself.</ATR_MaintenanceCritical.description>
+  <ATR_MaintenanceCritical.labelNoun>critical vulnerability</ATR_MaintenanceCritical.labelNoun>
+
+  <ATR_MaintenancePoor.label>poor integrity</ATR_MaintenancePoor.label>
+  <ATR_MaintenancePoor.description>This unit is suffering from poor maintenance and may suffer spontaneous small scale failures if left unattended for too long. The lack of maintenance is slightly reducing the chassis' ability to repair itself.</ATR_MaintenancePoor.description>
+  <ATR_MaintenancePoor.labelNoun>minor vulnerability</ATR_MaintenancePoor.labelNoun>
+
+  <ATR_MaintenanceSatisfactory.label>high integrity</ATR_MaintenanceSatisfactory.label>
+  <ATR_MaintenanceSatisfactory.description>This unit is benefitting from proper maintenance and is immune to spontaneous part failure. The well-maintained chassis is slightly more power efficient and able to repair itself.</ATR_MaintenanceSatisfactory.description>
+  <ATR_MaintenanceSatisfactory.labelNoun>heightened stability</ATR_MaintenanceSatisfactory.labelNoun>
+
+
+</LanguageData>

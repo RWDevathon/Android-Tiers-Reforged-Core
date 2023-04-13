@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_SplitConsciousness.label>Split consciousness</ATR_SplitConsciousness.label>
+  <ATR_SplitConsciousness.description>The consciousness controlling this body is split, as it also controls other bodies. This effectively reduces the consciousness's ability to execute fine control over this body. More bodies means a steeper penalty.</ATR_SplitConsciousness.description>
+  <ATR_SplitConsciousness.stages.0.label>Safe</ATR_SplitConsciousness.stages.0.label>
+  <ATR_SplitConsciousness.stages.1.label>Trivial</ATR_SplitConsciousness.stages.1.label>
+  <ATR_SplitConsciousness.stages.2.label>Manageable</ATR_SplitConsciousness.stages.2.label>
+  <ATR_SplitConsciousness.stages.3.label>Difficult</ATR_SplitConsciousness.stages.3.label>
+  <ATR_SplitConsciousness.stages.4.label>Intense</ATR_SplitConsciousness.stages.4.label>
+  <ATR_SplitConsciousness.stages.5.label>Extreme</ATR_SplitConsciousness.stages.5.label>
+  <ATR_SplitConsciousness.labelNoun>Split consciousness</ATR_SplitConsciousness.labelNoun>
+
+  <ATR_ForeignConsciousness.label>Foreign consciousness</ATR_ForeignConsciousness.label>
+  <ATR_ForeignConsciousness.description>The consciousness controlling this body belongs to another faction. The controller will disconnect upon it being downed, and will likely trigger a core self-destruct.</ATR_ForeignConsciousness.description>
+  <ATR_ForeignConsciousness.labelNoun>a foreign consciousness</ATR_ForeignConsciousness.labelNoun>
+
+  <ATR_MindOperation.label>SkyMind operation in progress</ATR_MindOperation.label>
+  <ATR_MindOperation.description>This unit is currently undergoing a SkyMind operation. In order to maintain the connection and integrity, the consciousness is not currently in control of this body.</ATR_MindOperation.description>
+  <ATR_MindOperation.labelNoun>SkyMind operation</ATR_MindOperation.labelNoun>
+
+  <ATR_NoController.label>No controller connected</ATR_NoController.label>
+  <ATR_NoController.description>This surrogate has no controller and is therefore incapable of autonomous action.</ATR_NoController.description>
+  <ATR_NoController.labelNoun>No host connected</ATR_NoController.labelNoun>
+
+
+</LanguageData>

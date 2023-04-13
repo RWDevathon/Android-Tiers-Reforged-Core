@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Advanced Arm -->
+
+  <ATR_AdvancedArm.label>Advanced arm</ATR_AdvancedArm.label>
+  <ATR_AdvancedArm.description>Higher plasteel temperance with higher efficiency components grants this arm a significant advantage over standard issue parts.</ATR_AdvancedArm.description>
+  <ATR_AdvancedArm.comps.0.tools.0.label>fist</ATR_AdvancedArm.comps.0.tools.0.label>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_AdvancedLeg.label>Advanced leg</ATR_AdvancedLeg.label>
+  <ATR_AdvancedLeg.description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</ATR_AdvancedLeg.description>
+
+
+  <!-- Advanced Visual Sensor -->
+
+  <ATR_AdvancedVisualSensor.label>Advanced visual sensor</ATR_AdvancedVisualSensor.label>
+  <ATR_AdvancedVisualSensor.description>Higher plasteel temperance with higher efficiency components grants this visual sensor a significant advantage over standard issue parts.</ATR_AdvancedVisualSensor.description>
+
+
+  <!-- Advanced Audio Sensor -->
+
+  <ATR_AdvancedAudioSensor.label>Advanced audio sensor</ATR_AdvancedAudioSensor.label>
+  <ATR_AdvancedAudioSensor.description>Higher plasteel temperance with higher efficiency components grants this audio sensor a significant advantage over standard issue parts.</ATR_AdvancedAudioSensor.description>
+
+
+  <!-- Advanced Heatsink -->
+
+  <ATR_AdvancedHeatsink.label>Advanced heatsink</ATR_AdvancedHeatsink.label>
+  <ATR_AdvancedHeatsink.description>Higher plasteel temperance with higher efficiency components grants this heatsink a significant advantage over standard issue parts.</ATR_AdvancedHeatsink.description>
+
+
+  <!-- Advanced Coolant Pump -->
+
+  <ATR_AdvancedCoolantPump.label>Advanced coolant pump</ATR_AdvancedCoolantPump.label>
+  <ATR_AdvancedCoolantPump.description>Higher plasteel temperance with higher efficiency components grants this coolant pump a significant advantage over standard issue parts.</ATR_AdvancedCoolantPump.description>
+
+
+  <!-- Advanced Battery -->
+
+  <ATR_AdvancedBattery.label>Advanced battery pack</ATR_AdvancedBattery.label>
+  <ATR_AdvancedBattery.description>Higher plasteel temperance with higher efficiency components grants this battery a significant advantage over standard issue parts.</ATR_AdvancedBattery.description>
+
+
+  <!-- Advanced Mechanite Storage -->
+
+  <ATR_AdvancedMechaniteStorage.label>Advanced mechanite storage</ATR_AdvancedMechaniteStorage.label>
+  <ATR_AdvancedMechaniteStorage.description>Higher plasteel temperance with higher efficiency components grants this mechanite storage a significant advantage over standard issue parts. Higher quality mechanites means injuries will be repaired quicker.</ATR_AdvancedMechaniteStorage.description>
+
+
+  <!-- Advanced Reactor -->
+
+  <ATR_AdvancedReactor.label>Advanced bio-reactor</ATR_AdvancedReactor.label>
+  <ATR_AdvancedReactor.description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</ATR_AdvancedReactor.description>
+
+
+  <!-- Organic Charger -->
+
+  <ATR_OrganicCharger.label>organic charger</ATR_OrganicCharger.label>
+  <ATR_OrganicCharger.description>An advanced bionic part that allows organics that have this installed to charge. It requires considerable energy itself, leading to faster consumption, and reduces the amount of nutrition absorbed when eating food.</ATR_OrganicCharger.description>
+
+
+</LanguageData>

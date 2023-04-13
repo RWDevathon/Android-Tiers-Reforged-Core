@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_CoolantLoss.label>coolant loss</ATR_CoolantLoss.label>
+  <ATR_CoolantLoss.description>Loss of coolant in the chassis, resulting in reduced cooling capacity and loss of finetuned motor control. Lack of circulation prevents restorative mechanites from functioning properly, leading to extended recovery times. \n\nPrioritization ensures core functionality receives sufficient coolant flow until critical levels are reached.</ATR_CoolantLoss.description>
+  <ATR_CoolantLoss.stages.0.label>nominal</ATR_CoolantLoss.stages.0.label>
+  <ATR_CoolantLoss.stages.1.label>minor</ATR_CoolantLoss.stages.1.label>
+  <ATR_CoolantLoss.stages.2.label>moderate</ATR_CoolantLoss.stages.2.label>
+  <ATR_CoolantLoss.stages.3.label>significant</ATR_CoolantLoss.stages.3.label>
+  <ATR_CoolantLoss.stages.4.label>threatening</ATR_CoolantLoss.stages.4.label>
+  <ATR_CoolantLoss.stages.5.label>severe</ATR_CoolantLoss.stages.5.label>
+  <ATR_CoolantLoss.stages.6.label>critical</ATR_CoolantLoss.stages.6.label>
+
+  <ATR_Overheating.label>overheating</ATR_Overheating.label>
+  <ATR_Overheating.description>Unsafe levels of heat retention in the chassis. At minor levels, mechanical units can reduce some high power/heat functionality to offset the impact. At major levels, the unit will suffer from increasing system failures. If it surpasses a critical threshold, the core will shut down and the unit will die.</ATR_Overheating.description>
+  <ATR_Overheating.stages.0.label>nominal</ATR_Overheating.stages.0.label>
+  <ATR_Overheating.stages.1.label>minute</ATR_Overheating.stages.1.label>
+  <ATR_Overheating.stages.2.label>minor</ATR_Overheating.stages.2.label>
+  <ATR_Overheating.stages.3.label>moderate</ATR_Overheating.stages.3.label>
+  <ATR_Overheating.stages.4.label>significant</ATR_Overheating.stages.4.label>
+  <ATR_Overheating.stages.5.label>severe</ATR_Overheating.stages.5.label>
+
+  <ATR_MechanicalHypothermia.label>hypothermic reaction</ATR_MechanicalHypothermia.label>
+  <ATR_MechanicalHypothermia.description>While mechanical parts do not suffer from frostbite like organic flesh does, cold is an existential threat to machinery. At critical levels, the unit must focus all heat generation to internal systems - effectively immobilizing it - and batteries drain at an alarming rate when chilled.</ATR_MechanicalHypothermia.description>
+  <ATR_MechanicalHypothermia.stages.0.label>insignificant</ATR_MechanicalHypothermia.stages.0.label>
+  <ATR_MechanicalHypothermia.stages.1.label>minor</ATR_MechanicalHypothermia.stages.1.label>
+  <ATR_MechanicalHypothermia.stages.2.label>moderate</ATR_MechanicalHypothermia.stages.2.label>
+  <ATR_MechanicalHypothermia.stages.3.label>significant</ATR_MechanicalHypothermia.stages.3.label>
+  <ATR_MechanicalHypothermia.stages.4.label>threatening</ATR_MechanicalHypothermia.stages.4.label>
+  <ATR_MechanicalHypothermia.stages.5.label>critical</ATR_MechanicalHypothermia.stages.5.label>
+
+
+</LanguageData>
