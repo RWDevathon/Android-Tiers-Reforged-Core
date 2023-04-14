@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+  <ATR_ServerMeltdown>Разрушение сервера</ATR_ServerMeltdown>
+  <ATR_ServerMeltdownDesc>Сервер частично взорвался из-за чрезмерного нагрева!</ATR_ServerMeltdownDesc>
+
+  <!-- Faction Rights Letters -->
+  <ATR_DeclarationOfWarRights>Война за права</ATR_DeclarationOfWarRights>
+  <ATR_DeclarationOfWarRightsDesc>{0} поддерживает строгий кодекс против прав {1}, которые вы нарушили. {2} намерен уничтожить все интеллекты {1} - пока колонисты-нарушители не будут уничтожены, мира не будет.</ATR_DeclarationOfWarRightsDesc>
+  <ATR_CessationOfConflict>Конфликт по поводу прав урегулирован </ATR_CessationOfConflict>
+  <ATR_CessationOfConflictDesc>{0} поддерживает строгий кодекс против прав {1}, которые вы больше не нарушаете. По мере ослабления напряженности и потепления отношений мир снова становится возможным.</ATR_CessationOfConflictDesc>
+
+  <!-- Hacking Incidents -->
+  <!-- Generic Messages -->
+  <ATR_IncidentGenericAttackDesc>Вражеская попытка взлома, сила которой оценивается как {0}, успешно проникла в систему безопасности SkyMind колонии, заразив {1} сетевых устройств до того, как сработали защитные средства.</ATR_IncidentGenericAttackDesc>
+  <ATR_IncidentGenericDefense>Попытка взлома была пресечена</ATR_IncidentGenericDefense>
+  <ATR_IncidentGenericDefenseDesc>Вражеская попытка взлома, сила которой оценивается как {0}, не смогла проникнуть в систему безопасности колонии SkyMind. Функциональность системы в норме, а серверы безопасности пытаются опередить вторжения.</ATR_IncidentGenericDefenseDesc>
+  <ATR_IncidentGenericAllyIntercept>Взлом перехвачен!</ATR_IncidentGenericAllyIntercept>
+  <ATR_IncidentGenericAllyInterceptDesc>Белые хакеры вашего союзника {0} связались с вами и сообщили о попытке взлома вашей сети SkyMind враждебно настроенным человеком. Они не только смогли остановить атаку (сила которой оценивается в {1} очков), которая нарушила бы вашу безопасность, но и выявили несколько уязвимостей, которые можно легко устранить, в результате чего ваша система безопасности набирает {2} очков!</ATR_IncidentGenericAllyInterceptDesc>
+
+  <!-- Gridscreen Virus -->
+  <!-- Grid-virus defeated -->
+  <ATR_IncidentGridVirusDefeated>Сетевой вирус побежден</ATR_IncidentGridVirusDefeated>
+
+  <!-- Grid-sleeper attack -->
+  <ATR_IncidentGridsleeperAttack>Сетевой усыпитель</ATR_IncidentGridsleeperAttack>
+  <ATR_IncidentGridsleeperAttackDesc>Затронутые устройства вышли из строя, и им потребуется время для восстановления работоспособности по умолчанию.</ATR_IncidentGridsleeperAttackDesc>
+
+  <!-- Grid-locker attack -->
+  <ATR_IncidentGridlockerAttack>Сетевой замок</ATR_IncidentGridlockerAttack>
+  <ATR_IncidentGridlockerAttackDesc>Функциональность затронутых устройств была зашифрована хакером! Теперь хакеру предстоит восстановить функциональность - для этого потребуется заключить сделку.</ATR_IncidentGridlockerAttackDesc>
+
+  <ATR_CryptolockerNeedRansom>Сетевой замок - Вымогательство</ATR_CryptolockerNeedRansom>
+  <ATR_CryptolockerNeedRansomDesc>Заблокированное сетью устройство выдает сообщение по кругу. Хакер отправит коды дешифровки и откажется от контроля над {0} взломанными юнитами в обмен на {1} серебра. </ATR_CryptolockerNeedRansomDesc>
+
+  <!-- Grid-breaker attack -->
+  <ATR_IncidentGridbreakerAttack>Сетевой прерыватель</ATR_IncidentGridbreakerAttack>
+  <ATR_IncidentGridbreakerAttackDesc>В пострадавших устройствах произошел сбой аппаратного обеспечения из-за небезопасных программных процедур. Для восстановления стандартных функций после ремонта потребуется некоторое время.</ATR_IncidentGridbreakerAttackDesc>
+
+  <!-- Ally Grid Virus Intervention -->
+  <ATR_IncidentGridVirusAllyIntercept>Сетевой вирус перехвачен!</ATR_IncidentGridVirusAllyIntercept>
+
+  <!-- DDOS Attack -->
+  <ATR_IncidentDDOSDefeated>Сетевой вирус побежден</ATR_IncidentDDOSDefeated>
+
+  <ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+  <ATR_IncidentDDOSNormalAttackDesc>Пострадавшие устройства наводнены нежелательными данными и мусорной информацией. Это наносит ущерб навыкам и генерации хакерской информации. Однако атака не смогла эффективно повредить отдельные устройства.</ATR_IncidentDDOSNormalAttackDesc>
+  <ATR_IncidentDDOSOverwhelmingAttackDesc>Пострадавшие устройства наводнены нежелательными данными и мусорной информацией. Это наносит ущерб навыкам и генерации хакерской информации. Атака смогла успешно загрузить достаточно мусорной информации, чтобы устройства были вынуждены перекомпилировать большую часть своих знаний.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+
+  <ATR_IncidentDDOSAllyIntercept>DDOS перехвачен!</ATR_IncidentDDOSAllyIntercept>
+
+  <!-- Troll Attack -->
+  <ATR_IncidentTrollDefeated>Атака троллей побеждена</ATR_IncidentTrollDefeated>
+
+  <ATR_IncidentTrollAttack>Тролль</ATR_IncidentTrollAttack>
+  <ATR_IncidentTrollAttackDesc>Пострадавшая пешка, {0}, потеряла в общей сложности {1} очков навыков, распределенных между их страстными и высокоуровневыми навыками! {0} также крайне расстроен из-за ужасных вещей, которые хакеры смогли загрузить в его разум, и из-за того, что системы безопасности не смогли защитить его.</ATR_IncidentTrollAttackDesc>
+
+  <ATR_IncidentTrollAllyIntercept>Атака тролля перехвачена!</ATR_IncidentTrollAllyIntercept>
+
+  <!-- Diplohack -->
+  <ATR_IncidentDiplohackDefeated>Диплохак побежден</ATR_IncidentDiplohackDefeated>
+
+  <ATR_IncidentDiplohackAttack>Диплохак</ATR_IncidentDiplohackAttack>
+  <ATR_IncidentDiplohackAttackDesc>Неизвестные хакеры смогли расшифровать ключевые линии связи с {0} и доставили им сообщение, достоверно указывающее на вас как на источник. Сообщение содержало неверную информацию, которая привела караван из {0} в засаду. Они ясно выразили свое недовольство вашей "беспечности и слабой безопасности" в дипломатическом ответе, составленном в резких выражениях - и, предположительно, реальном. Они обещали распространить информацию об этом инциденте и среди других фракций.</ATR_IncidentDiplohackAttackDesc>
+
+  <ATR_IncidentDiplohackAllyIntercept>Диплохак перехвачен!</ATR_IncidentDiplohackAllyIntercept>
+
+  <!-- Provoker Hack -->
+  <ATR_IncidentProvokerhackDefeated>Взлом Провокатор побежден</ATR_IncidentProvokerhackDefeated>
+
+  <ATR_IncidentProvokerhackAttack>Взлом Провокатор</ATR_IncidentProvokerhackAttack>
+  <ATR_IncidentProvokerhackAttackDesc>Неизвестные хакеры смогли взломать систему безопасности SkyMind и установить простую программу-излучатель сигнала. Сигнал привлек внимание враждебных сил прежде, чем его удалось деактивировать!</ATR_IncidentProvokerhackAttackDesc>
+
+  <ATR_IncidentProvokerhackAllyIntercept>Взлом Провокатор перехвачен!</ATR_IncidentProvokerhackAllyIntercept>
+
+  <!-- Counterhack -->
+  <ATR_IncidentCounterhackDefeated>Контрвзлом побежден</ATR_IncidentCounterhackDefeated>
+
+  <ATR_IncidentCounterhackAttack>Контрвзлом</ATR_IncidentCounterhackAttack>
+  <ATR_IncidentCounterhackAttackDesc>Неизвестные хакеры проникли в сеть SkyMind и захватили столько информации, сколько смогли, отдав предпочтение разведданным, собранным на других объектах, а затем навыкам. По оценкам, они украли до {0} очков, прежде чем потеряли доступ.</ATR_IncidentCounterhackAttackDesc>
+
+  <ATR_IncidentCounterhackAllyIntercept>Контрвзлом перехвачен!</ATR_IncidentCounterhackAllyIntercept>
+
+  <!-- Player Hacks failing -->
+  <ATR_RelationshipRetaliation>Отношения испорчены</ATR_RelationshipRetaliation>
+  <ATR_RelationshipRetaliationDesc>Попытка операции была перехвачена и отбита средствами защиты цели. Фракция подозревает вас в совершении покушения, но не имеет веских доказательств вашей причастности к преступлению. Фактическое воздействие на отношения {0}, похоже, произошло потому, что перехвативший операцию человек решил обвинить вас перед всеми, кто готов слушать. Досадный дипломатический инцидент.</ATR_RelationshipRetaliationDesc>
+
+  <!-- Learning Letters -->
+  <ATR_FirstBlankAndroidCreated>О: Пустые андроиды</ATR_FirstBlankAndroidCreated>
+  <ATR_FirstBlankAndroidCreatedDesc>В отличие от дронов, андроиды создаются "пустыми", без какого-либо сознания. Чтобы сделать их активными, необходимо установить автономное или приемное ядро. Автономные ядра хранят полноценный интеллект, который может самоинициализироваться или может быть передан через сеть SkyMind при установке. Приемные ядра превращают устройство в суррогат для дистанционного управления. Оба ядра являются простыми хирургическими операциями без каких-либо специальных деталей.</ATR_FirstBlankAndroidCreatedDesc>
+
+  <ATR_FirstDroneCreated>О: Дроны</ATR_FirstDroneCreated>
+  <ATR_FirstDroneCreatedDesc>Обладая человекоподобным интеллектом, дроны не имеют сознания и, следовательно, настроения или связанных с ним потребностей. Другие воспринимают их как простые машины и не возражают против их уничтожения или разборки. С ними невозможно социальное взаимодействие, поэтому они не могут торговать, надзирать, приручать или иным образом взаимодействовать с другими.</ATR_FirstDroneCreatedDesc>
+
+  <ATR_FirstSurrogateCreated>О: Суррогаты</ATR_FirstSurrogateCreated>
+  <ATR_FirstSurrogateCreatedDesc>Вы создали свою первую суррогатную пешку. Пока она не подключена к контроллеру (любая пешка, подключенная к SkyMind, может переключать управление и связываться с этой пешкой), она остается пустой и не считается частью вашей фракции. При подключении к контроллеру она будет разделять навыки, пристрастия и отношения со своим контроллером. Полученные XP автоматически разделяются. Настроение, здоровье и некоторые другие детали не могут быть разделены, чтобы избежать проблем с нарушением игры.</ATR_FirstSurrogateCreatedDesc>
+
+  <!-- Mental States -->
+  <ATR_SurrogateSufferedMentalState>Суррогат Сломлен</ATR_SurrogateSufferedMentalState>
+  <ATR_SurrogateSufferedMentalStateDesc>Суррогат пережил психический срыв и отключился в качестве реакции самосохранения. Он перезагрузится автоматически.</ATR_SurrogateSufferedMentalStateDesc>
+
+  <ATR_ControllerSufferedMentalState>Контроллер Сломлен</ATR_ControllerSufferedMentalState>
+  <ATR_ControllerSufferedMentalStateDesc>Суррогатный контроллер получил психический срыв из-за экстремального сбоя в суррогате, распространяющегося на контроллер, или сбоя непосредственно в контроллере. Все подключенные к контроллеру суррогаты отключились - автоматически инициировав перезагрузку - и отсоединились от контроллера.</ATR_ControllerSufferedMentalStateDesc>
+
+  <!-- Personality Shift Letters -->
+  <ATR_PersonalityShiftFreewilled>Запрос на изменение личности</ATR_PersonalityShiftFreewilled>
+  <ATR_PersonalityShiftFreewilledDesc>{0_nameDef} хотел бы немного изменить свою личность, чтобы взглянуть на мир по-новому. Если вы согласитесь, страсть {0_possessive} в трех навыках и черта характера будут заменены на новые с вашим участием. {0_nameDef} будет рад переменам, и будет слегка разочарован, если ему помешают измениться.</ATR_PersonalityShiftFreewilledDesc>
+  <ATR_PersonalityShiftNewboot>Личностная нерешительность</ATR_PersonalityShiftNewboot>
+  <ATR_PersonalityShiftRequest>Сдвиг личности у {0_nameDef}</ATR_PersonalityShiftRequest>
+  <ATR_PersonalityShift>{0_nameFull} желает немного изменить свою личность.</ATR_PersonalityShift>
+  <ATR_PersonalityShiftChooseHowPawnWillChange>Откройте это письмо, чтобы выбрать, как изменится {0_nameDef}.</ATR_PersonalityShiftChooseHowPawnWillChange>
+
+</LanguageData>

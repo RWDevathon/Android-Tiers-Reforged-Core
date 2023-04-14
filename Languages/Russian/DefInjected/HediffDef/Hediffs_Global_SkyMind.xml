@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_SplitConsciousness.label>Разделенное сознание</ATR_SplitConsciousness.label>
+  <ATR_SplitConsciousness.description>Сознание, контролирующее это тело, раздваивается, поскольку оно также контролирует другие тела. Это эффективно снижает способность сознания осуществлять тонкий контроль над этим телом. Большее количество тел означает более суровое наказание.</ATR_SplitConsciousness.description>
+  <ATR_SplitConsciousness.stages.0.label>Безопасно</ATR_SplitConsciousness.stages.0.label>
+  <ATR_SplitConsciousness.stages.1.label>Тривиально</ATR_SplitConsciousness.stages.1.label>
+  <ATR_SplitConsciousness.stages.2.label>Управляемо</ATR_SplitConsciousness.stages.2.label>
+  <ATR_SplitConsciousness.stages.3.label>Сложно</ATR_SplitConsciousness.stages.3.label>
+  <ATR_SplitConsciousness.stages.4.label>Интенсивно</ATR_SplitConsciousness.stages.4.label>
+  <ATR_SplitConsciousness.stages.5.label>Экстремально</ATR_SplitConsciousness.stages.5.label>
+  <ATR_SplitConsciousness.labelNoun>Разделенное сознание</ATR_SplitConsciousness.labelNoun>
+
+  <ATR_ForeignConsciousness.label>Чужое сознание</ATR_ForeignConsciousness.label>
+  <ATR_ForeignConsciousness.description>Сознание, контролирующее это тело, принадлежит другой фракции. Контроллер отключится, когда его уничтожат, и, скорее всего, запустит самоуничтожение ядра.</ATR_ForeignConsciousness.description>
+  <ATR_ForeignConsciousness.labelNoun>чужое сознание</ATR_ForeignConsciousness.labelNoun>
+
+  <ATR_MindOperation.label>Проводится операция SkyMind</ATR_MindOperation.label>
+  <ATR_MindOperation.description>В настоящее время это устройство проходит операцию SkyMind. Чтобы сохранить связь и целостность, сознание в настоящее время не контролирует это тело.</ATR_MindOperation.description>
+  <ATR_MindOperation.labelNoun>операция SkyMind</ATR_MindOperation.labelNoun>
+
+  <ATR_NoController.label>Контроллер не подключен</ATR_NoController.label>
+  <ATR_NoController.description>Этот суррогат не имеет контроллера и поэтому не способен к автономным действиям.</ATR_NoController.description>
+  <ATR_NoController.labelNoun>Нет подключенного хоста</ATR_NoController.labelNoun>
+
+
+</LanguageData>
