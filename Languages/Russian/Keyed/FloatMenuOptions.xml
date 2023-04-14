@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+  <ATR_ViableSources>Доступные источники:</ATR_ViableSources>
+  <ATR_ViableTargets>Доступные цели:</ATR_ViableTargets>
+  <ATR_NoAvailableTarget>Нет доступных целей для операции.</ATR_NoAvailableTarget>
+  <ATR_NoSurrogateMechanitors>Механиторы не могут быть суррогатами.</ATR_NoSurrogateMechanitors>
+
+</LanguageData>

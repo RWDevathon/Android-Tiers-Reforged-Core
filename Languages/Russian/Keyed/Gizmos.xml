@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- AutoDoor -->
+  <ATR_AutoDoorOpen>Открыть</ATR_AutoDoorOpen>
+  <ATR_AutoDoorOpenDescription>Открывается удаленно через соединение SkyMind.</ATR_AutoDoorOpenDescription>
+  <ATR_AutoDoorClose>Закрыть</ATR_AutoDoorClose>
+  <ATR_AutoDoorCloseDescription>Закрывается удаленно через соединение SkyMind.</ATR_AutoDoorCloseDescription>
+
+  <!-- Comms Console -->
+  <ATR_OpenRemoteComms>Открыть коммуникации</ATR_OpenRemoteComms>
+  <ATR_OpenRemoteCommsDesc>Коммуникации открыты удаленно через соединение SkyMind.</ATR_OpenRemoteCommsDesc>
+
+  <!-- Computer -->
+  <ATR_ServerNetworkConnectionNeeded>Сервер не подключен к сети SkyMind.</ATR_ServerNetworkConnectionNeeded>
+
+  <ATR_SkillMode>Режим навыков</ATR_SkillMode>
+  <ATR_SkillModeDesc>Этот сервер назначен для генерации очков навыков. Щелкните, чтобы переключиться на безопасность.</ATR_SkillModeDesc>
+
+  <ATR_SecurityMode>Режим безопасности</ATR_SecurityMode>
+  <ATR_SecurityModeDesc>Этот сервер назначен для генерации очков безопасности. Нажмите, чтобы переключиться на взлом.</ATR_SecurityModeDesc>
+
+  <ATR_HackingMode>Режим взлома</ATR_HackingMode>
+  <ATR_HackingModeDesc>Этот сервер назначен для генерации очков взлома. Нажмите, чтобы переключиться на навыки.</ATR_HackingModeDesc>
+
+  <ATR_HackingWindow>Попытка взлома</ATR_HackingWindow>
+  <ATR_HackingWindowDesc>Открыть интерфейс взлома, позволяющий использовать очки взлома для участия в гнусной деятельности.</ATR_HackingWindowDesc>
+
+  <ATR_SwitchToSkillMode>Неактивно!</ATR_SwitchToSkillMode>
+  <ATR_SwitchToSkillModeDesc>Этот сервер находится в незаконном состоянии. Нажмите для перехода к навыкам.</ATR_SwitchToSkillModeDesc>
+
+  <!-- SkyMind -->
+  <ATR_ConnectSkyMind>Подключение к SkyMind</ATR_ConnectSkyMind>
+  <ATR_ConnectSkyMindDesc>Подключите это устройство к сети SkyMind для удаленного взаимодействия.</ATR_ConnectSkyMindDesc>
+
+  <!-- Core -->
+  <ATR_CloudPawnInfo>Информация</ATR_CloudPawnInfo>
+  <ATR_CloudPawnInfoDesc>Получите информацию об интеллектах SkyMind.</ATR_CloudPawnInfoDesc>
+
+  <ATR_RemoveCloudPawn>Удалить</ATR_RemoveCloudPawn>
+  <ATR_RemoveCloudPawnDesc>Удаление интеллекта из SkyMind</ATR_RemoveCloudPawnDesc>
+  <ATR_RemoveCloudPawnConfirm>Удаление {0} из сети SkyMind навсегда уничтожит интеллект. Это считается убийством.</ATR_RemoveCloudPawnConfirm>
+
+  <ATR_ReplicateCloudPawn>Репликация</ATR_ReplicateCloudPawn>
+  <ATR_ReplicateCloudPawnDesc>Воссоздать копию интеллектуальных данных SkyMind.</ATR_ReplicateCloudPawnDesc>
+
+  <ATR_Skills>Навыки</ATR_Skills>
+  <ATR_SkillsDesc>Открытая мастерская навыков, позволяющая обменивать серверные очки навыков на опыт и пристрастия.</ATR_SkillsDesc>
+
+  <ATR_ControlSurrogate>Подключить</ATR_ControlSurrogate>
+  <ATR_ControlSurrogateDesc>Возьмите под контроль выбранный суррогат без хоста.</ATR_ControlSurrogateDesc>
+
+  <ATR_DisconnectCloudPawn>Отключить</ATR_DisconnectCloudPawn>
+  <ATR_DisconnectCloudPawnDesc>Отключить сознание SkyMind от его суррогатов.</ATR_DisconnectCloudPawnDesc>
+
+  <ATR_ControlCaravanSurrogate>Восстановить</ATR_ControlCaravanSurrogate>
+  <ATR_ControlCaravanSurrogateDesc>Верните суррогат без хозяина в караван.</ATR_ControlCaravanSurrogateDesc>
+
+  <!-- Link -->
+  <ATR_Surrogate>суррогат</ATR_Surrogate>
+
+  <ATR_AbsorbExperience>Поглощение сознания</ATR_AbsorbExperience>
+  <ATR_AbsorbExperienceDesc>Поглощайте опыт интеллектуальной пешки за очки навыков и взлома.</ATR_AbsorbExperienceDesc>
+  <ATR_AbsorbExperienceConfirm>Эта операция позволяет получить полезные сведения о навыках и взломе ценой жизни пешки. Это считается убийством.</ATR_AbsorbExperienceConfirm>
+
+  <ATR_DownloadCloudPawn>Загрузить</ATR_DownloadCloudPawn>
+  <ATR_DownloadCloudPawnDesc>Загрузите интеллект SkyMind в эту пешку.</ATR_DownloadCloudPawnDesc>
+  <ATR_DownloadCloudPawnConfirm>Эта операция полностью передает интеллект SkyMind в эту пешку. Интеллект не сохраняется в сети.</ATR_DownloadCloudPawnConfirm>
+
+  <ATR_DisconnectSurrogate>Отключить</ATR_DisconnectSurrogate>
+  <ATR_DisconnectSurrogateDesc>Отключить все суррогатные связи.</ATR_DisconnectSurrogateDesc>
+
+  <ATR_ToggleControlMode>Переключатель управления</ATR_ToggleControlMode>
+  <ATR_ToggleControlModeDesc>Переключает режим суррогатного управления, позволяя использовать суррогатное управление, но отключая операции SkyMind.</ATR_ToggleControlModeDesc>
+
+  <ATR_Permute>Обменять</ATR_Permute>
+  <ATR_PermuteDesc>Обменять сознание выбранного в данный момент колониста с другим колонистом.</ATR_PermuteDesc>
+  <ATR_PermuteConfirm>Эта операция поменяет местами интеллекты {0} и {1}.</ATR_PermuteConfirm>
+
+  <ATR_Transfer>Передача</ATR_Transfer>
+  <ATR_TransferDesc>Перенесите сознание выбранного колониста в органического суррогата.</ATR_TransferDesc>
+  <ATR_TransferConfirm>Эта операция перенесет {0} в тело выбранного суррогата. В результате исходное тело {0} останется без разума. Приемник SkyMind сгорит после завершения операции.</ATR_TransferConfirm>
+
+  <ATR_Upload>Загрузить</ATR_Upload>
+  <ATR_UploadDesc>Загрузите этот интеллект в сеть SkyMind. То, что происходит с оставленным телом, контролируется через настройки (по умолчанию тело становится безмозглым).</ATR_UploadDesc>
+  <ATR_UploadConfirm>В ходе операции этот интеллект передается в сеть SkyMind, а тело остается позади.</ATR_UploadConfirm>
+
+  <!-- Remotely Triggered -->
+  <ATR_DetonateIEDRemotely>Запуск СВУ</ATR_DetonateIEDRemotely>
+  <ATR_DetonateIEDRemotelyDesc>Дистанционное и мгновенное срабатывание СВУ через соединение SkyMind.</ATR_DetonateIEDRemotelyDesc>
+
+</LanguageData>

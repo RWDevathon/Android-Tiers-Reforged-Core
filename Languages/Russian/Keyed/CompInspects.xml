@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Computer -->
+  <ATR_SkillServersSynthesis>Доступные очки навыков: {0} / {1}</ATR_SkillServersSynthesis>
+  <ATR_SkillProducedPoints>Производство очков навыков: {0}</ATR_SkillProducedPoints>
+  <ATR_SkillSlotsAdded>Добавлено хранилище навыков: {0}</ATR_SkillSlotsAdded>
+
+  <ATR_SecurityServersSynthesis>Доступные очки безопасности: {0} / {1}</ATR_SecurityServersSynthesis>
+  <ATR_SecurityProducedPoints>Производство очков безопасности: {0}</ATR_SecurityProducedPoints>
+  <ATR_SecuritySlotsAdded>Добавлено хранилище безопасности: {0}</ATR_SecuritySlotsAdded>
+
+  <ATR_HackingServersSynthesis>Доступные очки взлома: {0} / {1}</ATR_HackingServersSynthesis>
+  <ATR_HackingProducedPoints>Производство очков взлома: {0}</ATR_HackingProducedPoints>
+  <ATR_HackingSlotsAdded>Добавлено хранилище взлома: {0}</ATR_HackingSlotsAdded>
+
+  <!-- Heat -->
+  <ATR_CompHotSensitiveCriticalText>Тепловой порог превышен: повреждение неизбежно!</ATR_CompHotSensitiveCriticalText>
+  <ATR_CompHotSensitiveDangerText>Приближение к тепловому порогу: рекомендуется принять профилактические меры!</ATR_CompHotSensitiveDangerText>
+  <ATR_CompHotSensitiveWarningText>Превышен порог идеального тепла: рекомендуется соблюдать осторожность.</ATR_CompHotSensitiveWarningText>
+  <ATR_CompHotSensitiveSafeText>В пределах безопасного рабочего порога: работа в норме.</ATR_CompHotSensitiveSafeText>
+
+  <!-- SkyMind -->
+  <ATR_HackedWithTimer>Перекомпиляция ПО завершена в {0}.</ATR_HackedWithTimer>
+  <ATR_CryptoLocked>Криптоблокировка, доступ запрещен.</ATR_CryptoLocked>
+  <ATR_SkyMindDetected>Подключено к SkyMind</ATR_SkyMindDetected>
+
+  <!-- Core -->
+  <ATR_CloudIntelligenceSummary>Интеллекты в SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
+  <ATR_AssistingIntelligenceSummary>Пустые интеллекты: {0}</ATR_AssistingIntelligenceSummary>
+
+  <!-- Link -->
+  <ATR_SkyMindOperationInProgress>Время до завершения операции: {0}</ATR_SkyMindOperationInProgress>
+  <ATR_SkyMindCoreOperationInProgress>Время до завершения операции для {0}: {1}</ATR_SkyMindCoreOperationInProgress>
+  <ATR_SurrogateConnected>Соединяется с: {0} другой пешкой</ATR_SurrogateConnected>
+
+  <!-- Tower -->
+  <ATR_SkyMindNetworkSummary>Подключено пользователей: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>
