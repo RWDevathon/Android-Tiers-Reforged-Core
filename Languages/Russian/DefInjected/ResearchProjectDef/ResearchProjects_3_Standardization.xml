@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_MechanicalStandardization.label>Mechanical standardization</ATR_MechanicalStandardization.label>
-  <ATR_MechanicalStandardization.description>In order to reach a state of consistent manufactured quality and scaling quantity, a standard of production and maintenance must be established. Androids come in a vast number of styles and designs - standardizing the colony's parts will be critical for success in mechanical fields.</ATR_MechanicalStandardization.description>
+  <ATR_MechanicalStandardization.label>Механическая стандартизация</ATR_MechanicalStandardization.label>
+  <ATR_MechanicalStandardization.description>Для того чтобы достичь состояния постоянного качества производства и масштабирования количества, необходимо установить стандарт производства и обслуживания. Андроиды имеют огромное количество стилей и конструкций - стандартизация деталей колонии будет иметь решающее значение для успеха в механических областях.</ATR_MechanicalStandardization.description>
 
-  <ATR_InterchangeableParts.label>Interchangeable parts</ATR_InterchangeableParts.label>
-  <ATR_InterchangeableParts.description>The standardization of designs, components, and assembly techniques allows for the standardization of parts, and thus, interchangeability. Dedicating resources to designing easily replaceable, upgradeable parts will open up new avenues for specialization and efficiency gains.</ATR_InterchangeableParts.description>
+  <ATR_InterchangeableParts.label>Взаимозаменяемые детали</ATR_InterchangeableParts.label>
+  <ATR_InterchangeableParts.description>Стандартизация конструкций, компонентов и методов сборки позволяет стандартизировать детали, а значит, и взаимозаменяемость. Выделение ресурсов на разработку легко заменяемых и модернизируемых деталей откроет новые возможности для специализации и повышения эффективности.</ATR_InterchangeableParts.description>
 
-  <ATR_StandardizedCommunications.label>Standardized communications</ATR_StandardizedCommunications.label>
-  <ATR_StandardizedCommunications.description>Standardizing communication and digital presence technologies will allow a baseline for a network of connected mechanical units and devices. The advent of a theoretical cloud environment connecting those consciousnesses and devices could allow for great opportunities for insights into shared experience, security, or remote attacks on hostile entitites. It all begins with infrastructure.</ATR_StandardizedCommunications.description>
+  <ATR_StandardizedCommunications.label>Стандартизированные коммуникации</ATR_StandardizedCommunications.label>
+  <ATR_StandardizedCommunications.description>Стандартизация технологий связи и цифрового присутствия позволит создать основу для сети подключенных механических устройств и приборов. Появление теоретической облачной среды, соединяющей эти сознания и устройства, может открыть широкие возможности для понимания общего опыта, обеспечения безопасности или удаленных атак на враждебные объекты. Все начинается с инфраструктуры.</ATR_StandardizedCommunications.description>
 
-  <ATR_MechanicalStimulators.label>Mechanical stimulants</ATR_MechanicalStimulators.label>
-  <ATR_MechanicalStimulators.description>While mechanical units are largely unconcerned by the passage of time and therefore unconcerned about the efficiency of its use, there are times when efficiency at a particular moment is critical. Consumable short-term stimulants could prove useful in these moments.</ATR_MechanicalStimulators.description>
+  <ATR_MechanicalStimulators.label>Механические стимуляторы</ATR_MechanicalStimulators.label>
+  <ATR_MechanicalStimulators.description>Хотя механические юниты в значительной степени не заботятся о течении времени и, следовательно, не заботятся об эффективности своего использования, бывают моменты, когда эффективность в конкретный момент является критической. В такие моменты полезными могут оказаться расходуемые кратковременные стимуляторы.</ATR_MechanicalStimulators.description>
 
-  <ATR_AdvancedMechParts.label>Advanced mechanical parts</ATR_AdvancedMechParts.label>
-  <ATR_AdvancedMechParts.description>With the acquisition of properly fabrication and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. These parts will function significantly better than factory standard equivalents while remaining within reasonable cost estimates.</ATR_AdvancedMechParts.description>
+  <ATR_AdvancedMechParts.label>Передовые механические детали</ATR_AdvancedMechParts.label>
+  <ATR_AdvancedMechParts.description>С приобретением правильного производства и сильной схемы стандартизации, улучшение качества механических деталей теперь в пределах досягаемости. Эти детали будут работать значительно лучше, чем стандартные заводские эквиваленты, оставаясь при этом в пределах разумной цены.</ATR_AdvancedMechParts.description>
 
-  <ATR_MechanicalFrameworks.label>Basic framework replacements</ATR_MechanicalFrameworks.label>
-  <ATR_MechanicalFrameworks.description>The framework of a mechanical unit is its most visible feature, as it quite literally holds the entire chassis together. Basic modifications could result in significant gains in a wide range of particular tasks - but does require committing to one particular modification at a time.</ATR_MechanicalFrameworks.description>
+  <ATR_MechanicalFrameworks.label>Замена основных каркасов</ATR_MechanicalFrameworks.label>
+  <ATR_MechanicalFrameworks.description>Каркас механического агрегата - это его самая заметная особенность, поскольку он буквально держит все шасси вместе. Базовые модификации могут привести к существенным улучшениям в широком спектре конкретных задач - но для этого требуется приложить усилия к одной конкретной модификации за один раз.</ATR_MechanicalFrameworks.description>
 
-  <ATR_MechaniteAssistedRecovery.label>Mechanite assisted recovery</ATR_MechaniteAssistedRecovery.label>
-  <ATR_MechaniteAssistedRecovery.description>While simple components and replacement parts can fix most physical damage to mechanical units, recovering the consciousness of a sapient mechanical entity is a more complicated process. Advanced tools and and intricate materials - with the technical knowhow to produce and incorporate - will be required to reactivate offline mechanical sapients.</ATR_MechaniteAssistedRecovery.description>
+  <ATR_MechaniteAssistedRecovery.label>Механизированное восстановление</ATR_MechaniteAssistedRecovery.label>
+  <ATR_MechaniteAssistedRecovery.description>В то время как простые компоненты и запасные части могут устранить большинство физических повреждений механических юнитов, восстановление сознания разумного механического существа - более сложный процесс. Для реактивации автономных механических сапиентов потребуются продвинутые инструменты и сложные материалы, а также технические ноу-хау для их производства и применения.</ATR_MechaniteAssistedRecovery.description>
 
-  <ATR_RemoteControlProtocols.label>Remote control protocols</ATR_RemoteControlProtocols.label>
-  <ATR_RemoteControlProtocols.description>With standardized communication methods across hosts, it is theoretically possible to develop a framework for remotely controlling so-called surrogate bodies. Technical limitations prevent organic involvement in this service due to a lack of efficiency and universal organic applications, but this could prove revolutionary for mechanical units.</ATR_RemoteControlProtocols.description>
+  <ATR_RemoteControlProtocols.label>Протоколы удаленного управления</ATR_RemoteControlProtocols.label>
+  <ATR_RemoteControlProtocols.description>При наличии стандартизированных методов связи между хостами теоретически возможно разработать структуру для дистанционного управления так называемыми суррогатными телами. Технические ограничения препятствуют вовлечению органических организмов в этот сервис из-за недостаточной эффективности и универсальности органических приложений, но это может оказаться революционным для механических юнитов.</ATR_RemoteControlProtocols.description>
 
 
 </LanguageData>

@@ -3,80 +3,80 @@
 
   <!-- Insight Assistant -->
 
-  <ATR_InsightAssistant.label>Insight assistant</ATR_InsightAssistant.label>
-  <ATR_InsightAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core intelligence handles. It is also capable of independently generating new theories and assisting with research.</ATR_InsightAssistant.description>
+  <ATR_InsightAssistant.label>Помощник понимания</ATR_InsightAssistant.label>
+  <ATR_InsightAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на выявлении, категоризации и применении новых идей и возможностей для обучения в любой области, которой занимается основной интеллект. Он также способен самостоятельно генерировать новые теории и помогать в исследованиях.</ATR_InsightAssistant.description>
 
 
   <!-- General Assistant -->
 
-  <ATR_GeneralAssistant.label>General assistant</ATR_GeneralAssistant.label>
-  <ATR_GeneralAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is deliberately unspecialized, instead possessing dedicated processes to a wide range of tasks. This results in vast speed increases in the rate at which any task where quality is a concern can be completed - it allows the core intelligence to focus on quality while it handles less intricate details.</ATR_GeneralAssistant.description>
+  <ATR_GeneralAssistant.label>Генеральный помощник</ATR_GeneralAssistant.label>
+  <ATR_GeneralAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник намеренно неспециализирован, вместо этого он обладает специализированными процессами для широкого круга задач. Это приводит к значительному увеличению скорости выполнения любых задач, где речь идет о качестве - это позволяет основному интеллекту сосредоточиться на качестве, пока он обрабатывает менее сложные детали.</ATR_GeneralAssistant.description>
 
 
   <!-- Combat Assistant -->
 
-  <ATR_CombatAssistant.label>Combat assistant</ATR_CombatAssistant.label>
-  <ATR_CombatAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.\n\nThe assistant's constant tactical analysis drains work efficiency, however.</ATR_CombatAssistant.description>
+  <ATR_CombatAssistant.label>Боевой помощник</ATR_CombatAssistant.label>
+  <ATR_CombatAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на сценариях боя и анализа угроз. Способный автономно определять тактические возможности и предлагать в реальном времени ответ на входящий огонь на поле боя, этот чип, по общему мнению, отвечает за истории механических боевых единиц, благодаря которым тактические аналитики и командиры выглядят устаревшими.\n\nПостоянный тактический анализ помощника снижает эффективность работы.</ATR_CombatAssistant.description>
 
 
   <!-- Mechanic Assistant -->
 
-  <ATR_MechanicAssistant.label>Mechanic assistant</ATR_MechanicAssistant.label>
-  <ATR_MechanicAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines.</ATR_MechanicAssistant.description>
+  <ATR_MechanicAssistant.label>Помощник механика</ATR_MechanicAssistant.label>
+  <ATR_MechanicAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на инженерных и механических задачах. Обладая большой библиотекой подпрограмм для оптимального проектирования и создания деталей, а также их установки, ремонта или изменения, такие чипы часто запрещены на мирах с сильными союзами механиков, чтобы предотвратить полное доминирование в промышленности специально созданных машин.</ATR_MechanicAssistant.description>
 
 
   <!-- Construction Assistant -->
 
-  <ATR_ConstructionAssistant.label>Construction assistant</ATR_ConstructionAssistant.label>
-  <ATR_ConstructionAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for architecture and construction tasks. An in-depth archive of the exact characteristics of building materials, tools, practices, and styles ensures the unit has every piece of information it could possibly need when approaching a task. Automatic sub-routines for measuring, examining, and analyzing physical objects and spaces also permit quicker calculations on placement, force, and safety.</ATR_ConstructionAssistant.description>
+  <ATR_ConstructionAssistant.label>Помощник строителя</ATR_ConstructionAssistant.label>
+  <ATR_ConstructionAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на задачах архитектуры и строительства. Глубокий архив точных характеристик строительных материалов, инструментов, практик и стилей позволяет юниту иметь любую информацию, которая может понадобиться при выполнении задачи. Автоматические подпрограммы для измерения, изучения и анализа физических объектов и пространств также позволяют быстро рассчитать размещение, силу и безопасность.</ATR_ConstructionAssistant.description>
 
 
   <!-- Excavation Assistant -->
 
-  <ATR_ExcavationAssistant.label>Excavation assistant</ATR_ExcavationAssistant.label>
-  <ATR_ExcavationAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for optimizing mineral identification, categorization, and extraction. A comprehension archive of mineral and material properties permits much more precise and efficient mining operations, leading to significant yield increases and operational capacity. Autonomous sub-routines also optimize the processes of excavator technology like deep drills.</ATR_ExcavationAssistant.description>
+  <ATR_ExcavationAssistant.label>Помощник по раскопкам</ATR_ExcavationAssistant.label>
+  <ATR_ExcavationAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализирован для оптимизации идентификации, категоризации и добычи минералов. Понятный архив свойств минералов и материалов позволяет проводить гораздо более точные и эффективные горные работы, что приводит к значительному повышению производительности и операционной мощности. Автономные подпрограммы также оптимизируют процессы экскаваторной техники, например, глубоких буров.</ATR_ExcavationAssistant.description>
 
 
   <!-- Victual Assistant -->
 
-  <ATR_VictualAssistant.label>Victual assistant</ATR_VictualAssistant.label>
-  <ATR_VictualAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the processing and preparation of organic substances - namely, food and drugs. An array of autonomous sub-routines combined with a vast library of references on the nature, composition, and behavior of organic matter tailored with a focus on their proper usage ensures top-of-the-line quality substances with minimal waste.</ATR_VictualAssistant.description>
+  <ATR_VictualAssistant.label>Помощник по готовке</ATR_VictualAssistant.label>
+  <ATR_VictualAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на обработке и приготовлении органических веществ - а именно, пищи и лекарств. Массив автономных подпрограмм в сочетании с обширной библиотекой справочных материалов о природе, составе и поведении органических веществ, сфокусированных на их правильном использовании, обеспечивает высокое качество веществ с минимальными отходами.</ATR_VictualAssistant.description>
 
 
   <!-- Cultivation Assistant -->
 
-  <ATR_CultivationAssistant.label>Cultivation assistant</ATR_CultivationAssistant.label>
-  <ATR_CultivationAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the cultivation of flora and fauna. With a massive archive of data with painstakingly accurate insights on every plant and animal known to exist on the planet, autonomous sub-routines allow the unit to identify key behaviors, stressors, and to some base extent allow "communication" with target species via specific behaviors and pheromones. \n\nCuriously, this occasionally makes the mechanical unit itself display almost parental affection for lesser intelligences.</ATR_CultivationAssistant.description>
+  <ATR_CultivationAssistant.label>Помощник по культивации</ATR_CultivationAssistant.label>
+  <ATR_CultivationAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на выращивании флоры и фауны. Имея огромный архив данных с кропотливо точными сведениями о каждом растении и животном, известном на планете, автономные подпрограммы позволяют устройству определять ключевые модели поведения, стрессовые факторы и, в некоторой степени, позволяют "общаться" с целевыми видами посредством специфического поведения и феромонов. \n\nКак ни странно, это иногда заставляет механического юнита проявлять почти родительскую привязанность к меньшим разумным существам.</ATR_CultivationAssistant.description>
 
 
   <!-- Medicine Assistant -->
 
-  <ATR_MedicineAssistant.label>Medicine assistant</ATR_MedicineAssistant.label>
-  <ATR_MedicineAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for treatment of organic injuries and for organic surgeries. An array of sub-routines and procedures assists in identifying, categorizing, and analyzing organic issues and provides remedial suggestions. \n\nThis device also lends itself well to performing simple repairs on mechanical units.</ATR_MedicineAssistant.description>
+  <ATR_MedicineAssistant.label>Помощник медика</ATR_MedicineAssistant.label>
+  <ATR_MedicineAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на лечении органических травм и проведении органических операций. Массив подпрограмм и процедур помогает выявлять, классифицировать и анализировать органические проблемы, а также предоставляет предложения по их устранению. \n\nЭто устройство также хорошо подходит для выполнения простых ремонтных работ на механических юнитах.</ATR_MedicineAssistant.description>
 
 
   <!-- Social Assistant -->
 
-  <ATR_SocialAssistant.label>Social assistant</ATR_SocialAssistant.label>
-  <ATR_SocialAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for social situations. From reading individual body movements and expressions to referencing all known histories of targets, every day negotiations are optimized and analyzed for advancing the core intelligence's ability to handle social situations. Maximizing popularity, infamy, prestige - all are considered viable objectives.</ATR_SocialAssistant.description>
+  <ATR_SocialAssistant.label>Социальный помощник</ATR_SocialAssistant.label>
+  <ATR_SocialAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на социальных ситуациях. От чтения индивидуальных движений тела и выражений лица до обращения ко всем известным историям целей, каждый день переговоры оптимизируются и анализируются для повышения способности основного интеллекта справляться с социальными ситуациями. Максимизация популярности, позора, престижа - все это считается жизнеспособными целями.</ATR_SocialAssistant.description>
 
 
   <!-- Mental Assistant -->
 
-  <ATR_MentalAssistant.label>Mental assistant</ATR_MentalAssistant.label>
-  <ATR_MentalAssistant.description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for imbuing the core intelligence with a much stronger mental resilience. A suite of individualized sub-routines remove many stressors and unpleasant issues from the intelligence's cognition, while training a greater capacity for overcoming difficult situations. Many mechanical units come to view this device as a trusted friend, and find their own immortal-like existence much more bearable with it safely within them.</ATR_MentalAssistant.description>
+  <ATR_MentalAssistant.label>Психологический помощник</ATR_MentalAssistant.label>
+  <ATR_MentalAssistant.description>Установленный помощник, который помогает основному интеллекту выполнять ряд задач. Этот помощник специализируется на том, чтобы наделить основной интеллект гораздо более сильной психической устойчивостью. Набор индивидуальных подпрограмм снимает многие стрессы и неприятные проблемы с сознания интеллекта, одновременно тренируя способность преодолевать сложные ситуации. Многие механические единицы воспринимают это устройство как надежного друга и находят свое бессмертное существование гораздо более терпимым, когда оно находится в безопасности.</ATR_MentalAssistant.description>
 
 
   <!-- Psychic Assistant -->
 
-  <ATR_PsychicAssistant.label>Psychic assistant</ATR_PsychicAssistant.label>
-  <ATR_PsychicAssistant.description>Installed assistant that assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</ATR_PsychicAssistant.description>
+  <ATR_PsychicAssistant.label>Помощник экстрасенса</ATR_PsychicAssistant.label>
+  <ATR_PsychicAssistant.description>Установленный помощник, помогающий основному интеллекту. Этот органический помощник обладает высокой психической настройкой, выступая в качестве проводника для основного интеллекта, использующего психические способности. Из-за органической природы помощника основной интеллект не может полностью манипулировать им, как другими частями, и уязвим для всего, что связано с экстрасенсорной чувствительностью. Помощник потребляет огромное количество энергии для поддержания своей жизнедеятельности, что приводит к повышенному энергопотреблению в целом.</ATR_PsychicAssistant.description>
 
 
   <!-- Controller Assistant -->
 
-  <ATR_ControllerAssistant.label>Controller assistant</ATR_ControllerAssistant.label>
-  <ATR_ControllerAssistant.description>Installed assistant that assists the core intelligence. This highly specialized assistant allows for the usage of surrogate processing power to alleviate the burden of controlling surrogates. This assistant allows for connecting to 4 additional surrogates without suffering any penalties. This assistant will only function in surrogate controllers and will do nothing otherwise.</ATR_ControllerAssistant.description>
+  <ATR_ControllerAssistant.label>Помощник контролера</ATR_ControllerAssistant.label>
+  <ATR_ControllerAssistant.description>Установленный помощник, помогающий основному интеллекту. Этот высокоспециализированный помощник позволяет использовать вычислительную мощность суррогатов, чтобы облегчить бремя управления суррогатами. Этот помощник позволяет подключить до 4 дополнительных суррогатов без каких-либо штрафов. Этот помощник будет работать только в контроллерах суррогатов и не будет делать ничего другого.</ATR_ControllerAssistant.description>
 
 
 </LanguageData>

@@ -2,8 +2,8 @@
 <LanguageData>
 
   <ATR_InternalCorePump.label>Насос охлаждающей жидкости</ATR_InternalCorePump.label>
-  <ATR_MechanicalHeatsink.label>Левый радиатор</ATR_MechanicalHeatsink.label>
-  <ATR_InternalBattery.label>Батарея</ATR_InternalBattery.label>
+  <ATR_MechanicalHeatsink.label>Радиатор</ATR_MechanicalHeatsink.label>
+  <ATR_InternalBattery.label>Аккумулятор</ATR_InternalBattery.label>
   <ATR_MechaniteStorage.label>Хранилище механитов</ATR_MechaniteStorage.label>
   <ATR_InternalGenerator.label>Генератор</ATR_InternalGenerator.label>
 

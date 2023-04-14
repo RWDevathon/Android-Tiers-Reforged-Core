@@ -6,186 +6,186 @@
 
   <!-- Recipe Users: ATR_MechPartWorkbench -->
 
-  <Make_ATR_MechAntifreeze.label>make Mechanite antifreeze</Make_ATR_MechAntifreeze.label>
-  <Make_ATR_MechAntifreeze.description>Make Mechanite antifreeze.</Make_ATR_MechAntifreeze.description>
-  <Make_ATR_MechAntifreeze.jobString>Making Mechanite antifreeze.</Make_ATR_MechAntifreeze.jobString>
+  <Make_ATR_MechAntifreeze.label>изготовить Механит антифриз</Make_ATR_MechAntifreeze.label>
+  <Make_ATR_MechAntifreeze.description>Изготовить Механит антифриз.</Make_ATR_MechAntifreeze.description>
+  <Make_ATR_MechAntifreeze.jobString>Изготавливает Механит антифриз.</Make_ATR_MechAntifreeze.jobString>
 
-  <Make_ATR_MechSwarm.label>make Mechanite swarm</Make_ATR_MechSwarm.label>
-  <Make_ATR_MechSwarm.description>Make Mechanite swarm.</Make_ATR_MechSwarm.description>
-  <Make_ATR_MechSwarm.jobString>Making Mechanite swarm.</Make_ATR_MechSwarm.jobString>
+  <Make_ATR_MechSwarm.label>изготовить Рой механитов</Make_ATR_MechSwarm.label>
+  <Make_ATR_MechSwarm.description>Изготовить Рой механитов.</Make_ATR_MechSwarm.description>
+  <Make_ATR_MechSwarm.jobString>Изготавливает Рой механитов.</Make_ATR_MechSwarm.jobString>
 
-  <Make_ATR_RegenerativePill.label>make Regenerative pill</Make_ATR_RegenerativePill.label>
-  <Make_ATR_RegenerativePill.description>Make Regenerative pill.</Make_ATR_RegenerativePill.description>
-  <Make_ATR_RegenerativePill.jobString>Making Regenerative pill.</Make_ATR_RegenerativePill.jobString>
+  <Make_ATR_RegenerativePill.label>изготовить Регенеративную таблетку</Make_ATR_RegenerativePill.label>
+  <Make_ATR_RegenerativePill.description>Изготовить Регенеративную таблетку.</Make_ATR_RegenerativePill.description>
+  <Make_ATR_RegenerativePill.jobString>Изготавливает Регенеративную таблетку.</Make_ATR_RegenerativePill.jobString>
 
-  <Make_ATR_StasisPill.label>make Stasis pill</Make_ATR_StasisPill.label>
-  <Make_ATR_StasisPill.description>Make Stasis pill.</Make_ATR_StasisPill.description>
-  <Make_ATR_StasisPill.jobString>Making Stasis pill.</Make_ATR_StasisPill.jobString>
+  <Make_ATR_StasisPill.label>изготовить Стазисную таблетку</Make_ATR_StasisPill.label>
+  <Make_ATR_StasisPill.description>Изготовить Стазисную таблетку.</Make_ATR_StasisPill.description>
+  <Make_ATR_StasisPill.jobString>Изготавливает Стазисную таблетку.</Make_ATR_StasisPill.jobString>
 
-  <Make_ATR_InsightAssistant.label>make Insight assistant chip</Make_ATR_InsightAssistant.label>
-  <Make_ATR_InsightAssistant.description>Make Insight assistant chip.</Make_ATR_InsightAssistant.description>
-  <Make_ATR_InsightAssistant.jobString>Making Insight assistant chip.</Make_ATR_InsightAssistant.jobString>
+  <Make_ATR_InsightAssistant.label>изготовить Чип помощник понимания</Make_ATR_InsightAssistant.label>
+  <Make_ATR_InsightAssistant.description>Изготовить Чип помощник понимания.</Make_ATR_InsightAssistant.description>
+  <Make_ATR_InsightAssistant.jobString>Изготавливает Чип помощник понимания.</Make_ATR_InsightAssistant.jobString>
 
-  <Make_ATR_GeneralAssistant.label>make General assistant chip</Make_ATR_GeneralAssistant.label>
-  <Make_ATR_GeneralAssistant.description>Make General assistant chip.</Make_ATR_GeneralAssistant.description>
-  <Make_ATR_GeneralAssistant.jobString>Making General assistant chip.</Make_ATR_GeneralAssistant.jobString>
+  <Make_ATR_GeneralAssistant.label>изготовить Чип генеральный помощник</Make_ATR_GeneralAssistant.label>
+  <Make_ATR_GeneralAssistant.description>Изготовить Чип генеральный помощник.</Make_ATR_GeneralAssistant.description>
+  <Make_ATR_GeneralAssistant.jobString>Изготавливает Чип генеральный помощник.</Make_ATR_GeneralAssistant.jobString>
 
-  <Make_ATR_CombatAssistant.label>make Combat assistant chip</Make_ATR_CombatAssistant.label>
-  <Make_ATR_CombatAssistant.description>Make Combat assistant chip.</Make_ATR_CombatAssistant.description>
-  <Make_ATR_CombatAssistant.jobString>Making Combat assistant chip.</Make_ATR_CombatAssistant.jobString>
+  <Make_ATR_CombatAssistant.label>изготовить Чип боевой помощник</Make_ATR_CombatAssistant.label>
+  <Make_ATR_CombatAssistant.description>Изготовить Чип боевой помощник.</Make_ATR_CombatAssistant.description>
+  <Make_ATR_CombatAssistant.jobString>Изготавливает Чип боевой помощник.</Make_ATR_CombatAssistant.jobString>
 
-  <Make_ATR_MechanicAssistant.label>make Mechanic assistant chip</Make_ATR_MechanicAssistant.label>
-  <Make_ATR_MechanicAssistant.description>Make Mechanic assistant chip.</Make_ATR_MechanicAssistant.description>
-  <Make_ATR_MechanicAssistant.jobString>Making Mechanic assistant chip.</Make_ATR_MechanicAssistant.jobString>
+  <Make_ATR_MechanicAssistant.label>изготовить Чип помощник механика</Make_ATR_MechanicAssistant.label>
+  <Make_ATR_MechanicAssistant.description>Изготовить Чип помощник механика.</Make_ATR_MechanicAssistant.description>
+  <Make_ATR_MechanicAssistant.jobString>Изготавливает Чип помощник механика.</Make_ATR_MechanicAssistant.jobString>
 
-  <Make_ATR_ConstructionAssistant.label>make Construction assistant chip</Make_ATR_ConstructionAssistant.label>
-  <Make_ATR_ConstructionAssistant.description>Make Construction assistant chip.</Make_ATR_ConstructionAssistant.description>
-  <Make_ATR_ConstructionAssistant.jobString>Making Construction assistant chip.</Make_ATR_ConstructionAssistant.jobString>
+  <Make_ATR_ConstructionAssistant.label>изготовить Чип помощник строителя</Make_ATR_ConstructionAssistant.label>
+  <Make_ATR_ConstructionAssistant.description>Изготовить Чип помощник строителя.</Make_ATR_ConstructionAssistant.description>
+  <Make_ATR_ConstructionAssistant.jobString>Изготавливает Чип помощник строителя.</Make_ATR_ConstructionAssistant.jobString>
 
-  <Make_ATR_ExcavationAssistant.label>make Excavation assistant chip</Make_ATR_ExcavationAssistant.label>
-  <Make_ATR_ExcavationAssistant.description>Make Excavation assistant chip.</Make_ATR_ExcavationAssistant.description>
-  <Make_ATR_ExcavationAssistant.jobString>Making Excavation assistant chip.</Make_ATR_ExcavationAssistant.jobString>
+  <Make_ATR_ExcavationAssistant.label>изготовить Чип помощник по раскопкам</Make_ATR_ExcavationAssistant.label>
+  <Make_ATR_ExcavationAssistant.description>Изготовить Чип помощник по раскопкам.</Make_ATR_ExcavationAssistant.description>
+  <Make_ATR_ExcavationAssistant.jobString>Изготавливает Чип помощник по раскопкам.</Make_ATR_ExcavationAssistant.jobString>
 
-  <Make_ATR_VictualAssistant.label>make Victual assistant chip</Make_ATR_VictualAssistant.label>
-  <Make_ATR_VictualAssistant.description>Make Victual assistant chip.</Make_ATR_VictualAssistant.description>
-  <Make_ATR_VictualAssistant.jobString>Making Victual assistant chip.</Make_ATR_VictualAssistant.jobString>
+  <Make_ATR_VictualAssistant.label>изготовить Чип помощник по готовке</Make_ATR_VictualAssistant.label>
+  <Make_ATR_VictualAssistant.description>Изготовить Чип помощник по готовке.</Make_ATR_VictualAssistant.description>
+  <Make_ATR_VictualAssistant.jobString>Изготавливает Чип помощник по готовке.</Make_ATR_VictualAssistant.jobString>
 
-  <Make_ATR_CultivationAssistant.label>make Cultivation assistant</Make_ATR_CultivationAssistant.label>
-  <Make_ATR_CultivationAssistant.description>Make Cultivation assistant.</Make_ATR_CultivationAssistant.description>
-  <Make_ATR_CultivationAssistant.jobString>Making Cultivation assistant.</Make_ATR_CultivationAssistant.jobString>
+  <Make_ATR_CultivationAssistant.label>изготовить Помощник по культивации</Make_ATR_CultivationAssistant.label>
+  <Make_ATR_CultivationAssistant.description>Изготовить Помощник по культивации.</Make_ATR_CultivationAssistant.description>
+  <Make_ATR_CultivationAssistant.jobString>Изготавливает Помощник по культивации.</Make_ATR_CultivationAssistant.jobString>
 
-  <Make_ATR_MedicineAssistant.label>make Medicine assistant chip</Make_ATR_MedicineAssistant.label>
-  <Make_ATR_MedicineAssistant.description>Make Medicine assistant chip.</Make_ATR_MedicineAssistant.description>
-  <Make_ATR_MedicineAssistant.jobString>Making Medicine assistant chip.</Make_ATR_MedicineAssistant.jobString>
+  <Make_ATR_MedicineAssistant.label>изготовить Чип помощник медика</Make_ATR_MedicineAssistant.label>
+  <Make_ATR_MedicineAssistant.description>Изготовить Чип помощник медика.</Make_ATR_MedicineAssistant.description>
+  <Make_ATR_MedicineAssistant.jobString>Изготавливает Чип помощник медика.</Make_ATR_MedicineAssistant.jobString>
 
-  <Make_ATR_SocialAssistant.label>make Social assistant</Make_ATR_SocialAssistant.label>
-  <Make_ATR_SocialAssistant.description>Make Social assistant.</Make_ATR_SocialAssistant.description>
-  <Make_ATR_SocialAssistant.jobString>Making Social assistant.</Make_ATR_SocialAssistant.jobString>
+  <Make_ATR_SocialAssistant.label>изготовить Социальный помощник</Make_ATR_SocialAssistant.label>
+  <Make_ATR_SocialAssistant.description>Изготовить Социальный помощник.</Make_ATR_SocialAssistant.description>
+  <Make_ATR_SocialAssistant.jobString>Изготавливает Социальный помощник.</Make_ATR_SocialAssistant.jobString>
 
-  <Make_ATR_MentalAssistant.label>make Mental assistant</Make_ATR_MentalAssistant.label>
-  <Make_ATR_MentalAssistant.description>Make Mental assistant.</Make_ATR_MentalAssistant.description>
-  <Make_ATR_MentalAssistant.jobString>Making Mental assistant.</Make_ATR_MentalAssistant.jobString>
+  <Make_ATR_MentalAssistant.label>изготовить Психологический помощник</Make_ATR_MentalAssistant.label>
+  <Make_ATR_MentalAssistant.description>Изготовить Психологический помощник.</Make_ATR_MentalAssistant.description>
+  <Make_ATR_MentalAssistant.jobString>Изготавливает Психологический помощник.</Make_ATR_MentalAssistant.jobString>
 
-  <Make_ATR_PsychicAssistant.label>make Psychic assistant</Make_ATR_PsychicAssistant.label>
-  <Make_ATR_PsychicAssistant.description>Make Psychic assistant.</Make_ATR_PsychicAssistant.description>
-  <Make_ATR_PsychicAssistant.jobString>Making Psychic assistant.</Make_ATR_PsychicAssistant.jobString>
+  <Make_ATR_PsychicAssistant.label>изготовить Помощник экстрасенса</Make_ATR_PsychicAssistant.label>
+  <Make_ATR_PsychicAssistant.description>Изготовить Помощник экстрасенса.</Make_ATR_PsychicAssistant.description>
+  <Make_ATR_PsychicAssistant.jobString>Изготавливает Помощник экстрасенса.</Make_ATR_PsychicAssistant.jobString>
 
-  <Make_ATR_ControllerAssistant.label>make Controller assistant</Make_ATR_ControllerAssistant.label>
-  <Make_ATR_ControllerAssistant.description>Make Controller assistant.</Make_ATR_ControllerAssistant.description>
-  <Make_ATR_ControllerAssistant.jobString>Making Controller assistant.</Make_ATR_ControllerAssistant.jobString>
+  <Make_ATR_ControllerAssistant.label>изготовить Помощник контролера</Make_ATR_ControllerAssistant.label>
+  <Make_ATR_ControllerAssistant.description>Изготовить Помощник контролера.</Make_ATR_ControllerAssistant.description>
+  <Make_ATR_ControllerAssistant.jobString>Изготавливает Помощник контролера.</Make_ATR_ControllerAssistant.jobString>
 
-  <Make_ATR_SkyMindReceiver.label>make SkyMind Receiver</Make_ATR_SkyMindReceiver.label>
-  <Make_ATR_SkyMindReceiver.description>Make SkyMind Receiver.</Make_ATR_SkyMindReceiver.description>
-  <Make_ATR_SkyMindReceiver.jobString>Making SkyMind Receiver.</Make_ATR_SkyMindReceiver.jobString>
+  <Make_ATR_SkyMindReceiver.label>изготовить Приемник SkyMind</Make_ATR_SkyMindReceiver.label>
+  <Make_ATR_SkyMindReceiver.description>Изготовить Приемник SkyMind.</Make_ATR_SkyMindReceiver.description>
+  <Make_ATR_SkyMindReceiver.jobString>Изготавливает Приемник SkyMind.</Make_ATR_SkyMindReceiver.jobString>
 
-  <Make_ATR_SkyMindTransceiver.label>make SkyMind Transceiver</Make_ATR_SkyMindTransceiver.label>
-  <Make_ATR_SkyMindTransceiver.description>Make SkyMind Transceiver.</Make_ATR_SkyMindTransceiver.description>
-  <Make_ATR_SkyMindTransceiver.jobString>Making SkyMind Transceiver.</Make_ATR_SkyMindTransceiver.jobString>
+  <Make_ATR_SkyMindTransceiver.label>изготовить Трансивер SkyMind</Make_ATR_SkyMindTransceiver.label>
+  <Make_ATR_SkyMindTransceiver.description>Изготовить Трансивер SkyMind.</Make_ATR_SkyMindTransceiver.description>
+  <Make_ATR_SkyMindTransceiver.jobString>Изготавливает Трансивер SkyMind.</Make_ATR_SkyMindTransceiver.jobString>
 
-  <Make_ATR_PlatingPlasteel.label>make Plasteel Frame</Make_ATR_PlatingPlasteel.label>
-  <Make_ATR_PlatingPlasteel.description>Make Plasteel Frame.</Make_ATR_PlatingPlasteel.description>
-  <Make_ATR_PlatingPlasteel.jobString>Making Plasteel Frame.</Make_ATR_PlatingPlasteel.jobString>
+  <Make_ATR_PlatingPlasteel.label>изготовить Пласталевую раму</Make_ATR_PlatingPlasteel.label>
+  <Make_ATR_PlatingPlasteel.description>Изготовить Пласталевую раму.</Make_ATR_PlatingPlasteel.description>
+  <Make_ATR_PlatingPlasteel.jobString>Изготавливает Пласталевую раму.</Make_ATR_PlatingPlasteel.jobString>
 
-  <Make_ATR_GuardianFrame.label>make Guardian Frame</Make_ATR_GuardianFrame.label>
-  <Make_ATR_GuardianFrame.description>Make Guardian Frame.</Make_ATR_GuardianFrame.description>
-  <Make_ATR_GuardianFrame.jobString>Making Guardian Frame.</Make_ATR_GuardianFrame.jobString>
+  <Make_ATR_GuardianFrame.label>изготовить Защитную раму</Make_ATR_GuardianFrame.label>
+  <Make_ATR_GuardianFrame.description>Изготовить Защитную раму.</Make_ATR_GuardianFrame.description>
+  <Make_ATR_GuardianFrame.jobString>Изготавливает Защитную раму.</Make_ATR_GuardianFrame.jobString>
 
-  <Make_ATR_HydraulicFrame.label>make Hydraulic Frame</Make_ATR_HydraulicFrame.label>
-  <Make_ATR_HydraulicFrame.description>Make Hydraulic Frame.</Make_ATR_HydraulicFrame.description>
-  <Make_ATR_HydraulicFrame.jobString>Making Hydraulic Frame.</Make_ATR_HydraulicFrame.jobString>
+  <Make_ATR_HydraulicFrame.label>изготовить Гидравлическую раму</Make_ATR_HydraulicFrame.label>
+  <Make_ATR_HydraulicFrame.description>Изготовить Гидравлическую раму.</Make_ATR_HydraulicFrame.description>
+  <Make_ATR_HydraulicFrame.jobString>Изготавливает Гидравлическую раму.</Make_ATR_HydraulicFrame.jobString>
 
-  <Make_ATR_SuppressorFrame.label>make Suppressor Frame</Make_ATR_SuppressorFrame.label>
-  <Make_ATR_SuppressorFrame.description>Make Suppressor Frame.</Make_ATR_SuppressorFrame.description>
-  <Make_ATR_SuppressorFrame.jobString>Making Suppressor Frame.</Make_ATR_SuppressorFrame.jobString>
+  <Make_ATR_SuppressorFrame.label>изготовить Подавляющую раму</Make_ATR_SuppressorFrame.label>
+  <Make_ATR_SuppressorFrame.description>Изготовить Подавляющую раму.</Make_ATR_SuppressorFrame.description>
+  <Make_ATR_SuppressorFrame.jobString>Изготавливает Подавляющую раму.</Make_ATR_SuppressorFrame.jobString>
 
 
   <!-- Recipe Users: ATR_MechPartWorkbench, ATR_MechPartWorkbench -->
 
-  <Make_ATR_CompositePlating.label>make Composite Frame</Make_ATR_CompositePlating.label>
-  <Make_ATR_CompositePlating.description>Make Composite Frame.</Make_ATR_CompositePlating.description>
-  <Make_ATR_CompositePlating.jobString>Making Composite Frame.</Make_ATR_CompositePlating.jobString>
+  <Make_ATR_CompositePlating.label>изготовить Композитную раму</Make_ATR_CompositePlating.label>
+  <Make_ATR_CompositePlating.description>Изготовить Композитную раму.</Make_ATR_CompositePlating.description>
+  <Make_ATR_CompositePlating.jobString>Изготавливает Композитную раму.</Make_ATR_CompositePlating.jobString>
 
-  <Make_ATR_RefinedFrame.label>make Refined Frame</Make_ATR_RefinedFrame.label>
-  <Make_ATR_RefinedFrame.description>Make Refined Frame.</Make_ATR_RefinedFrame.description>
-  <Make_ATR_RefinedFrame.jobString>Making Refined Frame.</Make_ATR_RefinedFrame.jobString>
+  <Make_ATR_RefinedFrame.label>изготовить Изысканную раму</Make_ATR_RefinedFrame.label>
+  <Make_ATR_RefinedFrame.description>Изготовить Изысканную раму.</Make_ATR_RefinedFrame.description>
+  <Make_ATR_RefinedFrame.jobString>Изготавливает Изысканную раму.</Make_ATR_RefinedFrame.jobString>
 
-  <Make_ATR_SanitaryFrame.label>make Sanitary Frame</Make_ATR_SanitaryFrame.label>
-  <Make_ATR_SanitaryFrame.description>Make Sanitary Frame.</Make_ATR_SanitaryFrame.description>
-  <Make_ATR_SanitaryFrame.jobString>Making Sanitary Frame.</Make_ATR_SanitaryFrame.jobString>
+  <Make_ATR_SanitaryFrame.label>изготовить Санитарную раму</Make_ATR_SanitaryFrame.label>
+  <Make_ATR_SanitaryFrame.description>Изготовить Санитарную раму.</Make_ATR_SanitaryFrame.description>
+  <Make_ATR_SanitaryFrame.jobString>Изготавливает Санитарную раму.</Make_ATR_SanitaryFrame.jobString>
 
-  <Make_ATR_MobilityFrame.label>make Mobility Frame</Make_ATR_MobilityFrame.label>
-  <Make_ATR_MobilityFrame.description>Make Mobility Frame.</Make_ATR_MobilityFrame.description>
-  <Make_ATR_MobilityFrame.jobString>Making Mobility Frame.</Make_ATR_MobilityFrame.jobString>
+  <Make_ATR_MobilityFrame.label>изготовить Мобильную раму</Make_ATR_MobilityFrame.label>
+  <Make_ATR_MobilityFrame.description>Изготовить Мобильную раму.</Make_ATR_MobilityFrame.description>
+  <Make_ATR_MobilityFrame.jobString>Изготавливает Мобильную раму.</Make_ATR_MobilityFrame.jobString>
 
 
   <!-- Recipe Users: ATR_MechPartWorkbench -->
 
-  <Make_ATR_MiningArm.label>make Mining arm</Make_ATR_MiningArm.label>
-  <Make_ATR_MiningArm.description>Make Mining arm.</Make_ATR_MiningArm.description>
-  <Make_ATR_MiningArm.jobString>Making Mining arm.</Make_ATR_MiningArm.jobString>
+  <Make_ATR_MiningArm.label>изготовить Горную руку</Make_ATR_MiningArm.label>
+  <Make_ATR_MiningArm.description>Изготовить Горную руку.</Make_ATR_MiningArm.description>
+  <Make_ATR_MiningArm.jobString>Изготавливает Горную руку.</Make_ATR_MiningArm.jobString>
 
-  <Make_ATR_AgriArm.label>make Agri arm</Make_ATR_AgriArm.label>
-  <Make_ATR_AgriArm.description>Make Agri arm.</Make_ATR_AgriArm.description>
-  <Make_ATR_AgriArm.jobString>Making Agri arm.</Make_ATR_AgriArm.jobString>
+  <Make_ATR_AgriArm.label>изготовить Агро руку</Make_ATR_AgriArm.label>
+  <Make_ATR_AgriArm.description>Изготовить Агро руку.</Make_ATR_AgriArm.description>
+  <Make_ATR_AgriArm.jobString>Изготавливает Агро руку.</Make_ATR_AgriArm.jobString>
 
-  <Make_ATR_PacificationArm.label>make Pacification arm</Make_ATR_PacificationArm.label>
-  <Make_ATR_PacificationArm.description>Make Pacification arm.</Make_ATR_PacificationArm.description>
-  <Make_ATR_PacificationArm.jobString>Making Pacification arm.</Make_ATR_PacificationArm.jobString>
+  <Make_ATR_PacificationArm.label>изготовить Усмиряющую руку</Make_ATR_PacificationArm.label>
+  <Make_ATR_PacificationArm.description>Изготовить Усмиряющую руку.</Make_ATR_PacificationArm.description>
+  <Make_ATR_PacificationArm.jobString>Изготавливает Усмиряющую руку.</Make_ATR_PacificationArm.jobString>
 
-  <Make_ATR_ScalpelArm.label>make Scalpel arm</Make_ATR_ScalpelArm.label>
-  <Make_ATR_ScalpelArm.description>Make Scalpel arm.</Make_ATR_ScalpelArm.description>
-  <Make_ATR_ScalpelArm.jobString>Making Scalpel arm.</Make_ATR_ScalpelArm.jobString>
+  <Make_ATR_ScalpelArm.label>изготовить Руку со скальпелем</Make_ATR_ScalpelArm.label>
+  <Make_ATR_ScalpelArm.description>Изготовить Руку со скальпелем.</Make_ATR_ScalpelArm.description>
+  <Make_ATR_ScalpelArm.jobString>Изготавливает Руку со скальпелем.</Make_ATR_ScalpelArm.jobString>
 
-  <Make_ATR_RendingArm.label>make Rending arm</Make_ATR_RendingArm.label>
-  <Make_ATR_RendingArm.description>Make Rending arm.</Make_ATR_RendingArm.description>
-  <Make_ATR_RendingArm.jobString>Making Rending arm.</Make_ATR_RendingArm.jobString>
+  <Make_ATR_RendingArm.label>изготовить Раздирающую руку</Make_ATR_RendingArm.label>
+  <Make_ATR_RendingArm.description>Изготовить Раздирающую руку.</Make_ATR_RendingArm.description>
+  <Make_ATR_RendingArm.jobString>Изготавливает Раздирающую руку.</Make_ATR_RendingArm.jobString>
 
-  <Make_ATR_SpecializedVoiceSynthesizer.label>make Specialized voice synthesizer</Make_ATR_SpecializedVoiceSynthesizer.label>
-  <Make_ATR_SpecializedVoiceSynthesizer.description>Make Specialized voice synthesizer.</Make_ATR_SpecializedVoiceSynthesizer.description>
-  <Make_ATR_SpecializedVoiceSynthesizer.jobString>Making Specialized voice synthesizer.</Make_ATR_SpecializedVoiceSynthesizer.jobString>
+  <Make_ATR_SpecializedVoiceSynthesizer.label>изготовить Специализированный синтезатор голосов</Make_ATR_SpecializedVoiceSynthesizer.label>
+  <Make_ATR_SpecializedVoiceSynthesizer.description>Изготовить Специализированный синтезатор голосов.</Make_ATR_SpecializedVoiceSynthesizer.description>
+  <Make_ATR_SpecializedVoiceSynthesizer.jobString>Изготавливает Специализированный синтезатор голосов.</Make_ATR_SpecializedVoiceSynthesizer.jobString>
 
-  <Make_ATR_AdvancedArm.label>make Advanced arm</Make_ATR_AdvancedArm.label>
-  <Make_ATR_AdvancedArm.description>Make Advanced arm.</Make_ATR_AdvancedArm.description>
-  <Make_ATR_AdvancedArm.jobString>Making Advanced arm.</Make_ATR_AdvancedArm.jobString>
+  <Make_ATR_AdvancedArm.label>изготовить Продвинутую руку</Make_ATR_AdvancedArm.label>
+  <Make_ATR_AdvancedArm.description>Изготовить Продвинутую руку.</Make_ATR_AdvancedArm.description>
+  <Make_ATR_AdvancedArm.jobString>Изготавливает Продвинутую руку.</Make_ATR_AdvancedArm.jobString>
 
-  <Make_ATR_AdvancedLeg.label>make Advanced leg</Make_ATR_AdvancedLeg.label>
-  <Make_ATR_AdvancedLeg.description>Make Advanced leg.</Make_ATR_AdvancedLeg.description>
-  <Make_ATR_AdvancedLeg.jobString>Making Advanced leg.</Make_ATR_AdvancedLeg.jobString>
+  <Make_ATR_AdvancedLeg.label>изготовить Продвинутую ногу</Make_ATR_AdvancedLeg.label>
+  <Make_ATR_AdvancedLeg.description>Изготовить Продвинутую ногу.</Make_ATR_AdvancedLeg.description>
+  <Make_ATR_AdvancedLeg.jobString>Изготавливает Продвинутую ногу.</Make_ATR_AdvancedLeg.jobString>
 
-  <Make_ATR_AdvancedVisualSensor.label>make Advanced visual sensor</Make_ATR_AdvancedVisualSensor.label>
-  <Make_ATR_AdvancedVisualSensor.description>Make Advanced visual sensor.</Make_ATR_AdvancedVisualSensor.description>
-  <Make_ATR_AdvancedVisualSensor.jobString>Making Advanced visual sensor.</Make_ATR_AdvancedVisualSensor.jobString>
+  <Make_ATR_AdvancedVisualSensor.label>изготовить Продвинутый визуальный сенсор</Make_ATR_AdvancedVisualSensor.label>
+  <Make_ATR_AdvancedVisualSensor.description>Изготовить Продвинутый визуальный сенсор.</Make_ATR_AdvancedVisualSensor.description>
+  <Make_ATR_AdvancedVisualSensor.jobString>Изготавливает Продвинутый визуальный сенсор.</Make_ATR_AdvancedVisualSensor.jobString>
 
-  <Make_ATR_AdvancedAudioSensor.label>make Advanced audio sensor</Make_ATR_AdvancedAudioSensor.label>
-  <Make_ATR_AdvancedAudioSensor.description>Make Advanced audio sensor.</Make_ATR_AdvancedAudioSensor.description>
-  <Make_ATR_AdvancedAudioSensor.jobString>Making Advanced audio sensor.</Make_ATR_AdvancedAudioSensor.jobString>
+  <Make_ATR_AdvancedAudioSensor.label>изготовить Продвинутый звуковой сенсор</Make_ATR_AdvancedAudioSensor.label>
+  <Make_ATR_AdvancedAudioSensor.description>Изготовить Продвинутый звуковой сенсор.</Make_ATR_AdvancedAudioSensor.description>
+  <Make_ATR_AdvancedAudioSensor.jobString>Изготавливает Продвинутый звуковой сенсор.</Make_ATR_AdvancedAudioSensor.jobString>
 
-  <Make_ATR_AdvancedHeatsink.label>make Advanced heatsink</Make_ATR_AdvancedHeatsink.label>
-  <Make_ATR_AdvancedHeatsink.description>Make Advanced heatsink.</Make_ATR_AdvancedHeatsink.description>
-  <Make_ATR_AdvancedHeatsink.jobString>Making Advanced heatsink.</Make_ATR_AdvancedHeatsink.jobString>
+  <Make_ATR_AdvancedHeatsink.label>изготовить Продвинутый радиатор</Make_ATR_AdvancedHeatsink.label>
+  <Make_ATR_AdvancedHeatsink.description>Изготовить Продвинутый радиатор.</Make_ATR_AdvancedHeatsink.description>
+  <Make_ATR_AdvancedHeatsink.jobString>Изготавливает Продвинутый радиатор.</Make_ATR_AdvancedHeatsink.jobString>
 
-  <Make_ATR_AdvancedCoolantPump.label>make Advanced coolant pump</Make_ATR_AdvancedCoolantPump.label>
-  <Make_ATR_AdvancedCoolantPump.description>Make Advanced coolant pump.</Make_ATR_AdvancedCoolantPump.description>
-  <Make_ATR_AdvancedCoolantPump.jobString>Making Advanced coolant pump.</Make_ATR_AdvancedCoolantPump.jobString>
+  <Make_ATR_AdvancedCoolantPump.label>изготовить Продвинутый насос охлаждающей жидкости</Make_ATR_AdvancedCoolantPump.label>
+  <Make_ATR_AdvancedCoolantPump.description>Изготовить Продвинутый насос охлаждающей жидкости.</Make_ATR_AdvancedCoolantPump.description>
+  <Make_ATR_AdvancedCoolantPump.jobString>Изготавливает Продвинутый насос охлаждающей жидкости.</Make_ATR_AdvancedCoolantPump.jobString>
 
-  <Make_ATR_AdvancedBattery.label>make Advanced battery pack</Make_ATR_AdvancedBattery.label>
-  <Make_ATR_AdvancedBattery.description>Make Advanced battery pack.</Make_ATR_AdvancedBattery.description>
-  <Make_ATR_AdvancedBattery.jobString>Making Advanced battery pack.</Make_ATR_AdvancedBattery.jobString>
+  <Make_ATR_AdvancedBattery.label>изготовить Продвинутый аккумуляторный блок</Make_ATR_AdvancedBattery.label>
+  <Make_ATR_AdvancedBattery.description>Изготовить Продвинутый аккумуляторный блок.</Make_ATR_AdvancedBattery.description>
+  <Make_ATR_AdvancedBattery.jobString>Изготавливает Продвинутый аккумуляторный блок.</Make_ATR_AdvancedBattery.jobString>
 
-  <Make_ATR_AdvancedMechaniteStorage.label>make Advanced mechanite storage</Make_ATR_AdvancedMechaniteStorage.label>
-  <Make_ATR_AdvancedMechaniteStorage.description>Make Advanced mechanite storage.</Make_ATR_AdvancedMechaniteStorage.description>
-  <Make_ATR_AdvancedMechaniteStorage.jobString>Making Advanced mechanite storage.</Make_ATR_AdvancedMechaniteStorage.jobString>
+  <Make_ATR_AdvancedMechaniteStorage.label>изготовить Продвинутое хранилище механитов</Make_ATR_AdvancedMechaniteStorage.label>
+  <Make_ATR_AdvancedMechaniteStorage.description>Изготовить Продвинутое хранилище механитов.</Make_ATR_AdvancedMechaniteStorage.description>
+  <Make_ATR_AdvancedMechaniteStorage.jobString>Изготавливает Продвинутое хранилище механитов.</Make_ATR_AdvancedMechaniteStorage.jobString>
 
-  <Make_ATR_AdvancedReactor.label>make Advanced bio-reactor</Make_ATR_AdvancedReactor.label>
-  <Make_ATR_AdvancedReactor.description>Make Advanced bio-reactor.</Make_ATR_AdvancedReactor.description>
-  <Make_ATR_AdvancedReactor.jobString>Making Advanced bio-reactor.</Make_ATR_AdvancedReactor.jobString>
+  <Make_ATR_AdvancedReactor.label>изготовить Продвинутый реактор</Make_ATR_AdvancedReactor.label>
+  <Make_ATR_AdvancedReactor.description>Изготовить Продвинутый реактор.</Make_ATR_AdvancedReactor.description>
+  <Make_ATR_AdvancedReactor.jobString>Изготавливает Продвинутый реактор.</Make_ATR_AdvancedReactor.jobString>
 
 
   <!-- Recipe Users: FabricationBench, ATR_MechPartWorkbench -->
 
-  <Make_ATR_OrganicCharger.label>make organic charger</Make_ATR_OrganicCharger.label>
-  <Make_ATR_OrganicCharger.description>Make organic charger.</Make_ATR_OrganicCharger.description>
-  <Make_ATR_OrganicCharger.jobString>Making organic charger.</Make_ATR_OrganicCharger.jobString>
+  <Make_ATR_OrganicCharger.label>изготовить органическое зарядное устройство</Make_ATR_OrganicCharger.label>
+  <Make_ATR_OrganicCharger.description>Изготовить органическое зарядное устройство.</Make_ATR_OrganicCharger.description>
+  <Make_ATR_OrganicCharger.jobString>Изготавливает органическое зарядное устройство.</Make_ATR_OrganicCharger.jobString>
 
 
 </LanguageData>

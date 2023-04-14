@@ -3,58 +3,58 @@
 
   <!-- Plasteel Plating -->
 
-  <ATR_Install_PlasteelPlating.label>Install Plasteel Plating</ATR_Install_PlasteelPlating.label>
-  <ATR_Install_PlasteelPlating.description>Replaces the chassis frame of this unit with a tempered plasteel-infused frame, enhancing combat survivability.</ATR_Install_PlasteelPlating.description>
-  <ATR_Install_PlasteelPlating.jobString>Replacing framework.</ATR_Install_PlasteelPlating.jobString>
+  <ATR_Install_PlasteelPlating.label>установить Пласталевую раму</ATR_Install_PlasteelPlating.label>
+  <ATR_Install_PlasteelPlating.description>Заменяет раму шасси этого юнита на раму из закаленной пластали, повышая боевую живучесть.</ATR_Install_PlasteelPlating.description>
+  <ATR_Install_PlasteelPlating.jobString>Замена каркаса.</ATR_Install_PlasteelPlating.jobString>
 
 
   <!-- Guardian -->
 
-  <ATR_Install_GuardianFrame.label>Install Guardian Frame</ATR_Install_GuardianFrame.label>
-  <ATR_Install_GuardianFrame.description>Replaces the chassis frame of this unit with a guardian frame, greatly enhancing environmental survivability and police capabilities.</ATR_Install_GuardianFrame.description>
-  <ATR_Install_GuardianFrame.jobString>Replacing framework.</ATR_Install_GuardianFrame.jobString>
+  <ATR_Install_GuardianFrame.label>установить Защитную раму</ATR_Install_GuardianFrame.label>
+  <ATR_Install_GuardianFrame.description>Заменяет раму шасси этого юнита на защитную раму, значительно повышая живучесть в окружающей среде и возможности полиции.</ATR_Install_GuardianFrame.description>
+  <ATR_Install_GuardianFrame.jobString>Замена каркаса.</ATR_Install_GuardianFrame.jobString>
 
 
   <!-- Hydraulic -->
 
-  <ATR_Install_HydraulicFrame.label>Install Hydraulic Frame</ATR_Install_HydraulicFrame.label>
-  <ATR_Install_HydraulicFrame.description>Replaces the chassis frame of this unit with a hydraulic frame, greatly enhancing weight capacity and general labor efficiency.</ATR_Install_HydraulicFrame.description>
-  <ATR_Install_HydraulicFrame.jobString>Replacing framework.</ATR_Install_HydraulicFrame.jobString>
+  <ATR_Install_HydraulicFrame.label>установить Гидравлическую раму</ATR_Install_HydraulicFrame.label>
+  <ATR_Install_HydraulicFrame.description>Заменяет раму шасси этого юнита на гидравлическую раму, значительно повышая грузоподъемность и общую эффективность труда.</ATR_Install_HydraulicFrame.description>
+  <ATR_Install_HydraulicFrame.jobString>Замена каркаса.</ATR_Install_HydraulicFrame.jobString>
 
 
   <!-- Suppressor -->
 
-  <ATR_Install_SuppressorFrame.label>Install Suppressor Frame</ATR_Install_SuppressorFrame.label>
-  <ATR_Install_SuppressorFrame.description>Replaces the chassis frame of this unit with a suppressor frame, greatly reducing the combat threat of this unit.</ATR_Install_SuppressorFrame.description>
-  <ATR_Install_SuppressorFrame.jobString>Replacing framework.</ATR_Install_SuppressorFrame.jobString>
+  <ATR_Install_SuppressorFrame.label>установить Подавляющую раму</ATR_Install_SuppressorFrame.label>
+  <ATR_Install_SuppressorFrame.description>Заменяет раму шасси этого юнита на подавляющую раму, значительно снижая боевую угрозу этого юнита.</ATR_Install_SuppressorFrame.description>
+  <ATR_Install_SuppressorFrame.jobString>Замена каркаса.</ATR_Install_SuppressorFrame.jobString>
 
 
   <!-- Composite Plating -->
 
-  <ATR_Install_CompositePlating.label>Install Composite Frame</ATR_Install_CompositePlating.label>
-  <ATR_Install_CompositePlating.description>Replaces the chassis frame of this unit with a mechanite-plasteel composite frame, greatly enhancing combat survivability.</ATR_Install_CompositePlating.description>
-  <ATR_Install_CompositePlating.jobString>Replacing framework.</ATR_Install_CompositePlating.jobString>
+  <ATR_Install_CompositePlating.label>установить Композитную раму</ATR_Install_CompositePlating.label>
+  <ATR_Install_CompositePlating.description>Заменяет раму шасси этого юнита на раму из механито-пласталевого композита, значительно повышая боевую живучесть.</ATR_Install_CompositePlating.description>
+  <ATR_Install_CompositePlating.jobString>Замена каркаса.</ATR_Install_CompositePlating.jobString>
 
 
   <!-- Refined -->
 
-  <ATR_Install_RefinedFrame.label>Install Refined Frame</ATR_Install_RefinedFrame.label>
-  <ATR_Install_RefinedFrame.description>Replaces the chassis frame of this unit with a refined frame, accentuating sociability and imbuing a distinctly noble and striking look. Installing the frame is as much up to the components as to the artistic skills of its installer, as there is no way to standardize the beauty of the intricate design.</ATR_Install_RefinedFrame.description>
-  <ATR_Install_RefinedFrame.jobString>Replacing framework.</ATR_Install_RefinedFrame.jobString>
+  <ATR_Install_RefinedFrame.label>установить Изысканную раму</ATR_Install_RefinedFrame.label>
+  <ATR_Install_RefinedFrame.description>Заменяет раму шасси этого юнита на изысканную раму, подчеркивающую общительность и придающую ему благородный и яркий вид. Установка рамы зависит как от компонентов, так и от художественного мастерства установщика, поскольку нет возможности стандартизировать красоту замысловатого дизайна.</ATR_Install_RefinedFrame.description>
+  <ATR_Install_RefinedFrame.jobString>Замена каркаса.</ATR_Install_RefinedFrame.jobString>
 
 
   <!-- Sanitary -->
 
-  <ATR_Install_SanitaryFrame.label>Install Sanitary Frame</ATR_Install_SanitaryFrame.label>
-  <ATR_Install_SanitaryFrame.description>Replaces the chassis frame of this unit with a sanitary frame, ensuring it is completely free of filth and completely sanitized.</ATR_Install_SanitaryFrame.description>
-  <ATR_Install_SanitaryFrame.jobString>Replacing framework.</ATR_Install_SanitaryFrame.jobString>
+  <ATR_Install_SanitaryFrame.label>установить Санитарную раму</ATR_Install_SanitaryFrame.label>
+  <ATR_Install_SanitaryFrame.description>Заменяет раму шасси этого юнита на санитарную раму, обеспечивая полное отсутствие грязи и полную санитарную обработку.</ATR_Install_SanitaryFrame.description>
+  <ATR_Install_SanitaryFrame.jobString>Замена каркаса.</ATR_Install_SanitaryFrame.jobString>
 
 
   <!-- Mobility -->
 
-  <ATR_Install_MobilityFrame.label>Install Mobility Frame</ATR_Install_MobilityFrame.label>
-  <ATR_Install_MobilityFrame.description>Replaces the chassis frame of this unit with a mobility frame, greatly enhancing its movement capabilities and agility.</ATR_Install_MobilityFrame.description>
-  <ATR_Install_MobilityFrame.jobString>Replacing framework.</ATR_Install_MobilityFrame.jobString>
+  <ATR_Install_MobilityFrame.label>установить Мобильную раму</ATR_Install_MobilityFrame.label>
+  <ATR_Install_MobilityFrame.description>Заменяет раму шасси этого юнита на мобильную раму, значительно повышая его возможности передвижения и маневренность.</ATR_Install_MobilityFrame.description>
+  <ATR_Install_MobilityFrame.jobString>Замена каркаса.</ATR_Install_MobilityFrame.jobString>
 
 
 </LanguageData>

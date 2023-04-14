@@ -3,63 +3,63 @@
 
   <!-- Mining Utility Arm -->
 
-  <ATR_MiningArm.label>Mining arm</ATR_MiningArm.label>
-  <ATR_MiningArm.description>A simple mechanical arm designed with the extraction and processing of minerals in mind. The arm prominently features a plasteel drill which feeds contents into an internal processor, separating minerals efficiently and swiftly discarding waste to ensure maximal drilling and minimal sorting time.</ATR_MiningArm.description>
-  <ATR_MiningArm.comps.0.tools.0.label>drill</ATR_MiningArm.comps.0.tools.0.label>
+  <ATR_MiningArm.label>Горная рука</ATR_MiningArm.label>
+  <ATR_MiningArm.description>Простой механический манипулятор, разработанный для добычи и переработки минералов. В манипуляторе имеется сверло из пластали, которое подает содержимое во внутренний процессор, эффективно отделяя минералы и быстро выбрасывая отходы, чтобы обеспечить максимальное количество бурения и минимальное время сортировки.</ATR_MiningArm.description>
+  <ATR_MiningArm.comps.0.tools.0.label>бур</ATR_MiningArm.comps.0.tools.0.label>
 
 
   <!-- Agriculture Utility Arm -->
 
-  <ATR_AgriArm.label>Agri arm</ATR_AgriArm.label>
-  <ATR_AgriArm.description>A simple mechanical arm designed with agriculture and horticulture in mind. The arm features several internal multi-tools that appropriately harvest products and feeds contents into an internal processor, discarding waste products to ensure optimal harvest and minimal sorting time. Ejecting products out of specialized elbow ports is efficient, if rather odd to observe.</ATR_AgriArm.description>
-  <ATR_AgriArm.comps.0.tools.0.label>scythe</ATR_AgriArm.comps.0.tools.0.label>
+  <ATR_AgriArm.label>Агро рука</ATR_AgriArm.label>
+  <ATR_AgriArm.description>Простой механический манипулятор, разработанный для сельского хозяйства и садоводства. Рука оснащена несколькими внутренними мультиинструментами, которые соответствующим образом собирают продукты и подают содержимое во внутренний процессор, отбрасывая отходы, чтобы обеспечить оптимальный урожай и минимальное время сортировки. Выталкивание продуктов из специализированных локтевых портов эффективно, хотя и довольно странно для наблюдения.</ATR_AgriArm.description>
+  <ATR_AgriArm.comps.0.tools.0.label>коса</ATR_AgriArm.comps.0.tools.0.label>
 
 
   <!-- Pacification Utility Arm -->
 
-  <ATR_PacificationArm.label>Pacification arm</ATR_PacificationArm.label>
-  <ATR_PacificationArm.description>A simple mechanical arm with built-in energy absorbers and generators. The fists are capable of reaching dangerously high temperatures and are able to vent heat upon impacting something - effectively scorching a target - and applying an overloading amount of energy - an EMP in all but name. They are often used by riot police to impart highly painful but non-lethal burns and disable vehicles.\n\nEccentric chefs appreciate the consistent and rapid heat transfer.</ATR_PacificationArm.description>
-  <ATR_PacificationArm.comps.0.tools.0.label>charged fist</ATR_PacificationArm.comps.0.tools.0.label>
+  <ATR_PacificationArm.label>Усмиряющая рука</ATR_PacificationArm.label>
+  <ATR_PacificationArm.description>Простая механическая рука со встроенными поглотителями и генераторами энергии. Кулаки способны достигать опасно высоких температур и выпускать тепло при столкновении с объектом, эффективно испепеляя цель и применяя перегрузочное количество энергии - ЭМИ по сути. Они часто используются полицией для нанесения болезненных, но несмертельных ожогов и вывода из строя транспортных средств.\n\nЭксцентричные повара ценят постоянную и быструю передачу тепла.</ATR_PacificationArm.description>
+  <ATR_PacificationArm.comps.0.tools.0.label>заряженный кулак</ATR_PacificationArm.comps.0.tools.0.label>
 
 
   <!-- Scalpel Utility Arm -->
 
-  <ATR_ScalpelArm.label>Scalpel arm</ATR_ScalpelArm.label>
-  <ATR_ScalpelArm.description>A mechanical arm with a very modified structure designed for precision and perfectly smooth movement. A number of integrated counterbalances, unique parts, and multi-tools provide this arm with much finer - but delicate - control. While unsuited for general work tasks, this arm is an incredible boon to surgeons and mechanics alike. The delicate structure combined with minor changes to the the larger chassis leave the user more vulnerable to damage, but the scalpel can be used as a very dangerous piercing weapon if needed.</ATR_ScalpelArm.description>
-  <ATR_ScalpelArm.comps.0.tools.0.label>scalpel</ATR_ScalpelArm.comps.0.tools.0.label>
+  <ATR_ScalpelArm.label>Рука со скальпелем</ATR_ScalpelArm.label>
+  <ATR_ScalpelArm.description>Механическая рука с очень модифицированной структурой, разработанной для точного и идеально плавного движения. Множество встроенных противовесов, уникальных деталей и мультиинструментов обеспечивают этой руке гораздо более тонкий - но деликатный - контроль. Хотя эта рука не подходит для выполнения общих рабочих задач, она является невероятной находкой как для хирургов, так и для механиков. Тонкая структура в сочетании с небольшими изменениями в большом шасси делает пользователя более уязвимым к повреждениям, но при необходимости скальпель можно использовать как очень опасное колющее оружие.</ATR_ScalpelArm.description>
+  <ATR_ScalpelArm.comps.0.tools.0.label>скальпель</ATR_ScalpelArm.comps.0.tools.0.label>
 
 
   <!-- Rending Utility Arm -->
 
-  <ATR_RendingArm.label>Rending arm</ATR_RendingArm.label>
-  <ATR_RendingArm.description>A mechanical arm designed to rend down organic or inorganic mass into component parts. An array of specialized internal sensors, sorters, and processors provide this arm with powerful disassembly capacities. The design permits free range of movement and no outstanding penalties, but is uncanny and disturbing to observe. The arm is capable of breaking down living tissue just as well as dead tissue, and can make short work of buildings. Android troops of notoriously brutal commanders will often be found equipped with these to handle shocking executions and rapidly eliminating issues with corpses.\n\nThe rending process thoroughly destroys pathogens and contaminants, make it an ideal attachment for efficiency and cleanliness obsessed butchers and chefs.</ATR_RendingArm.description>
-  <ATR_RendingArm.comps.0.tools.0.label>carver</ATR_RendingArm.comps.0.tools.0.label>
-  <ATR_RendingArm.comps.0.tools.1.label>demolisher</ATR_RendingArm.comps.0.tools.1.label>
+  <ATR_RendingArm.label>Раздирающая рука</ATR_RendingArm.label>
+  <ATR_RendingArm.description>Механическая рука, предназначенная для разложения органической или неорганической массы на составные части. Массив специализированных внутренних сенсоров, сортировщиков и процессоров обеспечивает этой руке мощные возможности разборки. Конструкция позволяет свободно передвигаться и не требует особых наказаний, но при этом вызывает жуткое и тревожное ощущение. Рука способна разрушать живые ткани так же хорошо, как и мертвые, и может в короткие сроки разрушать здания. Андроидные войска известных жестоких командиров часто можно встретить оснащенными этим манипулятором для проведения шокирующих казней и быстрого устранения проблем с трупами.\n\n\nПроцесс разрыва тщательно уничтожает патогены и загрязнения, что делает его идеальным приспособлением для одержимых эффективностью и чистотой мясников и поваров.</ATR_RendingArm.description>
+  <ATR_RendingArm.comps.0.tools.0.label>резчик</ATR_RendingArm.comps.0.tools.0.label>
+  <ATR_RendingArm.comps.0.tools.1.label>уничтожитель</ATR_RendingArm.comps.0.tools.1.label>
 
 
   <!-- Auto-modulator Voice Synthesizer -->
 
-  <ATR_AutomodulatedVoiceSynthesizer.label>Automodulated Voice Synthesizer</ATR_AutomodulatedVoiceSynthesizer.label>
-  <ATR_AutomodulatedVoiceSynthesizer.description>A voice synthesizer replacement utilizing a large built-in language modelling algorithm that can rapidly modulate the unit's voice output to perfectly reflect their desired tone, intonation, and connotation in a wide array of languages and even dialects of those languages. While organics do occasionally find dynamically changing voices to be unnerving, this device ensures that the android's voice is sonorous, perfectly crisp, and with the exact sound desired to maximize positive outcomes in social interactions, leading others to have higher opinions of the unit.</ATR_AutomodulatedVoiceSynthesizer.description>
+  <ATR_AutomodulatedVoiceSynthesizer.label>Синтезатор голоса с автомодуляцией</ATR_AutomodulatedVoiceSynthesizer.label>
+  <ATR_AutomodulatedVoiceSynthesizer.description>Замена синтезатора голоса, использующая большой встроенный алгоритм моделирования языка, который может быстро изменять голос юнита, чтобы идеально отразить желаемый тон, интонацию и подтекст на широком спектре языков и даже диалектов этих языков. Хотя органические существа иногда находят динамически меняющиеся голоса нервирующими, это устройство гарантирует, что голос андроида будет звучным, идеально четким и с точным звучанием, чтобы максимизировать положительные результаты в социальных взаимодействиях, заставляя других иметь более высокое мнение о нем.</ATR_AutomodulatedVoiceSynthesizer.description>
 
 
   <!-- Coercive Voice Synthesizer -->
 
-  <ATR_CoerciveVoiceSynthesizer.label>Coercive Voice Synthesizer</ATR_CoerciveVoiceSynthesizer.label>
-  <ATR_CoerciveVoiceSynthesizer.description>A voice synthesizer replacement programmed to maximize coercive capabilities by greatly increasing volume and intensity. Specialized to operate only in various menacing tones and manipulative modes, others find units equipped with this to be terrifying and threatening and generally more conducive to obeying the will of the unit. The module has a single "normal" mode for instances where threatening is unnecessary, but others still find it mildly offputting.</ATR_CoerciveVoiceSynthesizer.description>
+  <ATR_CoerciveVoiceSynthesizer.label>Принудительный синтезатор голоса</ATR_CoerciveVoiceSynthesizer.label>
+  <ATR_CoerciveVoiceSynthesizer.description>Замена синтезатора голоса, запрограммированная на максимальное усиление возможностей принуждения за счет значительного увеличения громкости и интенсивности. Специализированный для работы только в различных угрожающих тонах и манипулятивных режимах, другие находят юнитов, оснащенных этим модулем, страшными и угрожающими и в целом более способствующими повиновению воле юнита. Модуль имеет один "нормальный" режим для случаев, когда угроза не нужна, но другие все равно находят его слегка раздражающим.</ATR_CoerciveVoiceSynthesizer.description>
 
 
   <!-- Makeshift Leg -->
 
-  <ATR_MakeshiftMechLeg.label>Makeshift mechanical leg</ATR_MakeshiftMechLeg.label>
-  <ATR_MakeshiftMechLeg.description>An installed makeshift leg, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct feet or toes, it is still significantly inferior to a properly designed and manufactured leg.</ATR_MakeshiftMechLeg.description>
+  <ATR_MakeshiftMechLeg.label>Самодельная механическая нога</ATR_MakeshiftMechLeg.label>
+  <ATR_MakeshiftMechLeg.description>Установленная самодельная нога, обладающая лишь минимальной функциональностью. Хотя она функционирует превосходно, учитывая ее самодельную природу и отсутствие выраженных ступней или пальцев, она все же значительно уступает правильно спроектированной и изготовленной ноге.</ATR_MakeshiftMechLeg.description>
 
 
   <!-- Makeshift Arm -->
 
-  <ATR_MakeshiftMechArm.label>Makeshift mechanical arm</ATR_MakeshiftMechArm.label>
-  <ATR_MakeshiftMechArm.description>An installed makeshift arm, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct hands or fingers, it is still significantly inferior to a properly designed and manufactured arm.</ATR_MakeshiftMechArm.description>
-  <ATR_MakeshiftMechArm.comps.0.tools.0.label>fist</ATR_MakeshiftMechArm.comps.0.tools.0.label>
+  <ATR_MakeshiftMechArm.label>Самодельная механическая рука</ATR_MakeshiftMechArm.label>
+  <ATR_MakeshiftMechArm.description>Установленная импровизированная рука, обладающая лишь минимальной функциональностью. Хотя она функционирует превосходно, учитывая ее временную природу и отсутствие отдельных кистей или пальцев, она все же значительно уступает правильно спроектированной и изготовленной руке.</ATR_MakeshiftMechArm.description>
+  <ATR_MakeshiftMechArm.comps.0.tools.0.label>кулак</ATR_MakeshiftMechArm.comps.0.tools.0.label>
 
 
 </LanguageData>

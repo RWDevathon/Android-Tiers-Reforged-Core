@@ -3,32 +3,32 @@
 
   <!-- Isolated Core Housing -->
 
-  <ATR_IsolatedCore.label>No installed interface</ATR_IsolatedCore.label>
-  <ATR_IsolatedCore.description>This unit's core is empty. The initialization of an autonomous core or receiver core is required to connect to the interface and activate the unit.</ATR_IsolatedCore.description>
+  <ATR_IsolatedCore.label>Интерфейс не установлен</ATR_IsolatedCore.label>
+  <ATR_IsolatedCore.description>Ядро этого юнита пусто. Для подключения к интерфейсу и активации юнита требуется инициализация автономного ядра или ядра приемника.</ATR_IsolatedCore.description>
 
 
   <!-- Autonomous Core -->
 
-  <ATR_AutonomousCore.label>Autonomous core</ATR_AutonomousCore.label>
-  <ATR_AutonomousCore.description>This core is fully interfaced with an autonomous intelligence. Everything that makes up the intelligence is stored safely within this core, from which it is able to exert control over the rest of the chassis.</ATR_AutonomousCore.description>
+  <ATR_AutonomousCore.label>Автономное ядро</ATR_AutonomousCore.label>
+  <ATR_AutonomousCore.description>Это ядро полностью взаимодействует с автономным интеллектом. Все, что составляет интеллект, надежно хранится в этом ядре, откуда он может осуществлять контроль над остальными частями шасси.</ATR_AutonomousCore.description>
 
 
   <!-- SkyMind Receiver Core -->
 
-  <ATR_ReceiverCore.label>Receiver core</ATR_ReceiverCore.label>
-  <ATR_ReceiverCore.description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</ATR_ReceiverCore.description>
+  <ATR_ReceiverCore.label>Ядро приемник</ATR_ReceiverCore.label>
+  <ATR_ReceiverCore.description>Это ядро подключено к шасси, а все функции ядра переданы протоколам связи и дистанционного управления. В этом ядре нет интеллекта, но любой подключенный интеллект может исполнять свою волю через него.</ATR_ReceiverCore.description>
 
 
   <!-- SkyMind Receiver -->
 
-  <ATR_SkyMindReceiver.label>SkyMind Receiver</ATR_SkyMindReceiver.label>
-  <ATR_SkyMindReceiver.description>This device is installed directly into the brain, and completely overrides the subject's neural network, converting them into a blank husk to be controlled by an external force. Due to the complexity of the device and the inherent difficulty of controlling organic matter, this device has a tendency to combust violently upon destruction. \n\nMany forces have used this to their advantage to destroy surrogates rather than let them fall into enemy hands.</ATR_SkyMindReceiver.description>
+  <ATR_SkyMindReceiver.label>Приемник SkyMind</ATR_SkyMindReceiver.label>
+  <ATR_SkyMindReceiver.description>Это устройство устанавливается непосредственно в мозг и полностью отменяет нейронную сеть субъекта, превращая его в пустую оболочку, которой можно управлять с помощью внешней силы. Из-за сложности устройства и трудностей, связанных с контролем органической материи, устройство имеет тенденцию сильно воспламеняться при разрушении. \n\nМногие войска использовали это в своих интересах, чтобы уничтожить суррогаты, а не позволить им попасть в руки врага.</ATR_SkyMindReceiver.description>
 
 
   <!-- SkyMind Transceiver -->
 
-  <ATR_SkyMindTransceiver.label>SkyMind Transceiver</ATR_SkyMindTransceiver.label>
-  <ATR_SkyMindTransceiver.description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</ATR_SkyMindTransceiver.description>
+  <ATR_SkyMindTransceiver.label>Трансивер SkyMind</ATR_SkyMindTransceiver.label>
+  <ATR_SkyMindTransceiver.description>Это устройство устанавливается непосредственно в мозг, позволяя испытуемому свободно взаимодействовать с сетью SkyMind. Успешное вживление или удаление этого имплантата не имеет серьезных последствий.</ATR_SkyMindTransceiver.description>
 
 
 </LanguageData>
