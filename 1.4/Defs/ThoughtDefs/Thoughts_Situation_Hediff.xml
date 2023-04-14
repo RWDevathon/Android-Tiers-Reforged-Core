@@ -4,6 +4,10 @@
     <ThoughtDef>
         <defName>ATR_ChronicAnnoyance</defName>
         <workerClass>ATReforged.ThoughtWorker_ChronicAnnoyance</workerClass>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+            <li>Masochist</li>
+        </nullifyingTraits>
         <stages>
             <li>
                 <label>defective part</label>
@@ -32,6 +36,10 @@
     <ThoughtDef>
         <defName>ATR_RustedPart</defName>
         <workerClass>ATReforged.ThoughtWorker_RustedPart</workerClass>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+            <li>Masochist</li>
+        </nullifyingTraits>
         <stages>
             <li>
                 <label>rusted part</label>
