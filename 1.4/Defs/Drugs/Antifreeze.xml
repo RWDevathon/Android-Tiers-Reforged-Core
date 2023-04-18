@@ -68,7 +68,6 @@
 				<label>Insignificant</label>
 				<becomeVisible>false</becomeVisible>
 			</li>
-
 			<li>
 				<minSeverity>0.1</minSeverity>
 				<label>Minor</label>

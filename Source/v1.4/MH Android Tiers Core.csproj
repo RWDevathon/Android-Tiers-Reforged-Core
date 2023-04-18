@@ -224,6 +224,9 @@
     <Compile Include="Incidents\Incidents_Hacking.cs" />
     <Compile Include="JobDrivers\JobDriver_GenerateInsight.cs" />
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
+    <Compile Include="MaintenanceWorkers\MaintenanceWorker_RandomMemoryLoss.cs" />
+    <Compile Include="MaintenanceWorkers\MaintenanceWorker_SapientsOnly.cs" />
+    <Compile Include="MaintenanceWorkers\MaintenanceWorker_AdaptationPractice.cs" />
     <Compile Include="MaintenanceWorkers\MaintenanceWorker_NoConsciousnessSource.cs" />
     <Compile Include="MentalStates\MentalState_Exterminator.cs" />
     <Compile Include="ATReforgedCore.cs" />

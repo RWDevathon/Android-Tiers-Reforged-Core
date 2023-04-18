@@ -18,17 +18,20 @@ namespace ATReforged
             public static void Listener(PawnGroupMakerParms parms, bool warnOnZeroResults, ref IEnumerable<Pawn> __result)
             {
                 List<Pawn> modifiedResults = __result.ToList();
-                // Generated mechanical pawns in proper groups will always receive the Stasis Hediff to reduce their power consumption significantly.
+                // Generated androids in proper groups will always receive the Stasis Hediff to reduce their power consumption significantly.
                 foreach (Pawn member in modifiedResults)
                 {
-                    Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_StasisPill);
-                    if (MHC_Utils.IsConsideredMechanical(member) && stasisHediff == null)
+                    if (member.def.GetModExtension<ATR_PawnExtension>()?.isAndroid ?? false)
                     {
-                        member.health.AddHediff(HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_StasisPill, member));
-                    }
-                    else if (stasisHediff != null)
-                    {
-                        stasisHediff.Severity = 1f;
+                        Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_StasisPill);
+                        if (stasisHediff == null)
+                        {
+                            member.health.AddHediff(HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_StasisPill, member));
+                        }
+                        else
+                        {
+                            stasisHediff.Severity = 1f;
+                        }
                     }
                 }
 
@@ -61,8 +64,7 @@ namespace ATReforged
                             // Only androids that can inherently use the SkyMind network or have a receiver core can be surrogates.
                             else if (factionExtension.canUseMechanicalSurrogates && MHC_Utils.IsConsideredMechanicalSapient(pawn))
                             {
-                                ATR_PawnExtension pawnExtension = pawn.def.GetModExtension<ATR_PawnExtension>();
-                                if (pawnExtension != null && (pawnExtension.canInherentlyUseSkyMind || pawnExtension.isAndroid || pawnExtension.defaultReceiverImplant != null))
+                                if (pawn.def.GetModExtension<ATR_PawnExtension>() is ATR_PawnExtension pawnExtension && (pawnExtension.canInherentlyUseSkyMind || pawnExtension.isAndroid || pawnExtension.defaultReceiverImplant != null))
                                 {
                                     surrogateCandidates.Add(pawn);
                                 }

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    Hediffs_MaintenanceRelated-banana
-
-    <HediffDef Name="ATR_ChronicDefectiveBase" Abstract="True">
+    <HediffDef Name="ATR_MaintenanceRandomEffectsBase" Abstract="True">
         <hediffClass>HediffWithComps</hediffClass>
         <chronic>true</chronic>
         <description>_</description>
@@ -11,7 +9,7 @@
         <initialSeverity>0.001</initialSeverity>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_PartDecay</defName>
         <label>decaying part</label>
         <labelNoun>a decaying part</labelNoun>
@@ -37,6 +35,15 @@
         </stages>
         <modExtensions>
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 144)</li>
+                        <li>(6, 72)</li>
+                        <li>(12, 36)</li>
+                        <li>(27, 18)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-3</daysBeforeCanOccur>
                 <racesToAffect />
                 <maintenanceWorkers>
                     <li>ATReforged.MaintenanceWorker_NoConsciousnessSource</li>
@@ -46,7 +53,7 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_RustedPart</defName>
         <label>rusted part</label>
         <labelNoun>a rusted part</labelNoun>
@@ -65,13 +72,22 @@
         </stages>
         <modExtensions>
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 144)</li>
+                        <li>(6, 72)</li>
+                        <li>(12, 36)</li>
+                        <li>(27, 18)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-3</daysBeforeCanOccur>
                 <racesToAffect />
                 <partDepthToAffect>Outside</partDepthToAffect>
             </li>
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_PowerLoss</defName>
         <label>part blackout</label>
         <labelNoun>a part blackout</labelNoun>
@@ -94,10 +110,10 @@
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
                 <meanDaysToOccur>
                     <points>
-                        <li>(0, 9999999)</li>
-                        <li>(3, 60)</li>
-                        <li>(9, 30)</li>
-                        <li>(21, 15)</li>
+                        <li>(0, 180)</li>
+                        <li>(6, 90)</li>
+                        <li>(12, 45)</li>
+                        <li>(27, 23)</li>
                     </points>
                 </meanDaysToOccur>
                 <daysBeforeCanOccur>-3</daysBeforeCanOccur>
@@ -107,10 +123,10 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_DamagedCore</defName>
         <label>core damage</label>
-        <description>The memory core of this unit has suffered internal physical damage and is not operating at an appropriate level. This may result in additional transitory memory corruptions and impair functionality until repaired.</description>
+        <description>The memory core of this unit has suffered internal physical damage and is not operating at an appropriate level. All recent skill memory of the day of the incident has been lost. This will impair learning capacity and consciousness until repaired.</description>
         <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
         <initialSeverity>1</initialSeverity>
         <stages>
@@ -146,15 +162,19 @@
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
                 <meanDaysToOccur>
                     <points>
-                        <li>(0, 9999999)</li>
-                        <li>(3, 5000)</li>
-                        <li>(11, 2400)</li>
-                        <li>(27, 120)</li>
+                        <li>(0, 20000)</li>
+                        <li>(5, 5000)</li>
+                        <li>(15, 2400)</li>
+                        <li>(25, 120)</li>
                     </points>
                 </meanDaysToOccur>
                 <daysBeforeCanOccur>-5</daysBeforeCanOccur>
                 <requiredMaintenanceStageToOccur>Critical</requiredMaintenanceStageToOccur>
                 <racesToAffect />
+                <maintenanceWorkers>
+                    <li>ATReforged.MaintenanceWorker_SapientsOnly</li>
+                    <li>ATReforged.MaintenanceWorker_RandomMemoryLoss</li>
+                </maintenanceWorkers>
                 <bodyPartTagsToAffect>
                     <li>ConsciousnessSource</li>
                 </bodyPartTagsToAffect>
@@ -162,7 +182,86 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
+        <defName>ATR_OpticalDriverAbberrations</defName>
+        <label>optical abberrations</label>
+        <description>Due to poor maintenance and overuse, the optical drivers in this sensor have failed and are producing severe abberrations in visual feedback for the entire unit, leading to hallucinations and misidentified entities. The unit can resolve this with enough time, or by reaching stable maintenance.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.2</severityPerDay>
+            </li>
+            <li Class="MechHumanlikes.HediffCompProperties_MaintenanceThresholdToRemove">
+                <maintenanceThresholdDays>0.5</maintenanceThresholdDays>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <postFactor>0.1</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 9999999)</li>
+                        <li>(2, 360)</li>
+                        <li>(6, 240)</li>
+                        <li>(9, 120)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-1</daysBeforeCanOccur>
+                <requiredMaintenanceStageToOccur>Poor</requiredMaintenanceStageToOccur>
+                <racesToAffect />
+                <bodyPartTagsToAffect>
+                    <li>SightSource</li>
+                </bodyPartTagsToAffect>
+            </li>
+        </modExtensions>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
+        <defName>ATR_JointMisalignment</defName>
+        <label>joint misalignment</label>
+        <description>This part has had its joints weaken and become misaligned, leading to ungainly functionality and difficulty using it. This will lead to unpredictable and unnerving movement in melee combat, as a curious side effect, until repairs are completed.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>0.25</initialSeverity>
+        <stages>
+            <li>
+                <partEfficiencyOffset>-0.25</partEfficiencyOffset>
+                <statOffsets>
+                    <MeleeDodgeChance>5</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 720)</li>
+                        <li>(3, 360)</li>
+                        <li>(9, 180)</li>
+                        <li>(15, 90)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-1</daysBeforeCanOccur>
+                <requiredMaintenanceStageToOccur>Poor</requiredMaintenanceStageToOccur>
+                <racesToAffect />
+                <bodyPartTagsToAffect>
+                    <li>ManipulationLimbSegment</li>
+                    <li>MovingLimbSegment</li>
+                </bodyPartTagsToAffect>
+            </li>
+        </modExtensions>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_FailingCoolantValves</defName>
         <label>failing coolant valves</label>
         <description>The internal coolant valves of this unit are degrading. Over time, the chassis will lose the ability to circulate coolant, leading to severe impediments to repairs and cooling efficiency until repaired.</description>
@@ -260,7 +359,7 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+    <HediffDef ParentName="ATR_MaintenanceRandomEffectsBase">
         <defName>ATR_RogueMechanites</defName>
         <label>rogue mechanites</label>
         <description>The internal mechanite storage has suffered a critical failure, and the mechanites are decohering and preventing coolant flow. As they accumulate in critical regions and damage coolant lines, they may cause a lethal hardware failure unless emergency repairs occur.</description>
@@ -332,7 +431,96 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef Name="ATR_MaintenanceEffectsBase" Abstract="True">
+    <!-- Good Random Maintenance Effects -->
+
+    <HediffDef Name="ATR_MaintenanceGoodRandomEffectsBase" ParentName="ATR_MaintenanceRandomEffectsBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <description>_</description>
+        <defaultLabelColor>(0.7, 0.7, 0.5)</defaultLabelColor>
+        <initialSeverity>0.001</initialSeverity>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceGoodRandomEffectsBase">
+        <defName>ATR_AdaptationPractice</defName>
+        <label>practiced adaptation</label>
+        <description>This unit has managed an undermaintained chassis well enough that it has come to understand how to deal with the situation, and learned a great deal about itself and existence as a whole. It is able to better learn from its experiences and efficiently deal with maintenance issues for a short while.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.25</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GlobalLearningFactor>0.5</GlobalLearningFactor>
+                    <MHC_MaintenanceRetention>0.5</MHC_MaintenanceRetention>
+                </statOffsets>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 600)</li>
+                        <li>(5, 300)</li>
+                        <li>(15, 180)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-5</daysBeforeCanOccur>
+                <requiredMaintenanceStageToOccur>Critical</requiredMaintenanceStageToOccur>
+                <racesToAffect />
+                <maintenanceWorkers>
+                    <li>ATReforged.MaintenanceWorker_AdaptationPractice</li>
+                    <li>ATReforged.MaintenanceWorker_SapientsOnly</li>
+                </maintenanceWorkers>
+            </li>
+        </modExtensions>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceGoodRandomEffectsBase">
+        <defName>ATR_AggressiveRepairs</defName>
+        <label>hyper-aggressive repairs</label>
+        <description>Due to poor maintenance, the mechanites of this unit are less controlled and restricted, and a notable amount of them have gone rogue and are aggressively - and beneficially - repairing injuries at an accelerated rate without major side effects. This will last for several days, or until maintenance is restored.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.2</severityPerDay>
+            </li>
+            <li Class="MechHumanlikes.HediffCompProperties_MaintenanceThresholdToRemove">
+                <maintenanceThresholdDays>0</maintenanceThresholdDays>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>1.5</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
+                <meanDaysToOccur>
+                    <points>
+                        <li>(0, 600)</li>
+                        <li>(5, 300)</li>
+                        <li>(15, 120)</li>
+                        <li>(25, 60)</li>
+                    </points>
+                </meanDaysToOccur>
+                <daysBeforeCanOccur>-5</daysBeforeCanOccur>
+                <requiredMaintenanceStageToOccur>Poor</requiredMaintenanceStageToOccur>
+                <racesToAffect />
+            </li>
+        </modExtensions>
+    </HediffDef>
+
+    <!-- Maintenance Stage Effects -->
+
+    <HediffDef Name="ATR_MaintenanceStageEffectsBase" Abstract="True">
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <description>_</description>
@@ -340,7 +528,7 @@
         <initialSeverity>0.001</initialSeverity>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+    <HediffDef ParentName="ATR_MaintenanceStageEffectsBase">
         <defName>ATR_MaintenanceCritical</defName>
         <label>critical integrity</label>
         <labelNoun>critical vulnerability</labelNoun>
@@ -373,7 +561,7 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+    <HediffDef ParentName="ATR_MaintenanceStageEffectsBase">
         <defName>ATR_MaintenancePoor</defName>
         <label>poor integrity</label>
         <labelNoun>minor vulnerability</labelNoun>
@@ -395,7 +583,7 @@
         </modExtensions>
     </HediffDef>
 
-    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+    <HediffDef ParentName="ATR_MaintenanceStageEffectsBase">
         <defName>ATR_MaintenanceSatisfactory</defName>
         <label>high integrity</label>
         <labelNoun>heightened stability</labelNoun>

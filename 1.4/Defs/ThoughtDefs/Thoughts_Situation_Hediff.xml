@@ -51,6 +51,20 @@
     </ThoughtDef>
 
     <ThoughtDef>
+        <defName>ATR_VisualAbberrationsThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ATR_OpticalDriverAbberrations</hediff>
+        <stages>
+            <li>
+                <label>visual abberrations</label>
+                <description>My visual sensors are providing false information and interpretations. I can't tell what is real or not. This is extremely frustrating!</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+	    <validWhileDespawned>true</validWhileDespawned>
+    </ThoughtDef>
+
+    <ThoughtDef>
         <defName>ATR_OverclockedThought</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
 		<hediff>ATR_MechanicalOverclocking</hediff>
