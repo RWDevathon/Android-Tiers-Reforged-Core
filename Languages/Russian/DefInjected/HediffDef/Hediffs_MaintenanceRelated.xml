@@ -14,7 +14,13 @@
   <ATR_PowerLoss.labelNoun>деталь отключена</ATR_PowerLoss.labelNoun>
 
   <ATR_DamagedCore.label>повреждение ядра</ATR_DamagedCore.label>
-  <ATR_DamagedCore.description>Ядро памяти данного устройства получило внутреннее физическое повреждение и работает не на должном уровне. Это может привести к дополнительным временным повреждениям памяти и нарушить функциональность до ремонта.</ATR_DamagedCore.description>
+  <ATR_DamagedCore.description>Ядро памяти этого юнита получило внутренние физические повреждения и не работает на должном уровне. Вся недавняя память о навыках в день инцидента была потеряна. Это ухудшит способность к обучению и сознание, пока не будет восстановлено.</ATR_DamagedCore.description>
+
+  <ATR_OpticalDriverAbberrations.label>оптические нарушения</ATR_OpticalDriverAbberrations.label>
+  <ATR_OpticalDriverAbberrations.description>Из-за плохого обслуживания и чрезмерного использования оптические драйверы в этом сенсоре вышли из строя и создают серьезные нарушения в визуальной обратной связи для всего устройства, что приводит к галлюцинациям и неправильной идентификации объектов. Юнит может решить эту проблему при наличии достаточного времени или при достижении стабильного технического обслуживания.</ATR_OpticalDriverAbberrations.description>
+
+  <ATR_JointMisalignment.label>смещение сустава</ATR_JointMisalignment.label>
+  <ATR_JointMisalignment.description>Суставы этой части ослабли и стали несоосными, что привело к неуклюжей функциональности и затруднению в использовании. Это приведет к непредсказуемым и нервирующим движениям в ближнем бою, как любопытный побочный эффект, пока ремонт не будет завершен.</ATR_JointMisalignment.description>
 
   <ATR_FailingCoolantValves.label>неисправность клапанов охлаждающей жидкости</ATR_FailingCoolantValves.label>
   <ATR_FailingCoolantValves.description>Внутренние клапаны охлаждающей жидкости этого юнита деградируют. Со временем шасси потеряет способность циркулировать охлаждающую жидкость, что приведет к серьезным препятствиям в ремонте и эффективности охлаждения до момента ремонта.</ATR_FailingCoolantValves.description>
@@ -30,6 +36,18 @@
   <ATR_RogueMechanites.stages.1.label>умеренная когерентность</ATR_RogueMechanites.stages.1.label>
   <ATR_RogueMechanites.stages.2.label>сильная когерентностьe</ATR_RogueMechanites.stages.2.label>
   <ATR_RogueMechanites.stages.3.label>фатально</ATR_RogueMechanites.stages.3.label>
+
+
+  <!-- Good Random Maintenance Effects -->
+
+  <ATR_AdaptationPractice.label>практикуемая адаптация</ATR_AdaptationPractice.label>
+  <ATR_AdaptationPractice.description>Этот юнит справился с необслуживаемым шасси достаточно хорошо, чтобы понять, как справиться с ситуацией, и узнать много нового о себе и о существовании в целом. Он способен лучше учиться на своем опыте и эффективно справляться с проблемами технического обслуживания в течение короткого времени.</ATR_AdaptationPractice.description>
+
+  <ATR_AggressiveRepairs.label>гипер-агрессивный ремонт</ATR_AggressiveRepairs.label>
+  <ATR_AggressiveRepairs.description>Из-за плохого технического обслуживания механиты этого юнита менее контролируемы и ограничены, а значительная часть из них вышла из-под контроля и агрессивно, с пользой для себя, восстанавливает повреждения в ускоренном темпе без серьезных побочных эффектов. Это будет продолжаться в течение нескольких дней или пока не будет проведено техобслуживание.</ATR_AggressiveRepairs.description>
+
+
+  <!-- Maintenance Stage Effects -->
 
   <ATR_MaintenanceCritical.label>критическая целостность</ATR_MaintenanceCritical.label>
   <ATR_MaintenanceCritical.description>Этот юнит страдает от критически плохого технического обслуживания и может испытывать спонтанные крупные поломки или множество мелких отказов. Отсутствие технического обслуживания также снижает общую эффективность и способность шасси к самовосстановлению.</ATR_MaintenanceCritical.description>
