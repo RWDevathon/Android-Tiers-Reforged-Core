@@ -204,6 +204,7 @@
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
     <Compile Include="Extensions\FactionExtensions.cs" />
     <Compile Include="Extensions\HediffExtensions.cs" />
+    <Compile Include="Harmony\LovePartnerRelationUtility_Patch.cs" />
     <Compile Include="Harmony\MHC_Utils_Patch.cs" />
     <Compile Include="Harmony\MentalStateHandler_Patch.cs" />
     <Compile Include="Harmony\Pawn_InteractionsTracker - Copy.cs" />
