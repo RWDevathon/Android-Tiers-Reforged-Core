@@ -26,7 +26,9 @@ namespace ATReforged
             base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
 
             Hediff hediff = HediffMaker.MakeHediff(recipe.addsHediff, pawn, part);
+            // Turn the pawn into a surrogate, but killingIntelligence is false as this pawn is already blank.
             SMN_Utils.TurnIntoSurrogate(pawn, hediff, part, false);
+            pawn.health.AddHediff(SMN_HediffDefOf.SMN_NoController);
 
             // Remove the isolated core hediff.
             Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore);

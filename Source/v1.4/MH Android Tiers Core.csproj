@@ -189,6 +189,7 @@
     <Compile Include="Dialogs\Dialog_PersonalityShiftChoices.cs" />
     <Compile Include="Extensions\FactionExtensions.cs" />
     <Compile Include="Harmony\MHC_Utils_Patch.cs" />
+    <Compile Include="Harmony\PawnGroupMakerUtility_Patch.cs" />
     <Compile Include="Harmony\Recipe_RemoveMechanicalPart_Patch.cs" />
     <Compile Include="Harmony\SpouseRelationUtility_Patch.cs" />
     <Compile Include="Harmony\QuestGen_Pawns_Patch.cs" />
