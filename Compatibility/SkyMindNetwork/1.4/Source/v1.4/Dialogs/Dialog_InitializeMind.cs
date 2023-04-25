@@ -74,8 +74,8 @@ namespace ATReforged
             {
                 PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
-                newPawn.story.Childhood = SMN_BackstoryDefOf.SMN_BlankChildhood;
-                newPawn.story.Adulthood = SMN_BackstoryDefOf.SMN_BlankAdulthood;
+                newPawn.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
+                newPawn.story.Adulthood = ATR_BackstoryDefOf.ATR_NewbootAdulthood;
                 SMN_Utils.Duplicate(newPawn, newIntelligence, false, false);
                 Hediff rebootHediff = newIntelligence.health.hediffSet.GetFirstHediffOfDef(MHC_HediffDefOf.MHC_Restarting);
                 if (rebootHediff == null)

@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="Mechanical Humanlikes Core">
       <HintPath>..\..\..\..\..\..\Dev_Mechanical Humanlikes Core\1.4\Assemblies\Mechanical Humanlikes Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MH Android Tiers Core">
       <HintPath>..\..\..\..\..\1.4\Assemblies\MH Android Tiers Core.dll</HintPath>
