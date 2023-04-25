@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using RimWorld;
 using Verse;
 using HarmonyLib;
-using RimWorld.Planet;
 using System.Linq;
-using AlienRace;
-using MechHumanlikes;
 
 namespace ATReforged
 {
     public static class ATRCore_Utils
     {
+        // Cached pawn that represents a blank pawn to be used for various duplication and modification tasks.
+        private static Pawn blankPawn;
+
         // GENERAL UTILITIES
         // Return a new Gender for a mechanical pawn, based on settings. This should only be called for androids.
         public static Gender GenerateGender(PawnKindDef pawnKind)
@@ -43,94 +43,14 @@ namespace ATReforged
         }
 
         /* === HEALTH UTILITIES === */
-
-        /* === CONNECTIVITY UTILITIES === */
-
-        // If a pawn's Def Extension allows it to use the SkyMind network or it has a hediff that allows it (via a defModExtension bool), return true.
-        public static bool HasCloudCapableImplant(Pawn pawn)
-        {
-            if (pawn.def.GetModExtension<ATR_PawnExtension>()?.canInherentlyUseSkyMind == true)
-            {
-                return true;
-            }
-
-            List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
-            for (int i = pawnHediffs.Count - 1; i >= 0; i--)
-            {
-                if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.allowsConnection == true)
-                    return true;
-            }
-            return false;
-        }
-
-        // Returns true if the pawn has a Hediff that acts as a receiver via the ATR_SkyMindHediffExtension extension marking it as one.
-        public static bool IsSurrogate(Pawn pawn)
-        {
-            List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
-            for (int i = pawnHediffs.Count - 1; i >= 0; i--)
-            {
-                if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.isReceiver == true)
-                    return true;
-            }
-            return false;
-        }
         
         // Misc
-        // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
-        public static void ApplySkyMindAttack(IEnumerable<Pawn> victims = null, ThoughtDef forVictim = null, ThoughtDef forWitness = null)
-        {
-            try
-            {
-                // Victims were directly attacked by a hack and get a worse mood debuff
-                if (victims != null && victims.Count() > 0)
-                {
-                    foreach (Pawn pawn in victims)
-                    {
-                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forVictim ?? ATR_ThoughtDefOf.ATR_AttackedViaSkyMind);
-                    }
-                }
-
-                // Witnesses (connected to SkyMind but not targetted directly) get a minor mood debuff
-                foreach (Thing thing in gameComp.GetSkyMindDevices())
-                {
-                    if (thing is Pawn pawn && (victims == null || !victims.Contains(pawn)))
-                    {
-                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? ATR_ThoughtDefOf.ATR_AttackedViaSkyMind);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.Error("[ATR] Error applying SkyMind attack mood thoughts. " + ex.Message + " " + ex.StackTrace);
-            }
-        }
-
-        // Remove viruses from the provided things. While they are assumed to have viruses, no errors will occur if non-virused things are provided.
-        public static void RemoveViruses(IEnumerable<Thing> virusedThings)
-        {
-            if (virusedThings == null)
-            {
-                return;
-            }
-
-            // Remove the viruses from each provided thing. No errors will occur if the thing does not have a SkyMind comp or does not have a virus.
-            foreach (Thing virusedThing in virusedThings)
-            {
-                CompSkyMind csm = virusedThing.TryGetComp<CompSkyMind>();
-
-                if (csm == null)
-                    continue;
-                csm.Breached = -1;
-                gameComp.PopVirusedThing(virusedThing);
-            }
-        }
-
         // Get a cached Blank pawn (to avoid having to create a new pawn whenever a surrogate is made, disconnects, downed, etc.)
         public static Pawn GetBlank()
         {
-            if (gameComp.blankPawn != null)
+            if (blankPawn != null)
             {
-                return gameComp.blankPawn;
+                return blankPawn;
             }
 
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
@@ -175,9 +95,9 @@ namespace ATReforged
                 blankMechanical.drugs = new Pawn_DrugPolicyTracker(blankMechanical);
             if (blankMechanical.outfits == null)
                 blankMechanical.outfits = new Pawn_OutfitTracker(blankMechanical);
-            blankMechanical.Name = new NameTriple("Unit 404", "Blank", "Error");
-            gameComp.blankPawn = blankMechanical;
-            return gameComp.blankPawn;
+            blankMechanical.Name = new NameTriple("ATR_BlankPawnFirstName".Translate(), "ATR_BlankPawnNickname".Translate(), "ATR_BlankPawnLastName".Translate());
+            blankPawn = blankMechanical;
+            return blankPawn;
         }
 
         // Utilities not available for direct player editing but not reserved by this mod
@@ -500,278 +420,6 @@ namespace ATReforged
             catch (Exception exception)
             {
                 Log.Warning("[ATR] An unexpected error occurred during player setting duplication between " + source + " " + dest + ". The destination PlayerSettings may be left unstable!" + exception.Message + exception.StackTrace);
-            }
-        }
-
-        public static void PermutePawn(Pawn firstPawn, Pawn secondPawn)
-        {
-            try
-            {
-                if (firstPawn == null || secondPawn == null)
-                    return;
-
-                // Permute all major mind-related components to each other via a temp copy.
-                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.Colonist, null, PawnGenerationContext.PlayerStarter, forceGenerateNewPawn: true);
-                Pawn tempCopy = PawnGenerator.GeneratePawn(request);
-                Duplicate(firstPawn, tempCopy, false, false);
-                Duplicate(secondPawn, firstPawn, false, false);
-                Duplicate(tempCopy, secondPawn, false, false);
-
-
-                // Swap all log entries between the two pawns as appropriate.
-                foreach (LogEntry log in Find.PlayLog.AllEntries)
-                {
-                    if (log.Concerns(firstPawn) || log.Concerns(secondPawn))
-                    {
-                        Traverse tlog = Traverse.Create(log);
-                        Pawn initiator = tlog.Field("initiator").GetValue<Pawn>();
-                        Pawn recipient = tlog.Field("recipient").GetValue<Pawn>();
-
-                        if (initiator == firstPawn)
-                            initiator = secondPawn;
-                        else if (initiator == secondPawn)
-                            initiator = firstPawn;
-
-                        if (recipient == secondPawn)
-                            recipient = secondPawn;
-                        else if (recipient == firstPawn)
-                            recipient = secondPawn;
-
-                        tlog.Field("initiator").SetValue(initiator);
-                        tlog.Field("recipient").SetValue(recipient);
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Log.Message("[ATR] Utils.PermutePawn : " + e.Message + " - " + e.StackTrace);
-            }
-        }
-
-        // Check if the targetted pawn is a valid target for receiving mind transfer operations.
-        public static bool IsValidMindTransferTarget(Pawn pawn)
-        {
-            // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer && pawn.HostFaction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
-            {
-                return false;
-            }
-
-            // Pawns afflicted with a Hediff that prevents SkyMind connections, or who are already subjects of mind operations, are not permissible targets for mind operations.
-            List<Hediff> targetHediffs = pawn.health.hediffSet.hediffs;
-            for (int i = targetHediffs.Count - 1; i >= 0; i--)
-            {
-                Hediff hediff = targetHediffs[i];
-                if (hediff.def.GetModExtension<ATR_SkyMindHediffExtension>()?.blocksConnection == true)
-                {
-                    return false;
-                }
-            }
-
-            // If the pawn has a cloud capable implant or is in the SkyMind network already, then it is valid.
-            return HasCloudCapableImplant(pawn);
-        }
-
-        // Returns a list of all surrogates without hosts in caravans. Return null if there are none.
-        public static IEnumerable<Pawn> GetHostlessCaravanSurrogates()
-        {
-            // If surrogates aren't allowed, there can be no hostless surrogates.
-            if (!ATReforgedCore_Settings.surrogatesAllowed)
-                return null;
-
-            HashSet<Pawn> hostlessSurrogates = new HashSet<Pawn>();
-            foreach (Caravan caravan in Find.World.worldObjects.Caravans)
-            {
-                foreach (Pawn pawn in caravan.pawns)
-                {
-                    if (IsSurrogate(pawn) && !pawn.GetComp<CompSkyMindLink>().HasSurrogate())
-                    {
-                        hostlessSurrogates.AddItem(pawn);
-                    }
-                }
-            }
-            return hostlessSurrogates.Count == 0 ? null : hostlessSurrogates;
-        }
-
-        // Create as close to a perfect copy of the provided pawn as possible. If kill is true, then we're trying to make a corpse copy of it.
-        public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
-        {
-            // Generate a new pawn.
-            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, canGeneratePawnRelations: false, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
-            Pawn copy = PawnGenerator.GeneratePawn(request);
-
-            // Gene generation is a bit strange, so we manually handle it ourselves.
-            copy.genes = new Pawn_GeneTracker(copy);
-            copy.genes.SetXenotypeDirect(pawn.genes?.Xenotype);
-            foreach (Gene gene in pawn.genes?.Xenogenes)
-            {
-                copy.genes.AddGene(gene.def, true);
-            }
-            foreach (Gene gene in pawn.genes?.Endogenes)
-            {
-                copy.genes.AddGene(gene.def, false);
-            }
-            // Melanin is controlled via genes. If the pawn has one, use it. Otherwise just take whatever skinColorBase the pawn has.
-            if (copy.genes?.GetMelaninGene() != null && pawn.genes?.GetMelaninGene() != null)
-            {
-                copy.genes.GetMelaninGene().skinColorBase = pawn.genes.GetMelaninGene().skinColorBase;
-            }
-            copy.story.skinColorOverride = pawn.story?.skinColorOverride;
-            pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
-            copy.story.SkinColorBase = pawn.story.SkinColorBase;
-
-            // Get rid of any items it may have spawned with.
-            copy.equipment?.DestroyAllEquipment();
-            copy.apparel?.DestroyAll();
-            copy.inventory?.DestroyAll();
-
-            // Copy the pawn's physical attributes.
-            copy.Rotation = pawn.Rotation;
-            copy.story.bodyType = pawn.story.bodyType;
-            copy.story.HairColor = pawn.story.HairColor;
-            copy.story.hairDef = pawn.story.hairDef;
-
-            // Attempt to transfer all items the pawn may be carrying over to its copy.
-            if (pawn.inventory != null && pawn.inventory.innerContainer != null && copy.inventory != null && copy.inventory.innerContainer != null)
-            {
-                try
-                {
-                    pawn.inventory.innerContainer.TryTransferAllToContainer(copy.inventory.innerContainer);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error("[ATR] Utils.SpawnCopy.TransferInventory " + ex.Message + " " + ex.StackTrace);
-                }
-            }
-
-            // Attempt to transfer all equipment the pawn may have to the copy.
-            if (pawn.equipment != null && copy.equipment != null)
-            {
-                foreach (ThingWithComps equipment in pawn.equipment.AllEquipmentListForReading.ToList())
-                {
-                    try
-                    {
-                        pawn.equipment.Remove(equipment);
-                        copy.equipment.AddEquipment(equipment);
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.Message("[ATR] Utils.SpawnCopy.TransferEquipment " + ex.Message + " " + ex.StackTrace);
-                    }
-                }
-            }
-
-            // Transfer all apparel from the pawn to the copy.
-            if (pawn.apparel != null)
-            {
-                foreach (Apparel apparel in pawn.apparel.WornApparel.ToList())
-                {
-                    pawn.apparel.Remove(apparel);
-                    copy.apparel.Wear(apparel);
-                }
-            }
-
-            // Copy all hediffs from the pawn to the copy. Remove the hediff from the host to ensure it isn't saved across both pawns.
-            copy.health.RemoveAllHediffs();
-            foreach (Hediff hediff in pawn.health.hediffSet.hediffs.ToList())
-            {
-                try
-                {
-                    if (hediff.def != HediffDefOf.MissingBodyPart && hediff.def != ATR_HediffDefOf.ATR_MindOperation)
-                    {
-                        hediff.pawn = copy;
-                        copy.health.AddHediff(hediff, hediff.Part);
-                        pawn.health.RemoveHediff(hediff);
-                    }
-                }
-                catch(Exception ex)
-                {
-                    Log.Error("[ATR] Utils.SpawnCopy.TransferHediffs " + ex.Message + " " + ex.StackTrace);
-                }
-            }
-
-            // If we are "killing" the pawn, that means the body is now a blank. Properly duplicate those features.
-            if (kill)
-            {
-                KillPawnIntelligence(copy);
-            }
-            // Else, duplicate all mind-related things to the copy. This is not considered murder.
-            else
-            {
-                Duplicate(pawn, copy, false, false);
-            }
-
-            // Spawn the copy.
-            GenSpawn.Spawn(copy, pawn.Position, pawn.Map);
-
-            // Draw the copy.
-            copy.Drawer.renderer.graphics.ResolveAllGraphics();
-            return copy;
-        }
-
-        // Calculate the number of skill points required in order to give a pawn a new passion.
-        public static int GetSkillPointsToIncreasePassion(Pawn pawn, int passionCount)
-        {
-            // Assign base cost based on settings. Default is 5000.
-            float result = ATReforgedCore_Settings.basePointsNeededForPassion;
-
-            // Multiply result by the pawn's global learning factor (inverse relation, as higher learning factor should reduce cost).
-            result *= 1 / pawn.GetStatValue(StatDef.Named("GlobalLearningFactor"));
-
-            if (passionCount > ATReforgedCore_Settings.passionSoftCap)
-            { // If over the soft cap for number of passions, each additional passion adds 25% cost to buying another passion.
-                result *= (float) Math.Pow(1.25, passionCount - ATReforgedCore_Settings.passionSoftCap);
-            }
-
-            // Return the end result as an integer for nice display numbers and costs.
-            return (int) result;
-        }
-
-        // Handle the "killing" of a pawn's intelligence by duplicating in a blank and handling organic vs. mechanical cases.
-        public static void KillPawnIntelligence(Pawn pawn)
-        {
-            Duplicate(GetBlank(), pawn, false, false);
-
-            // Killed SkyMind intelligences cease to exist.
-            if (gameComp.GetCloudPawns().Contains(pawn))
-            {
-                gameComp.PopCloudPawn(pawn);
-                pawn.Destroy();
-            }
-
-            // Androids that become blanks should also lose their interface (if they have them) so that they're ready for a new intelligence.
-            if (IsConsideredMechanicalAndroid(pawn) && MHC_Utils.IsConsideredMechanicalSapient(pawn))
-            {
-                pawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
-                Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
-                if (target != null)
-                {
-                    pawn.health.RemoveHediff(target);
-                }
-                target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ReceiverCore);
-                if (target != null)
-                {
-                    pawn.health.RemoveHediff(target);
-                }
-                pawn.guest?.SetGuestStatus(Faction.OfPlayer);
-                if (pawn.playerSettings != null)
-                    pawn.playerSettings.medCare = MedicalCareCategory.Best;
-            }
-            // Pawns that aren't core-using androids can not truly become blanks as they have no Core Hediff to affect. Instead, make them into a simple new pawn.
-            else
-            {
-                // Ensure the pawn has a proper name.
-                pawn.Name = PawnBioAndNameGenerator.GeneratePawnName(pawn);
-
-                // Ensure the pawn has no SkyMind capable implants any more.
-                List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
-                for (int i = pawnHediffs.Count - 1; i >= 0; i--)
-                {
-                    if (pawnHediffs[i].def.GetModExtension<ATR_SkyMindHediffExtension>()?.allowsConnection == true)
-                    {
-                        pawnHediffs.RemoveAt(i);
-                    }
-                }
             }
         }
     }

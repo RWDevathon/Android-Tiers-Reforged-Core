@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- SkyMind Receiver Core -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartCoreBase">
+        <defName>ATR_ReceiverCore</defName>
+        <label>Receiver core</label>
+        <description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">0</MechBandwidth>
+                </statFactors>
+            </li>
+        </stages>
+		<modExtensions>
+			<li Class="SkyMind.SMN_HediffSkyMindExtension">
+                <allowsConnection>true</allowsConnection>
+                <isReceiver>true</isReceiver>
+			</li>
+		</modExtensions>
+    </HediffDef>
+
+    <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
+        <defName>ATR_Install_ReceiverCore</defName>
+        <label>Install receiver core</label>
+        <description>Installs and connects a receiver core. After repair stims connect the central networking, the core will be able to host remote controllers and act as a surrogate. It will have no intelligence or functionality on its own, however.</description>
+        <workerClass>ATReforged.Recipe_InstallAndroidReceiver</workerClass>
+        <researchPrerequisite>SMN_StandardizedCommunications</researchPrerequisite>
+        <jobString>Installing receiver core.</jobString>
+        <addsHediff>ATR_ReceiverCore</addsHediff>
+    </RecipeDef>
+
+ </Defs>

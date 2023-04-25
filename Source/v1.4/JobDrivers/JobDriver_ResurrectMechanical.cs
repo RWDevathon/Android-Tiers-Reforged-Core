@@ -66,14 +66,6 @@ namespace ATReforged
                     shouldbeBlank = true;
                 }
 
-                // Dead surrogates originating from other factions should no longer be considered foreign. Surrogates are already blank when dead, no additional checks needed.
-                if (ATRCore_Utils.IsSurrogate(innerPawn))
-                {
-                    CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
-                    if (targetComp.isForeign)
-                        targetComp.isForeign = false;
-                }
-
                 // This kit executes a full resurrection which removes all negative hediffs.
                 ResurrectionUtility.Resurrect(innerPawn);
                 SoundDefOf.MechSerumUsed.PlayOneShot(SoundInfo.InMap(innerPawn));
@@ -84,11 +76,6 @@ namespace ATReforged
                     ATRCore_Utils.Duplicate(ATRCore_Utils.GetBlank(), innerPawn, false, false);
                     innerPawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, innerPawn.health.hediffSet.GetBrain());
                     Hediff target = innerPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
-                    if (target != null)
-                    {
-                        innerPawn.health.RemoveHediff(target);
-                    }
-                    target = innerPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ReceiverCore);
                     if (target != null)
                     {
                         innerPawn.health.RemoveHediff(target);

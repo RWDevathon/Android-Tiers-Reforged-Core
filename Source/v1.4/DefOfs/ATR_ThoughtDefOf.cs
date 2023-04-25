@@ -10,15 +10,6 @@ namespace ATReforged
             DefOfHelper.EnsureInitializedInCtor(typeof(ATR_ThoughtDefOf));
         }
 
-        public static ThoughtDef ATR_ConnectedSkyMindAttacked;
-
-        public static ThoughtDef ATR_AttackedViaSkyMind;
-
-        public static ThoughtDef ATR_TrolledViaSkyMind;
-
-        public static ThoughtDef ATR_SurrogateMentalBreak;
-
-
         public static ThoughtDef ATR_PersonalityShiftAllowed;
 
         public static ThoughtDef ATR_PersonalityShiftDenied;

@@ -20,7 +20,7 @@ namespace ATReforged
                     Thing thing = outThings[i];
                     if (thing is Pawn pawn)
                     {
-                        if (!MHC_Utils.IsConsideredMechanical(pawn) && (pawn.Faction != null && pawn.Faction.def.GetModExtension<ATR_FactionExtension>()?.membersShouldBeAndroids == true || pawn.Faction == null && Faction.OfPlayer.def.GetModExtension<ATR_FactionExtension>()?.membersShouldBeAndroids == true))
+                        if (!MHC_Utils.IsConsideredMechanical(pawn) && (pawn.Faction != null && pawn.Faction.def.GetModExtension<ATR_FactionAndroidExtension>()?.membersShouldBeAndroids == true || pawn.Faction == null && Faction.OfPlayer.def.GetModExtension<ATR_FactionAndroidExtension>()?.membersShouldBeAndroids == true))
                         {
                             if (pawn.Faction != null)
                             {

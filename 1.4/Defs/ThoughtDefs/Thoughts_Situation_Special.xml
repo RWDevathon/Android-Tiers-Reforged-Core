@@ -2,29 +2,6 @@
 <Defs>
 
     <ThoughtDef>
-        <defName>ATR_AssistingMindBoost</defName>
-        <workerClass>ATReforged.ThoughtWorker_AssistedByMinds</workerClass>
-        <stages>
-            <li>
-                <label>SkyMind Assistants</label>
-                <description>Having personal assistants to converse with at any time is like having close friends around at all times.</description>
-                <baseMoodEffect>3</baseMoodEffect>
-            </li>
-            <li>
-                <label>SkyMind Cluster</label>
-                <description>Having so many personalities to converse with freely is like being part of an elite club.</description>
-                <baseMoodEffect>6</baseMoodEffect>
-            </li>
-            <li>
-                <label>SkyMind Legion</label>
-                <description>I have a whole legion of friends with me at all times. It is a wonderful thing to have!</description>
-                <baseMoodEffect>10</baseMoodEffect>
-            </li>
-        </stages>
-	    <validWhileDespawned>true</validWhileDespawned>
-    </ThoughtDef>
-
-    <ThoughtDef>
         <defName>ATR_MentalAssistant</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
         <hediff>ATR_MentalAssistant</hediff>

@@ -20,12 +20,12 @@ namespace ATReforged
                 if (kindDef == PawnKindDefOf.SpaceRefugee || kindDef == PawnKindDefOf.Refugee)
                 {
                     // Factionless quest pawns for android faction players should be androids.
-                    if (faction == null && Faction.OfPlayer.def.GetModExtension<ATR_FactionExtension>() is ATR_FactionExtension playerFactionExtension && playerFactionExtension.membersShouldBeAndroids)
+                    if (faction == null && Faction.OfPlayer.def.GetModExtension<ATR_FactionAndroidExtension>() is ATR_FactionAndroidExtension playerFactionExtension && playerFactionExtension.membersShouldBeAndroids)
                     {
                         kindDef = Faction.OfPlayer.def.basicMemberKind;
                     }
                     // Quest pawns that are members of an android faction should be androids.
-                    else if (faction != null && faction.def.GetModExtension<ATR_FactionExtension>() is ATR_FactionExtension factionExtension && factionExtension.membersShouldBeAndroids)
+                    else if (faction != null && faction.def.GetModExtension<ATR_FactionAndroidExtension>() is ATR_FactionAndroidExtension factionExtension && factionExtension.membersShouldBeAndroids)
                     {
                         kindDef = faction.def.basicMemberKind;
                     }

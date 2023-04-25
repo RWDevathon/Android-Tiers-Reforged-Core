@@ -7,7 +7,7 @@ namespace ATReforged
 {
     public class Recipe_InstallAndroidInterface : Recipe_InstallMechanicalPart
     {
-        // This recipe is specifically targetting the brain of a mechanical unit, so we only need to check if the brain is available (a slight optimization over checking fixed body parts).
+        // This recipe is specifically targetting the brain of an android, so we only need to check if the brain is available (a slight optimization over checking fixed body parts).
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         { 
 
@@ -19,34 +19,49 @@ namespace ATReforged
             yield break;
         }
 
-        // Install the part as normal, and then handle which type of core was installed if it was successful (which can be measured by seeing if it actually got the hediff or not).
+        // Install the part as normal, and then handle additional specifications.
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         { 
             base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
 
-            // If the pawn still has an isolated core, the operation failed. Also failed if they're dead now.
-            if (pawn.Dead || pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore) != null)
-                return;
-
-            // There are special considerations for adding the core (brain) itself. Adding a core makes a new intelligence. Receiver core initializes it as a surrogate. Adding any core removes the "Isolated Core" hediff.
-            // Initializing a new android. Create the new intelligence.
+            // There are special considerations for adding the core itself. Adding a core makes a new intelligence. Adding any core removes the "Isolated Core" hediff.
             if (recipe.addsHediff == ATR_HediffDefOf.ATR_AutonomousCore)
             {
-                Find.WindowStack.Add(new Dialog_InitializeMind(pawn));
-            }
-            // Initializing a surrogate. Ensure surrogate details are initialized properly.
-            else
-            {
-                pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
+                InitializeMind(pawn);
             }
 
-            // Remove the isolated core hediff and the reboot hediff (Androids get Long Reboot and Surrogates get nothing). 
+            // Remove the isolated core hediff.
             Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore);
             if (target != null)
             {
                 pawn.health.RemoveHediff(target);
             }
+        }
 
+        public void InitializeMind(Pawn pawn)
+        {
+            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
+            Pawn personality = PawnGenerator.GeneratePawn(request);
+            personality.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
+            personality.story.Adulthood = ATR_BackstoryDefOf.ATR_NewbootAdulthood;
+            ATRCore_Utils.Duplicate(personality, pawn, false, false);
+            Hediff rebootHediff = pawn.health.hediffSet.GetFirstHediffOfDef(MHC_HediffDefOf.MHC_Restarting);
+            if (rebootHediff == null)
+            {
+                rebootHediff = HediffMaker.MakeHediff(MHC_HediffDefOf.MHC_Restarting, pawn, null);
+                pawn.health.AddHediff(rebootHediff);
+            }
+            rebootHediff.Severity = 1;
+
+            // Allow the player to pick a few passions and a trait for the new android, akin to child growth moments in Biotech.
+            if (ModLister.BiotechInstalled)
+            {
+                ChoiceLetter_PersonalityShift choiceLetter = (ChoiceLetter_PersonalityShift)LetterMaker.MakeLetter(ATR_LetterDefOf.ATR_PersonalityShiftLetter);
+                choiceLetter.ConfigureChoiceLetter(pawn, 3, 3, false, false);
+                choiceLetter.Label = "ATR_PersonalityShiftNewboot".Translate();
+                choiceLetter.StartTimeout(120000);
+                Find.LetterStack.ReceiveLetter(choiceLetter);
+            }
         }
     }
 }

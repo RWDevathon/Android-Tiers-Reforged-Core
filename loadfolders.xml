@@ -4,7 +4,6 @@
         <li>/</li>
         <li>1.4</li>
         <li>Common</li>
-        <li IfModActive="Dubwise.Rimefeller">Compatibility/Rimefeller/1.4</li>
-        <li IfModActive="Dubwise.Rimatomics">Compatibility/Rimatomics/1.4</li>
+        <li IfModActive="Killathon.SkyMind.SkyMindNetwork">Compatibility/SkyMindNetwork/1.4</li>
     </v1.4>
 </loadFolders>
