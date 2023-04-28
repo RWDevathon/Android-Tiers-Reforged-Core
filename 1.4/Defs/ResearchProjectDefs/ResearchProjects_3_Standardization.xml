@@ -44,7 +44,7 @@
 
     <ResearchProjectDef>
         <defName>ATR_AdvancedMechParts</defName>
-        <label>Advanced mechanical parts</label>
+        <label>Advanced parts</label>
         <tab>ATR_MechResearch</tab>
         <description>With the acquisition of properly fabrication and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. These parts will function significantly better than factory standard equivalents while remaining within reasonable cost estimates.</description>
         <baseCost>1600</baseCost>
