@@ -554,7 +554,7 @@
         </stages>
         <modExtensions>
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
-                <isMaintenangeStageEffect>true</isMaintenangeStageEffect>
+                <isMaintenanceStageEffect>true</isMaintenanceStageEffect>
                 <requiredMaintenanceStageToOccur>Critical</requiredMaintenanceStageToOccur>
                 <racesToAffect />
             </li>
@@ -576,7 +576,7 @@
         </stages>
         <modExtensions>
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
-                <isMaintenangeStageEffect>true</isMaintenangeStageEffect>
+                <isMaintenanceStageEffect>true</isMaintenanceStageEffect>
                 <requiredMaintenanceStageToOccur>Poor</requiredMaintenanceStageToOccur>
                 <racesToAffect />
             </li>
@@ -599,7 +599,7 @@
         </stages>
         <modExtensions>
             <li Class="MechHumanlikes.MHC_MaintenanceEffectExtension">
-                <isMaintenangeStageEffect>true</isMaintenangeStageEffect>
+                <isMaintenanceStageEffect>true</isMaintenanceStageEffect>
                 <requiredMaintenanceStageToOccur>Satisfactory</requiredMaintenanceStageToOccur>
                 <racesToAffect />
             </li>
