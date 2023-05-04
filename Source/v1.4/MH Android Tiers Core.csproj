@@ -179,7 +179,9 @@
   <ItemGroup>
     <Compile Include="ChoiceLetter\ChoiceLetter_PersonalityShiftRequest.cs" />
     <Compile Include="ChoiceLetter\ChoiceLetter_PersonalityShift.cs" />
+    <Compile Include="Components\HediffComps\HediffCompProperties_SeverityChangeAffectsNeed.cs" />
     <Compile Include="Components\HediffComps\HediffCompProperties_RemoveHediffOnApply.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_SeverityChangeAffectsNeed.cs" />
     <Compile Include="Components\HediffComps\HediffComp_RemoveHediffOnApply.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="DefOfs\ATR_BackstoryDefOf.cs" />

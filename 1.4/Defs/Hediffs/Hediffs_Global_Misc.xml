@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	
+
 	<HediffDef>
+        <hediffClass>HediffWithComps</hediffClass>
 		<defName>ATR_CoolantLoss</defName>
 		<label>coolant loss</label>
 		<description>Loss of coolant in the chassis, resulting in reduced cooling capacity and loss of finetuned motor control. Lack of circulation prevents restorative mechanites from functioning properly, leading to extended recovery times. \n\nPrioritization ensures core functionality receives sufficient coolant flow until critical levels are reached.</description>
 		<maxSeverity>1.0</maxSeverity>
 	    <defaultLabelColor>(0.6, 0.6, 0.9)</defaultLabelColor>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_SeverityChangeAffectsNeed">
+                <needDef>MHC_Coolant</needDef>
+                <severityToChangeRatio>0.8</severityToChangeRatio>
+                <changeOnIncrease>true</changeOnIncrease>
+            </li>
+        </comps>
         <stages>
             <li>
                 <label>nominal</label>

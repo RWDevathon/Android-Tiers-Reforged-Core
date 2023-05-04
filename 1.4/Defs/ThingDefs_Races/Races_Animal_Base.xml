@@ -55,6 +55,10 @@
                     <li MayRequire="Dubwise.DubsBadHygiene">Bladder</li>
                     <li MayRequire="Dubwise.DubsBadHygiene">DBHThirst</li>
                 </blacklistedNeeds>
+                <mechanicalNeeds>
+                    <li>MHC_Coolant</li>
+                    <li>MHC_Lubrication</li>
+                </mechanicalNeeds>
             </li>
 		</modExtensions>
 	</ThingDef>
