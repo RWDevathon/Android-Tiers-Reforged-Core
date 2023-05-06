@@ -111,13 +111,13 @@
             <li>
                 <statOffsets>
                     <ArmorRating_Heat>1.5</ArmorRating_Heat>
-                    <Insulation_Heat>100</Insulation_Heat>
-                    <Insulation_Cold>50</Insulation_Cold>
+                    <Insulation_Heat>40</Insulation_Heat>
+                    <Insulation_Cold>20</Insulation_Cold>
                 </statOffsets>
                 <statFactors>
                     <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</SuppressionPower>
                     <ArrestSuccessChance>1.25</ArrestSuccessChance>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
                 </statFactors>
             </li>
         </stages>
