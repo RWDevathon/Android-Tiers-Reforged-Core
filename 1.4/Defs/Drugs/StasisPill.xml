@@ -47,7 +47,7 @@
 			</li>
 		</comps>
         <modExtensions>
-            <li Class="MechHumanlikes.MHC_FoodExtension">
+            <li Class="MechHumanlikes.MHC_NeedFulfillerExtension">
                 <consumableByOrganics>false</consumableByOrganics>
             </li>
         </modExtensions>
