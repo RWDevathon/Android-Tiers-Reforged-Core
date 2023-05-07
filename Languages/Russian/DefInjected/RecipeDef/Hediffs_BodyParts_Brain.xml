@@ -8,33 +8,4 @@
   <ATR_Install_AutonomousCore.jobString>Установка автономного ядра.</ATR_Install_AutonomousCore.jobString>
 
 
-  <!-- SkyMind Receiver Core -->
-
-  <Install_ReceiverCore.label>Установить ядро приемник</Install_ReceiverCore.label>
-  <Install_ReceiverCore.description>Устанавливает и подключает ядро приемник. После того как ремонтники подключат центральную сеть, ядро сможет принимать удаленные контроллеры и действовать как суррогат. Однако само по себе оно не будет обладать ни интеллектом, ни функциональностью.</Install_ReceiverCore.description>
-  <Install_ReceiverCore.jobString>Установка ядра приемник.</Install_ReceiverCore.jobString>
-
-
-  <!-- SkyMind Receiver -->
-
-  <ATR_Install_SkyMindReceiver.label>Установить приемник SkyMind</ATR_Install_SkyMindReceiver.label>
-  <ATR_Install_SkyMindReceiver.description>Устанавливает и инициализирует приемник в мозге субъекта. Интеллект, хранящийся в мозге, умрет, и субъект станет суррогатом.</ATR_Install_SkyMindReceiver.description>
-  <ATR_Install_SkyMindReceiver.jobString>Установка приемника SkyMind.</ATR_Install_SkyMindReceiver.jobString>
-
-  <ATR_RemoveSkyMindReceiver.label>извлечь приемник SkyMind</ATR_RemoveSkyMindReceiver.label>
-  <ATR_RemoveSkyMindReceiver.description>Извлекает имплантированный приемник Skymind.</ATR_RemoveSkyMindReceiver.description>
-  <ATR_RemoveSkyMindReceiver.jobString>Извлечение приемника Skymind.</ATR_RemoveSkyMindReceiver.jobString>
-
-
-  <!-- SkyMind Transceiver -->
-
-  <ATR_Install_SkyMindTransceiver.label>Установить трансивер SkyMind</ATR_Install_SkyMindTransceiver.label>
-  <ATR_Install_SkyMindTransceiver.description>Устанавливает и инициализирует трансивер в мозгу испытуемого. Пешка сможет получить свободный доступ к сети SkyMind.</ATR_Install_SkyMindTransceiver.description>
-  <ATR_Install_SkyMindTransceiver.jobString>Установка трансивера SkyMind.</ATR_Install_SkyMindTransceiver.jobString>
-
-  <ATR_RemoveOrganicSkyMindTransceiver.label>извлечь трансивер SkyMind</ATR_RemoveOrganicSkyMindTransceiver.label>
-  <ATR_RemoveOrganicSkyMindTransceiver.description>Извлекает имплантированный трансивер SkyMind.</ATR_RemoveOrganicSkyMindTransceiver.description>
-  <ATR_RemoveOrganicSkyMindTransceiver.jobString>Извлечение трансивера Skymind.</ATR_RemoveOrganicSkyMindTransceiver.jobString>
-
-
 </LanguageData>

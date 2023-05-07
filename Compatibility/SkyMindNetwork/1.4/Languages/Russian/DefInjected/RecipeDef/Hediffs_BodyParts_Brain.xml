@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- SkyMind Receiver Core -->
+
+  <ATR_Install_ReceiverCore.label>Установить ядро приемник</ATR_Install_ReceiverCore.label>
+  <ATR_Install_ReceiverCore.description>Устанавливает и подключает ядро приемник. После того как ремонтники подключат центральную сеть, ядро сможет принимать удаленные контроллеры и действовать как суррогат. Однако само по себе оно не будет обладать ни интеллектом, ни функциональностью.</ATR_Install_ReceiverCore.description>
+  <ATR_Install_ReceiverCore.jobString>Установка ядра приемник.</ATR_Install_ReceiverCore.jobString>
+
+
+</LanguageData>

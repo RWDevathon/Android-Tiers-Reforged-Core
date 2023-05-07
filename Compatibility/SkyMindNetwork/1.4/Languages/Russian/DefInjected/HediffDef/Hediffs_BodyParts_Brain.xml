@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- SkyMind Receiver Core -->
+
+  <ATR_ReceiverCore.label>Ядро приемник</ATR_ReceiverCore.label>
+  <ATR_ReceiverCore.description>Это ядро подключено к шасси, а все функции ядра переданы протоколам связи и дистанционного управления. В этом ядре нет интеллекта, но любой подключенный интеллект может исполнять свою волю через него.</ATR_ReceiverCore.description>
+
+
+</LanguageData>
