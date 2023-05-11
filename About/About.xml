@@ -41,10 +41,8 @@
 		<li>majorhoff.rimthreaded</li>
 	</loadBefore>
     <description><![CDATA[
-Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
-Reworked for maximal flexibility and dynamic controls in settings and compatibility.
-Redesigned with balance and rationality in mind.
-Reforged because I wanted it done.
+The core content and code necessary for making Android Tiers pawns work properly, without any races.
+A baseline framework for modularity and player choice.
 
 Version <color=#FFD800>1.0.0</color> with more to come.
     ]]></description>

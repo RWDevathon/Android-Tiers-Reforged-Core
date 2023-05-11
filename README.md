@@ -16,8 +16,7 @@ Android Tiers Reforged is a total rework of Atlas' and ARandomKiwi's works imple
 * A vast swath of new mechanical specific hediffs, body parts, diseases, and implants.
 
 ## Known Issues / Incompatibilities
-- Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.
-- Prepare Carefully has an annoying tendency to break various features of alien races, has serious performance issues, and can seriously damage the functionality of Hediffs and other mechanics. Use Character Editor instead if you need a pawn editor.
+- None so far.
 
 ## Links
 [Discord](https://discord.gg/udNCpbkABT)
@@ -34,8 +33,15 @@ Special thanks to:
 * Kitty Of Pathos - Gynoid textures
 * JGH - Donated graphics for simplified buildings, icons, and many other graphics
 * RedMattis - Newly updated and refined gynoid textures
+* Thermo - Thumbnail/Preview Image
 * Android Tiers Discord - The endless whirlpool of ideas, assistance, and the home domain
 * RimWorld and HAR Discords - Incredible amounts of support and assistance
+
+Background by starline on Freepik
+(https://www.freepik.com/free-vector/blue-technology-circuit-diagram-glowing-lines_8765544.htm#page=2&query=blue%20circuit%20background&position=25&from_view=search&track=robertav1_2_sidr%22%3E%22%3EImage)
+
+Corner Reflective Metal by macrovector on Freepik
+(https://www.freepik.com/free-vector/realistic-metal-button-with-circular-processing-cone-reflection_11060526.htm#query=shining%20metal&position=39&from_view=search&track=robertav1_2_sidr%22%3EImage)
 
 ## Contributions
 
