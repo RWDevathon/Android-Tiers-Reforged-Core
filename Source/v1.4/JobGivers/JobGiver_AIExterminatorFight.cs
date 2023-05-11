@@ -9,7 +9,7 @@ namespace ATReforged
     {
         protected override Thing FindAttackTarget(Pawn pawn)
         {
-            return (Thing)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedAutoTargetable, null, 0f, 9999f, default(IntVec3), float.MaxValue);
+            return (Thing)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedAutoTargetable, null, 0f, 9999f, default, float.MaxValue);
         }
     }
 }
