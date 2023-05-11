@@ -70,18 +70,6 @@
   <Make_ATR_PsychicAssistant.description>Изготовить Помощник экстрасенса.</Make_ATR_PsychicAssistant.description>
   <Make_ATR_PsychicAssistant.jobString>Изготавливает Помощник экстрасенса.</Make_ATR_PsychicAssistant.jobString>
 
-  <Make_ATR_ControllerAssistant.label>изготовить Помощник контролера</Make_ATR_ControllerAssistant.label>
-  <Make_ATR_ControllerAssistant.description>Изготовить Помощник контролера.</Make_ATR_ControllerAssistant.description>
-  <Make_ATR_ControllerAssistant.jobString>Изготавливает Помощник контролера.</Make_ATR_ControllerAssistant.jobString>
-
-  <Make_ATR_SkyMindReceiver.label>изготовить Приемник SkyMind</Make_ATR_SkyMindReceiver.label>
-  <Make_ATR_SkyMindReceiver.description>Изготовить Приемник SkyMind.</Make_ATR_SkyMindReceiver.description>
-  <Make_ATR_SkyMindReceiver.jobString>Изготавливает Приемник SkyMind.</Make_ATR_SkyMindReceiver.jobString>
-
-  <Make_ATR_SkyMindTransceiver.label>изготовить Трансивер SkyMind</Make_ATR_SkyMindTransceiver.label>
-  <Make_ATR_SkyMindTransceiver.description>Изготовить Трансивер SkyMind.</Make_ATR_SkyMindTransceiver.description>
-  <Make_ATR_SkyMindTransceiver.jobString>Изготавливает Трансивер SkyMind.</Make_ATR_SkyMindTransceiver.jobString>
-
   <Make_ATR_PlatingPlasteel.label>изготовить Пласталевую раму</Make_ATR_PlatingPlasteel.label>
   <Make_ATR_PlatingPlasteel.description>Изготовить Пласталевую раму.</Make_ATR_PlatingPlasteel.description>
   <Make_ATR_PlatingPlasteel.jobString>Изготавливает Пласталевую раму.</Make_ATR_PlatingPlasteel.jobString>
