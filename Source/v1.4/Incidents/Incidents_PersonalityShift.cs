@@ -19,7 +19,7 @@ namespace ATReforged
                     continue;
                 }
 
-                if (possiblePawn.needs.mood != null && possiblePawn.needs.mood.CurInstantLevelPercentage < 0.7f)
+                if (possiblePawn.needs.mood == null || possiblePawn.needs.mood.CurInstantLevelPercentage < 0.7f)
                 {
                     possiblePawns.RemoveAt(i);
                 }
