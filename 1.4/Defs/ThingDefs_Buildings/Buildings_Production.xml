@@ -3,7 +3,7 @@
 
     <ThingDef ParentName="BenchBase">
         <defName>ATR_MechanicalAssemblyPod</defName>
-        <label>Mechanical assembly casket</label>
+        <label>mechanical assembly casket</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A casket designed to shape itself to form the chassis and assemble all necessary parts for androids and mechanical animals.</description>
         <graphicData>
@@ -72,7 +72,7 @@
 
     <ThingDef ParentName="BenchBase">
         <defName>ATR_MechPartWorkbench</defName>
-        <label>Mechanical parts workbench</label>
+        <label>mechanical parts workbench</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A workbench that holds all equipment needed to make a variety of mechanical parts.</description>
         <graphicData>

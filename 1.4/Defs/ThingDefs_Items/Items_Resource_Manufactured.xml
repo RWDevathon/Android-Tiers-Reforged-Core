@@ -28,7 +28,7 @@
     <!-- Drone Resurrector Kit -->
     <ThingDef ParentName="ATR_ResurrectorKitBase">
         <defName>ATR_DroneResurrectorKit</defName>
-        <label>Drone Resurrector Kit</label>
+        <label>drone resurrector kit</label>
         <description>A specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
         <graphicData>
             <texPath>Things/Items/Manufactured/DroneResurrectionKit</texPath>
@@ -58,7 +58,7 @@
     <!-- Android Resurrection Kit -->
     <ThingDef ParentName="ATR_ResurrectorKitBase">
         <defName>ATR_AndroidResurrectorKit</defName>
-        <label>Android Resurrector Kit</label>
+        <label>android resurrector kit</label>
         <description>A specialized suite of tools capable of bringing disabled mechanical units back to life. The tools are sufficiently advanced to bring any such unit back to nominal functionality. Revived units must fully reboot in order to begin operating again.</description>
         <graphicData>
             <texPath>Things/Items/Manufactured/AndroidResurrectionKit</texPath>

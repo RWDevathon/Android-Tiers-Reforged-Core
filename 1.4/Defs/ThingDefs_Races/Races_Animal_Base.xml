@@ -48,19 +48,6 @@
 		<tradeTags>
             <li>ATR_MechanicalAnimal</li>
 		</tradeTags>
-		<modExtensions>
-            <li Class="MechHumanlikes.MHC_MechanicalPawnExtension">
-                <blacklistedNeeds>
-                    <li MayRequire="Dubwise.DubsBadHygiene">Hygiene</li>
-                    <li MayRequire="Dubwise.DubsBadHygiene">Bladder</li>
-                    <li MayRequire="Dubwise.DubsBadHygiene">DBHThirst</li>
-                </blacklistedNeeds>
-                <mechanicalNeeds>
-                    <li>MHC_Coolant</li>
-                    <li>MHC_Lubrication</li>
-                </mechanicalNeeds>
-            </li>
-		</modExtensions>
 	</ThingDef>
 
 	<PawnKindDef Name="ATR_MechanicalAnimalKindBase" ParentName="AnimalKindBase" Abstract="True">
