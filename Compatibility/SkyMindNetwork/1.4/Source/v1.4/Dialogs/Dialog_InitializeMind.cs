@@ -37,7 +37,7 @@ namespace ATReforged
         {
             // If there is any idle intelligence in the SkyMind, then the new intelligence may download it. This is a standard download action.
             IEnumerable<Pawn> cloudPawns = SMN_Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(SMN_HediffDefOf.SMN_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate());
-            IEnumerable<Thing> networkedPawns = SMN_Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.GetComp<CompSkyMindLink>()?.HasSurrogate() == false);
+            IEnumerable<Thing> networkedPawns = SMN_Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.health.hediffSet.GetFirstHediffOfDef(SMN_HediffDefOf.SMN_MindOperation) == null && pawn.GetComp<CompSkyMindLink>()?.HasSurrogate() == false);
             if (cloudPawns.Count() + networkedPawns.Count() > 0 && SMN_Utils.gameComp.networkedDevices.Count < SMN_Utils.gameComp.GetSkyMindNetworkSlots())
             {
                 buttonAAction = delegate ()
