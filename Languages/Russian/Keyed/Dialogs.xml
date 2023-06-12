@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_SkyMindDisconnectionRisk>Отключение от сети SkyMind во время выполнения операции приведет к серьезным последствиям. При неправильном отключении гарантируется повреждение памяти различной степени.</ATR_SkyMindDisconnectionRisk>
+  <ATR_SkyMindDisconnectionRisk>Отключение от сети SkyMind во время выполнения операции приведёт к серьезным последствиям. При неправильном отключении гарантируется повреждение памяти различной степени.</ATR_SkyMindDisconnectionRisk>
 
-  <ATR_ResurrectionSuccessful>Механический юнит {0} был успешно переведен на минимальную мощность. Перед возвращением к полной функциональности юнит должен перезагрузиться.</ATR_ResurrectionSuccessful>
-  <ATR_ResurrectionFailedInvalidPawn>Цель, {0}, не была активирована, так как она не является подходящей целью для воскрешения таким способом. Цели должны быть механическими (настройки AT Reforged).</ATR_ResurrectionFailedInvalidPawn>
-  <ATR_ResurrectionFailedDroneOnly>Набор для воскрешения дронов можно использовать только на дронах или животных, а {0} считается полностью автономной механической единицей!</ATR_ResurrectionFailedDroneOnly>
+  <ATR_ResurrectionSuccessful>Механический юнит {0} был успешно реанимирован. Перед восстановлением полной функциональности, он должен перезагрузиться.</ATR_ResurrectionSuccessful>
+  <ATR_ResurrectionFailedInvalidPawn>Цель, {0}, не может быть реанимирована этим комплектом. Цели должны быть механическими (Указаны в настройках мода).</ATR_ResurrectionFailedInvalidPawn>
+  <ATR_ResurrectionFailedDroneOnly>Комплект реанимации дрона, может использоваться только на дронах или механических животных, а {0} считается полностью автономным андроидом.</ATR_ResurrectionFailedDroneOnly>
 
-  <ATR_InsufficientPoints>Для этой операции требуется не менее {0} очков.</ATR_InsufficientPoints>
+  <ATR_InsufficientPoints>Для этой операции требуется не менее {0} очков навыков.</ATR_InsufficientPoints>
 
   <!-- Skill Upgrades -->
-  <ATR_PawnBeingModified>Навыки и страсть к: </ATR_PawnBeingModified>
-  <ATR_CurrentXP> XP требуемое для следующего уровня: </ATR_CurrentXP>
-  <ATR_TodaysXP> XP сегодня: </ATR_TodaysXP>
+  <ATR_PawnBeingModified>Навыки и интересы:</ATR_PawnBeingModified>
+  <ATR_CurrentXP>Необходимо XP:</ATR_CurrentXP>
+  <ATR_TodaysXP>Хранится XP:</ATR_TodaysXP>
 
-  <ATR_AddSkillPoints>Ввести очки в {0}</ATR_AddSkillPoints>
-  <ATR_AvailableSkillPoints>Доступно очков : {0}</ATR_AvailableSkillPoints>
-  <ATR_AvailableSkillPointsDesc>Примечание: Инъекция озарения зависит от способностей человека к обучению, а также от ежедневных пределов понимания. Инъекция страсти зависит от индивидуальных способностей к обучению, а также от уже существующих страстей. Чрезмерная стимуляция неэффективна.</ATR_AvailableSkillPointsDesc>
+  <ATR_AddSkillPoints>Добавить опыт в {0}</ATR_AddSkillPoints>
+  <ATR_AvailableSkillPoints>Доступно очков навыков: {0}</ATR_AvailableSkillPoints>
+  <ATR_AvailableSkillPointsDesc>Примечание: Добавление опыта к навыкам зависит от эффективности обучения, а также от ежедневных пределов обучения. Добавление интересов, зависит от индивидуальной эффективности обучения, а также от уже существующих интересов. Чрезмерная стимуляция навыков — неэффективна.</ATR_AvailableSkillPointsDesc>
 
   <!-- Hacking Interface -->
-  <ATR_HackInterfaceTitle>Ожидание директивы о ведении кибервойны.</ATR_HackInterfaceTitle>
-  <ATR_ConfirmHack>Разрешить операцию с целью?</ATR_ConfirmHack>
-  <ATR_ConfirmhackDesc>Все взломы сопряжены с рисками. Неудача может означать дипломатический ущерб, срабатывание автоматических контрмер или какую-либо форму возмездия.</ATR_ConfirmhackDesc>
+  <ATR_HackInterfaceTitle>Ожидание инструкций кибервойны.</ATR_HackInterfaceTitle>
+  <ATR_ConfirmHack>Разрешить целевую операцию?</ATR_ConfirmHack>
+  <ATR_ConfirmhackDesc>Все взломы сопряжены с рисками. Неудача может испортить отношение с фракцией, а также применить автоматическую активацию контрмер или определённую форму мести.</ATR_ConfirmhackDesc>
 
-  <ATR_HackOpCost>Цена: {0}</ATR_HackOpCost>
-  <ATR_SuccessChance>Расчетная вероятность успеха: {0}%</ATR_SuccessChance>
+  <ATR_HackOpCost>Стоимость: {0}</ATR_HackOpCost>
+  <ATR_SuccessChance>Шанс успеха: {0}%</ATR_SuccessChance>
 
-  <ATR_AvailableHackingPoints>Доступные очки: {0}. Штраф за время: {1}.</ATR_AvailableHackingPoints>
-  <ATR_AvailableHackingPointsDesc>Примечание: Стоимость инициации взломов зависит от базовой стоимости операции, умноженной на время с момента последнего взлома (штраф за частое использование).\nВыделение большего количества очков увеличивает вероятность успеха.</ATR_AvailableHackingPointsDesc>
+  <ATR_AvailableHackingPoints>Очки взлома: {0}. Временной штраф: {1}.</ATR_AvailableHackingPoints>
+  <ATR_AvailableHackingPointsDesc>Примечание: Стоимость попытки взлома — это базовая стоимость операции, умноженная на время с момента последнего взлома (Временной штраф, за частое использование).\nБольшее количество очков взлома, увеличивает вероятность успеха.</ATR_AvailableHackingPointsDesc>
 
   <!-- Guidance Hack -->
-  <ATR_GuidanceHack>Принудительное перенаправление системы наведения фракции</ATR_GuidanceHack>
-  <ATR_GuidanceHackDesc>Попытка взлома системы наведения фракции в попытке перенаправить что-то на эту карту. Нет никакой гарантии, на содержимое того, что будет отправлено. Это могут быть припасы, торговый корабль, пленный - или переброска вражеского гарнизона.</ATR_GuidanceHackDesc>
+  <ATR_GuidanceHack>Взлом навигационной системы</ATR_GuidanceHack>
+  <ATR_GuidanceHackDesc>Попытка взлома навигационной системы жертвы, в попытке перенаправить что-то, в ваше поселение. Нет никакой гарантии, что содержимое будет того стоить. Это могут быть: припасы, торговый корабль, пленный — или вражеский гарнизон.</ATR_GuidanceHackDesc>
 
   <!-- Propaganda Hack -->
-  <ATR_PropagandaHack>Развернуть целенаправленную кампанию позитивной пропаганды</ATR_PropagandaHack>
-  <ATR_PropagandaHackDesc>Попытка провести целенаправленную кампанию, чтобы повлиять на ключевых членов целевой фракции в пользу колонии. Из-за непрозрачной природы политического влияния точный результат неизвестен.</ATR_PropagandaHackDesc>
+  <ATR_PropagandaHack>Целенаправленная пропаганда</ATR_PropagandaHack>
+  <ATR_PropagandaHackDesc>Попытка проведения целенаправленной пропаганды, чтобы повлиять на ключевых членов целевой фракции в пользу вашего поселения. Из-за сложной природы политического влияния, точный результат пропаганды — неизвестен.</ATR_PropagandaHackDesc>
 
   <!-- Espionage Hack -->
-  <ATR_EspionageHack>Начать кампанию шпионажа для получения квеста</ATR_EspionageHack>
-  <ATR_EspionageHackDesc>Попытка использовать полученные разведданные для выявления перспективного квеста по фоновым разведданным от фракции. Это гарантированно даст представление о тайнике, но не от конкретной фракции или группы.</ATR_EspionageHackDesc>
+  <ATR_EspionageHack>Перспективный шпионаж</ATR_EspionageHack>
+  <ATR_EspionageHackDesc>Попытка использования полученных разведданных, для выявления перспективной информации. Это гарантированно даст наводку о «Складе с ценностями», но не от конкретной фракции или поселения.</ATR_EspionageHackDesc>
 
   <!-- Disruptor Hack -->
-  <ATR_DisruptorHack>Запустить DDOS-атаку по всей карте на местные вражеские подразделения</ATR_DisruptorHack>
-  <ATR_DisruptorHackDesc>Попытка локализованной DDOS-атаки на пешки определенной фракции с поддержкой SkyMind, присутствующие на этой карте.</ATR_DisruptorHackDesc>
+  <ATR_DisruptorHack>Локальная DDOS-атака</ATR_DisruptorHack>
+  <ATR_DisruptorHackDesc>Попытка локализованной DDOS-атаки на андроидов определенной фракции, подключённых к SkyMind, и присутствующих на вашей карте.</ATR_DisruptorHackDesc>
 
   <!-- Initialize Mind Dialog/Keys -->
-  <ATR_InitializeMindTitle>Механическому юниту требуется инициализация</ATR_InitializeMindTitle>
-  <ATR_InitializeMindDesc>Только что подключенный интерфейс ядра готов содержать интеллект, но еще не инициализирован. Интеллект может быть передан от любой пешки, связанной с SkyMind, если таковая имеется, или ему может быть позволено сформировать личность самостоятельно.</ATR_InitializeMindDesc>
+  <ATR_InitializeMindTitle>Механический юнит нуждается в инициализации</ATR_InitializeMindTitle>
+  <ATR_InitializeMindDesc>Нейроинтерфейс имеет подключенное ядро, готовое к содержанию интеллекта, но пока не инициализировано. Интеллект может быть передан от любого поселенца, связанного со SkyMind, или можно самостоятельно сформировать свою автономную личность.</ATR_InitializeMindDesc>
 
   <ATR_SkyMindInitialization>Инициализация из SkyMind</ATR_SkyMindInitialization>
-  <ATR_AutomaticInitialization>Инициализация автоматический</ATR_AutomaticInitialization>
+  <ATR_AutomaticInitialization>Автономная инициализация</ATR_AutomaticInitialization>
 
 </LanguageData>

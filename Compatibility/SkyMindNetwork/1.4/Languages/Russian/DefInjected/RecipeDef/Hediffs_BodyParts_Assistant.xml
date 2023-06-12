@@ -3,9 +3,9 @@
 
   <!-- Controller Assistant -->
 
-  <ATR_Install_ControllerAssistant.label>установить помощник контролера</ATR_Install_ControllerAssistant.label>
-  <ATR_Install_ControllerAssistant.description>Устанавливает помощник контролера в слот субъядерного помощника юнита.</ATR_Install_ControllerAssistant.description>
-  <ATR_Install_ControllerAssistant.jobString>Установка помощника контролера.</ATR_Install_ControllerAssistant.jobString>
+  <ATR_Install_ControllerAssistant.label>установить помощник оператора</ATR_Install_ControllerAssistant.label>
+  <ATR_Install_ControllerAssistant.description>Установить помощник оператора юниту в слот помощника.</ATR_Install_ControllerAssistant.description>
+  <ATR_Install_ControllerAssistant.jobString>Установка помощника оператора.</ATR_Install_ControllerAssistant.jobString>
 
 
 </LanguageData>

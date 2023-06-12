@@ -3,14 +3,14 @@
 
   <!-- Isolated Core Housing -->
 
-  <ATR_IsolatedCore.label>Интерфейс не установлен</ATR_IsolatedCore.label>
-  <ATR_IsolatedCore.description>Ядро этого юнита пусто. Для подключения к интерфейсу и активации юнита требуется инициализация автономного ядра или ядра приемника.</ATR_IsolatedCore.description>
+  <ATR_IsolatedCore.label>Отсутствует ядро</ATR_IsolatedCore.label>
+  <ATR_IsolatedCore.description>У этого андроида нет ядра. Инициализация автономного ядра необходима для подключения к интерфейсу и активации юнита.</ATR_IsolatedCore.description>
 
 
   <!-- Autonomous Core -->
 
   <ATR_AutonomousCore.label>Автономное ядро</ATR_AutonomousCore.label>
-  <ATR_AutonomousCore.description>Это ядро полностью взаимодействует с автономным интеллектом. Все, что составляет интеллект, надежно хранится в этом ядре, откуда он может осуществлять контроль над остальными частями шасси.</ATR_AutonomousCore.description>
+  <ATR_AutonomousCore.description>Автономное ядро — это искусственный мозг андроида. Интеллект, хранящийся в нём, управляет всеми функциям корпуса и имеет полный контроль над действиями андроида.</ATR_AutonomousCore.description>
 
 
 </LanguageData>
