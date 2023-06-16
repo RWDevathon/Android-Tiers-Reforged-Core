@@ -3,16 +3,16 @@
 
   <!-- Drone Resurrector Kit -->
 
-  <ATR_DroneResurrectorKit.label>Набор для воскрешения дронов</ATR_DroneResurrectorKit.label>
-  <ATR_DroneResurrectorKit.description>Специализированный набор инструментов, способных возвращать к жизни отключенные простые механические дроны. Инструменты достаточно развиты, чтобы вернуть к жизни простые механические устройства, такие как животные. Оживленные устройства должны полностью перезагрузиться, чтобы снова начать работать.</ATR_DroneResurrectorKit.description>
-  <ATR_DroneResurrectorKit.comps.0.useLabel>Используйте набор для воскрешения</ATR_DroneResurrectorKit.comps.0.useLabel>
+  <ATR_DroneResurrectorKit.label>комплект реанимации дрона</ATR_DroneResurrectorKit.label>
+  <ATR_DroneResurrectorKit.description>Специализированный комплект деталей и инструментов, способных реанимировать отключённого или повреждённого дрона. Комплект реанимации так же может реанимировать механических животных. Реанимированные дроны, должны полностью перезагрузиться, чтобы снова начать работу.</ATR_DroneResurrectorKit.description>
+  <ATR_DroneResurrectorKit.comps.0.useLabel>Реанимировать дрона</ATR_DroneResurrectorKit.comps.0.useLabel>
 
 
   <!-- Android Resurrection Kit -->
 
-  <ATR_AndroidResurrectorKit.label>Набор для воскрешения андроида</ATR_AndroidResurrectorKit.label>
-  <ATR_AndroidResurrectorKit.description>Специализированный набор инструментов, способных вернуть к жизни вышедшие из строя механические юниты. Инструменты достаточно совершенны, чтобы вернуть любой такой юнит к номинальной функциональности. Оживленные юниты должны полностью перезагрузиться, чтобы снова начать работать.</ATR_AndroidResurrectorKit.description>
-  <ATR_AndroidResurrectorKit.comps.0.useLabel>Используйте набор для воскрешения</ATR_AndroidResurrectorKit.comps.0.useLabel>
+  <ATR_AndroidResurrectorKit.label>комплект реанимации андроида</ATR_AndroidResurrectorKit.label>
+  <ATR_AndroidResurrectorKit.description>Продвинутый специализированный комплект деталей и инструментов, способных реанимировать отключённого или повреждённого андроида. Продвинутый комплект реанимации может реанимировать любое механическое существо. Реанимированные андроиды, должны полностью перезагрузиться, чтобы снова начать работу.</ATR_AndroidResurrectorKit.description>
+  <ATR_AndroidResurrectorKit.comps.0.useLabel>Реанимировать андроида</ATR_AndroidResurrectorKit.comps.0.useLabel>
 
 
 </LanguageData>

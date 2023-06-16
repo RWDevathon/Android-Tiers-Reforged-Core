@@ -2,9 +2,9 @@
 <LanguageData>
 
   <!-- AutoFlickering -->
-  <ATR_FlickEnable>Включение питания через SkyMind</ATR_FlickEnable>
-  <ATR_FlickDisable>Выключение питания через SkyMind</ATR_FlickDisable>
-  <ATR_AutoDoorOpenMoteText>Открытие через SkyMind</ATR_AutoDoorOpenMoteText>
-  <ATR_AutoDoorCloseMoteText>Закрытие через SkyMind</ATR_AutoDoorCloseMoteText>
+  <ATR_FlickEnable>Включить через SkyMind</ATR_FlickEnable>
+  <ATR_FlickDisable>Отключить через SkyMind</ATR_FlickDisable>
+  <ATR_AutoDoorOpenMoteText>Открыть через SkyMind</ATR_AutoDoorOpenMoteText>
+  <ATR_AutoDoorCloseMoteText>Закрыть через SkyMind</ATR_AutoDoorCloseMoteText>
 
 </LanguageData>

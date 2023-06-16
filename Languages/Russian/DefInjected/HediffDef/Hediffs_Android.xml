@@ -2,14 +2,14 @@
 <LanguageData>
 
   <ATR_MechanicalOverclocking.label>Разгон</ATR_MechanicalOverclocking.label>
-  <ATR_MechanicalOverclocking.description>Это устройство разгоняет свой основной процессор, заметно повышая производительность. Это требует значительного дополнительного энергопотребления и создает нагрузку на тепловую и обслуживающую системы. Необычно повышенная активность процессора напрягает и сознание хозяина.</ATR_MechanicalOverclocking.description>
+  <ATR_MechanicalOverclocking.description>Андроид разогнал своё ядро с заметным увеличением производительности. Энергопотребление, тепловыделение и износ комплектующих системы — были заметно увеличены. Необычно повышенная активность ядра напрягает и сознание андроида.</ATR_MechanicalOverclocking.description>
 
-  <ATR_RemainingCharge.label>время автономной работы</ATR_RemainingCharge.label>
-  <ATR_RemainingCharge.description>Оставшееся время работы аккумулятора до потери функции.</ATR_RemainingCharge.description>
-  <ATR_RemainingCharge.stages.0.label>Пустой</ATR_RemainingCharge.stages.0.label>
+  <ATR_RemainingCharge.label>заряд аккумулятора</ATR_RemainingCharge.label>
+  <ATR_RemainingCharge.description>Оставшееся время работы аккумулятора до его полного разряда.</ATR_RemainingCharge.description>
+  <ATR_RemainingCharge.stages.0.label>Разряжен</ATR_RemainingCharge.stages.0.label>
   <ATR_RemainingCharge.stages.1.label>Критический</ATR_RemainingCharge.stages.1.label>
   <ATR_RemainingCharge.stages.2.label>Низкий</ATR_RemainingCharge.stages.2.label>
-  <ATR_RemainingCharge.stages.3.label>Умеренный</ATR_RemainingCharge.stages.3.label>
+  <ATR_RemainingCharge.stages.3.label>Средний</ATR_RemainingCharge.stages.3.label>
   <ATR_RemainingCharge.stages.4.label>Высокий</ATR_RemainingCharge.stages.4.label>
   <ATR_RemainingCharge.stages.5.label>Полный</ATR_RemainingCharge.stages.5.label>
 

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_MentalAssistant.stages.0.label>Психологический помощник</ATR_MentalAssistant.stages.0.label>
-  <ATR_MentalAssistant.stages.0.description>Этот чип ментального помощника помогает снять ужасные стрессы и помогает мне быть психически устойчивым. Я чувствую себя сильным.</ATR_MentalAssistant.stages.0.description>
+  <ATR_MentalAssistant.stages.0.label>Помощник психолог</ATR_MentalAssistant.stages.0.label>
+  <ATR_MentalAssistant.stages.0.description>Мой личный ИИ-психолог, помогает снять ужасные стрессовые факторы, и помогает мне быть психически устойчивым. Ничто не сможет меня сломить.</ATR_MentalAssistant.stages.0.description>
 
-  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>окрашен в любимый цвет</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>
+  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>окрашен любимым цветом</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>
   <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>Мне нравится цвет моей краски.</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>
 
 
