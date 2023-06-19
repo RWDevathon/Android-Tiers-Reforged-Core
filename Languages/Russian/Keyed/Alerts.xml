@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_AlertServerHeatCritical>Теплочувствительное устройство в критичном состоянии</ATR_AlertServerHeatCritical>
-  <ATR_AlertServerHeatCriticalDesc>По крайней мере одно теплочувствительное устройство находится в опасности возгорания из-за превышения максимального порога безопасного нагрева! Необходимо принять меры для сохранения целостности сети!</ATR_AlertServerHeatCriticalDesc>
+  <ATR_AlertServerHeatCritical>Перегрев юнита</ATR_AlertServerHeatCritical>
+  <ATR_AlertServerHeatCriticalDesc>Как минимум один из юнитов имеет критически высокую температуру и может перегреться! Необходимо принять меры для предотвращения возможного возгорания и сохранения целостности сети!</ATR_AlertServerHeatCriticalDesc>
 
-  <ATR_AlertFullSkillServers>Сервер навыков заполнен</ATR_AlertFullSkillServers>
-  <ATR_AlertFullSkillServersDesc>Больше нет возможности накапливать очки навыков. Рассмотрите возможность их использования или расширения емкости.</ATR_AlertFullSkillServersDesc>
+  <ATR_AlertFullSkillServers>Максимум очков навыков</ATR_AlertFullSkillServers>
+  <ATR_AlertFullSkillServersDesc>Достигнуто максимальное количество очков навыков. Для продолжения записи новой информации необходимо расширить базу данных.</ATR_AlertFullSkillServersDesc>
 
-  <ATR_AlertFullHackingServers>Хакерский сервер заполнен</ATR_AlertFullHackingServers>
-  <ATR_AlertFullHackingServersDesc>Больше нет возможности накапливать очков взлома, и нет штрафа за текущее время. Рассмотрите возможность их использования или расширения емкости.</ATR_AlertFullHackingServersDesc>
+  <ATR_AlertFullHackingServers>Максимум очков взлома</ATR_AlertFullHackingServers>
+  <ATR_AlertFullHackingServersDesc>Достигнуто максимальное количество очков взлома. Для продолжения записи новой информации необходимо расширить базу данных.</ATR_AlertFullHackingServersDesc>
 
   <ATR_AlertLowSecurity>Сеть под угрозой</ATR_AlertLowSecurity>
-  <ATR_AlertLowSecurityDesc>Количество доступных очков безопасности крайне мало для успешной защиты от любых попыток взлома! Требуются дополнительные серверы и очки безопасности - в настоящее время следует проявлять крайнюю осторожность при использовании сети.</ATR_AlertLowSecurityDesc>
+  <ATR_AlertLowSecurityDesc>Количество доступных очков защиты может не обеспечить полной защиты от любой попытки взлома. Для увеличения уровня защиты необходимо установить дополнительные аналитические серверы для генерации дополнительных очков защиты.</ATR_AlertLowSecurityDesc>
 
 </LanguageData>

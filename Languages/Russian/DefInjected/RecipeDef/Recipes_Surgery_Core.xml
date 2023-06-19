@@ -3,13 +3,13 @@
 
   <!-- Overclocking -->
 
-  <ATR_ApplyOverclocking.label>Применить разгон</ATR_ApplyOverclocking.label>
-  <ATR_ApplyOverclocking.description>Простая аппаратная перестройка механического юнита для снижения мер безопасности оборудования, позволяющая повысить производительность и риски.</ATR_ApplyOverclocking.description>
-  <ATR_ApplyOverclocking.jobString>Применение разгона.</ATR_ApplyOverclocking.jobString>
+  <ATR_ApplyOverclocking.label>применить разгон</ATR_ApplyOverclocking.label>
+  <ATR_ApplyOverclocking.description>Простая операция по перестройки механического узла, для обхода сертификатов защиты, позволяющая повысить общую производительность.\n\nРазгон также увеличивает энергопотребление, тепловыделение и создает нагрузку для всех систем андроида.</ATR_ApplyOverclocking.description>
+  <ATR_ApplyOverclocking.jobString>Применяет разгон.</ATR_ApplyOverclocking.jobString>
 
-  <ATR_ResetOverclocking.label>Сброс разгона</ATR_ResetOverclocking.label>
-  <ATR_ResetOverclocking.description>Простая аппаратная перестройка механического юнита для сброса мер безопасности оборудования к стандартным настройкам.</ATR_ResetOverclocking.description>
-  <ATR_ResetOverclocking.jobString>Сброс разгона.</ATR_ResetOverclocking.jobString>
+  <ATR_ResetOverclocking.label>сбросить разгон</ATR_ResetOverclocking.label>
+  <ATR_ResetOverclocking.description>Простая операция по перестройки механического узла, для сброса всех настроек к заводским.</ATR_ResetOverclocking.description>
+  <ATR_ResetOverclocking.jobString>Сбрасывает разгон.</ATR_ResetOverclocking.jobString>
 
 
 </LanguageData>

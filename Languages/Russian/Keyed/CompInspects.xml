@@ -2,39 +2,39 @@
 <LanguageData>
 
   <!-- Computer -->
-  <ATR_SkillServersSynthesis>Доступные очки навыков: {0} / {1}</ATR_SkillServersSynthesis>
-  <ATR_SkillProducedPoints>Производство очков навыков: {0}</ATR_SkillProducedPoints>
-  <ATR_SkillSlotsAdded>Добавлено хранилище навыков: {0}</ATR_SkillSlotsAdded>
+  <ATR_SkillServersSynthesis>Доступно очков навыков: {0} / {1}</ATR_SkillServersSynthesis>
+  <ATR_SkillProducedPoints>Производится очков навыков: {0}</ATR_SkillProducedPoints>
+  <ATR_SkillSlotsAdded>Хранится очков навыков: {0}</ATR_SkillSlotsAdded>
 
-  <ATR_SecurityServersSynthesis>Доступные очки безопасности: {0} / {1}</ATR_SecurityServersSynthesis>
-  <ATR_SecurityProducedPoints>Производство очков безопасности: {0}</ATR_SecurityProducedPoints>
-  <ATR_SecuritySlotsAdded>Добавлено хранилище безопасности: {0}</ATR_SecuritySlotsAdded>
+  <ATR_SecurityServersSynthesis>Доступно очков защиты: {0} / {1}</ATR_SecurityServersSynthesis>
+  <ATR_SecurityProducedPoints>Производится очков защиты: {0}</ATR_SecurityProducedPoints>
+  <ATR_SecuritySlotsAdded>Хранится очков защиты: {0}</ATR_SecuritySlotsAdded>
 
-  <ATR_HackingServersSynthesis>Доступные очки взлома: {0} / {1}</ATR_HackingServersSynthesis>
-  <ATR_HackingProducedPoints>Производство очков взлома: {0}</ATR_HackingProducedPoints>
-  <ATR_HackingSlotsAdded>Добавлено хранилище взлома: {0}</ATR_HackingSlotsAdded>
+  <ATR_HackingServersSynthesis>Доступно очков взлома: {0} / {1}</ATR_HackingServersSynthesis>
+  <ATR_HackingProducedPoints>Производится очков взлома: {0}</ATR_HackingProducedPoints>
+  <ATR_HackingSlotsAdded>Хранится очков взлома: {0}</ATR_HackingSlotsAdded>
 
   <!-- Heat -->
-  <ATR_CompHotSensitiveCriticalText>Тепловой порог превышен: повреждение неизбежно!</ATR_CompHotSensitiveCriticalText>
-  <ATR_CompHotSensitiveDangerText>Приближение к тепловому порогу: рекомендуется принять профилактические меры!</ATR_CompHotSensitiveDangerText>
-  <ATR_CompHotSensitiveWarningText>Превышен порог идеального тепла: рекомендуется соблюдать осторожность.</ATR_CompHotSensitiveWarningText>
-  <ATR_CompHotSensitiveSafeText>В пределах безопасного рабочего порога: работа в норме.</ATR_CompHotSensitiveSafeText>
+  <ATR_CompHotSensitiveCriticalText>Критическая температура: повреждение неизбежно!</ATR_CompHotSensitiveCriticalText>
+  <ATR_CompHotSensitiveDangerText>Высокая температура: рекомендуется охлаждение!</ATR_CompHotSensitiveDangerText>
+  <ATR_CompHotSensitiveWarningText>Повышенная температура: рекомендуется соблюдать осторожность.</ATR_CompHotSensitiveWarningText>
+  <ATR_CompHotSensitiveSafeText>Оптимальная температура: работоспособность в норме.</ATR_CompHotSensitiveSafeText>
 
   <!-- SkyMind -->
-  <ATR_HackedWithTimer>Перекомпиляция ПО завершена в {0}.</ATR_HackedWithTimer>
-  <ATR_CryptoLocked>Криптоблокировка, доступ запрещен.</ATR_CryptoLocked>
-  <ATR_SkyMindDetected>Подключено к SkyMind</ATR_SkyMindDetected>
+  <ATR_HackedWithTimer>Перекомпиляция системы завершена на {0}.</ATR_HackedWithTimer>
+  <ATR_CryptoLocked>Криптоблокировка, доступ запрещён.</ATR_CryptoLocked>
+  <ATR_SkyMindDetected>Подключён к SkyMind</ATR_SkyMindDetected>
 
   <!-- Core -->
-  <ATR_CloudIntelligenceSummary>Интеллекты в SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
-  <ATR_AssistingIntelligenceSummary>Пустые интеллекты: {0}</ATR_AssistingIntelligenceSummary>
+  <ATR_CloudIntelligenceSummary>Интеллекты SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
+  <ATR_AssistingIntelligenceSummary>Бездействующие интеллекты: {0}</ATR_AssistingIntelligenceSummary>
 
   <!-- Link -->
   <ATR_SkyMindOperationInProgress>Время до завершения операции: {0}</ATR_SkyMindOperationInProgress>
-  <ATR_SkyMindCoreOperationInProgress>Время до завершения операции для {0}: {1}</ATR_SkyMindCoreOperationInProgress>
-  <ATR_SurrogateConnected>Соединяется с: {0} другой пешкой</ATR_SurrogateConnected>
+  <ATR_SkyMindCoreOperationInProgress>Операция в процессе {0} завершено: {1}</ATR_SkyMindCoreOperationInProgress>
+  <ATR_SurrogateConnected>Подключён к: {0} другой пешки</ATR_SurrogateConnected>
 
   <!-- Tower -->
-  <ATR_SkyMindNetworkSummary>Подключено пользователей: {0} / {1}</ATR_SkyMindNetworkSummary>
+  <ATR_SkyMindNetworkSummary>Подключённые пользователи: {0} / {1}</ATR_SkyMindNetworkSummary>
 
 </LanguageData>

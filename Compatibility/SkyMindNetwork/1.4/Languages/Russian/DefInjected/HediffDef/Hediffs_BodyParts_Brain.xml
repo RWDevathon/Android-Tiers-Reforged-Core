@@ -3,8 +3,8 @@
 
   <!-- SkyMind Receiver Core -->
 
-  <ATR_ReceiverCore.label>Ядро приемник</ATR_ReceiverCore.label>
-  <ATR_ReceiverCore.description>Это ядро подключено к шасси, а все функции ядра переданы протоколам связи и дистанционного управления. В этом ядре нет интеллекта, но любой подключенный интеллект может исполнять свою волю через него.</ATR_ReceiverCore.description>
+  <ATR_ReceiverCore.label>Ядро приёмник</ATR_ReceiverCore.label>
+  <ATR_ReceiverCore.description>Ядро приёмник управляет всеми функциям корпуса и имеет полный нейроконтроль над действиями андроида, а также обладает протоколами связи для дистанционного управления. В этом ядре нет искусственного мозга, но любой связанный с ним интеллект, сможет управлять андроидом, удалённо.</ATR_ReceiverCore.description>
 
 
 </LanguageData>

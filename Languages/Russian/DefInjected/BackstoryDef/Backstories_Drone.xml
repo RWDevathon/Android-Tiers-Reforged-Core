@@ -3,16 +3,16 @@
 
   <!-- Childhoods -->
 
-  <ATR_MechChildhoodFreshBlank.title>Свежая заготовка</ATR_MechChildhoodFreshBlank.title>
-  <ATR_MechChildhoodFreshBlank.titleShort>Юнит</ATR_MechChildhoodFreshBlank.titleShort>
-  <ATR_MechChildhoodFreshBlank.baseDesc>{PAWN_nameDef} был создан как абсолютно чистый лист, готовый к тому, чтобы его следующий владелец сформировал его первые и единственные воспоминания.</ATR_MechChildhoodFreshBlank.baseDesc>
+  <ATR_MechChildhoodFreshBlank.title>Свежая оболочка</ATR_MechChildhoodFreshBlank.title>
+  <ATR_MechChildhoodFreshBlank.titleShort>Андроид</ATR_MechChildhoodFreshBlank.titleShort>
+  <ATR_MechChildhoodFreshBlank.baseDesc>{PAWN_nameDef} {PAWN_gender ? был : была} {PAWN_gender ? собран : собрана} быть пустой оболочкой, готовой к тому, чтобы {PAWN_possessive} будущий владелец сформировал свои первые и единственные воспоминания.</ATR_MechChildhoodFreshBlank.baseDesc>
 
 
   <!-- Adulthoods -->
 
-  <ATR_MechAdulthoodBlank.title>Взрослая заготовка</ATR_MechAdulthoodBlank.title>
-  <ATR_MechAdulthoodBlank.titleShort>Юнит</ATR_MechAdulthoodBlank.titleShort>
-  <ATR_MechAdulthoodBlank.baseDesc>Этот юнит не обладает ни интеллектом, ни памятью. Он полностью лишен характера и полезности.</ATR_MechAdulthoodBlank.baseDesc>
+  <ATR_MechAdulthoodBlank.title>Пустой дрон</ATR_MechAdulthoodBlank.title>
+  <ATR_MechAdulthoodBlank.titleShort>Пустышка</ATR_MechAdulthoodBlank.titleShort>
+  <ATR_MechAdulthoodBlank.baseDesc>{PAWN_nameDef} не имеет ни интеллекта, ни памяти. {PAWN_pronoun} полностью {PAWN_gender ? лишён : лишена} характера и полезности.</ATR_MechAdulthoodBlank.baseDesc>
 
 
 </LanguageData>
