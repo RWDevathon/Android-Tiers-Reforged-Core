@@ -42,9 +42,6 @@
 
 	<RecipeDef Name="ATR_SurgeryMechanicalSpacer" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Implanting advanced component.</jobString>
-        <skillRequirements>
-            <Crafting>8</Crafting>
-        </skillRequirements>
 		<workAmount>2600</workAmount>
         <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
 		<anesthetize>false</anesthetize>

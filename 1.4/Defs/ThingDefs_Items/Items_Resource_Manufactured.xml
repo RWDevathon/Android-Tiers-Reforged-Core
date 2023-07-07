@@ -49,7 +49,7 @@
         </costList>
         <recipeMaker>
             <skillRequirements>
-                <Crafting>6</Crafting>
+                <Crafting>4</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
@@ -81,7 +81,7 @@
         </costList>
         <recipeMaker>
             <skillRequirements>
-                <Crafting>8</Crafting>
+                <Crafting>6</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
         </recipeMaker>

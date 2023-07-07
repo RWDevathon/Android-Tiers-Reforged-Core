@@ -5,12 +5,6 @@
 	<ATR_ServerMeltdown>Server Meltdown</ATR_ServerMeltdown>
     <ATR_ServerMeltdownDesc>A server has partially exploded due to excessive heat!</ATR_ServerMeltdownDesc>
 
-    <!-- Faction Rights Letters -->
-    <ATR_DeclarationOfWarRights>War of rights</ATR_DeclarationOfWarRights>
-    <ATR_DeclarationOfWarRightsDesc>{0} maintains a strict code against {1} rights, which you have violated. {2} is determined to wipe out all {1} intelligences - until the offending colonists are eliminated, there will be no peace.</ATR_DeclarationOfWarRightsDesc>
-    <ATR_CessationOfConflict>Rights conflict resolved</ATR_CessationOfConflict>
-    <ATR_CessationOfConflictDesc>{0} maintains a strict code against {1} rights, which you no longer violate. As tensions melt away and relations warm, peace is within the realm of possibility once again.</ATR_CessationOfConflictDesc>
-
 	<!-- Hacking Incidents -->
 		<!-- Generic Messages -->
 	<ATR_IncidentGenericAttackDesc>A hostile hacking attempt evaluated to have a strength of {0} successfully breached the colony's SkyMind security system, infecting {1} networked devices before safeguards kicked in.</ATR_IncidentGenericAttackDesc>
@@ -88,20 +82,10 @@
 
     <!-- Learning Letters -->
     <ATR_FirstBlankAndroidCreated>About: Blank Androids</ATR_FirstBlankAndroidCreated>
-    <ATR_FirstBlankAndroidCreatedDesc>Unlike drones, androids are built "blank" without any consciousness. In order to render them active, you must install an autonomous or receiver core. Autonomous cores store a fully fledged intelligence that may self-initialize or may have a mind transferred via the SkyMind network upon installation. Receiver cores turn the unit into a surrogate for remote control. Both are simple surgery installations without any special parts.</ATR_FirstBlankAndroidCreatedDesc>
+    <ATR_FirstBlankAndroidCreatedDesc>Unlike drones, androids are built "blank" without any consciousness. In order to render them active, you must install an autonomous core. Autonomous cores store a fully fledged intelligence that may self-initialize (or, if using SkyMind Network, may have a mind transferred via the SkyMind network) upon installation. The surgical operations are simple, requiring only repair stims.</ATR_FirstBlankAndroidCreatedDesc>
 
     <ATR_FirstDroneCreated>About: Drones</ATR_FirstDroneCreated>
     <ATR_FirstDroneCreatedDesc>While they possess humanlike intelligence, drones do not have proper consciousnesses and thus no mood or related needs. Others view them as simple machines, and will never mind their destruction or disassembly. They can not be socially interacted with or interact, and are thus unable to trade, warden, tame, or otherwise interact with others.</ATR_FirstDroneCreatedDesc>
-
-    <ATR_FirstSurrogateCreated>About: Surrogates</ATR_FirstSurrogateCreated>
-    <ATR_FirstSurrogateCreatedDesc>You have created your first surrogate pawn. Until it is connected to a controller (any SkyMind-connected pawn can toggle controls and link to this pawn), it will remain blank and not considered part of your faction. When connected to a controller, it will share the skills, passions, and relations with its controller. XP gained is automatically shared. Mood, health, and some other details can't be shared to avoid game-breaking issues.</ATR_FirstSurrogateCreatedDesc>
-
-    <!-- Mental States -->
-    <ATR_SurrogateSufferedMentalState>Surrogate Breakdown</ATR_SurrogateSufferedMentalState>
-    <ATR_SurrogateSufferedMentalStateDesc>A surrogate has suffered a mental break and shut-down as a self-preservation reaction. It will reboot automatically.</ATR_SurrogateSufferedMentalStateDesc>
-
-    <ATR_ControllerSufferedMentalState>Controller Breakdown</ATR_ControllerSufferedMentalState>
-    <ATR_ControllerSufferedMentalStateDesc>A surrogate controller has suffered a mental break due to an extreme breakdown in a surrogate propagating to the controller or a breakdown in the controller directly. All connected surrogates to the controller have shut down - initiating reboots automatically - and have disconnected from the controller.</ATR_ControllerSufferedMentalStateDesc>
 
     <!-- Personality Shift Letters -->
     <ATR_PersonalityShiftFreewilled>Personality shift request</ATR_PersonalityShiftFreewilled>

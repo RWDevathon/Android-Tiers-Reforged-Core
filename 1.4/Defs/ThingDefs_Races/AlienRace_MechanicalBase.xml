@@ -21,6 +21,7 @@
 					<li>ATR_FeelingsTowardOrganics</li>
 				</traitList>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+                <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
                 <blackFoodList>
                     <li>Beer</li>
                     <li>Ambrosia</li>

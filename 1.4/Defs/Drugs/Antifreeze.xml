@@ -4,7 +4,7 @@
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>ATR_MechAntifreeze</defName>
 		<label>Mechanite antifreeze</label>
-		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<description>A synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Organics will suffer severely toxic effects if they consume this.</description>
 		<graphicData>
 			<texPath>Things/Drugs/Antifreeze</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -13,7 +13,7 @@
 		<rotatable>false</rotatable>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>10</MarketValue>
+			<MarketValue>4</MarketValue>
 			<WorkToMake>550</WorkToMake>
 			<Mass>0.4</Mass>
 		</statBases>
@@ -51,7 +51,7 @@
 		<defName>ATR_Toxicated</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Toxicated</label>
-		<description>Toxic synthetic compounds within the bloodstream, causing severe health defects.</description>
+		<description>Toxic synthetic compounds within the bloodstream, causing severe health complications.</description>
 		<makesSickThought>true</makesSickThought>
 		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -154,14 +154,15 @@
 		<defName>ATR_MechAntifreeze</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Mechanite antifreeze</label>
-		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<description>Synthetic chemical compounds designed to reduce chassis susceptibility to adverse temperature - positive and negative - are flowing through the chassis.</description>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
+		<maxSeverity>5.0</maxSeverity>
         <isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-4</severityPerDay>
+				<severityPerDay>-1</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
 			</li>
 		</comps>
 		<stages>

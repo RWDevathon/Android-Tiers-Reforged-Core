@@ -56,7 +56,7 @@
 		<workAmount>2000</workAmount>
         <isViolation>true</isViolation>
         <skillRequirements>
-            <Crafting>4</Crafting>
+            <Crafting>5</Crafting>
         </skillRequirements>
 		<ingredients>
 			<li>

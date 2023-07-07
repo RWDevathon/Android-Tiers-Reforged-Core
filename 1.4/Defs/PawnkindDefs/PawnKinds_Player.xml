@@ -3,6 +3,7 @@
 
     <PawnKindDef Name="ATR_BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
+        <defaultFactionType>PlayerColony</defaultFactionType>
 		<backstoryFiltersOverride>
             <li>
                 <categories>
@@ -16,10 +17,11 @@
 		<initialResistanceRange>13~21</initialResistanceRange>
     </PawnKindDef>
 
-	<!--Androids With Real Backstories-->
+	<!--Pawns With Real Backstories-->
 
     <PawnKindDef Name="ATR_BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
+        <defaultFactionType>PlayerColony</defaultFactionType>
 		<minGenerationAge>20</minGenerationAge>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>

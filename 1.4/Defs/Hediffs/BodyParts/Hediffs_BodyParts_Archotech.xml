@@ -37,9 +37,6 @@
 
 	<RecipeDef Name="ATR_SurgeryMechanicalCybertech" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Implanting Cybertech component.</jobString>
-        <skillRequirements>
-            <Crafting>16</Crafting>
-        </skillRequirements>
 		<workAmount>4000</workAmount>
         <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
 		<anesthetize>false</anesthetize>

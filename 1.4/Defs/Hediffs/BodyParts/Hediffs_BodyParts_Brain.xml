@@ -22,9 +22,6 @@
 	<RecipeDef Name="ATR_SurgeryCoreMechanical" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallAndroidInterface</workerClass>
 		<jobString>Installing core interface.</jobString>
-    	<skillRequirements>
-			<Crafting>4</Crafting>
-    	</skillRequirements>
 		<workAmount>600</workAmount>
 		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
 		<anesthetize>false</anesthetize>

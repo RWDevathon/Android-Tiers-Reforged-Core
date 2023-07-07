@@ -15,7 +15,6 @@
         <jobString>Applying overclocking.</jobString>
 		<workAmount>5000</workAmount>
 		<skillRequirements>
-            <Crafting>4</Crafting>
             <Intellectual>2</Intellectual>
         </skillRequirements>
 		<ingredients>
@@ -46,7 +45,6 @@
 		<jobString>Resetting overclocking.</jobString>
 		<workAmount>5000</workAmount>
 		<skillRequirements>
-            <Crafting>4</Crafting>
             <Intellectual>2</Intellectual>
         </skillRequirements>
 		<ingredients>

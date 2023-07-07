@@ -32,7 +32,7 @@
             <soundWorking>Recipe_Machining</soundWorking>
             <workSpeedStat>MHC_MechanicalOperationSpeed</workSpeedStat>
             <skillRequirements>
-                <Crafting>8</Crafting>
+                <Crafting>6</Crafting>
             </skillRequirements>
             <recipeUsers>
                 <li>ATR_MechanicalAssemblyPod</li>

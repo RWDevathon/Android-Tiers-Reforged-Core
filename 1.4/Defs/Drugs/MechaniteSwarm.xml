@@ -3,8 +3,8 @@
 
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>ATR_MechSwarm</defName>
-		<label>Mechanite swarm</label>
-		<description>A small pill containing a veritable legion of mechanites. These mechanites greatly enhance the hosts ability to control the chassis, for two days, as natural mechanite production can not sustain the surge.</description>
+		<label>Signal surge</label>
+		<description>A synthetic solution containing a wide range of highly conductive and signal-boosting compounds. Mechanical units gain a greatly enhanced control over the chassis temporarily until the compounds break down into harmless detritus. Organics, however, are poisoned by the substances should they ingest it.</description>
 		<graphicData>
 			<texPath>Things/Drugs/MechSwarm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -56,19 +56,17 @@
 	<HediffDef>
 		<defName>ATR_MechaniteSurge</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>Mechanite surge</label>
-		<description>An extra boost of mechanites flowing through coolant tubing. The overpopulation of mechanites can't be sustained by the mechanite storage, and will return to normal levels before long.\n\nIn the mean time however, overall efficiency will be improved and the extra mechanites will greatly reduce coolant loss. The initial infusion of mechanites can replace lost coolant outright.</description>
+		<label>Signal surge</label>
+		<description>A synthetic solution containing a wide range of highly conductive and signal-boosting compounds is surging through the coolant lines and attaching to signal lines throughout the chassis, greatly improving information flow. Until it wears off, the unit will benefit from a minor consciousness boost.</description>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
         <initialSeverity>1.0</initialSeverity>
-		<maxSeverity>1.0</maxSeverity>
+		<maxSeverity>4.0</maxSeverity>
         <isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.5</severityPerDay>
-			</li>
-			<li Class="ATReforged.HediffCompProperties_RemoveHediffOnApply">
-				<hediffToRemove>ATR_CoolantLoss</hediffToRemove>
+                <showHoursToRecover>true</showHoursToRecover>
 			</li>
 		</comps>
 		<stages>
@@ -80,18 +78,6 @@
 			<li>
 				<minSeverity>0.1</minSeverity>
 				<label>Minor</label>
-				<statOffsets>
-					<CarryingCapacity>10</CarryingCapacity>
-				</statOffsets>
-                <totalBleedFactor>0.5</totalBleedFactor>
-			</li>
-			<li>
-				<minSeverity>0.25</minSeverity>
-				<label>Moderate</label>
-				<statOffsets>
-					<CarryingCapacity>30</CarryingCapacity>
-				</statOffsets>
-                <totalBleedFactor>0.25</totalBleedFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -100,12 +86,8 @@
 				</capMods>
 			</li>
 			<li>
-				<minSeverity>0.6</minSeverity>
-				<label>Significant</label>
-				<statOffsets>
-					<CarryingCapacity>50</CarryingCapacity>
-				</statOffsets>
-                <totalBleedFactor>0</totalBleedFactor>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -114,16 +96,22 @@
 				</capMods>
 			</li>
 			<li>
-				<minSeverity>0.8</minSeverity>
-				<label>Peak</label>
-				<statOffsets>
-					<CarryingCapacity>70</CarryingCapacity>
-				</statOffsets>
-                <totalBleedFactor>0</totalBleedFactor>
+				<minSeverity>0.6</minSeverity>
+				<label>Significant</label>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.15</offset>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>Peak</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
 					</li>
 				</capMods>
 			</li>

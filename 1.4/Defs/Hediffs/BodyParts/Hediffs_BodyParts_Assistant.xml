@@ -26,13 +26,12 @@
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-			<workSkill>Crafting</workSkill>
+			<workSkill>Intellectual</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Smith</soundWorking>
 			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
 			<skillRequirements>
-				<Crafting>12</Crafting>
-				<Intellectual>12</Intellectual>
+				<Intellectual>8</Intellectual>
 			</skillRequirements>
 			<researchPrerequisite>ATR_CoreAssistants</researchPrerequisite>
 			<recipeUsers>
@@ -45,8 +44,7 @@
 	<RecipeDef Name="ATR_SurgeryCoreAssistant" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Installing core assistant.</jobString>
     	<skillRequirements>
-			<Crafting>12</Crafting>
-			<Intellectual>10</Intellectual>
+			<Crafting>8</Crafting>
     	</skillRequirements>
 		<workAmount>2800</workAmount>
 		<surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor>

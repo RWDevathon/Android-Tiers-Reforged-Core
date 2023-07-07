@@ -30,7 +30,7 @@
             <soundWorking>Recipe_Smith</soundWorking>
             <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
             <skillRequirements>
-                <Crafting>8</Crafting>
+                <Crafting>6</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_MechanicalFrameworks</researchPrerequisite>
             <recipeUsers>
@@ -42,9 +42,6 @@
 
 	<RecipeDef Name="ATR_SurgeryFramework" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Replacing framework.</jobString>
-        <skillRequirements>
-            <Crafting>8</Crafting>
-        </skillRequirements>
 		<appliedOnFixedBodyParts>
 			<li>ATR_Framework</li>
 		</appliedOnFixedBodyParts>
@@ -280,7 +277,7 @@
             <soundWorking>Recipe_Smith</soundWorking>
             <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
             <skillRequirements>
-                <Crafting>12</Crafting>
+                <Crafting>8</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_AdvancedMechanicalFrameworks</researchPrerequisite>
             <recipeUsers>
@@ -289,12 +286,6 @@
         </recipeMaker>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
-
-	<RecipeDef Name="ATR_SurgeryAdvancedFramework" ParentName="ATR_SurgeryFramework" Abstract="True">
-        <skillRequirements>
-            <Crafting>12</Crafting>
-        </skillRequirements>
-	</RecipeDef>
 
     <!-- Composite Plating -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
@@ -328,7 +319,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="ATR_SurgeryAdvancedFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
         <defName>ATR_Install_CompositePlating</defName>
         <label>Install Composite Frame</label>
         <description>Replaces the chassis frame of this unit with a mechanite-plasteel composite frame, greatly enhancing combat survivability.</description>
@@ -383,13 +374,12 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="ATR_SurgeryAdvancedFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_RefinedFrame</defName>
 		<label>Install Refined Frame</label>
-		<description>Replaces the chassis frame of this unit with a refined frame, accentuating sociability and imbuing a distinctly noble and striking look. Installing the frame is as much up to the components as to the artistic skills of its installer, as there is no way to standardize the beauty of the intricate design.</description>
+		<description>Replaces the chassis frame of this unit with a refined frame, accentuating sociability and imbuing a distinctly noble and striking look. The framework itself is not physically much different and is thus exceedingly easy to install - the difficulty lies in the requisite artistic skills of its installer, as there is no way to standardize the beauty of the intricate design.</description>
 		<skillRequirements>
-			<Crafting>4</Crafting>
-			<Artistic>10</Artistic>
+			<Artistic>8</Artistic>
 		</skillRequirements>
 		<ingredients>
 			<li>
@@ -441,7 +431,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="ATR_SurgeryAdvancedFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_SanitaryFrame</defName>
 		<label>Install Sanitary Frame</label>
 		<description>Replaces the chassis frame of this unit with a sanitary frame, ensuring it is completely free of filth and completely sanitized.</description>
@@ -494,7 +484,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="ATR_SurgeryAdvancedFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_MobilityFrame</defName>
 		<label>Install Mobility Frame</label>
 		<description>Replaces the chassis frame of this unit with a mobility frame, greatly enhancing its movement capabilities and agility.</description>
