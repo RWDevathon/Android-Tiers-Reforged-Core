@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_MechaniteSurge.label>Механитовый всплеск</ATR_MechaniteSurge.label>
-  <ATR_MechaniteSurge.description>Дополнительный поток механитов. Увеличенный поток механитов не может поддерживаться блоком механитов, и вскоре вернётся к нормальному уровню.\n\nТем временем, общая эффективность будет улучшена, а дополнительные механиты значительно уменьшат потери хладагента. </ATR_MechaniteSurge.description>
+  <ATR_MechaniteSurge.label>Скачок сигнала</ATR_MechaniteSurge.label>
+  <ATR_MechaniteSurge.description>Синтетический раствор, содержащий широкий спектр высокопроводящих соединений, проходит по линиям хладогента и присоединяется к сигнальным линиям по всему шасси, значительно улучшая передачу информации. До тех пор, пока не иссякнет, юнит будет получать небольшую прибавку к сознанию.</ATR_MechaniteSurge.description>
   <ATR_MechaniteSurge.stages.0.label>незаметная</ATR_MechaniteSurge.stages.0.label>
   <ATR_MechaniteSurge.stages.1.label>слабая</ATR_MechaniteSurge.stages.1.label>
   <ATR_MechaniteSurge.stages.2.label>средняя</ATR_MechaniteSurge.stages.2.label>

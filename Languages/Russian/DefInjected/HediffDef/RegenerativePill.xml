@@ -2,7 +2,7 @@
 <LanguageData>
 
   <ATR_RegenOrganic.label>регенерация</ATR_RegenOrganic.label>
-  <ATR_RegenOrganic.description>Регенеративные механиты восстанавливают повреждённые органы и укрепляют здоровье.</ATR_RegenOrganic.description>
+  <ATR_RegenOrganic.description>Синтетический регенерирующий раствор, снижающий скорость потери жидкости и приводит к уменьшению времени восстановления, вызывая при этом сильный дискомфорт.</ATR_RegenOrganic.description>
   <ATR_RegenOrganic.stages.0.label>незаметная</ATR_RegenOrganic.stages.0.label>
   <ATR_RegenOrganic.stages.1.label>слабая</ATR_RegenOrganic.stages.1.label>
   <ATR_RegenOrganic.stages.2.label>средняя</ATR_RegenOrganic.stages.2.label>
@@ -13,7 +13,7 @@
   <!-- HediffMechanical -->
 
   <ATR_RegenMechanical.label>регенерация</ATR_RegenMechanical.label>
-  <ATR_RegenMechanical.description>Регенеративные механиты, предназначенные для оперативного ремонта поврежденных частей корпуса.</ATR_RegenMechanical.description>
+  <ATR_RegenMechanical.description>Синтетический раствор в линиях хладогента укрепляет повреждённые участки шасси от потери жидкости и служит полезным материалом для ремонта.</ATR_RegenMechanical.description>
 
 
 </LanguageData>
