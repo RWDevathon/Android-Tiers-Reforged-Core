@@ -5,12 +5,6 @@
   <ATR_ServerMeltdown>Расплавление сервера</ATR_ServerMeltdown>
   <ATR_ServerMeltdownDesc>Сервер частично расплавился из-за чрезмерного перенагревания!</ATR_ServerMeltdownDesc>
 
-  <!-- Faction Rights Letters -->
-  <ATR_DeclarationOfWarRights>Война за права</ATR_DeclarationOfWarRights>
-  <ATR_DeclarationOfWarRightsDesc>{0} поддерживает строгий кодекс против прав {1}, которые вы нарушили. {2} намерен уничтожить всех {1} — пока они живы, мира не будет.</ATR_DeclarationOfWarRightsDesc>
-  <ATR_CessationOfConflict>Конфликт прав разрешён</ATR_CessationOfConflict>
-  <ATR_CessationOfConflictDesc>{0} поддерживает строгий кодекс против прав {1}, которые вы больше не нарушаете. По мере ослабления напряжённости и потепления отношений, мир снова становится возможным.</ATR_CessationOfConflictDesc>
-
   <!-- Hacking Incidents -->
   <!-- Generic Messages -->
   <ATR_IncidentGenericAttackDesc>Вражеская попытка взлома, сила которой оценивается как {0}, успешно проникла в систему безопасности SkyMind, заразив {1} сетевых устройств до того, как сработала система безопасности.</ATR_IncidentGenericAttackDesc>
@@ -42,7 +36,7 @@
   <ATR_IncidentGridVirusAllyIntercept>Вирус-блокер перехвачен!</ATR_IncidentGridVirusAllyIntercept>
 
   <!-- DDOS Attack -->
-  <ATR_IncidentDDOSDefeated>DDOS побеждён</ATR_IncidentDDOSDefeated>
+  <ATR_IncidentDDOSDefeated>Вирус-блокер побеждён</ATR_IncidentDDOSDefeated>
 
   <ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
   <ATR_IncidentDDOSNormalAttackDesc>Затронутые устройства подверглись DDOS атаке и наводнены нежелательными данными и мусорной информацией. Это нанесёт ущерб генерации очкам познания и взлома. Однако атака не смогла их повредить.</ATR_IncidentDDOSNormalAttackDesc>
@@ -88,20 +82,10 @@
 
   <!-- Learning Letters -->
   <ATR_FirstBlankAndroidCreated>Информация: Пустые андроиды</ATR_FirstBlankAndroidCreated>
-  <ATR_FirstBlankAndroidCreatedDesc>В отличие от дронов, андроиды создаются «пустыми», без какого-либо сознания. Чтобы сделать их активными, необходимо установить автономное ядро или ядро приёмник. Автономные ядра хранят полноценный интеллект, который может самоинициализироваться или может быть передан через сеть SkyMind. Приёмные ядра превращают юнит в суррогат для дистанционного управления. Оба ядра являются простыми операционными установками без каких-либо специальных деталей.</ATR_FirstBlankAndroidCreatedDesc>
+  <ATR_FirstBlankAndroidCreatedDesc>В отличие от дронов, андроиды создаются «пустыми», без какого-либо сознания. Чтобы сделать их активными, необходимо установить автономное ядро. Автономные ядра хранят полноценный интеллект (или, при использовании SkyMind Network, может получить разум через сеть SkyMind) при установке. Хирургические операции просты и требуют лишь провести восстановительные работы.</ATR_FirstBlankAndroidCreatedDesc>
 
   <ATR_FirstDroneCreated>Информация: Дроны</ATR_FirstDroneCreated>
   <ATR_FirstDroneCreatedDesc>Обладая человекоподобным интеллектом, дроны не имеют сознания и, следовательно, настроения или связанных с ним потребностей. Другие воспринимают их как простые машины и не возражают против их уничтожения или разборки. С ними не возможно социальное взаимодействие, поэтому они не могут торговать, надзирать, приручать или иным образом взаимодействовать с другими разумными существами.</ATR_FirstDroneCreatedDesc>
-
-  <ATR_FirstSurrogateCreated>Информация: Суррогаты</ATR_FirstSurrogateCreated>
-  <ATR_FirstSurrogateCreatedDesc>Вы создали свою первую суррогатную пешку. Пока он не подключён к оператору (любой поселенец, подключённый к SkyMind, может переключать управление и связываться с этим суррогатом), он остаётся пустой оболочкой и не считается частью вашей фракции. При подключении к суррогату, он будет иметь все навыки, интересы и отношения как у своего оператора. Полученный опыт автоматически разделяется. Настроение, здоровье и некоторые другие детали не могут быть разделены, чтобы избежать проблем с нарушением игры.</ATR_FirstSurrogateCreatedDesc>
-
-  <!-- Mental States -->
-  <ATR_SurrogateSufferedMentalState>Поломка суррогата</ATR_SurrogateSufferedMentalState>
-  <ATR_SurrogateSufferedMentalStateDesc>Суррогат пережил нервный срыв и отключился для самосохранения. Он перезагрузится автоматически.</ATR_SurrogateSufferedMentalStateDesc>
-
-  <ATR_ControllerSufferedMentalState>Поломка оператора</ATR_ControllerSufferedMentalState>
-  <ATR_ControllerSufferedMentalStateDesc>Оператор суррогата, получил нервный срыв из-за критического сбоя в своём суррогате. Все подключённые к оператору суррогаты — автоматически отключились, инициировав перезагрузку.</ATR_ControllerSufferedMentalStateDesc>
 
   <!-- Personality Shift Letters -->
   <ATR_PersonalityShiftFreewilled>Запрос на изменение личности</ATR_PersonalityShiftFreewilled>

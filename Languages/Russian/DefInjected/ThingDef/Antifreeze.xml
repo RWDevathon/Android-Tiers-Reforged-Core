@@ -2,7 +2,7 @@
 <LanguageData>
 
   <ATR_MechAntifreeze.label>Механитовый антифриз</ATR_MechAntifreeze.label>
-  <ATR_MechAntifreeze.description>Механитовый антифриз — Синтетическое химическое соединение, предназначенное для снижения восприимчивости корпуса к неблагоприятным температурам, как положительным, так и отрицательным. Небезопасно для органических видов.</ATR_MechAntifreeze.description>
+  <ATR_MechAntifreeze.description>Синтетическое химическое соединение, предназначенное для снижения восприимчивости корпуса к неблагоприятным температурам, как положительным, так и отрицательным. Небезопасно для органических видов.</ATR_MechAntifreeze.description>
   <ATR_MechAntifreeze.ingestible.ingestCommandString>Принять {0}</ATR_MechAntifreeze.ingestible.ingestCommandString>
   <ATR_MechAntifreeze.ingestible.ingestReportString>Принимает {0}.</ATR_MechAntifreeze.ingestible.ingestReportString>
 

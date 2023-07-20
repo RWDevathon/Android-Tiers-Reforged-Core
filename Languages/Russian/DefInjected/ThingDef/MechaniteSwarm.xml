@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ATR_MechSwarm.label>Рой механитов</ATR_MechSwarm.label>
-  <ATR_MechSwarm.description>Небольшая таблетка, содержащая целый легион механитов. Эти механиты значительно повышают способность хозяина управлять шасси, в течение двух дней, так как естественное производство механитов не может выдержать такой всплеск.</ATR_MechSwarm.description>
+  <ATR_MechSwarm.label>Скачок сигнала</ATR_MechSwarm.label>
+  <ATR_MechSwarm.description>Синтетический раствор, содержащий широкий спектр высокопроводящих и усиливающих сигнал соединений. Механические юниты получают значительно усиленный контроль над шасси, пока соединения не распадутся на безвредный детрит. Небезопасно для органических видов.</ATR_MechSwarm.description>
   <ATR_MechSwarm.ingestible.ingestCommandString>Принять {0}</ATR_MechSwarm.ingestible.ingestCommandString>
   <ATR_MechSwarm.ingestible.ingestReportString>Принимает {0}.</ATR_MechSwarm.ingestible.ingestReportString>
 

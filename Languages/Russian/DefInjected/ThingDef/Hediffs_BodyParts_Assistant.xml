@@ -40,7 +40,7 @@
   <!-- Victual Assistant -->
 
   <ATR_VictualAssistant.label>чип Помощник повар</ATR_VictualAssistant.label>
-  <ATR_VictualAssistant.description>Этот субъядерный чип помогает основному интеллекту выполнять ряд задач. This assistant is specialized for the processing and preparation of organic substances - namely, food. Массив автономных подпрограмм в сочетании с обширной библиотекой справочных материалов о природе, обеспечивает высокое качество веществ с минимальными отходами.</ATR_VictualAssistant.description>
+  <ATR_VictualAssistant.description>Этот субъядерный чип помогает основному интеллекту выполнять ряд задач. Этот помощник специализирован на обработке и приготовлении органических веществ — а именно, продуктов питания. Массив автономных подпрограмм в сочетании с обширной библиотекой справочных материалов о природе, обеспечивает высокое качество веществ с минимальными отходами.</ATR_VictualAssistant.description>
 
 
   <!-- Cultivation Assistant -->
