@@ -37,7 +37,10 @@
 		<description>While mechanical units are largely unconcerned by the passage of time and therefore unconcerned about the efficiency of its use, there are times when efficiency at a particular moment is critical. Consumable short-term stimulants could prove useful in these moments.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Spacer</techLevel>
-		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
+		<prerequisites>
+            <li>ATR_InterchangeableParts</li>
+            <li>DrugProduction</li>
+        </prerequisites>
 		<researchViewX>3</researchViewX>
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>

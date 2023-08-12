@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Mechanical Android Base-->
+    <!-- Mechanical Humanlike Base -->
 	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMechanicalPawn" ParentName="BasePawn" Abstract="True">
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<statBases>
@@ -17,11 +17,8 @@
 		</statBases>
         <alienRace>
 			<raceRestriction>
-				<traitList>
-					<li>ATR_FeelingsTowardOrganics</li>
-				</traitList>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
-                <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+                <!-- <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes> -->
                 <blackFoodList>
                     <li>Beer</li>
                     <li>Ambrosia</li>
@@ -40,7 +37,6 @@
 				<immuneToAge>false</immuneToAge>
                 <notXenophobistTowards />
 				<alienPartGenerator>
-					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
                     <bodyTypes>
                         <li>Male</li>
                         <li>Female</li>

@@ -188,29 +188,6 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>ATR_ArtificialBrain</defName>
-        <label>artificial brain</label>
-        <hitPoints>30</hitPoints>
-        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-        <skinCovered>false</skinCovered>
-        <tags>
-            <li>ConsciousnessSource</li>
-        </tags>
-        <bleedRate>0</bleedRate>
-        <solid>true</solid>
-    </BodyPartDef>
-
-    <BodyPartDef>
-        <defName>ATR_CoreAssistant</defName>
-        <label>core assistant</label>
-        <hitPoints>10</hitPoints>
-        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-        <skinCovered>false</skinCovered>
-        <bleedRate>0</bleedRate>
-        <solid>true</solid>
-    </BodyPartDef>
-
-    <BodyPartDef>
         <defName>ATR_CounterWeightTail</defName>
         <label>counterweight</label>
         <hitPoints>20</hitPoints>

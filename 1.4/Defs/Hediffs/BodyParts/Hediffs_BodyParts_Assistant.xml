@@ -466,7 +466,7 @@
 
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_CultivationAssistant</defName>
-		<label>Cultivation assistant</label>
+		<label>Cultivation assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for the cultivation of flora and fauna. With a massive archive of data with painstakingly accurate insights on every plant and animal known to exist on the planet, autonomous sub-routines allow the unit to identify key behaviors, stressors, and to some base extent allow "communication" with target species via specific behaviors and pheromones. \n\nCuriously, this occasionally makes the mechanical unit itself display almost parental affection for lesser intelligences.</description>
     	<costList>
 			<Plasteel>20</Plasteel>
@@ -579,7 +579,7 @@
 
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_SocialAssistant</defName>
-		<label>Social assistant</label>
+		<label>Social assistant chip</label>
 		<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for social situations. From reading individual body movements and expressions to referencing all known histories of targets, every day negotiations are optimized and analyzed for advancing the core intelligence's ability to handle social situations. Maximizing popularity, infamy, prestige - all are considered viable objectives.</description>
 		<costList>
 			<Plasteel>20</Plasteel>
@@ -633,7 +633,7 @@
 
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_MentalAssistant</defName>
-		<label>Mental assistant</label>
+		<label>Mental assistant chip</label>
 		<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for imbuing the core intelligence with a much stronger mental resilience. A suite of individualized sub-routines remove many stressors and unpleasant issues from the intelligence's cognition, while training a greater capacity for overcoming difficult situations. Many mechanical units come to view this device as a trusted friend, and find their own immortal-like existence much more bearable with it safely within them.</description>
 		<costList>
 			<Plasteel>20</Plasteel>
@@ -684,7 +684,7 @@
 
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
-		<label>Psychic assistant</label>
+		<label>Psychic assistant chip</label>
 		<description>This organic component assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</description>
 		<costList>
 			<Plasteel>10</Plasteel>

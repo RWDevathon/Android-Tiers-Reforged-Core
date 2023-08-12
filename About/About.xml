@@ -21,7 +21,7 @@
         <li>
             <packageId>Killathon.MechanicalHumanlikesCore</packageId>
             <displayName>Mechanical Humanlikes Core</displayName>
-            <steamWorkshopUrl></steamWorkshopUrl>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2974524016</steamWorkshopUrl>
             <downloadUrl>https://github.com/RWDevathon/Dev_Mechanical-Humanlikes-Core</downloadUrl>
         </li>
     </modDependencies>

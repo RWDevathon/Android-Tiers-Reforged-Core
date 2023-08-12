@@ -34,8 +34,9 @@
 		<recipeMaker>
 			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
 			<recipeUsers>
-				<li>ATR_MechPartWorkbench</li>
+				<li>DrugLab</li>
 			</recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
 		</recipeMaker>
 		<costList>
 			<Chemfuel>5</Chemfuel>

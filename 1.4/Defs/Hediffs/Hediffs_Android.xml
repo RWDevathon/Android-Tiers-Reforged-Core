@@ -9,7 +9,7 @@
         <isBad>false</isBad>
         <stages>
             <li>
-				<hungerRateFactorOffset>1.25</hungerRateFactorOffset>
+				<hungerRateFactorOffset>0.25</hungerRateFactorOffset>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>

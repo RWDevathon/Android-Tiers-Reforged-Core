@@ -11,12 +11,13 @@
 		<defName>ATR_ApplyOverclocking</defName>
 		<label>Apply overclocking</label>
 		<description>A simple hardware restructuring to a mechanical unit to lower hardware safety measures to allow for greater performance and risks.</description>
-		<workerClass>Recipe_AddHediff</workerClass>
+		<workerClass>MechHumanlikes.Recipe_OverclockAndroid</workerClass>
         <jobString>Applying overclocking.</jobString>
 		<workAmount>5000</workAmount>
 		<skillRequirements>
             <Intellectual>2</Intellectual>
         </skillRequirements>
+        <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
 		<ingredients>
 			<li>
 				<filter>
@@ -32,14 +33,13 @@
 				<li>Medicine</li>
 			</categories>
 		</fixedIngredientFilter>
-		<surgerySuccessChanceFactor>4</surgerySuccessChanceFactor>
 		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
 		<addsHediff>ATR_MechanicalOverclocking</addsHediff>
 	</RecipeDef>
 
     <RecipeDef ParentName="ATR_surgeryMechanicalBase">
 		<defName>ATR_ResetOverclocking</defName>
-		<label>Resetting overclocking</label>
+		<label>Reset overclocking</label>
 		<description>A simple hardware restructuring to a mechanical unit to reset hardware safety measures to standard settings.</description>
         <workerClass>Recipe_RemoveHediff</workerClass>
 		<jobString>Resetting overclocking.</jobString>
@@ -47,6 +47,7 @@
 		<skillRequirements>
             <Intellectual>2</Intellectual>
         </skillRequirements>
+        <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
 		<ingredients>
 			<li>
 				<filter>
@@ -62,7 +63,6 @@
 				<li>Medicine</li>
 			</categories>
 		</fixedIngredientFilter>
-		<surgerySuccessChanceFactor>4</surgerySuccessChanceFactor>
 		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         <removesHediff>ATR_MechanicalOverclocking</removesHediff>
 	</RecipeDef>

@@ -213,6 +213,7 @@
     <Compile Include="Harmony\PawnGenerator_Patch.cs" />
     <Compile Include="Harmony\Pawn_HealthTracker_Patch.cs" />
     <Compile Include="DefOfs\ATR_HediffDefOf.cs" />
+    <Compile Include="Recipes\Recipe_OverclockAndroid.cs" />
     <Compile Include="StockGenerators\StockGenerator_Drones.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_CoerciveVoiceSynthesizer.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_ModulatedVoiceSynthesizer.cs" />

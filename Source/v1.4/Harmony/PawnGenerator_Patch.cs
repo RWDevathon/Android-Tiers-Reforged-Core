@@ -27,7 +27,7 @@ namespace ATReforged
 
         // Patch pawn generation for androids so they have an autonomous core if needed.
         [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn")]
-        [HarmonyPatch(new Type[] { typeof(PawnGenerationRequest)}, new ArgumentType[] { ArgumentType.Normal })]
+        [HarmonyPatch(new Type[] { typeof(PawnGenerationRequest) }, new ArgumentType[] { ArgumentType.Normal })]
         public class GeneratePawn_Patch
         {
             [HarmonyPostfix]
@@ -41,7 +41,7 @@ namespace ATReforged
                         __result.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Log.Error("[ATR] PawnGenerator.GeneratePawn " + ex.Message + " " + ex.StackTrace);
                 }
