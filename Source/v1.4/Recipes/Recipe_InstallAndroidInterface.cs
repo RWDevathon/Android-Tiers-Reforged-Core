@@ -59,8 +59,7 @@ namespace ATReforged
                 ChoiceLetter_PersonalityShift choiceLetter = (ChoiceLetter_PersonalityShift)LetterMaker.MakeLetter(ATR_LetterDefOf.ATR_PersonalityShiftLetter);
                 choiceLetter.ConfigureChoiceLetter(pawn, 3, 3, false, false);
                 choiceLetter.Label = "ATR_PersonalityShiftNewboot".Translate();
-                choiceLetter.StartTimeout(120000);
-                Find.LetterStack.ReceiveLetter(choiceLetter);
+                choiceLetter.OpenLetter();
             }
         }
     }
