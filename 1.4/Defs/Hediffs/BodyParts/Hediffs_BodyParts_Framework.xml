@@ -212,7 +212,7 @@
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>ATR_SuppressorFrame</defName>
         <label>Suppressor Frame</label>
-        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.\n\nThe framework is integral to the chassis, and is lost if removed or destroyed.</description>
         <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
         <stages>
             <li>
@@ -231,7 +231,7 @@
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>ATR_SuppressorFrame</defName>
         <label>Suppressor Frame</label>
-        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.\n\nThe framework is integral to the chassis, and is lost if removed or destroyed.</description>
         <statBases>
             <MarketValue>400</MarketValue>
         </statBases>
@@ -345,7 +345,7 @@
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>ATR_RefinedFrame</defName>
         <label>Refined Frame</label>
-        <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
+        <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.\n\nThe framework is integral to the chassis, and is lost if removed or destroyed.</description>
         <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
         <stages>
             <li>
@@ -364,7 +364,7 @@
     <ThingDef ParentName="ATR_BodyPartAdvancedFrameworkBase">
         <defName>ATR_RefinedFrame</defName>
         <label>Refined Frame</label>
-        <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
+        <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.\n\nThe framework is integral to the chassis, and is lost if removed or destroyed.</description>
         <statBases>
             <MarketValue>800</MarketValue>
         </statBases>
