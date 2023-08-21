@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  	<!-- Complexity Assistant -->
+
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
+    	<defName>ATR_ComplexityAssistant</defName>
+    	<label>Complexity assistant</label>
+	  	<description>Installed hardware using the core assistant slot. Unlike other assistants, this chip offers no intrinsic aid to the core intelligence, but rather, serves as formatted memory storage for additional programming.\n\nSapient units do not benefit from this chip, but drone units will be able to maintain higher complexity with this.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<MDR_ComplexityLimit>10</MDR_ComplexityLimit>
+				</statOffsets>
+			</li>
+		</stages>
+    	<spawnThingOnRemoved>ATR_InsightAssistant</spawnThingOnRemoved>
+  	</HediffDef>
+
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
+    	<defName>ATR_ComplexityAssistant</defName>
+    	<label>Complexity assistant chip</label>
+	  	<description>This assistant chip, unlike other assistants, this chip offers no intrinsic aid to the core intelligence, but rather, serves as formatted memory storage for additional programming.\n\nSapient units do not benefit from this chip, but drone units will be able to maintain higher complexity with this.</description>
+		<costList>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+  	</ThingDef>
+
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
+		<defName>ATR_Install_ComplexityAssistant</defName>
+		<label>Install complexity assistant</label>
+		<description>Installs a complexity assistant into the sub-core assistant slot of a unit.</description>
+		<jobString>Installing insight assistant.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ComplexityAssistant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_ComplexityAssistant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<addsHediff>ATR_ComplexityAssistant</addsHediff>
+	</RecipeDef>
+
+</Defs>
