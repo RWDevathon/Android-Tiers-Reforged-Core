@@ -3,7 +3,7 @@ using HarmonyLib;
 
 namespace ATReforged
 {
-    public class Pawn_Patch
+    public class ATRC_Pawn_Patch
     {
         // Some things explode when they die and are destroyed instantly.
         [HarmonyPatch(typeof(Pawn), "Kill")]

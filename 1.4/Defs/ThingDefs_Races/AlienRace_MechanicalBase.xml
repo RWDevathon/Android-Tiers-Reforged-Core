@@ -18,7 +18,6 @@
         <alienRace>
 			<raceRestriction>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
-                <!-- <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes> -->
                 <blackFoodList>
                     <li>Beer</li>
                     <li>Ambrosia</li>

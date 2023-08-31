@@ -3,7 +3,7 @@ using HarmonyLib;
 
 namespace ATReforged
 {
-    public class Pawn_HealthTracker_Patch
+    public class ATRC_Pawn_HealthTracker_Patch
     {
         // Upon a pawn being downed, some pawns should die automatically.
         [HarmonyPatch(typeof(Pawn_HealthTracker), "MakeDowned")]

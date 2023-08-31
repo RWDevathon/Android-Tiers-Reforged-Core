@@ -197,7 +197,7 @@
     <Compile Include="Harmony\SpouseRelationUtility_Patch.cs" />
     <Compile Include="Harmony\QuestGen_Pawns_Patch.cs" />
     <Compile Include="Harmony\ThingSetMaker_RefugeePod_Patch.cs" />
-    <Compile Include="Harmony\Pawn_Patch.cs" />
+    <Compile Include="Harmony\ATRC_Pawn_Patch.cs" />
     <Compile Include="Hediffs\HediffGiver_MechHypothermia.cs" />
     <Compile Include="Incidents\Incidents_PersonalityShift.cs" />
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
@@ -212,7 +212,7 @@
     <Compile Include="DefOfs\ATR_JobDefOf.cs" />
     <Compile Include="DefOfs\ATR_TraitDefOf.cs" />
     <Compile Include="Harmony\PawnGenerator_Patch.cs" />
-    <Compile Include="Harmony\Pawn_HealthTracker_Patch.cs" />
+    <Compile Include="Harmony\ATRC_Pawn_HealthTracker_Patch.cs" />
     <Compile Include="DefOfs\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_OverclockAndroid.cs" />
     <Compile Include="StockGenerators\StockGenerator_Drones.cs" />
