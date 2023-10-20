@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <ATR_ArtificialBrain.label>нейроинтерфейс</ATR_ArtificialBrain.label>
+  <ATR_CoreAssistant.label>слот помощника</ATR_CoreAssistant.label>
   <ATR_InternalCorePump.label>Гидронасос</ATR_InternalCorePump.label>
   <ATR_MechanicalHeatsink.label>Радиатор</ATR_MechanicalHeatsink.label>
   <ATR_InternalBattery.label>Аккумулятор</ATR_InternalBattery.label>

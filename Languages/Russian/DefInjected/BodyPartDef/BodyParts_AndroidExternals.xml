@@ -16,8 +16,6 @@
   <ATR_MechanicalWaist.label>служебный слот</ATR_MechanicalWaist.label>
   <ATR_MechanicalLeg.label>нога</ATR_MechanicalLeg.label>
   <ATR_MechanicalFoot.label>стопа</ATR_MechanicalFoot.label>
-  <ATR_ArtificialBrain.label>нейроинтерфейс</ATR_ArtificialBrain.label>
-  <ATR_CoreAssistant.label>слот помощника</ATR_CoreAssistant.label>
   <ATR_CounterWeightTail.label>противовес</ATR_CounterWeightTail.label>
   <ATR_MechanicalJaw.label>челюсть</ATR_MechanicalJaw.label>
   <ATR_MechanicalWing.label>крыло</ATR_MechanicalWing.label>
