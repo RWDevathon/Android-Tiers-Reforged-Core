@@ -76,7 +76,7 @@
 		<defName>ATR_MechaniteAssistedRecovery</defName>
 		<label>Mechanite assisted recovery</label>
 		<tab>ATR_MechResearch</tab>
-		<description>While simple components and replacement parts can fix most physical damage to mechanical units, recovering the consciousness of a sapient mechanical entity is a more complicated process. Advanced tools and and intricate materials - with the technical knowhow to produce and incorporate - will be required to reactivate offline mechanical sapients.</description>
+		<description>While simple components and replacement parts can fix most physical damage to mechanical units, recovering the consciousness of a sapient mechanical entity is a more complicated process. Advanced tools and intricate materials - with the technical knowhow to produce and incorporate them - will be required to reactivate destroyed mechanical sapients.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
