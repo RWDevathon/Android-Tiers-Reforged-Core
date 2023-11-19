@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>ATR_MechAntifreeze</defName>
-		<label>Mechanite antifreeze</label>
+		<label>Chassis temperature stabilizer</label>
 		<description>A synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Organics will suffer severely toxic effects if they consume this.</description>
 		<graphicData>
 			<texPath>Things/Drugs/Antifreeze</texPath>
@@ -154,7 +154,7 @@
 	<HediffDef>
 		<defName>ATR_MechAntifreeze</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>Mechanite antifreeze</label>
+		<label>Chassis temperature stabilizer</label>
 		<description>Synthetic chemical compounds designed to reduce chassis susceptibility to adverse temperature - positive and negative - are flowing through the chassis.</description>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
