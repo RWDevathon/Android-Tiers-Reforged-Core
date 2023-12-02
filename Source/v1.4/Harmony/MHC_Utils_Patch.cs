@@ -13,7 +13,8 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn pawn, ref bool __result)
             {
-                __result = __result || (pawn.def.GetModExtension<ATR_PawnExtension>()?.isAndroid ?? false && pawn.health.hediffSet.HasHediff(ATR_HediffDefOf.ATR_IsolatedCore));
+                Log.Warning(pawn.LabelShort + " " + ATRCore_Utils.IsConsideredMechanicalAndroid(pawn).ToString() + " " + pawn.health.hediffSet.HasHediff(ATR_HediffDefOf.ATR_IsolatedCore).ToString());
+                __result = __result || (ATRCore_Utils.IsConsideredMechanicalAndroid(pawn) && pawn.health.hediffSet.HasHediff(ATR_HediffDefOf.ATR_IsolatedCore));
             }
         }
     }

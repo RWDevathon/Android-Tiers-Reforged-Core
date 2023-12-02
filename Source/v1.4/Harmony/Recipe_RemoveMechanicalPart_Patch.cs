@@ -16,7 +16,7 @@ namespace ATReforged
             public static void Listener(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
             {
                 // There are special considerations for removing the core for androids. Removing an autonomous core is murder. Removing any core applies the "Isolated Core" hediff.
-                if (pawn.def.GetModExtension<ATR_PawnExtension>()?.isAndroid == true && pawn.health.hediffSet.GetBrain() == part)
+                if (ATRCore_Utils.IsConsideredMechanicalAndroid(pawn) && pawn.health.hediffSet.GetBrain() == part)
                 {
                     // Autonomous intelligences must be murdered and made blank.
                     if (pawn.Name != ATRCore_Utils.GetBlank().Name)

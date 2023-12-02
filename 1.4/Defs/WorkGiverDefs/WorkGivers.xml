@@ -5,8 +5,8 @@
         <defName>ATR_DoBillsAssemblyPod</defName>
         <label>assemble mechanical units at assembly pod</label>
         <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Smithing</workType>
-        <priorityInType>85</priorityInType>
+        <workType>MHC_Mechanic</workType>
+        <priorityInType>10</priorityInType>
         <fixedBillGiverDefs>
           <li>ATR_MechanicalAssemblyPod</li>
         </fixedBillGiverDefs>
@@ -22,8 +22,8 @@
         <defName>ATR_DoBillsPartWorkbench</defName>
         <label>assemble parts at parts workbench</label>
         <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Smithing</workType>
-        <priorityInType>65</priorityInType>
+        <workType>MHC_Mechanic</workType>
+        <priorityInType>5</priorityInType>
         <fixedBillGiverDefs>
           <li>ATR_MechPartWorkbench</li>
         </fixedBillGiverDefs>

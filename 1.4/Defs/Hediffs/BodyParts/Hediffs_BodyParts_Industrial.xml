@@ -452,6 +452,9 @@
             <Plasteel>10</Plasteel>
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
+        <recipeMaker>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
+        </recipeMaker>
         <statBases>
             <Mass>4</Mass>
         </statBases>

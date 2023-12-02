@@ -33,7 +33,7 @@
 			<useMeatFrom>Alpaca</useMeatFrom>
 			<leatherDef>Leather_Human</leatherDef>
             <lifeExpectancy>40</lifeExpectancy>
-			<hediffGiverSets>
+			<hediffGiverSets Inherit="False">
 				<li>ATR_MechanicalStandard</li>
 			</hediffGiverSets>
             <ageGenerationCurve>

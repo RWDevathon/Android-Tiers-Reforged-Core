@@ -39,13 +39,13 @@ namespace ATReforged
 
         public static bool IsConsideredMechanicalAndroid(ThingDef thingDef)
         {
-            return thingDef.GetModExtension<ATR_PawnExtension>()?.isAndroid == true;
+            return cachedAndroidRaces.Contains(thingDef);
         }
 
         /* === HEALTH UTILITIES === */
         
         // Misc
-        // Get a cached Blank pawn (to avoid having to create a new pawn whenever a surrogate is made, disconnects, downed, etc.)
+        // Get a cached Blank pawn (to avoid having to create a new pawn whenever an android is made blank)
         public static Pawn GetBlank()
         {
             if (blankPawn != null)
@@ -53,7 +53,7 @@ namespace ATReforged
                 return blankPawn;
             }
 
-            // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
+            // Create the Blank pawn that will be used for all blank androids
             PawnGenerationRequest request = new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceNoIdeo: true, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             blankMechanical.story.Childhood = ATR_BackstoryDefOf.ATR_MechChildhoodFreshBlank;
@@ -100,7 +100,6 @@ namespace ATReforged
             return blankPawn;
         }
 
-        // Utilities not available for direct player editing but not reserved by this mod
         public static ATR_GameComponent gameComp;
 
         // Duplicate the source pawn into the destination pawn. If overwriteAsDeath is true, then it is considered murdering the destination pawn.
@@ -422,5 +421,8 @@ namespace ATReforged
                 Log.Warning("[ATR] An unexpected error occurred during player setting duplication between " + source + " " + dest + ". The destination PlayerSettings may be left unstable!" + exception.Message + exception.StackTrace);
             }
         }
+
+        // Cached races that are considered androids for establishing correct behavior, cached at startup.
+        public static HashSet<ThingDef> cachedAndroidRaces = new HashSet<ThingDef>();
     }
 }

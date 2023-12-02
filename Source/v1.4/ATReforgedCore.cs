@@ -37,6 +37,17 @@ namespace ATReforged
         static ATReforgedCore_PostInit()
         {
             ATReforgedCore.settings = ATReforgedCore.ModSingleton.GetSettings<ATReforgedCore_Settings>();
+
+
+            // Must dynamically modify some ThingDefs based on certain qualifications.
+            foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
+            {
+                // Check race to see if the thingDef is for a Pawn.
+                if (thingDef.race != null && thingDef.GetModExtension<ATR_PawnExtension>()?.isAndroid == true)
+                {
+                    ATRCore_Utils.cachedAndroidRaces.Add(thingDef);
+                }
+            }
         }
     }
 }

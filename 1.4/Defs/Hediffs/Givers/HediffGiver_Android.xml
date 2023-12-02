@@ -4,9 +4,24 @@
 	<HediffGiverSetDef>
         <defName>ATR_MechanicalStandard</defName>
 	    <hediffGivers>
-			<li Class="HediffGiver_Bleeding">
+			<li Class="MechHumanlikes.HediffGiver_MechBleeding">
 				<hediff>ATR_CoolantLoss</hediff>
+                <riseRatePerDay>1</riseRatePerDay>
+                <fallRatePerDay>15</fallRatePerDay>
+                <iconPath>UI/Icons/BleedingCoolant</iconPath>
 			</li>
+			<li Class="ATReforged.HediffGiver_HypothermiaNoFrostbite">
+				<hediff>ATR_MechanicalHypothermia</hediff>
+			</li>
+			<li Class="HediffGiver_Heat">
+				<hediff>ATR_Overheating</hediff>
+			</li>
+	    </hediffGivers>
+	</HediffGiverSetDef>
+
+	<HediffGiverSetDef>
+        <defName>ATR_MechanicalCoolantless</defName>
+	    <hediffGivers>
 			<li Class="ATReforged.HediffGiver_HypothermiaNoFrostbite">
 				<hediff>ATR_MechanicalHypothermia</hediff>
 			</li>
