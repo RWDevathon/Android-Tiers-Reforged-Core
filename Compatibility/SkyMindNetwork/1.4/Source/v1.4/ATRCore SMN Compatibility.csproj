@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
+    <Compile Include="Harmony\SMN_Utils_Patch.cs" />
     <Compile Include="Harmony\CompSkyMindLink_Patch.cs" />
     <Compile Include="Harmony\Recipe_RemoveMechanicalPart_Patch.cs" />
     <Compile Include="Harmony\Recipe_InstallAndroidInterface_Patch.cs" />
