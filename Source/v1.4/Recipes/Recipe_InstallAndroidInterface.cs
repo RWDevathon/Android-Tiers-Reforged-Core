@@ -40,7 +40,7 @@ namespace ATReforged
 
         public void InitializeMind(Pawn pawn)
         {
-            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
+            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 50, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
             Pawn personality = PawnGenerator.GeneratePawn(request);
             personality.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
             personality.story.Adulthood = ATR_BackstoryDefOf.ATR_NewbootAdulthood;
