@@ -538,6 +538,7 @@
             <li>
                 <hungerRateFactor>1.05</hungerRateFactor>
                 <statFactors>
+                    <GlobalLearningFactor>0.75</GlobalLearningFactor>
                     <InjuryHealingFactor>0.90</InjuryHealingFactor>
                 </statFactors>
                 <capMods>
@@ -570,6 +571,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <GlobalLearningFactor>0.9</GlobalLearningFactor>
                     <InjuryHealingFactor>0.95</InjuryHealingFactor>
                 </statFactors>
             </li>
@@ -593,6 +595,7 @@
             <li>
                 <hungerRateFactor>0.95</hungerRateFactor>
                 <statFactors>
+                    <GlobalLearningFactor>1.1</GlobalLearningFactor>
                     <InjuryHealingFactor>1.05</InjuryHealingFactor>
                 </statFactors>
             </li>

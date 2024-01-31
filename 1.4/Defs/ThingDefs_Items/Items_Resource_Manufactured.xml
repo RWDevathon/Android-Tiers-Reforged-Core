@@ -22,6 +22,11 @@
                 <compClass>ATReforged.CompTargetEffect_ResurrectMechanical</compClass>
             </li>
         </comps>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ATR_MechPartWorkbench</li>
+            </recipeUsers>
+        </recipeMaker>
         <tradeability>Sellable</tradeability>
     </ThingDef>
 

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef>
+        <defName>ATR_ManufacturePartPacks</defName>
+        <label>manufacture Part Pack x4</label>
+        <description>Produce packs of half-assembled parts designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Basic materials are included in the packs for rapid creation of more specific pieces.</description>
+        <jobString>Assembling part packs.</jobString>
+        <workAmount>6450</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>160</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>24</count>
+            </li>
+        </ingredients>
+        <products>
+            <MHC_PartPack>4</MHC_PartPack>
+        </products>
+        <recipeUsers>
+            <li>
+                <li>ATR_MechPartWorkbench</li>
+            </li>
+        </recipeUsers>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>Plasteel</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ATR_ManufactureSimpleRepairStims</defName>
+        <label>manufacture Simple Repair Stim x4</label>
+        <description>Assemble small, simple kits of industrial components with tools for assisting and stimulating mechanical repairs.</description>
+        <jobString>Manufacturing simple repair stims.</jobString>
+        <workAmount>3000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+            <Intellectual>4</Intellectual>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <MHC_RepairStimSimple>4</MHC_RepairStimSimple>
+        </products>
+        <recipeUsers>
+            <li>
+                <li>ATR_MechPartWorkbench</li>
+            </li>
+        </recipeUsers>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ATR_ManufactureIntermediateRepairStims</defName>
+        <label>manufacture Intermediate Repair Stim x4</label>
+        <description>Assemble kits of industrial components with tools for assisting and stimulating mechanical repairs.</description>
+        <jobString>Manufacturing intermediate repair stims.</jobString>
+        <workAmount>10500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <skillRequirements>
+            <Crafting>6</Crafting>
+            <Intellectual>6</Intellectual>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <MHC_RepairStimIntermediate>4</MHC_RepairStimIntermediate>
+        </products>
+        <recipeUsers>
+            <li>
+                <li>ATR_MechPartWorkbench</li>
+            </li>
+        </recipeUsers>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Plasteel</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ATR_ManufactureAdvancedRepairStims</defName>
+        <label>manufacture Advanced Repair Stim x4</label>
+        <description>Assemble an array of high-tech tools for assisting and stimulating mechanical repairs.</description>
+        <jobString>Manufacturing advanced repair stims.</jobString>
+        <workAmount>19500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <skillRequirements>
+            <Crafting>12</Crafting>
+            <Intellectual>12</Intellectual>
+        </skillRequirements>
+        <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <MHC_RepairStimAdvanced>4</MHC_RepairStimAdvanced>
+        </products>
+        <recipeUsers>
+            <li>
+                <li>ATR_MechPartWorkbench</li>
+            </li>
+        </recipeUsers>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Gold</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+</Defs>
