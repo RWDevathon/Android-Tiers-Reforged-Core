@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_ManufacturePartPacks.label>произвести Комплект Деталей x4</ATR_ManufacturePartPacks.label>
+  <ATR_ManufacturePartPacks.description>Выпускайте комплекты деталей, предназначенный для замены стандартных компонентов андроидов, начиная от целых ног и рук, заканчивая сложными батареями и компонентами. Базовые, заранее запрограммированные, механиты формируют себя под новые, более сложные задачи.</ATR_ManufacturePartPacks.description>
+  <ATR_ManufacturePartPacks.jobString>Сборка комплектов деталей.</ATR_ManufacturePartPacks.jobString>
+
+  <ATR_ManufactureSimpleRepairStims.label>произвести Простой Ремонтный Комплект x4</ATR_ManufactureSimpleRepairStims.label>
+  <ATR_ManufactureSimpleRepairStims.description>Небольшой, простой ремкомплект, содержит промышленные компоненты и инструменты для аварийного ремонта.</ATR_ManufactureSimpleRepairStims.description>
+  <ATR_ManufactureSimpleRepairStims.jobString>Производит простые ремонтные комплекты.</ATR_ManufactureSimpleRepairStims.jobString>
+
+  <ATR_ManufactureIntermediateRepairStims.label>произвести Обычный Ремонтный Комплект x4</ATR_ManufactureIntermediateRepairStims.label>
+  <ATR_ManufactureIntermediateRepairStims.description>Стандартизированный базовый ремкомплект, содержит промышленные компоненты и инструменты для аварийного и профессионального ремонта.</ATR_ManufactureIntermediateRepairStims.description>
+  <ATR_ManufactureIntermediateRepairStims.jobString>Производит обычные ремонтные комплекты.</ATR_ManufactureIntermediateRepairStims.jobString>
+
+  <ATR_ManufactureAdvancedRepairStims.label>произвести Продвинутый Ремонтный Комплект x4</ATR_ManufactureAdvancedRepairStims.label>
+  <ATR_ManufactureAdvancedRepairStims.description>Сверхсовременный ремкомплект, содержит массив высокотехнологичных механитов и инструменты для аварийного и мастерского ремонта.</ATR_ManufactureAdvancedRepairStims.description>
+  <ATR_ManufactureAdvancedRepairStims.jobString>Производит продвинутые ремонтные комплекты.</ATR_ManufactureAdvancedRepairStims.jobString>
+
+
+</LanguageData>
