@@ -4,5 +4,7 @@
   <ATR_MechanicalInsight.label>Механическое начало</ATR_MechanicalInsight.label>
   <ATR_MechanicalInsight.description>Основы создания механически воссозданных органических существ, и связанных с этим возможностей.</ATR_MechanicalInsight.description>
 
+  <ATR_MechanicalInsight.discoveredLetterTitle>О механических пешках</ATR_MechanicalInsight.discoveredLetterTitle>
+  <ATR_MechanicalInsight.discoveredLetterText>Вы начали путь создания механических пешек с помощью ATR. Дополнительные буквы будут появляться по мере необходимости, но знайте, что механические пешки могут быть построены в производственной капсуле, и у них другой набор потребностей — вместо отдыха они нуждаются в обслуживании, и хотя они могут потреблять пищу, обычно зарядка более эффективна. Для их исцеления, вместо лекарств используются специальные медикаменты или пакеты деталей. Юнитам можно выборочно запретить или разрешить использовать любое место отдыха для различных целей.</ATR_MechanicalInsight.discoveredLetterText>
 
 </LanguageData>
